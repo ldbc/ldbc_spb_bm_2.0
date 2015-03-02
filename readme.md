@@ -1,6 +1,6 @@
 ![LDBC Logo](ldbc_logo.png)
-Semantic Publishing Benchmark
------------------------------
+Semantic Publishing Benchmark v1.5
+----------------------------------
 
 ###Introduction
 
