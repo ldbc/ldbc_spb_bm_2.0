@@ -1,0 +1,209 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bbcevent: <http://www.bbc.co.uk/ontologies/event/> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix par: <http://purl.org/vocab/participation/schema#> .
+@prefix pnc: <http://data.press.net/ontology/classification/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix timelineowl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.bbc.co.uk/contexts/a3aced23-43f3-4cd9-83a7-e1286bf391fd#id> a provenance:Dataset ;
+rdfs:label "Scottish Football Competitions"^^xsd:string ;
+provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/datasets/sport/football/scottish-football-competitions-1.ttl"^^xsd:string ;
+provenance:changeReason "Initial creation of dataset"^^xsd:string ;
+provenance:version "1"^^xsd:int ;
+provenance:provider <mailto:tom.grahame@bbc.co.uk> .
+
+<http://dbpedia.org/resource/Scottish_Football_League_Second_Division>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/scottish-second-division>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>
+    event:time <http://www.bbc.co.uk/things/86a0384b-152c-4f4a-817f-0deac3bc06b8#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/5af78336-c06e-0b48-83a2-e50e2c14cba6#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/5af78336-c06e-0b48-83a2-e50e2c14cba6#id>
+    domain:canonicalName "Scottish Second Division"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/scottish-second-division>, <http://www.scottishfootballleague.com/football/second/> ;
+    domain:externalId <http://dbpedia.org/resource/Scottish_Football_League_Second_Division>, <urn:sports-stats:118996178> ;
+    domain:name "IRN-BRU Scottish Second Division"^^xsd:string ;
+    domain:shortName "Scottish Second Division"^^xsd:string ;
+    domain:slug "scottish-second-division"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/domestic-league> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/86a0384b-152c-4f4a-817f-0deac3bc06b8#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id>
+    event:time <http://www.bbc.co.uk/things/ae92f433-f8eb-4e1a-91de-27d892063d71#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/5af78336-c06e-0b48-83a2-e50e2c14cba6#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/ae92f433-f8eb-4e1a-91de-27d892063d71#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.scottishfootballleague.com/football/second/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118996178>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Scottish_Football_League_Third_Division>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/scottish-third-division>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>
+    event:time <http://www.bbc.co.uk/things/4684010a-6635-4353-bf7c-d5a2b2e45b0d#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/7bf5cec0-5a16-2d42-ab3a-bb7137c4ff43#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/3f883336-d112-4fe4-8eb8-a1ba11202431#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/4684010a-6635-4353-bf7c-d5a2b2e45b0d#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/7bf5cec0-5a16-2d42-ab3a-bb7137c4ff43#id>
+    domain:canonicalName "Scottish Third Division"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/scottish-third-division>, <http://www.scottishfootballleague.com/football/third/> ;
+    domain:externalId <http://dbpedia.org/resource/Scottish_Football_League_Third_Division>, <urn:sports-stats:118996179> ;
+    domain:name "IRN-BRU Scottish Third Division"^^xsd:string ;
+    domain:shortName "Scottish Third Division"^^xsd:string ;
+    domain:slug "scottish-third-division"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/domestic-league> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id>
+    event:time <http://www.bbc.co.uk/things/3f883336-d112-4fe4-8eb8-a1ba11202431#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/7bf5cec0-5a16-2d42-ab3a-bb7137c4ff43#id> ;
+    a sport:Competition .
+
+<http://www.scottishfootballleague.com/football/third/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118996179>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Scottish_Premier_League>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/scottish-premier>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>
+    event:time <http://www.bbc.co.uk/things/dd402e70-a377-4f3d-8f46-75f3a2b9af2e#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/ebca7141-e8ba-0e40-bba9-d0864e29bc1f#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id>
+    event:time <http://www.bbc.co.uk/things/fd276612-7b13-49b0-8768-9fa5fcdf5694#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/ebca7141-e8ba-0e40-bba9-d0864e29bc1f#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/dd402e70-a377-4f3d-8f46-75f3a2b9af2e#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/ebca7141-e8ba-0e40-bba9-d0864e29bc1f#id>
+    domain:canonicalName "Scottish Premier League"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/scottish-premier>, <http://www.scotprem.com> ;
+    domain:externalId <http://dbpedia.org/resource/Scottish_Premier_League>, <urn:sports-stats:118996176> ;
+    domain:name "Clydesdale Bank Scottish Premier League"^^xsd:string ;
+    domain:shortName "Scottish Premier League"^^xsd:string ;
+    domain:slug "scottish-premier-league"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/domestic-league> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/fd276612-7b13-49b0-8768-9fa5fcdf5694#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.scotprem.com>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118996176>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Scottish_Football_League_First_Division>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/scottish-first-division>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/61b45f7a-fd27-4f59-afb2-23f23c285d58#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/9113d9ba-3a10-48f4-b9f5-ef7142a4e3d1#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>
+    event:time <http://www.bbc.co.uk/things/9113d9ba-3a10-48f4-b9f5-ef7142a4e3d1#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/f9ea64db-238d-2545-95a0-6bdecd52c489#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id>
+    event:time <http://www.bbc.co.uk/things/61b45f7a-fd27-4f59-afb2-23f23c285d58#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/f9ea64db-238d-2545-95a0-6bdecd52c489#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/f9ea64db-238d-2545-95a0-6bdecd52c489#id>
+    domain:canonicalName "Scottish First Division"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/scottish-first-division>, <http://www.scottishfootballleague.com/football/first/> ;
+    domain:externalId <http://dbpedia.org/resource/Scottish_Football_League_First_Division>, <urn:sports-stats:118996177> ;
+    domain:name "IRN-BRU Scottish First Division"^^xsd:string ;
+    domain:shortName "Scottish First Division"^^xsd:string ;
+    domain:slug "scottish-first-division"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/domestic-league> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.scottishfootballleague.com/football/first/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118996177>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+

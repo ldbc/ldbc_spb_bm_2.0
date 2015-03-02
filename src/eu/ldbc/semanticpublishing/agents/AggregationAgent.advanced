@@ -1,0 +1,515 @@
+package eu.ldbc.semanticpublishing.agents;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import eu.ldbc.semanticpublishing.TestDriver;
+import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection.QueryType;
+import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection;
+import eu.ldbc.semanticpublishing.endpoint.SparqlQueryExecuteManager;
+import eu.ldbc.semanticpublishing.properties.Definitions;
+import eu.ldbc.semanticpublishing.substitutionparameters.SubstitutionQueryParametersManager;
+import eu.ldbc.semanticpublishing.refdataset.model.Entity;
+import eu.ldbc.semanticpublishing.resultanalyzers.Query17Analyzer;
+import eu.ldbc.semanticpublishing.resultanalyzers.Query18Analyzer;
+import eu.ldbc.semanticpublishing.resultanalyzers.Query21Analyzer;
+import eu.ldbc.semanticpublishing.resultanalyzers.Query22Analyzer;
+import eu.ldbc.semanticpublishing.resultanalyzers.sax.SPARQLResultStatementsCounter;
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.RDFXMLResultStatementsCounter;
+import eu.ldbc.semanticpublishing.statistics.Statistics;
+import eu.ldbc.semanticpublishing.statistics.querypool.Pool;
+import eu.ldbc.semanticpublishing.templates.MustacheTemplate;
+import eu.ldbc.semanticpublishing.templates.aggregation.*;
+import eu.ldbc.semanticpublishing.util.RandomUtil;
+
+/**
+ * A class that represents an aggregation agent. It executes aggregation queries 
+ * in a loop, updates query execution statistics.
+ *
+ * WARNING : after making changes to this class, make sure you've made a copy of it with corresponding .basic / .advanced extension before building, 
+ *           otherwise you will lose your changes!
+ */
+public class AggregationAgent extends AbstractAsynchronousAgent {
+	private final SparqlQueryExecuteManager queryExecuteManager;
+	private final RandomUtil ru;
+	private final AtomicBoolean benchmarkingState;
+	private final HashMap<String, String> queryTemplates;
+	private final Pool queryMixPool;
+	private final long benchmarkByQueryMixRuns;
+	private SparqlQueryConnection connection;
+	private Definitions definitions;
+	private SubstitutionQueryParametersManager substitutionQueryParametersMngr;
+	private RDFXMLResultStatementsCounter rdfxmlResultStatementsCounter;
+	private SPARQLResultStatementsCounter sparqlResultStatementsCounter;
+	
+	private final static Logger LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
+	private final static Logger BRIEF_LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
+	private final static int MAX_DRILL_DOWN_ITERATIONS = 5;
+	private final static int MAX_FACETED_SEARCH_ITERATIONS = 5;
+	
+	public AggregationAgent(AtomicBoolean benchmarkingState, SparqlQueryExecuteManager queryExecuteManager, RandomUtil ru, AtomicBoolean runFlag, HashMap<String, String> queryTamplates, Definitions definitions, SubstitutionQueryParametersManager substitutionQueryParametersMngr, long benchmarkByQueryMixRuns) {
+		super(runFlag);
+		this.queryExecuteManager = queryExecuteManager;
+		this.ru = ru;
+		this.benchmarkingState = benchmarkingState;
+		this.queryTemplates = queryTamplates;
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+		this.definitions = definitions;
+		this.substitutionQueryParametersMngr = substitutionQueryParametersMngr;
+		this.rdfxmlResultStatementsCounter = new RDFXMLResultStatementsCounter();
+		this.sparqlResultStatementsCounter = new SPARQLResultStatementsCounter();
+		this.queryMixPool = new Pool(definitions.getString(Definitions.QUERY_POOLS), Statistics.totalStartedQueryMixRuns, Statistics.totalCompletedQueryMixRuns);
+		this.benchmarkByQueryMixRuns = benchmarkByQueryMixRuns;
+	}
+	
+	@Override
+	public boolean executeLoop() {
+		//remember if query was executed before benchmark phase start to skip it later when updating query statistics. No need to do that for Editorial Agents.
+		boolean startedDuringBenchmarkPhase = benchmarkingState.get();
+
+		//retrieve next query to be executed from the aggregation query mix
+		int aggregateQueryIndex = Definitions.aggregationOperationsAllocation.getAllocation();
+		
+		if (startedDuringBenchmarkPhase && queryMixPool.getItemsCount() > 0) {
+		    if (benchmarkByQueryMixRuns > 0 && !queryMixPool.getInProgress() && Statistics.totalStartedQueryMixRuns.get() >= benchmarkByQueryMixRuns) {
+		        return true;
+		    }
+		
+		    //aggregateQueryIndex is ZERO based, while query ids in definitions.properties (parameter queryPools) are not
+		    if (!queryMixPool.checkAndSetItemUnavailable(aggregateQueryIndex + 1)) {
+		        return true;
+		    }            
+		}
+
+		long queryId = 0;
+		MustacheTemplate aggregateQuery = null;
+		String queryString = "";
+		String queryResult = "";
+		
+		try {
+			boolean drillDownQuery = false;
+			boolean facetedSearchQuery = false;
+			
+			//important : queryDistribution is zero-based, while QueryNTemplate is not!
+			queryId = Statistics.aggregateQueriesArray[aggregateQueryIndex].getNewQueryId();
+
+			String[] querySubstParameters;
+			switch (aggregateQueryIndex) {
+				case 0 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query1Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 1 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query2Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 2 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query3Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 3 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query4Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 4 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query5Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 5 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query6Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 6 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query7Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 7 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query8Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 8 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query9Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 9 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query10Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 10 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query11Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 11 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query12Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 12 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query13Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 13 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query14Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 14 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query15Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 15 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query16Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 16 : 
+					//Drill-Down query with constraints on Geo-locations
+					drillDownQuery = true;
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query17Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 17 : 
+					//Drill-Down query with constraints on Date intervals
+					drillDownQuery = true;
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query18Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 18 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query19Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 19 : 
+					//FTS Query
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query20Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 20 : 					
+					//Faceted Search Query
+					facetedSearchQuery = true;
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query21Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 21 : 					
+					//Faceted Search Query
+					facetedSearchQuery = true;
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query22Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 22 :
+					//Faceted Search Query
+					facetedSearchQuery = true;
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query23Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 23 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query24Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+				case 24 :
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query25Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;
+			}
+			
+			queryString = aggregateQuery.compileMustacheTemplate();
+			
+			long executionTimeMs = System.currentTimeMillis();
+			
+			queryResult = queryExecuteManager.executeQuery(connection, aggregateQuery.getTemplateFileName(), queryString, aggregateQuery.getTemplateQueryType(), true, false);			
+									
+			if (drillDownQuery) {
+				//further loop the drill-down query using results from previous run
+				executeDrillDown(aggregateQuery, aggregateQueryIndex, queryString, queryResult, queryId);
+			}
+			
+			if (facetedSearchQuery) {
+				executeFacetedSearch(aggregateQuery, aggregateQueryIndex, queryString, queryResult, queryId);
+			}
+			
+			updateQueryStatistics(true, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, queryResult, queryId, System.currentTimeMillis() - executionTimeMs);			
+		} catch (IOException ioe) {
+			String msg = "Warning : AggregationAgent : IOException caught : " + ioe.getMessage() + ", attempting a new connection" + "\n" + "\tfor query : \n" + queryString;
+			
+			System.out.println(msg);
+			
+			LOGGER.warn(msg);
+			
+			updateQueryStatistics(false, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, queryResult, queryId, 0);
+			
+			connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+		}
+
+		if (startedDuringBenchmarkPhase) {
+			queryMixPool.releaseUnavailableItem(aggregateQueryIndex + 1);
+		}
+		
+		return true;
+	}
+	
+	/**
+	 * @param aggregateQuery - the aggregateQuery object
+	 * @param queryDistribution - pre-computed distribution
+	 * @param queryString - the query
+	 * @param queryResult - result of the query, RDFXML
+	 * @param queryId - will reuse the queryId of the first query iteration, easier to recognize query sequence in query log
+	 * @throws IOException
+	 */
+	private void executeDrillDown(MustacheTemplate aggregateQuery, int queryDistribution, String queryString, String queryResult, long queryId) throws IOException {
+		String qString = queryString;
+		String qResult = queryResult;
+		ArrayList<Entity> entitiesList;
+		
+		//iteration starts from 1, first execution was already completed
+		for (int i = 1; i < MAX_DRILL_DOWN_ITERATIONS ; i++) {
+			
+			switch (queryDistribution) {
+				case 16 :
+					Query17Analyzer query17Analyzer = new Query17Analyzer();
+					entitiesList = query17Analyzer.collectEntitiesList(qResult);
+					
+					if (entitiesList == null) {
+						//no results from previous query
+						return;
+					}		
+
+					if (entitiesList.size() > 0) {
+						int randomEntity = ru.nextInt(entitiesList.size());
+						Entity entity = entitiesList.get(randomEntity);
+
+						double latitude = Double.parseDouble(entity.getObjectFromTriple("geo:lat"));
+						double longtitude = Double.parseDouble(entity.getObjectFromTriple("geo:long"));
+
+						((Query17Template)aggregateQuery).initialize(latitude, longtitude, ru.nextDouble(0.01, 0.08), null);
+
+						qString = aggregateQuery.compileMustacheTemplate();
+						
+//						long executionTimeMs = System.currentTimeMillis();
+						
+						qResult = queryExecuteManager.executeQuery(connection, aggregateQuery.getTemplateFileName(), qString, aggregateQuery.getTemplateQueryType(), true, false);
+
+//						updateQueryStatistics(true, benchmarkingState.get(), aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), qString, qResult, queryId, System.currentTimeMillis() - executionTimeMs);
+					} else {
+            return;
+          }
+				
+				break;
+				
+			case 17 :
+				Query18Analyzer query18Analyzer = new Query18Analyzer();
+				entitiesList = query18Analyzer.collectEntitiesList(qResult);
+
+				if (entitiesList == null) {
+					//no results from previous query
+					return;
+				}
+          
+				if (entitiesList.size() > 0) {
+					int randomEntity = ru.nextInt(entitiesList.size());
+					Entity entity = entitiesList.get(randomEntity);
+					
+					((Query18Template)aggregateQuery).initialize(entity.getObjectFromTriple("cwork:dateModified"), ru.nextInt(1, 3), null);
+
+					qString = aggregateQuery.compileMustacheTemplate();
+					
+//					long executionTimeMs = System.currentTimeMillis();
+					
+					qResult = queryExecuteManager.executeQuery(connection, aggregateQuery.getTemplateFileName(), qString, aggregateQuery.getTemplateQueryType(), true, false);
+
+//					updateQueryStatistics(true, benchmarkingState.get(), aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), qString, qResult, queryId, System.currentTimeMillis() - executionTimeMs);
+				} else {
+					return;
+				}
+				break;	
+			}
+		}
+	}
+	
+	/**
+	 * @param aggregateQuery - the aggregateQuery object
+	 * @param queryDistribution - pre-computed distribution
+	 * @param queryString - the query
+	 * @param queryResult - result of the query, RDFXML
+	 * @param queryId - will reuse the queryId of the first query iteration, easier to recognize query sequence in query log
+	 * @throws IOException
+	 */
+	private void executeFacetedSearch(MustacheTemplate aggregateQuery, int queryDistribution, String queryString, String queryResult, long queryId) throws IOException {
+		String qString = queryString;
+		String qResult = queryResult;
+		String dateString = "";
+//		long executionTimeMs = 0;
+		ArrayList<String> datesList;
+		
+		//iteration starts from 1, first execution was already completed
+		for (int i = 1; i < MAX_FACETED_SEARCH_ITERATIONS ; i++) {
+			
+			switch (queryDistribution) {
+			
+				case 20 :
+					
+					//collect results from previous iteration (note that last iteration is 4, but iteration 3 is executed at the end and result is kept in qResult)
+					if (i == 4) {
+						Query21Analyzer query21Analyzer = new Query21Analyzer();
+						//date string format : 2010-10-02
+						datesList = query21Analyzer.collectDatesList(qResult);
+						
+						if (datesList == null) {
+							//no results from previous query
+							break;
+						}						
+						
+						if (datesList.size() == 0) {
+							//no results from previous query
+							break;
+						}
+						
+						//get random date
+						int randomDate = ru.nextInt(datesList.size());
+						dateString = datesList.get(randomDate);
+					}
+					
+					((Query21Template)aggregateQuery).initialize(i, dateString, null);
+					qString = aggregateQuery.compileMustacheTemplate();
+					
+//					executionTimeMs = System.currentTimeMillis();
+									
+					qResult = queryExecuteManager.executeQuery(connection, aggregateQuery.getTemplateFileName(), qString, aggregateQuery.getTemplateQueryType(), true, false);
+					
+//					updateQueryStatistics(true, benchmarkingState.get(), aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), qString, qResult, queryId, System.currentTimeMillis() - executionTimeMs);
+					
+					break;
+					
+				case 21 :
+					
+					//collect results from previous iteration (note that last iteration is 4, but iteration 3 is executed at the end and result is kept in qResult)
+					if (i == 4) {
+						Query22Analyzer query22Analyzer = new Query22Analyzer();
+						//date string format : 2010-10
+						datesList = query22Analyzer.collectDatesList(qResult);
+						
+						if (datesList == null) {
+							//no results from previous query
+							break;
+						}												
+						
+						if (datesList.size() == 0) {
+							//no results from previous query
+							break;
+						}
+						
+						//get random date
+						int randomDate = ru.nextInt(datesList.size());
+						dateString = datesList.get(randomDate);
+					}
+					
+					((Query22Template)aggregateQuery).initialize(i, dateString, null);
+					qString = aggregateQuery.compileMustacheTemplate();
+					
+//					executionTimeMs = System.currentTimeMillis();
+									
+					qResult = queryExecuteManager.executeQuery(connection, aggregateQuery.getTemplateFileName(), qString, aggregateQuery.getTemplateQueryType(), true, false);
+					
+//					updateQueryStatistics(true, benchmarkingState.get(), aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), qString, qResult, queryId, System.currentTimeMillis() - executionTimeMs);
+					
+					break;
+					
+				case 22 :
+					
+					((Query23Template)aggregateQuery).initialize(i, "", null);
+					qString = aggregateQuery.compileMustacheTemplate();
+					
+//					executionTimeMs = System.currentTimeMillis();
+									
+					qResult = queryExecuteManager.executeQuery(connection, aggregateQuery.getTemplateFileName(), qString, aggregateQuery.getTemplateQueryType(), true, false);
+					
+//					updateQueryStatistics(true, benchmarkingState.get(), aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), qString, qResult, queryId, System.currentTimeMillis() - executionTimeMs);
+					
+					break;					
+			}
+		}
+	}
+	
+	@Override
+	public void executeFinalize() {				
+		connection.disconnect();
+	}
+	
+	private void updateQueryStatistics(boolean reportSuccess, boolean startedDuringBenchmarkPhase, QueryType queryType, String queryName, String queryString, String queryResult, long id, long queryExecutionTimeMs) {
+		//skip update of statistics for conformance queries
+		if (queryName.startsWith("#")) {
+			return;
+		}
+		
+		int queryNumber = getQueryNumber(queryName);
+		String queryNameId = constructQueryNameId(queryName, id);
+		
+		//count results (statements)
+		long resultsCount = 0;
+		InputStream iStream = null;
+				
+		try {
+			if ((!queryResult.trim().isEmpty())) {			
+            iStream = new ByteArrayInputStream(queryResult.getBytes("UTF-8"));
+		        if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
+		          resultsCount = rdfxmlResultStatementsCounter.getStatementsCount(iStream);
+		          Statistics.timeCorrectionsMS.addAndGet(rdfxmlResultStatementsCounter.getParseTime());
+		        } else {
+		          resultsCount = sparqlResultStatementsCounter.getStatementsCount(iStream);
+		          Statistics.timeCorrectionsMS.addAndGet(sparqlResultStatementsCounter.getParseTime());
+		        }
+			}
+			
+			if (queryResult.length() >= 0 && benchmarkingState.get()) {
+				if (startedDuringBenchmarkPhase) {
+					if (reportSuccess) {
+						Statistics.aggregateQueriesArray[queryNumber - 1].reportSuccess(queryExecutionTimeMs);
+						Statistics.totalAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
+						logBrief(queryNameId, queryType, queryResult, "", queryExecutionTimeMs, resultsCount);
+					} else {				
+						Statistics.aggregateQueriesArray[queryNumber - 1].reportFailure();
+						Statistics.totalAggregateQueryStatistics.reportFailure();
+						logBrief(queryNameId, queryType, queryResult, ", query has timed out!", queryExecutionTimeMs, resultsCount);
+					}
+				} else {
+					if (queryExecutionTimeMs > 0) {
+						LOGGER.info("\tQuery : " + queryName + ", time : " + queryExecutionTimeMs + " ms, queryResult.length : " + queryResult.length() + ", results : " + resultsCount + ", has been started during the warmup phase, it will be ignored in the benchmark result!");
+						logBrief(queryNameId, queryType, queryResult, ", has been started during the warmup phase, it will be ignored in the benchmark result!", queryExecutionTimeMs, resultsCount);
+					} else {
+						LOGGER.warn("\tQuery : " + queryName + ", time : " + queryExecutionTimeMs + " ms, queryResult.length : " + queryResult.length() + ", results : " + resultsCount + ", has failed to execute... possibly query timeout has been reached!");					
+						logBrief(queryNameId, queryType, queryResult, ", has failed to execute... possibly query timeout has been reached!", queryExecutionTimeMs, resultsCount);
+					}
+				}
+			}
+			
+			LOGGER.info("\n*** Query [" + queryNameId + "], execution time : " + queryExecutionTimeMs + " ms, results : " + resultsCount + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void logBrief(String queryId, QueryType queryType, String queryResult, String appendString, long queryExecutionTimeMs, long resultStatementsCount) {
+		StringBuilder reportSb = new StringBuilder();
+		reportSb.append(String.format("\t[%s, %s] Query executed, execution time : %d ms, results : %d %s", queryId, Thread.currentThread().getName(), queryExecutionTimeMs, resultStatementsCount, appendString));
+//		if (queryType == QueryType.SELECT || queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
+//			reportSb.append(", characters returned : " + queryResult.length());
+//		}
+		
+		BRIEF_LOGGER.info(reportSb.toString());		
+	}
+	
+	private int getQueryNumber(String queryName) {
+		return Integer.parseInt(queryName.substring(queryName.indexOf(Statistics.AGGREGATE_QUERY_NAME) + Statistics.AGGREGATE_QUERY_NAME.length(), queryName.indexOf(".")));
+	}
+	
+	private String constructQueryNameId(String queryName, long id) {
+		StringBuilder queryId = new StringBuilder();
+		queryId.append(queryName);
+		queryId.append(", id:");
+		queryId.append("" + id);
+		return queryId.toString();
+	}
+}

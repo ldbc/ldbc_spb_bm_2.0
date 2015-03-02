@@ -1,0 +1,252 @@
+@prefix bbcevent: <http://www.bbc.co.uk/ontologies/event/> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix timelineowl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.bbc.co.uk/contexts/51a84c08-f648-4ddc-9950-8f0b1a49d307#id> a provenance:Dataset ;
+rdfs:label "English Football Competitions"^^xsd:string ;
+provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/datasets/sport/football/english-football-competitions-1.ttl"^^xsd:string ;
+provenance:changeReason "Initial creation of dataset"^^xsd:string ;
+provenance:version "1"^^xsd:int ;
+provenance:provider <mailto:tom.grahame@bbc.co.uk> .
+
+<http://dbpedia.org/resource/Football_League_One>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/league-one>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/0146f8ae-30d2-4fb1-9207-4b7db702f257#id>
+    event:time <http://www.bbc.co.uk/things/951fdbf4-e946-413c-8631-0e922d9fd7e1#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/030b5eaf-15db-3e4e-bac9-a7789892f436#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/030b5eaf-15db-3e4e-bac9-a7789892f436#id>
+    domain:canonicalName "League One"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/league-one>, <http://www.football-league.co.uk/page/League1Home/> ;
+    domain:externalId <http://dbpedia.org/resource/Football_League_One>, <urn:sports-stats:118996116> ;
+    domain:name "npower League One"^^xsd:string ;
+    domain:shortName "League One"^^xsd:string ;
+    domain:slug "league-one"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/domestic-league> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/39fbf0dd-f32d-4ac4-a237-7ac7d45908bd#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/951fdbf4-e946-413c-8631-0e922d9fd7e1#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/ad6c7f89-d439-41c2-9c4e-b8f3afd542ec#id>
+    event:time <http://www.bbc.co.uk/things/39fbf0dd-f32d-4ac4-a237-7ac7d45908bd#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/030b5eaf-15db-3e4e-bac9-a7789892f436#id> ;
+    a sport:Competition .
+
+<http://www.football-league.co.uk/page/League1Home/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118996116>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Premier_League>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/premier-league>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/461a3103-60d0-4e5b-8dd6-5a1727e70d19#id>
+    event:time <http://www.bbc.co.uk/things/84abb6d9-c4a7-47d1-89d0-5cf8551b9b87#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/5cd4682a-7643-f445-8b1f-bcbaf450bc89#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/487650b3-b463-40ef-a280-9badf60a7fa8#id>
+    event:time <http://www.bbc.co.uk/things/5a16909e-95f0-4208-aafe-01f9e1f72bad#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/5cd4682a-7643-f445-8b1f-bcbaf450bc89#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/5a16909e-95f0-4208-aafe-01f9e1f72bad#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/5cd4682a-7643-f445-8b1f-bcbaf450bc89#id>
+    domain:canonicalName "Premier League"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/premier-league>, <http://www.premierleague.com/page/Home> ;
+    domain:externalId <http://dbpedia.org/resource/Premier_League>, <urn:sports-stats:118996114> ;
+    domain:name "Barclays Premier League"^^xsd:string ;
+    domain:shortName "Premier League"^^xsd:string ;
+    domain:slug "premier-league"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/domestic-league> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/84abb6d9-c4a7-47d1-89d0-5cf8551b9b87#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.premierleague.com/page/Home>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118996114>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Football_League_Two>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/league-two>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/417e5dd8-8572-4af1-a08b-dd5b678699af#id>
+    event:time <http://www.bbc.co.uk/things/d338d46a-c647-4e5f-8fff-599d6664cfed#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/71d1288c-d1ea-6a4a-bd87-237dbb9e6470#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/5324004a-0eec-493c-bf7d-51fd09502d16#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/71d1288c-d1ea-6a4a-bd87-237dbb9e6470#id>
+    domain:canonicalName "League Two"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/league-two>, <http://www.football-league.co.uk/page/League2Home/> ;
+    domain:externalId <http://dbpedia.org/resource/Football_League_Two>, <urn:sports-stats:118996117> ;
+    domain:name "npower League Two"^^xsd:string ;
+    domain:shortName "League Two"^^xsd:string ;
+    domain:slug "league-two"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/domestic-league> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/aec46c15-041a-4519-86d1-7c97d505f429#id>
+    event:time <http://www.bbc.co.uk/things/5324004a-0eec-493c-bf7d-51fd09502d16#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/71d1288c-d1ea-6a4a-bd87-237dbb9e6470#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/d338d46a-c647-4e5f-8fff-599d6664cfed#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.football-league.co.uk/page/League2Home/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118996117>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Football_League_Championship>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/championship>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/01fc0bf8-65fd-430c-b6b7-2ed05555a8f4#id>
+    event:time <http://www.bbc.co.uk/things/ef9829db-bb85-4156-8206-0d3f4bdef6ae#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/9631e5b8-6068-f74e-a4f0-bf267ce2bc21#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/3f1aee92-a68c-48fc-8e20-ad841d94da6c#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/588d9527-8cbc-464d-9ba9-7949997e8599#id>
+    event:time <http://www.bbc.co.uk/things/3f1aee92-a68c-48fc-8e20-ad841d94da6c#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/9631e5b8-6068-f74e-a4f0-bf267ce2bc21#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/9631e5b8-6068-f74e-a4f0-bf267ce2bc21#id>
+    domain:canonicalName "Championship"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/championship>, <http://www.football-league.co.uk/page/ChampionshipHome> ;
+    domain:externalId <http://dbpedia.org/resource/Football_League_Championship>, <urn:sports-stats:118996115> ;
+    domain:name "npower Championship"^^xsd:string ;
+    domain:shortName "Championship"^^xsd:string ;
+    domain:slug "championship"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/domestic-league> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/ef9829db-bb85-4156-8206-0d3f4bdef6ae#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.football-league.co.uk/page/ChampionshipHome>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118996115>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Conference_National>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/conference>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/03800037-3144-4f88-87fc-3524046ca58d#id>
+    event:time <http://www.bbc.co.uk/things/d3417df8-f2f2-419e-9276-105abe3052df#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/d5e7ede8-a199-804f-9a09-7c91a6df1b96#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/2ea6ecfd-78e8-4292-8070-a2a56722bb87#id>
+    event:time <http://www.bbc.co.uk/things/ea291439-5ad8-453a-9f30-599446ac8b1f#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/d5e7ede8-a199-804f-9a09-7c91a6df1b96#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/d3417df8-f2f2-419e-9276-105abe3052df#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/d5e7ede8-a199-804f-9a09-7c91a6df1b96#id>
+    domain:canonicalName "Conference Premier"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/conference>, <http://www.bluesqfootball.com> ;
+    domain:externalId <http://dbpedia.org/resource/Conference_National>, <urn:sports-stats:118996118> ;
+    domain:name "Blue Square Bet Conference Premier"^^xsd:string ;
+    domain:shortName "Conference Premier"^^xsd:string ;
+    domain:slug "conference-premier"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/domestic-league> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/ea291439-5ad8-453a-9f30-599446ac8b1f#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bluesqfootball.com>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118996118>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+

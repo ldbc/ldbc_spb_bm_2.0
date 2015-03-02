@@ -1,0 +1,105 @@
+# Saved by TopBraid on Tue Apr 16 13:41:18 BST 2013
+# baseURI: http://www.bbc.co.uk/ontologies/bbc/
+# imports: http://www.bbc.co.uk/ontologies/coreconcepts/
+# imports: http://www.bbc.co.uk/ontologies/creativework/
+
+@prefix bbc:     <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix core:    <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix cwork:   <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+bbc:  rdf:type owl:Ontology ;
+      rdfs:comment "This ontology codifies BBC specific logic such as products, web documents and their association with creative works and tag concepts."^^xsd:string ;
+      owl:imports core: , cwork: ;
+      owl:versionInfo "1.2"^^xsd:string .
+
+bbc:Blogs
+      rdf:type bbc:Product ;
+      rdfs:comment "Represents the BBC blogs"^^xsd:string ;
+      rdfs:isDefinedBy bbc: .
+
+bbc:Education
+      rdf:type bbc:Product ;
+      rdfs:comment "Represents one of the products of Knowledge and Learning /education"^^xsd:string ;
+      rdfs:isDefinedBy bbc: .
+
+bbc:HighWeb
+      rdf:type bbc:Platform ;
+      rdfs:comment "Represents the  Web documents designed for a large screen"^^xsd:string ;
+      rdfs:isDefinedBy bbc: .
+
+bbc:Mobile
+      rdf:type bbc:Platform ;
+      rdfs:comment "Represents the web documents designed for a smaller, mobile screen"^^xsd:string ;
+      rdfs:isDefinedBy bbc: .
+
+bbc:Music
+      rdf:type bbc:Product ;
+      rdfs:comment "Represents Music"^^xsd:string ;
+      rdfs:isDefinedBy bbc: .
+
+bbc:News
+      rdf:type bbc:Product ;
+      rdfs:comment "Represents News"^^xsd:string ;
+      rdfs:isDefinedBy bbc: .
+
+bbc:Platform
+      rdf:type owl:Class ;
+      rdfs:comment "Enumerated class representing the different types of platforms for which a WebDocument is appropriate for. Currently either 'highweb' or 'mobile' if the page is highweb or mobile. This is used to derive the correct web document for consumption from the appropriate platform. If there's no specification on platform suitability then the document is considered to be suitable for both (responsive or mobile version not available-TBC)"^^xsd:string ;
+      rdfs:isDefinedBy bbc: ;
+      rdfs:subClassOf owl:Thing ;
+      owl:oneOf (bbc:HighWeb bbc:Mobile) .
+
+bbc:Product
+      rdf:type owl:Class ;
+      rdfs:comment "Enumerated class representing the different products by which web pages and data are created. Inside the BBC, this would be a 'product' in an editorial sense. Outside the BBC, this could refer to an organisation or company. Typically the hompage of the website of the product. Used to allow differentiation between links to provide additional functionality like icons but also to filter the different datasets provided by various clients of the LDP"^^xsd:string ;
+      rdfs:isDefinedBy bbc: ;
+      rdfs:subClassOf owl:Thing ;
+      owl:oneOf (bbc:Blogs bbc:Education bbc:Music bbc:News bbc:Sport) .
+
+bbc:Sport
+      rdf:type bbc:Product ;
+      rdfs:comment "Represents Sport"^^xsd:string ;
+      rdfs:isDefinedBy bbc: .
+
+bbc:WebDocument
+      rdf:type owl:Class ;
+      rdfs:comment """A BBC web document, a document available from a content-negotiable URL on the BBC website This class represents the web pages where the CreativeWork(s) tagged with a certain TagConcept are exposed
+USE CASE: People are interested in obtaining all BBC web pages on Tom Daley (news, programmes, sport, ..) given the BBC ID of Tom Daley"""^^xsd:string ;
+      rdfs:isDefinedBy bbc: ;
+      rdfs:subClassOf owl:Thing .
+
+bbc:platform
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates a web document with one of the two platforms for which the WebDocument is appropriate. If the webpage is responsive then this property is not used because the WebDocument is appropriate for both platforms."^^xsd:string ;
+      rdfs:domain bbc:WebDocument ;
+      rdfs:isDefinedBy bbc: ;
+      rdfs:range bbc:Platform .
+
+bbc:primaryContent
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Represents the fact that a web document has as primary content the creative work (e.g., a news story about Tom Daley is the primary content of a webpage)"^^xsd:string ;
+      rdfs:domain bbc:WebDocument ;
+      rdfs:isDefinedBy bbc: ;
+      rdfs:range cwork:CreativeWork ;
+      owl:inverseOf bbc:primaryContentOf .
+
+bbc:primaryContentOf
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Inverse of bbc:primaryContent"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy bbc: ;
+      rdfs:range bbc:WebDocument ;
+      owl:inverseOf bbc:primaryContent .
+
+bbc:product
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates the WebDocument with the particular BBC Product it belongs to (originates from)"^^xsd:string ;
+      rdfs:domain bbc:WebDocument ;
+      rdfs:isDefinedBy bbc: ;
+      rdfs:range bbc:Product .
+
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

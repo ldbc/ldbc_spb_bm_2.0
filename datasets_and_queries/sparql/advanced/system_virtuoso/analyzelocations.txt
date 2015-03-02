@@ -1,0 +1,43 @@
+define input:inference "ldbc"
+
+PREFIX bbcevent:<http://www.bbc.co.uk/ontologies/event/>
+PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX bbc:<http://www.bbc.co.uk/ontologies/bbc/>
+PREFIX time:<http://www.w3.org/2006/time#>
+PREFIX event:<http://purl.org/NET/c4dm/event.owl#>
+PREFIX music-ont:<http://purl.org/ontology/mo/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX provenance:<http://www.bbc.co.uk/ontologies/provenance/>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX cms:<http://www.bbc.co.uk/ontologies/cms/>
+PREFIX news:<http://www.bbc.co.uk/ontologies/news/>
+PREFIX cnews:<http://www.bbc.co.uk/ontologies/news/cnews/>
+PREFIX cconcepts:<http://www.bbc.co.uk/ontologies/coreconcepts/>
+PREFIX dbp-prop:<http://dbpedia.org/property/>
+PREFIX geonames:<http://sws.geonames.org/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX domain:<http://www.bbc.co.uk/ontologies/domain/>
+PREFIX dbpedia:<http://dbpedia.org/resource/>
+PREFIX geo-ont:<http://www.geonames.org/ontology#>
+PREFIX bbc-pont:<http://purl.org/ontology/po/>
+PREFIX tagging:<http://www.bbc.co.uk/ontologies/tagging/>
+PREFIX sport:<http://www.bbc.co.uk/ontologies/sport/>
+PREFIX skosCore:<http://www.w3.org/2004/02/skos/core#>
+PREFIX dbp-ont:<http://dbpedia.org/ontology/>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX core:<http://www.bbc.co.uk/ontologies/coreconcepts/>
+PREFIX curric:<http://www.bbc.co.uk/ontologies/curriculum/>
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+PREFIX fb:<http://rdf.freebase.com/ns/>
+PREFIX dcterms:<http://purl.org/dc/terms/>
+PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/>
+
+#  Query Name : AnalyzeReferenceData
+#  Query Description : Retrieves DBPedia IDs of all locations from reference data using the 'SameAs' relations from geonames .
+
+SELECT DISTINCT ?locationId 
+{
+  ?locationId a geo-ont:Feature .
+  FILTER(CONTAINS(STR(?locationId), "dbpedia")) . 
+}

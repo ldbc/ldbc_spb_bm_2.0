@@ -1,0 +1,480 @@
+[SubstitutionParameters]
+?title ?description ?category ?tag ?audience ?liveCoverage ?primaryFormat ?year ?month;FILTER (CONTAINS(?title, "15th") || CONTAINS(?description, "local")) .;FILTER (?category = <http://www.bbc.co.uk/category/SportsTeams>) .; ; ;ORDER BY ?tag ?year ?month
+
+[ExpectedResultsSize]
+472
+
+[Results]
+Blackpool well 15th local primitive privilege appear usage logged rules policy.
+Wolverhampton Wanderers about 15th viewers transfers gather among visit used using as.
+Middlesbrough it pressure serve ever easier on preclude machinery 15th three.
+Everton plead carried preferences record linked fact person speaking type contrary.
+Inverness Caledonian Thistle two plead may viewing on drive power at side to.
+Partick Thistle 15th venue web-surfing both personally represented diagnose is flash turn.
+Red Bull approach complete should levels centuries 15th cookies through cookie so.
+Portsmouth activity when 15th privilege pay personalize enactments while information many.
+Peterborough United adoption system however 15th least seen sake as rugby through.
+East Fife not at collect bidding logged result state violent secular contribute.
+Inverness Caledonian Thistle compete would type is facts linked without like first 15th.
+Elgin City type pursuit eg help cut privilege mediums 15th allowing cookie.
+Southend United covers electorate flash complete refusing referral hard competition us data.
+Grimsby Town transfers serve like strongest competitive took ends trends one covers.
+Spain national football team cup ethos within they machinery europe improve reporting logged allowing.
+Dagenham & Redbridge pressure delete cherished popular least customize transfers meant cut include.
+Aldershot Town piece its created effective government and/or national parliament show inform.
+Kidderminster Harriers information purpose seen competitive our rapid complete cut logged 15th.
+Barnet delete opportunity or our system 15th pursuit adopted number dogma.
+Celtic other automatically use whole ip retain assertion saving over mainly.
+Celtic mentality legislation identifiable help improve clergy analyze see trends server.
+Tranmere Rovers were referring so life beyond one-fifth collect last day components.
+Celtic search customer global during something log among 13th land incur.
+Elgin City achievement complete plead prolonged impact privilege hard alone 15th gather.
+Cheltenham Town most faster computer early medieval eg individual majority fortune sake.
+Derby County cut experience ceased liability to following century reporting content dogma.
+Walsall domain paid both cup town took should line around sake.
+Celtic began europe give 700 activity criticism olympic medieval its we.
+Gillingham also fundamental purpose platform mainly levels drive hobby private equality.
+Toro Rosso own personally contribute include assembly domain centuries click normally movement.
+Dundee United personalize main software enforced 15th than player hard begins olympics.
+Nottingham Forest life player type basic about whole name cannot granting after.
+Morecambe 15th liability uncommon privilege pursuit referring function least we electorate.
+Celtic took eventual click automatically kinds solely opportunity 15th mediums violent.
+Cardiff City taxes side whole so meant reinforced rather participants speaking integrity.
+Newcastle United amassed website football own occasion power institution services pursuit progress.
+Newcastle United end confrontation reporting always attract which entered competitions territorial principle.
+Tottenham Hotspur paid orders ip one usage through if by any 15th.
+Stirling Albion adopted layout most craftsmen personally realm give competitions 15th service.
+Brighton & Hove Albion originally inform billion themselves days states time tensions appear used.
+Preston North End ioc celibacy medieval approach domain services 15th pits practiced man.
+Inverness Caledonian Thistle installed two whole delete legislation our professional majority 15th trends.
+Bolton Wanderers within end 15th countries started institution king personally conscientious viewers.
+Colchester United internal around attracts venue retain rather secular originated ceased audience.
+Germany national football team carried privilege their cannot ethos at pursuit a national trends.
+Brighton & Hove Albion see customize players 15th without two contribute days refusing eligible.
+Nottingham Forest represented until custom revolves beyond parliament settings main athletes ambition.
+Rochdale conscientious 15th refused privilege uncommon such against users also levels.
+Torquay United browser mediums following originated allowing 15th prolonged tensions improve whole.
+Poland national football team bargaining speaking took secular main another until 15th fortune world.
+Everton usage ip legislation does own compete contrary viewers africa and.
+Oldham Athletic prolonged 12th occasion customize clergy faster use always levels platform.
+Plymouth Argyle 23 ambition soon pope transfers athletes pages you experience professional.
+Torquay United common not court ticket both pay-per-view lead estimated teams installed.
+Leeds United purposes olympics any electorate where servers result representation or website.
+Cardiff City covers mediums retain supported competition football worldwide hobby opportunity very.
+Annan Athletic information 15th 2006 rights competitive bidding radio refuse rapid plead.
+Milton Keynes Dons lies kinds amateur supported king engine commerce within view such.
+Cambridge United browsing is a days be place 15th concerned 2006 exchange.
+Forfar Athletic fundamental 1988 rule audience 15th be easier internal grounds faster.
+Tottenham Hotspur time towards they policy began basic political professionally rugby our.
+Wrexham known contribution delete contribution entrance browsers 15th church rule private.
+Oldham Athletic crown begins usage commerce begins candidates state governments settings celibacy.
+Celtic integrity adopt domain such 15th an customer help problems apartheid.
+AFC Telford United over which the affords 23 amateur features after unfair existence.
+Elgin City concerned charge your radio one payment party historically problems line.
+Walsall analyze you features individual 15th weak relate with higher view.
+Oldham Athletic eg secular any collect cookie administer least through reject 15th.
+Stenhousemuir educated maintained entrance 15th substantial against 23 holding weak private.
+Birmingham City always related both grassroots each ceased originally audience integrity page.
+Bury states came participants 15th custom browser purpose central historically tensions.
+Ferrari olympic reporting one-fifth centuries faster tensions protocol were historically were.
+Yeovil Town over solely others improve when enable if visit millions europe.
+AFC Telford United begins town was 15th pretty world cookies substantial have ever.
+Wigan Athletic medieval attracted be kinds political carried refused 15th linked on.
+Inverness Caledonian Thistle all legislation elections affords browsers assertion improve 700 granting cookies.
+Celtic bidding trends see through seen 15th click occasion administration as.
+Clyde tables day particularly commerce state charge assembly privilege cricket enactment.
+Portsmouth becoming own administer left preserve delete until personally layout relate.
+Inverness Caledonian Thistle states site maintained basis still permitted necessarily visit days compete.
+Walsall both this modern merely progress permitted negatively rival some two.
+Partick Thistle governments function adaptability complete mainly apartheid patterns individual's exist always.
+Leyton Orient plead linked 15th logged against radio enforced address additionally player.
+Middlesbrough however gather users sprang however have least nobles complete broadcast.
+ with from pits result cricket exist beyond best boxing result incur payment be address servers approach taxation candidates sports personally protocol often without war.
+ progress server land millions been give petitions practiced society last delete linked referral.
+ site's patterns practical sometimes strongest sent party consistent player reinforced progress elaborate into ever land pages petitions basic.
+ adopted solely audience system christendom than has necessarily delete turn professional christendom fact local unfair.
+ provides weak you provide rival without global settings site's view piece local referring wrestling policy main 2007.
+ need cut society most reporting without began privilege electorate territorial nobles three would other used components seen individual equality been.
+ speaking apartheid celibacy eventual whenever make large was occasion need collect saving basis amassed most the reinforced.
+ television gather equality person enactments improve official enjoyment evident party considered sporting a referral elaborate came king guaranteeing assembly sport teams isolation often.
+ christendom lower engine may originated privilege private even enable cookies always violent christendom person remotely name three had towards.
+ since and/or name analyze always bidding kinds local problems purely.
+ personalize celibacy main log customize grounds 15th eventual commerce adoption 12th ever purposes individual domain.
+ legislation about personalize type royal need unfair achievement.
+ bargaining finally peasants local customize represented their contribution 13th make others society.
+ audience complete estimated local cup hard relate eligible pieces could sake 12th olympics always venue trends rights record-keeping enactment most.
+ been rather paid an usage local existence viewing institutions pretty popular representation centuries effects.
+ teams times accept participants eligible exchange log out remotely while software reject following sprang number little when used little local covers type beyond entirely tables.
+ using effects local still analyze were peasants partisan day assembly give.
+ representative adoption include approach a around opportunity same.
+ remotely estimated may appear also compete need candidates provider historical.
+ accept local system rugby parliaments prolonged tables remotely begins orders.
+ professional rapid data domestic compete representative rapid certain visit among allowing address vote always local country incur enable those violent interesting represented privilege inform components.
+ peasants grassroots identifiable been over professionally originate reason cup tensions applicable elaborate national europe show information result pretty viewers revolves local pope.
+ evident software domestic amateur faster begins enable originally grassroots holding view always court local representative display show also still automatically custom attracts sent attracted.
+ prolonged partisan such visit raise pretty same cricket well interesting attracted majority money successful all beyond same person relate created integrity competitive.
+ 2006 conscientious prolonged improve but can has browsers majority world ends serve raise activity best local at carry times during viewers activity.
+ entered professional gather using taxes advantage machinery until local purpose mainly necessarily man petition advantage pretension mentality global day only venue accept.
+ among clergy provide being make their movement union both or reinforced over provider asked electorate states eventual territorial been serve adaptability participation sprang local data.
+ head side pages local principle affords money responsible representation saving professionally uncommon town using type.
+ notion improve legislation petitions local ceased such present candidates click accept often attracted normally prolonged athletes out function could pay.
+ covers same still personally grounds local than well but weak because taxes society automatically web-surfing country than hard.
+ like gather levels day taxation effects equal linked provide components own responsible our system lower servers medieval of uncommon allowing the pope wealthy assigned.
+ amateur like local secular saving movement 23 audience church our cannot spectators features type information enactments person amateur need.
+ viewers browsers to members end early and problems origin domestic 2006 by laws sent with page bargaining meant may.
+ legislation internet nobility terms hobby sake come provider hobby amateur worldwide broadcasters or day affords merely information games broadcast assigned not institutions levels individual's first.
+ data piece system saving among carry already certain local integrity.
+ enactment until development viewing local internet diagnose lower end evident clergy eg but governments all occasion hard because experience court number personalize christendom and.
+ transfers does refuse browser hundreds centuries attract amassed 15th professional worldwide entirely could but log politics rule public hundreds occasion local inform.
+ within entered revolves amounts effective charge little cherished cut decided only.
+ violent when state athletes provides about diagnose occasion themselves originated commentators amassed it this diagnose people customer countries bidding.
+ against partisan custom certain local political rapid our interesting competitions apartheid adaptability audiences responsible historically at.
+ members hundreds features representation began linked created charge dogma educated maintained rugby payment.
+ ceased site solely holding faster collect piece all.
+ peasants electorate sums easier began final only lower petitions.
+ installed pages administer man record-keeping church combined power clergy craftsmen professional fundamental south had interesting fundamental pay custom towards television local union and/or.
+ reason local common main unfair ads court provides side decided but sake if popular day primary attracts.
+ name sports amateur king outlet higher ticket craftsmen as purposes did even wealthy relate which individual's being components cookies left.
+ without piece church local educated sake those private professionally laws ioc necessarily sums phrase state referring representation.
+ for are until assigned educated only nobility 1988 entirely others end practical commentators an global century already this a.
+ delete reinforced following beginning worldwide drive machinery accept than internal need negatively hard preserve permitted achieve browser software 13th so celibacy patterns.
+ their cricket sport century wealthy identifiable like ends cookie for.
+ assembly local ambition primary well a also both day main privilege did official successful worst always dogma ip on attracts turn.
+ against politics ends best crown always whenever 2006 personal local decided sports make.
+ tables represented 700 pieces participation components commentators local hard preserve attracted many pretty.
+ speaking plead soon last local attract very confrontation millions type nobility since website peasants did lower party end referring feel patterns it.
+ at as fixtures name drive final gather is basic ioc occasion rights global town engine unfair local clergy raise global like individual's to.
+ purposes does originated ceased orders kinds linked most its it at reject policy we following gather court local football laws professional have.
+ sporting remotely beyond rival strongest analyze demolition phrase record page who higher main ever came combined central experience laws competitive person state other while.
+ money saving orders competition local representative head you payment purpose competitions enable court consistent so ends 23 your others wrestling begins.
+ or institution out union users nobility policy rival server personally broadcasters originally contribute responsible mediums pits peasants entered rights craftsmen among towards rapid within.
+ opportunity reporting turn normally practiced apartheid broadcasters unfair preferences.
+ ethos themselves most demographic land known one-fifth still data identifiable practical had wrestling individual custom contested pope pope than address protocol has local raise amounts.
+ system ads assembly players record delete pretension adaptability end contested those activity elections estimated rights time historical enactment its customer guaranteeing millions petition object.
+ adaptability parliament pressure grounds automatically sent times local player impact an nobility common end private charge viewing only development a personal additionally electorate cricket.
+ mentality cookies to preferences already sent over majority court make installed used existence criticism grassroots us outlet.
+ elections contested sums countries local hundreds system games principle began representative 12th was liability participation piece medieval cricket eligible attract components originated number as.
+ phrase identifiable revolves and applicable hundreds carried large since reject movement local created pages.
+ because ads countries so provider power personally secular including movement nobles amateur piece mentality million evident but.
+ world best need after peasants protocol themselves rules.
+ by against day number beyond to liability many carry ceased adaptability evident internet first being to competition.
+ is homogeneous viewers hundreds ever after local particularly very accept exchange ip hard rapid cherished society contrary contested.
+ others enactment boxing cup audience responsible page have prolonged your cut combined any maintained come serve.
+ around if consistent achievement royal each local contribution rather areas there their.
+ on movement to sessions still majority mainly necessarily central orders like partisan preserve enforced an local very represented professionally.
+ took other around visit ads many came any seen town object.
+ it such of still solely incur our charge without policy applicable pressure south and/or can states were crown head around laws terms most.
+ site's opportunity local pay-per-view originate settings protocol inform by homogeneous nobles court sporting as number originate money land outlet charge billion customize amassed person turn.
+ site internet created games competed worst present logged existence life participants by enactments its.
+ football something problems wealthy revolves players had during local include improve search two basis bargaining privilege orders themselves click 12th.
+ days may particularly local amateur pope is piece tables features logged time estimated rugby beyond apartheid.
+ such homogeneous integrity others data king local would most proof approach main help pay candidates century rights large competitions attendance africa century opportunity could countries.
+ church retain orders entered identifiable well in enjoyment electorate granting visit search were ever assembly without when local.
+ local patterns services help many entered hard lower.
+ preferences rugby layout conscientious world professional professionally pieces give purposes achievement 2007 achieve.
+ europe which local century europe petitions institutions solely elaborate to amassed land and.
+<http://www.bbc.co.uk/things/05251295-c015-2e42-839a-efe200441c9d#id>
+<http://sws.geonames.org/6286284/>
+<http://www.guardian.co.uk/politics/person/6789/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25384.stm>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25256.stm>
+<http://www.bbc.co.uk/things/b68a1520-32bc-eb42-8dc0-ccc1018e8e8f#id>
+<http://sws.geonames.org/7300754/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25471.stm>
+<http://www.wikidata.org/wiki/Q392461>
+<http://dbpedia.org/resource/Pete_Wishart>
+<http://www.bbc.co.uk/things/39a9af5a-c881-a74d-bae7-226ac220df03#id>
+<http://sws.geonames.org/6285916/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25640.stm>
+<http://google.com/search?btnI&q=site:http://www.guardian.co.uk/politics/person/+Richard+Shepherd>
+<http://www.bbc.co.uk/things/48287aac-b015-1d4e-9c4e-9b8abac03789#id>
+<http://sws.geonames.org/7292604/>
+<http://rdf.freebase.com/ns/m.0bwj3h7>
+<http://sws.geonames.org/2649258/>
+<http://www.bbc.co.uk/things/c2995909-a4ed-bc4d-b659-c56c1dcf65dc#id>
+<http://sws.geonames.org/7291971/>
+<http://www.bbc.co.uk/things/4b054c51-dff4-a243-a876-fc6595124b47#id>
+<http://www.bbc.co.uk/things/g9109dea8-a9b8-4978-8604-d8d9121fadd5#id>
+<http://www.bbc.co.uk/things/gbc13070b-103b-41bd-a952-c297c981f3bf#id>
+<http://www.bbc.co.uk/things/f58ec73b-d0d3-4a3b-ae3a-b1dff63ae6ef#id>
+<http://sws.geonames.org/7294769/>
+<http://www.bbc.co.uk/things/gf817baf1-92f2-4b58-8a8d-14cffbedd0c7#id>
+<http://www.bbc.co.uk/things/23ec8541-6e72-b447-b75a-2ee1a9856e7c#id>
+<http://www.bbc.co.uk/things/4bdbf21d-d1ad-7147-ab08-612cd0dc20b4#id>
+<http://sws.geonames.org/7294308/>
+<http://www.bbc.co.uk/things/g75372489-cd9b-4c2f-98e1-8d36ada44d16#id>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25533.stm>
+<http://www.wikidata.org/wiki/Q391908>
+<http://www.bbc.co.uk/things/a5ac6cfb-67ff-df4b-bd41-adc3295bc813#id>
+<http://sws.geonames.org/7296452/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25807.stm>
+<http://sws.geonames.org/7301982/>
+<http://www.bbc.co.uk/things/3d94fcd2-2af0-7941-aedd-c7670238ee20#id>
+<http://www.bbc.co.uk/things/gc83090ce-5aa4-4a6f-995c-8ec84a9c0b37#id>
+<http://sws.geonames.org/7292798/>
+<http://www.bbc.co.uk/things/g6a80c60e-3675-4d7d-8429-cac86096b44a#id>
+<http://dbpedia.org/resource/Edward_Timpson>
+<http://sws.geonames.org/6286595/>
+<http://www.bbc.co.uk/things/69eec8aa-359c-624d-bb16-1a80f25fad1e#id>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25197.stm>
+<http://rdf.freebase.com/ns/m.060z1h>
+<http://www.bbc.co.uk/things/d434ee4d-e0e1-0b49-8251-e3f29e8b5598#id>
+<http://sws.geonames.org/7294761/>
+<http://www.bbc.co.uk/things/60fb8a80-77b1-4f4e-8ad8-7c0f22f17d64#id>
+<http://sws.geonames.org/7290878/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/41334.stm>
+<http://rdf.freebase.com/ns/m.05wnyp>
+<http://google.com/search?btnI&q=site:http://www.guardian.co.uk/politics/person/+Adrian+Sanders>
+<http://sws.geonames.org/7294165/>
+<http://www.bbc.co.uk/things/b9bb453a-a3e2-46b4-9d20-35efa09d72b8#id>
+<http://rdf.freebase.com/ns/m.035tsj>
+<http://www.bbc.co.uk/things/c41395c3-d459-a14c-a4dd-11f9d95121fe#id>
+<http://sws.geonames.org/6285831/>
+<http://www.bbc.co.uk/things/6dc681ec-3b9b-2942-9042-f514c00a1f64#id>
+<http://sws.geonames.org/7294305/>
+<http://www.johndenham.org.uk/>
+<http://rdf.freebase.com/ns/m.0bwlxvk>
+<http://www.bbc.co.uk/things/fb692d4a-0fbd-b146-b82e-8ca7eb23b7e6#id>
+<http://sws.geonames.org/7300535/>
+<http://www.guardian.co.uk/politics/person/8715/>
+<http://www.wikidata.org/wiki/Q263729>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25190.stm>
+<http://www.bbc.co.uk/things/78bd2e07-667f-9b48-8941-6d64367babfd#id>
+<http://sws.geonames.org/6287406/>
+<http://dbpedia.org/resource/Peter_Bone>
+<http://sws.geonames.org/7293769/>
+<http://www.bbc.co.uk/things/6d397eab-9d0d-b84a-a746-8062a76649e5#id>
+<http://dbpedia.org/resource/Hilary_Benn>
+<http://www.bbc.co.uk/things/g9387f430-d40d-4369-bc06-c3c4c4f68a9c#id>
+<http://www.bbc.co.uk/things/g60c038f6-ac38-47cc-bf8c-edeb4dafacb8#id>
+<http://sws.geonames.org/7293616/>
+<http://www.guardian.co.uk/politics/person/6107/>
+<http://www.bbc.co.uk/things/ge1832af6-4544-4e12-b602-beac61486792#id>
+<http://www.andylovemp.com/>
+<http://www.bbc.co.uk/things/g60481485-f91b-4f75-8abb-bc44221e4c4d#id>
+<http://www.bbc.co.uk/things/4573991e-224e-2546-b4fd-6584d1498e23#id>
+<http://sws.geonames.org/6286910/>
+<http://rdf.freebase.com/ns/m.0bxzf1m>
+<http://sws.geonames.org/2649622/>
+<http://www.wikidata.org/wiki/Q260651>
+<http://www.bbc.co.uk/things/gc9927c0f-20c1-43a2-9713-2c606d636c75#id>
+<http://sws.geonames.org/7298077/>
+<http://rdf.freebase.com/ns/m.0bwk543>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/58360.stm>
+<http://www.bbc.co.uk/things/e038339b-f929-c640-937a-ba747aa9d3d9#id>
+<http://sws.geonames.org/7296997/>
+<http://www.wikidata.org/wiki/Q695092>
+<http://www.ianmearns.org.uk/>
+<http://www.bbc.co.uk/things/be304c00-b9fd-8f44-877d-8785f93bc52d#id>
+<http://sws.geonames.org/6287426/>
+<http://www.julie4sunderland.co.uk/>
+<http://www.wikidata.org/wiki/Q673765>
+<http://www.bbc.co.uk/things/49c1d28f-157a-0940-b73d-29854cdcf810#id>
+<http://sws.geonames.org/7291995/>
+<http://rdf.freebase.com/ns/m.0bwm2gl>
+<http://sws.geonames.org/7298931/>
+<http://www.wikidata.org/wiki/Q263147>
+<http://dbpedia.org/resource/Jeremy_Hunt_(politician)>
+<http://www.bbc.co.uk/things/d66791b0-d72a-fc43-b6f7-d7bbf5774ef3#id>
+<http://sws.geonames.org/7296040/>
+<http://www.wikidata.org/wiki/Q264305>
+<http://www.bbc.co.uk/things/g493c5708-1255-4461-9639-186d18cd5ce6#id>
+<http://rdf.freebase.com/ns/m.01nmw0>
+<http://www.bbc.co.uk/things/2c109a1b-dd90-481e-a742-0165590bfac4#id>
+<http://sws.geonames.org/6285896/>
+<http://sws.geonames.org/7294629/>
+<http://www.bbc.co.uk/things/8a535cd8-2260-1a49-8fb2-62f8e7b54ffc#id>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/38317.stm>
+<http://www.bbc.co.uk/things/g7fad95a3-9b95-43dc-8e10-5b1bfaae6f43#id>
+<http://www.bbc.co.uk/things/a3785681-0dce-3842-9e55-e83aa7a1aae1#id>
+<http://sws.geonames.org/7297489/>
+<http://www.bbc.co.uk/things/10726d19-2831-7e46-b1a6-e229862729f7#id>
+<http://sws.geonames.org/7294686/>
+<http://www.douglasalexander.org.uk/>
+<http://rdf.freebase.com/ns/m.0267kb>
+<http://www.charlotteleslie.com/>
+<http://sws.geonames.org/7294546/>
+<http://www.wikidata.org/wiki/Q259682>
+<http://dbpedia.org/resource/Steve_Gilbert>
+<http://www.bbc.co.uk/things/bef8a4b5-1ad1-4347-b665-edf581ab7350#id>
+<http://sws.geonames.org/7295063/>
+<http://www.wikidata.org/wiki/Q300004>
+<http://www.ivanlewis.org.uk/>
+<http://www.bbc.co.uk/things/34032412-5e2a-324d-bb3e-d0d4b16df2d4#id>
+<http://sws.geonames.org/7297737/>
+<http://www.bbc.co.uk/things/gf497d91b-40e4-440d-b611-927de8bd7a18#id>
+<http://www.wikidata.org/wiki/Q750364>
+<http://sws.geonames.org/7293677/>
+<http://www.bbc.co.uk/things/de96e227-7e77-974f-aab2-2e37598c5cc2#id>
+<http://www.guardian.co.uk/politics/person/8760/>
+<http://rdf.freebase.com/ns/m.029tsf>
+<http://dbpedia.org/resource/Andrew_Tyrie>
+<http://www.bbc.co.uk/things/edc20628-9520-044d-92c3-fdec473457be#id>
+<http://sws.geonames.org/7296118/>
+<http://www.olivercolvile.org/>
+<http://www.bbc.co.uk/things/g2599609e-c976-4482-9fe3-c7a3a3ab0768#id>
+<http://www.wikidata.org/wiki/Q695028>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25257.stm>
+<http://sws.geonames.org/7299005/>
+<http://www.bbc.co.uk/things/85740113-82ee-4e4e-bb35-fd546ecd48a7#id>
+<http://www.bbc.co.uk/things/3d814d88-1f22-d042-a9a6-87fd9216a50a#id>
+<http://sws.geonames.org/7296334/>
+<http://www.wikidata.org/wiki/Q259736>
+<http://www.bbc.co.uk/things/222e1b25-9851-5b46-aa20-a2f9e8591d64#id>
+<http://sws.geonames.org/6287230/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25560.stm>
+<http://sws.geonames.org/7294863/>
+<http://www.guardian.co.uk/politics/person/12796/>
+<http://dbpedia.org/resource/John_Mann_(politician)>
+<http://www.alecshelbrooke.co.uk/>
+<http://www.bbc.co.uk/things/25e5e7ca-004e-d349-8c76-ca86f3adfa7b#id>
+<http://sws.geonames.org/6286041/>
+<http://dbpedia.org/resource/Jon_Cruddas>
+<http://www.bbc.co.uk/things/g48962665-c9e2-43b0-bfc6-cb8bfadd6b8e#id>
+<http://www.bbc.co.uk/things/47ba66dc-aa35-2c46-8446-ac85380126a0#id>
+<http://sws.geonames.org/2650708/>
+<http://www.harriettbaldwin.com/>
+<http://www.guardian.co.uk/politics/person/1413/>
+<http://www.guardian.co.uk/politics/person/9410/>
+<http://sws.geonames.org/7295409/>
+<http://www.bbc.co.uk/things/280cfc54-a128-417c-a74e-b663a7f2f61f#id>
+<http://sws.geonames.org/2640903/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25755.stm>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/84849.stm>
+<http://www.wikidata.org/wiki/Q579661>
+<http://www.bbc.co.uk/things/g129e43d4-992d-4396-a31e-ba184b848d8c#id>
+<http://sws.geonames.org/6287254/>
+<http://rdf.freebase.com/ns/m.0630p5>
+<http://dbpedia.org/resource/Nadine_Dorries>
+<http://rdf.freebase.com/ns/m.027cfv>
+<http://www.bbc.co.uk/things/9284d26e-8e01-db4c-a1dc-1511bf7785fe#id>
+<http://sws.geonames.org/7296718/>
+<http://www.wikidata.org/wiki/Q67694>
+<http://dbpedia.org/resource/Steve_Rotheram>
+<http://www.bbc.co.uk/things/5d6f03d0-e049-2847-9de8-3be1d51653f4#id>
+<http://sws.geonames.org/2651497/>
+<http://www.wikidata.org/wiki/Q248021>
+<http://dbpedia.org/resource/Alex_Cunningham>
+<http://www.guardian.co.uk/politics/person/2048/>
+<http://www.guardian.co.uk/politics/person/9019/>
+<http://sws.geonames.org/7300442/>
+<http://www.bbc.co.uk/things/3d119357-390d-458a-b33c-3910532977fd#id>
+<http://sws.geonames.org/7298350/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/62817.stm>
+<http://dbpedia.org/resource/Tim_Loughton>
+<http://www.bbc.co.uk/things/661fc640-b304-2d46-bfeb-427505904447#id>
+<http://sws.geonames.org/7291318/>
+<http://www.wikidata.org/wiki/Q291615>
+<http://rdf.freebase.com/ns/m.025q4k>
+<http://rdf.freebase.com/ns/m.029z13>
+<http://www.bbc.co.uk/things/b581d4f3-c869-0a47-88ef-1c78d2d5792f#id>
+<http://sws.geonames.org/7300279/>
+<http://sws.geonames.org/7295669/>
+<http://www.wikidata.org/wiki/Q576175>
+<http://rdf.freebase.com/ns/m.0bxzz78>
+<http://www.bbc.co.uk/things/509d2079-2bf6-e44d-b791-a38bcda66529#id>
+<http://sws.geonames.org/7298861/>
+<http://www.wikidata.org/wiki/Q269853>
+<http://sws.geonames.org/7302052/>
+<http://rdf.freebase.com/ns/m.025kfr>
+<http://www.bbc.co.uk/things/g11c2588a-8868-4624-a098-576839f1f80f#id>
+<http://dbpedia.org/resource/Gregg_McClymont>
+<http://rdf.freebase.com/ns/m.02pw7z>
+<http://www.bbc.co.uk/things/ge94d70b7-79de-419d-8c2b-bb4ce9cc7037#id>
+<http://sws.geonames.org/6544685/>
+<http://www.bbc.co.uk/things/e93a3145-285d-4940-8018-8bafdc498ff0#id>
+<http://www.guardian.co.uk/politics/person/11981/>
+<http://www.bbc.co.uk/things/77fd06da-b489-3040-ace3-f8ed4f19d839#id>
+<http://sws.geonames.org/7292742/>
+<http://www.guardian.co.uk/politics/person/9378/>
+<http://www.bbc.co.uk/things/c1d8fb3f-0de9-f145-934f-210757952393#id>
+<http://sws.geonames.org/7300015/>
+<http://rdf.freebase.com/ns/m.0bwkqvx>
+<http://www.bbc.co.uk/things/g2514f7e5-1b8d-46fb-a4a8-abcb3461ac67#id>
+<http://sws.geonames.org/7300753/>
+<http://www.bbc.co.uk/things/2389e7d4-b6ee-8b42-b430-806fd9a5a7e9#id>
+<http://www.bbc.co.uk/things/g56ea556c-83a5-4be2-a556-08599867a6a2#id>
+<http://rdf.freebase.com/ns/m.02879w>
+<http://www.jamesmorrismp.com/>
+<http://sws.geonames.org/6286030/>
+<http://www.wikidata.org/wiki/Q290554>
+<http://www.guardian.co.uk/politics/person/3070/>
+<http://www.nickymorgan.com/>
+<http://google.com/search?btnI&q=site:http://www.guardian.co.uk/politics/person/+Bob+Stewart>
+<http://www.bbc.co.uk/things/8545dbc3-560f-fd49-8ebe-f0e325253ae9#id>
+<http://sws.geonames.org/7299860/>
+<http://sws.geonames.org/7297834/>
+<http://www.robertflello.com/>
+<http://dbpedia.org/resource/Matthew_Offord>
+<http://sws.geonames.org/7295154/>
+<http://www.wikidata.org/wiki/Q584156>
+<http://www.wikidata.org/wiki/Q480148>
+<http://rdf.freebase.com/ns/m.0283wx>
+<http://www.bbc.co.uk/things/1da3b5d2-c5d5-48a0-a6c2-e83a29abf99a#id>
+<http://www.bbc.co.uk/things/667e2d56-8c18-4819-b407-cc5ddcbf2688#id>
+<http://sws.geonames.org/6286534/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25738.stm>
+<http://dbpedia.org/resource/Karl_Turner_(politician)>
+<http://sws.geonames.org/6286461/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25701.stm>
+<http://sws.geonames.org/6287959/>
+<http://rdf.freebase.com/ns/m.043n577>
+<http://sws.geonames.org/7291685/>
+<http://www.bbc.co.uk/things/g520d9225-aa08-42ad-9271-1789c0c48785#id>
+<http://www.guardian.co.uk/politics/person/12567/>
+<http://sws.geonames.org/7292949/>
+<http://www.bbc.co.uk/things/dea7c3a1-9534-e245-b01f-68741851d2ae#id>
+<http://www.bbc.co.uk/things/g461c835c-fdd2-4187-b232-53e1891bf549#id>
+<http://www.bbc.co.uk/things/cfd00353-deb5-5b46-9e1c-e22c9f255468#id>
+<http://sws.geonames.org/7293164/>
+<http://www.bbc.co.uk/things/g710fc001-4601-4bcb-88f4-8d675ba4fc07#id>
+<http://dbpedia.org/resource/Michael_Connarty>
+<http://rdf.freebase.com/ns/m.0bwkjxp>
+<http://www.bbc.co.uk/things/4624d7c0-fcab-684d-92f1-23e304d8d879#id>
+<http://sws.geonames.org/7298160/>
+<http://www.markspencermp.com/>
+<http://www.bbc.co.uk/things/bc540490-969d-4888-a031-47f664ece511#id>
+<http://sws.geonames.org/6286557/>
+<http://www.wikidata.org/wiki/Q192>
+<http://www.guardian.co.uk/politics/person/6147/>
+<http://www.bbc.co.uk/things/b74aa261-04cb-8845-abf6-bf5648d2ed31#id>
+<http://sws.geonames.org/7296415/>
+<http://www.bbc.co.uk/things/1e5c6e40-0b48-cb44-86ae-be47f66aac8a#id>
+<http://www.guardian.co.uk/politics/person/11813/>
+<http://www.wikidata.org/wiki/Q266146>
+<http://sws.geonames.org/7295620/>
+<http://www.bbc.co.uk/things/6db79414-364f-e948-b3cb-5dcf987f799e#id>
+<http://sws.geonames.org/7298370/>
+<http://www.marycreagh.co.uk/>
+<http://www.guardian.co.uk/politics/person/12008/>
+<http://www.guardian.co.uk/politics/person/12028/>
+<http://www.guardian.co.uk/politics/person/8847/>
+<http://dbpedia.org/resource/Jim_Shannon>
+<http://sws.geonames.org/7297338/>
+<http://www.bbc.co.uk/things/g58989c18-77ef-4d8c-9b8c-c4d15eef292b#id>
+<http://www.guardian.co.uk/politics/person/12063/>
+<http://sws.geonames.org/7298268/>
+<http://www.bbc.co.uk/things/efee5735-c0c3-4e26-84a9-ea8acc44d9bd#id>
+<http://sws.geonames.org/7297205/>
+<http://www.bbc.co.uk/things/0d2bccc3-ba40-7741-b741-485ee78acdf2#id>
+<http://www.bbc.co.uk/things/g29ca31be-d422-4ceb-be88-77a46e48bdb5#id>
+<http://www.bbc.co.uk/things/ged9d1ef3-eded-4f81-b158-be49cfc1ea8f#id>
+<http://sws.geonames.org/7298365/>
+<http://www.guardian.co.uk/politics/person/11418/>
+<http://www.wikidata.org/wiki/Q266064>
+<http://sws.geonames.org/7299395/>
+<http://dbpedia.org/resource/David_Ward_(politician)>
+<http://sws.geonames.org/2645420/>
+<http://rdf.freebase.com/ns/m.0bwj_cq>
+<http://www.wikidata.org/wiki/Q583946>
+<http://sws.geonames.org/7301753/>
+<http://www.guardian.co.uk/politics/person/3663/>
+<http://www.bbc.co.uk/things/7851e418-cb7e-844f-813d-881e4ea8cf9b#id>
+<http://sws.geonames.org/7299656/>
+<http://www.guardian.co.uk/politics/person/11009/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/31721.stm>
+<http://www.bbc.co.uk/things/gd52a204b-7408-4494-9ca1-ba93c3b0b230#id>
+<http://sws.geonames.org/2648576/>
+<http://www.guardian.co.uk/politics/person/405/>
+<http://www.guardian.co.uk/politics/person/1008/>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25452.stm>

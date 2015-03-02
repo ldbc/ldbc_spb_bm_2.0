@@ -1,0 +1,25 @@
+[SubstitutionParameters]
+<http://www.bbc.co.uk/things/18399#id>
+
+[ExpectedResultsSize]
+61
+
+[Results]
+<http://www.bbc.co.uk/things/144065337#id>
+<http://www.bbc.co.uk/things/655108673#id>
+<http://www.bbc.co.uk/things/18399#id>
+<http://www.bbc.co.uk/things/34413190#id>
+<http://www.bbc.co.uk/things/144065337#id>
+<http://www.bbc.co.uk/ontologies/creativework/CreativeWork>
+<http://www.bbc.co.uk/ontologies/bbc/HighWeb>
+"2011-02-08T22:23:53.225+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/things/34413190#id>
+"James Paice secular war popular domain enforced primitive provides present transfers pay-per-view."
+"2011-02-28T08:37:34.498+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://rdf.freebase.com/ns/m.025kpn>
+<http://www.bbc.co.uk/ontologies/creativework/NewsItem>
+<http://www.wikidata.org/wiki/Q750078>
+<http://www.bbc.co.uk/things/655108673#id>
+<http://www.wikidata.org/wiki/Q576067>
+<http://www.annemcintosh.org.uk/>
+<http://www.bbc.co.uk/ontologies/bbc/Mobile>

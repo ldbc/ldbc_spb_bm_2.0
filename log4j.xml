@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">  
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">  
+  <!-- APPENDERS -->
+  <!-- BRIEF LOG -->
+  <appender name="queries.brief.file.appender" class="org.apache.log4j.RollingFileAppender">  
+    <param name="File" value="logs/semantic_publishing_benchmark_queries_brief.log"/>  
+    <param name="append" value="false" />  
+    <param name="MaxBackupIndex" value="50000" />  
+    <param name="bufferedIO" value="false" />
+    <param name="MaxFileSize" value="250MB"/>
+    <layout class="org.apache.log4j.PatternLayout">  
+      <param name="ConversionPattern" value="%r : %m\n" />  
+    </layout>  
+  </appender> 
+
+  <!-- DETAILED LOG -->
+  <appender name="queries.detailed.file.appender" class="org.apache.log4j.RollingFileAppender">  
+    <param name="File" value="logs/semantic_publishing_benchmark_queries_detailed.log"/>  
+    <param name="append" value="false" />  
+    <param name="MaxBackupIndex" value="50000" />  
+    <param name="bufferedIO" value="false" />
+    <param name="MaxFileSize" value="250MB"/>
+    <layout class="org.apache.log4j.PatternLayout">  
+      <param name="ConversionPattern" value=">> %r [%c{1}:%t] : %m\n" />  
+    </layout>  
+  </appender> 
+
+  <!-- RESULTS LOG -->
+  <appender name="results.file.appender" class="org.apache.log4j.RollingFileAppender">  
+    <param name="File" value="logs/semantic_publishing_benchmark_results.log"/>  
+    <param name="append" value="false" />  
+    <param name="MaxBackupIndex" value="50000" />  
+    <param name="bufferedIO" value="false" />
+    <param name="MaxFileSize" value="250MB"/>
+    <layout class="org.apache.log4j.PatternLayout">  
+      <param name="ConversionPattern" value="%r : %m\n" />  
+    </layout>  
+  </appender> 
+
+  <!-- CONSOLE -->
+  <appender name="sesame.console.appender" class="org.apache.log4j.ConsoleAppender">  
+    <layout class="org.apache.log4j.PatternLayout">  
+      <param name="ConversionPattern" value="%d{HH:mm:ss.SSS} : %m\n" />  
+    </layout>  
+  </appender>
+
+  <!-- LOGGERS -->
+  <!-- LOGGERS BRIEF -->
+  <logger name="eu.ldbc.semanticpublishing.TestDriver" additivity="false">
+    <param name="level" value="INFO"/>  
+    <appender-ref ref="queries.brief.file.appender"/>
+  </logger>  
+
+  <!-- LOGGERS DETAILED -->
+  <logger name="eu.ldbc.semanticpublishing.agents.AggregationAgent" additivity="false">  
+    <param name="level" value="INFO"/>  
+    <appender-ref ref="queries.detailed.file.appender"/>
+  </logger>  
+
+  <logger name="eu.ldbc.semanticpublishing.agents.EditorialAgent" additivity="false">  
+    <param name="level" value="INFO"/>  
+    <appender-ref ref="queries.detailed.file.appender"/>
+  </logger>  
+
+  <!-- LOGGERS RESULT -->
+  <logger name="eu.ldbc.semanticpublishing.TestDriverReporter" additivity="false">  
+    <param name="level" value="INFO"/>  
+    <appender-ref ref="results.file.appender"/>
+  </logger>  
+
+  <!-- LOGGERS CONSOLE -->
+  <logger name="org.openrdf" additivity="false">  
+    <param name="level" value="INFO"/>  
+    <appender-ref ref="sesame.console.appender"/>
+  </logger>  
+        
+  <root>  
+     <priority value="INFO" />  
+     <appender-ref ref="sesame.console.appender" />   
+  </root>  
+
+</log4j:configuration>  

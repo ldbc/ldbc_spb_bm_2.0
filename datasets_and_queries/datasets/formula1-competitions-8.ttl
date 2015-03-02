@@ -1,0 +1,455 @@
+@prefix bbcevent: <http://www.bbc.co.uk/ontologies/event/> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.bbc.co.uk/contexts/71268b85-8c53-4a7e-b544-316d49942423#id>
+    provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/datasets/sport/formula1/formula1-competitions-8.ttl"^^xsd:string ;
+    provenance:changeReason "Removing the and FIA Formula 1 prefixes from the names."^^xsd:string ;
+    provenance:provider <mailto:tom.grahame@bbc.co.uk> ;
+    provenance:version "8"^^xsd:int ;
+    a provenance:Dataset ;
+    rdfs:label "Formula1 Competitions"^^xsd:string .
+
+<http://www.bbc.co.uk/things/f3609a15-6409-41d1-8538-0188ca7be076#id>
+    domain:canonicalName "Turkish Grand Prix"^^xsd:string ;
+    domain:externalId <urn:sports-stats:135002098> ;
+    domain:name "Turkish Grand Prix"^^xsd:string ;
+    domain:shortName "Turkish Grand Prix"^^xsd:string ;
+    domain:slug "turkish-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/31120824-756a-44f4-9904-3bd75a6eba87#id>
+    domain:canonicalName "United States Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/usa-gp> ;
+    domain:externalId <urn:sports-stats:135002069> ;
+    domain:name "United States Grand Prix"^^xsd:string ;
+    domain:shortName "United States Grand Prix"^^xsd:string ;
+    domain:slug "united-states-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/3255a37e-b73f-433a-adc3-292e3791dc58#id>
+    domain:canonicalName "Canadian Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-canada> ;
+    domain:externalId <urn:sports-stats:135000550> ;
+    domain:name "Canadian Grand Prix"^^xsd:string ;
+    domain:shortName "Canadian Grand Prix"^^xsd:string ;
+    domain:slug "canadian-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/45e361a2-833a-4a7c-bea0-419839810762#id>
+    domain:canonicalName "Japanese Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-japan> ;
+    domain:externalId <urn:sports-stats:135002067> ;
+    domain:name "Japanese Grand Prix"^^xsd:string ;
+    domain:shortName "Japanese Grand Prix"^^xsd:string ;
+    domain:slug "japanese-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/460b693e-f85b-49bc-85b6-bf828ab6b6cc#id>
+    domain:canonicalName "Brazilian Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-brazil> ;
+    domain:externalId <urn:sports-stats:135000545> ;
+    domain:name "Brazilian Grand Prix"^^xsd:string ;
+    domain:shortName "Brazilian Grand Prix"^^xsd:string ;
+    domain:slug "brazilian-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/4b9f9e5c-766c-4e20-a5b7-1b77740b2fdb#id>
+    domain:canonicalName "Abu Dhabi Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-abu-dhabi> ;
+    domain:externalId <urn:sports-stats:135049369> ;
+    domain:name "Abu Dhabi Grand Prix"^^xsd:string ;
+    domain:shortName "Abu Dhabi Grand Prix"^^xsd:string ;
+    domain:slug "abu-dhabi-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/4be36bf5-b99a-4dff-962f-0b088f36b3ca#id>
+    domain:canonicalName "British Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-great-britain> ;
+    domain:externalId <urn:sports-stats:135000543> ;
+    domain:name "British Grand Prix"^^xsd:string ;
+    domain:shortName "British Grand Prix"^^xsd:string ;
+    domain:slug "british-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/65fae837-8320-4b43-923b-215ec4b8dfa0#id>
+    domain:name "FIA Formula 1 Championship"^^xsd:string ;
+    domain:shortName "FIA Formula 1 Championship"^^xsd:string ;
+    domain:canonicalName "FIA Formula 1 Championship"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id>
+    event:time <http://www.bbc.co.uk/things/99ba11b8-fd5a-497b-b374-53dadc4c025a#id> ;
+    domain:name "FIA Formula 1 Championship 2012"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/65fae837-8320-4b43-923b-215ec4b8dfa0#id> ;
+    a sport:Competition .
+    
+<http://www.bbc.co.uk/things/99ba11b8-fd5a-497b-b374-53dadc4c025a#id>
+    tl:hasBeginning "2012-01-01"^^xsd:date ;
+    tl:hasEnd "2012-12-31"^^xsd:date ;
+    a time:TemporalEntity .
+    
+<http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id>
+    event:time <http://www.bbc.co.uk/things/c1e50294-9a3c-4786-a9ba-9608b642f7e7#id> ;
+    domain:name "FIA Formula 1 Championship 2013"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/65fae837-8320-4b43-923b-215ec4b8dfa0#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/c1e50294-9a3c-4786-a9ba-9608b642f7e7#id>
+    tl:hasBeginning "2013-01-01"^^xsd:date ;
+    tl:hasEnd "2013-12-31"^^xsd:date ;
+    a time:TemporalEntity .
+    
+<http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id>
+    event:time <http://www.bbc.co.uk/things/7711696d-ce7a-4d7a-b4f9-c6c81260c65f#id> ;
+    domain:name "FIA Formula 1 Championship 2014"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/65fae837-8320-4b43-923b-215ec4b8dfa0#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/7711696d-ce7a-4d7a-b4f9-c6c81260c65f#id>
+    tl:hasBeginning "2014-01-01"^^xsd:date ;
+    tl:hasEnd "2014-12-31"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/79a23ab3-e338-408f-bfe8-3c46367ee0b5#id>
+    domain:canonicalName "German Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/german-gp> ;
+    domain:externalId <urn:sports-stats:135002062> ;
+    domain:name "German Grand Prix"^^xsd:string ;
+    domain:shortName "German Grand Prix"^^xsd:string ;
+    domain:slug "german-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/86b8c229-7b1e-477e-96e6-3e2a0bc2b5b2#id>
+    domain:canonicalName "Malaysian Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-malaysia> ;
+    domain:externalId <urn:sports-stats:135002095> ;
+    domain:name "Malaysian Grand Prix"^^xsd:string ;
+    domain:shortName "Malaysian Grand Prix"^^xsd:string ;
+    domain:slug "malaysian-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/895e5e78-bd15-4cfa-bd93-92b34e6e6ace#id>
+    domain:canonicalName "European Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/european-gp> ;
+    domain:externalId <urn:sports-stats:135002093> ;
+    domain:name "European Grand Prix"^^xsd:string ;
+    domain:shortName "European Grand Prix"^^xsd:string ;
+    domain:slug "european-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/97e13059-9e8b-40d8-9a3b-02496afe28d7#id>
+    domain:canonicalName "Belgian Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-belgium> ;
+    domain:externalId <urn:sports-stats:135002064> ;
+    domain:name "Belgian Grand Prix"^^xsd:string ;
+    domain:shortName "Belgian Grand Prix"^^xsd:string ;
+    domain:slug "belgian-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/a3ecfd32-4425-4abb-a1c9-72704e12f7a5#id>
+    domain:canonicalName "Singapore Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-singapore> ;
+    domain:externalId <urn:sports-stats:135049310> ;
+    domain:name "Singapore Grand Prix"^^xsd:string ;
+    domain:shortName "Singapore Grand Prix"^^xsd:string ;
+    domain:slug "singapore-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/b12a8e1d-46c0-42c2-9847-7a7937032776#id>
+    domain:canonicalName "Monaco Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-monaco> ;
+    domain:externalId <urn:sports-stats:135000549> ;
+    domain:name "Monaco Grand Prix"^^xsd:string ;
+    domain:shortName "Monaco Grand Prix"^^xsd:string ;
+    domain:slug "monaco-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/b8dbf29b-8d65-422a-8547-4ff2ecb38cea#id>
+    domain:canonicalName "Italian Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-italy> ;
+    domain:externalId <urn:sports-stats:135002065> ;
+    domain:name "Italian Grand Prix"^^xsd:string ;
+    domain:shortName "Italian Grand Prix"^^xsd:string ;
+    domain:slug "italian-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/c2eb52a-dab1-4cc7-8d32-cbf924a480a7#id>
+    domain:canonicalName "Bahrain Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-bahrain> ;
+    domain:externalId <urn:sports-stats:135002096> ;
+    domain:name "Bahrain Grand Prix"^^xsd:string ;
+    domain:shortName "Bahrain Grand Prix"^^xsd:string ;
+    domain:slug "bahrain-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/dac3947e-e2f4-4a7c-a478-3b2c62e29921#id>
+    domain:canonicalName "Korean Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-korea> ;
+    domain:externalId <urn:sports-stats:135049374> ;
+    domain:name "Korean Grand Prix"^^xsd:string ;
+    domain:shortName "Korean Grand Prix"^^xsd:string ;
+    domain:slug "korean-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/db14205f-858d-41fe-8eb9-e376a72f53d1#id>
+    domain:canonicalName "Indian Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-india> ;
+    domain:externalId <urn:sports-stats:135050111> ;
+    domain:name "Indian Grand Prix"^^xsd:string ;
+    domain:shortName "Indian Grand Prix"^^xsd:string ;
+    domain:slug "indian-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/dbb0bd5b-e298-4266-91d1-06f4ec2bccdc#id>
+    domain:canonicalName "Spanish Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-spain> ;
+    domain:externalId <urn:sports-stats:135000548> ;
+    domain:name "Spanish Grand Prix"^^xsd:string ;
+    domain:shortName "Spanish Grand Prix"^^xsd:string ;
+    domain:slug "spanish-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/dc6e72e6-b0a1-4385-a734-f37a9ffd4de7#id>
+    domain:canonicalName "Hungarian Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-hungary> ;
+    domain:externalId <urn:sports-stats:135002063> ;
+    domain:name "Hungarian Grand Prix"^^xsd:string ;
+    domain:shortName "Hungarian Grand Prix"^^xsd:string ;
+    domain:slug "hungarian-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/f9138c5b-2ec9-4fd5-8fa3-3ef4c645d506#id>
+    domain:canonicalName "Australian Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-australia> ;
+    domain:externalId <urn:sports-stats:135000544> ;
+    domain:name "Australian Grand Prix"^^xsd:string ;
+    domain:shortName "Australian Grand Prix"^^xsd:string ;
+    domain:slug "australian-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/f9b9aef7-a4b6-47d7-97cb-333e4826d49e#id>
+    domain:canonicalName "Chinese Grand Prix"^^xsd:string ;
+    domain:document <http://www.fia.com/sport/championships/events/gp-china> ;
+    domain:externalId <urn:sports-stats:135002097> ;
+    domain:name "Chinese Grand Prix"^^xsd:string ;
+    domain:shortName "Chinese Grand Prix"^^xsd:string ;
+    domain:slug "chinese-grand-prix"^^xsd:string ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:RecurringCompetition .
+
+<http://www.fia.com/sport/championships/events/gp-abu-dhabi>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-australia>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-bahrain>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-belgium>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-brazil>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-great-britain>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-canada>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-china>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/european-gp>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/german-gp>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-hungary>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-india>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-italy>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-japan>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-korea>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-malaysia>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-monaco>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-singapore>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/gp-spain>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fia.com/sport/championships/events/usa-gp>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:135000543>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135000544>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135000545>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135000548>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135000549>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135000550>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002062>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002063>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002064>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002065>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002067>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002069>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002093>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002095>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002096>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002097>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135049310>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135049369>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135049374>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135050111>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:135002098>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .

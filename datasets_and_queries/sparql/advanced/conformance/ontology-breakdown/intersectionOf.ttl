@@ -1,0 +1,37 @@
+# LDBC ontology for testing OWL2-RL constraint capabilities of a database engine.
+
+@prefix cms:     <http://www.bbc.co.uk/ontologies/cms/> .
+@prefix core:    <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix news:    <http://www.bbc.co.uk/ontologies/news/> .
+@prefix provenance:  <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix time:    <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix bbc:     <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix olo:     <http://purl.org/ontology/olo/core#> .
+@prefix curric:  <http://www.bbc.co.uk/ontologies/curriculum/> .
+@prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix ldbc:     <http://www.ldbc.eu/ontologies/sempub#> .
+@prefix person:  <http://www.bbc.co.uk/ontologies/person/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
+@prefix geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix protons:  <http://proton.semanticweb.org/2005/04/protons#> .
+@prefix sport:   <http://www.bbc.co.uk/ontologies/sport/> .         
+@prefix tag:     <http://www.bbc.co.uk/ontologies/tag/> .
+@prefix cwork:   <http://www.bbc.co.uk/ontologies/creativework/> .
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+
+#=========================================================================================
+#Additions to Core and Domain ontologies     
+
+# @cnews-1.3.ttl
+ 
+ news:Event
+ 	owl:intersectionOf ( news:Person news:Organisation ) .
+ 

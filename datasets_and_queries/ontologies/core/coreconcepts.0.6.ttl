@@ -1,0 +1,149 @@
+# Saved by TopBraid on Thu Apr 11 15:02:49 BST 2013
+# baseURI: http://www.bbc.co.uk/ontologies/coreconcepts/
+# imports: http://www.bbc.co.uk/ontologies/bbc/
+
+@prefix bbc:     <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix core:    <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dbp-ont: <http://dbpedia.org/ontology/> .
+
+core:
+      rdf:type owl:Ontology ;
+      rdfs:comment "The generic BBC ontology for people, places,events, organisations, themes which represent things that make sense across the BBC. This model is meant to be generic enough, and allow clients (domain experts) link their own concepts e.g., athletes or politicians using rdfs:sublClassOf the particular concept. Please note that not all the domain specific concepts (e.g.,Curriculum Stage or Sport Competition) are linked to this model simply because they make sense in the particular domain concept."^^xsd:string ;
+      owl:imports bbc: ;
+      owl:versionInfo "0.5"^^xsd:string .
+
+core:Event
+      rdf:type owl:Class ;
+      rdfs:comment "The class of events in the BBC. This is a generic class to represent events (music events, historic events, sports events, politics events, e.t.c.)"^^xsd:string ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "Place"^^xsd:string ;
+      rdfs:subClassOf core:Thing .
+
+core:Organisation
+      rdf:type owl:Class ;
+      rdfs:comment "The class of organisations in the BBC. E.g., Businesses"^^xsd:string ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "Organisation"^^xsd:string ;
+      rdfs:subClassOf core:Thing .
+
+core:Person
+      rdf:type owl:Class ;
+      rdfs:comment "The class of people in the BBC. Subclasses of this can be all types of people such as politicians, athletes, historic figures, contributors in programmes e.t.c."^^xsd:string ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "Person"^^xsd:string ;
+      rdfs:subClassOf core:Thing .
+
+core:Place
+      rdf:type owl:Class ;
+      rdfs:comment "The class of places in the BBC."^^xsd:string ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "Place"^^xsd:string ;
+      rdfs:subClassOf core:Thing .
+
+core:Theme
+      rdf:type owl:Class ;
+      rdfs:comment "This concept is used to represent intangible things or abstract concepts.  For example, Financial Crisis, Midwifery, Happiness"^^xsd:string ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "Theme"^^xsd:string ;
+      rdfs:subClassOf core:Thing .
+
+core:Thing
+      rdf:type owl:Class ;
+      rdfs:comment "The superclass of all things the BBC creates or talks about"^^xsd:string ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "Thing"^^xsd:string ;
+      rdfs:subClassOf owl:Thing .
+
+core:disambiguationHint
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "This property assiciates a thing with a string that is ued as a hint to disambiguate between concepts (e.g., two people with the name \"Michael Jackson\") and is used for tagging or data management applications. This is used only for internal purposes and is not meant to be exposed to the audiences. In addition, this is non null when the ambiguity has been identified between two or more concepts and if a concept is unambiguous it's not necessary to have a value."^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "disambiguationHint"^^xsd:string ;
+      rdfs:range xsd:string .
+
+core:facebook
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Links a thing to its facebook account, this is a subproperty of primaryTopicOf"^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "facebook"^^xsd:string ;
+      rdfs:range bbc:WebDocument ;
+      rdfs:subPropertyOf core:primaryTopicOf .
+
+core:officialHomepage
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Links a thing to its official homepage(s) on the web."^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "officialHomepage"^^xsd:string ;
+      rdfs:range bbc:WebDocument ;
+      rdfs:subPropertyOf core:primaryTopicOf .
+
+core:preferredLabel
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "The BBC editorially preferred label for a thing"^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "preferredLabel"^^xsd:string ;
+      rdfs:range xsd:string .
+
+core:primaryTopic
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Represents the fact that a thing (usually concept, e.g., Tom Daley) is the primary topic of a web document"^^xsd:string ;
+      rdfs:domain bbc:WebDocument ;
+      rdfs:isDefinedBy core: ;
+      rdfs:range core:Thing ;
+      owl:inverseOf core:primaryTopicOf .
+
+core:primaryTopicOf
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Represents the fact that a thing (usually concept, e.g., Tom Daley) is the primary topic of a web document"^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy core: ;
+      rdfs:range bbc:WebDocument ;
+      owl:inverseOf core:primaryTopic .
+
+core:sameAs
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Indicates that something is the same as something else, but in a way that is slightly weaker than owl:sameAs. It's purpose is to connect separate identities of the same thing, whilst keeping separation between the original statements of each."^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy core: ;
+      rdfs:range owl:Thing .
+
+core:shortLabel
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "A short label for a thing"^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "shortLabel"^^xsd:string ;
+      rdfs:range xsd:string .
+
+core:slug
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "Human readable keywords that may be used in a programmatic fashion e.g., manchester-city"^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy core: ;
+      rdfs:label "slug"^^xsd:string ;
+      rdfs:range xsd:string .
+
+core:twitter
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Links a thing to its twitter account, this is a subproperty of primaryTopicOf"^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy core: ;
+      rdfs:range bbc:WebDocument ;
+      rdfs:subPropertyOf core:primaryTopicOf .
+
+dbp-ont:Company rdfs:subClassOf core:Thing .
+dbp-ont:parentCompany a owl:TransitiveProperty . 
+dbp-ont:Person rdfs:subClassOf core:Thing .
+foaf:Person rdfs:subClassOf core:Thing .
+dbp-ont:Event rdfs:subClassOf core:Thing .
+
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

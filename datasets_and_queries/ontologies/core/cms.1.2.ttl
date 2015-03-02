@@ -1,0 +1,58 @@
+# Saved by TopBraid on Fri Mar 15 15:47:58 GMT 2013
+# baseURI: http://www.bbc.co.uk/ontologies/cms/
+# imports: http://www.bbc.co.uk/ontologies/creativework/
+
+@prefix cms:     <http://www.bbc.co.uk/ontologies/cms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+cms:  rdf:type owl:Ontology ;
+      rdfs:comment "An ontology to represent the content management systems and their interation with the triplestore. For instance, how should an entity in the triplestore (the URI for Manchester United) be linked to an external CMS that provides more information on the thing, e.g., sports statistics, or how should a creative work URI in the triplestore refer to another CMS (e.g., content store) so that more information that the triplestore doesn't store (e.g., the full text body of the creative work) can be retrieved."^^xsd:string ;
+      rdfs:label "ContentManagementSystem"^^xsd:string ;
+      owl:imports <http://www.bbc.co.uk/ontologies/creativework/> ;
+      owl:versionInfo "1.2"^^xsd:string .
+
+cms:CPS
+      rdf:type owl:Class ;
+      rdfs:comment "This locator type is used for creating locators for CPS"^^xsd:string ;
+      rdfs:isDefinedBy cms: ;
+      rdfs:subClassOf cms:Locator .
+
+cms:ContentApi
+      rdf:type owl:Class ;
+      rdfs:comment "This class of locators is used to retrieve things through the content API"^^xsd:string ;
+      rdfs:isDefinedBy cms: ;
+      rdfs:subClassOf cms:Locator .
+
+cms:Locator
+      rdf:type owl:Class ;
+      rdfs:comment "An identifier used for locating a representation of the thing (not a public URL) in a system external to the LDP (e.g., CPS, sports-stats, iBroadcast, .. tbc). The convention in creating locators for things is to follow the pattern<urn:LocatorType:localID> for example <urn:sports-stats:11269354> or <urn:cps:7f0da524-08bd-4d7e-848e-f50ccca6d87c> (see the class LocatorType for available locator types)"^^xsd:string ;
+      rdfs:isDefinedBy cms: ;
+      rdfs:subClassOf owl:Thing .
+
+cms:MusicBootStrap
+      rdf:type owl:Class ;
+      rdfs:isDefinedBy cms: ;
+      rdfs:subClassOf cms:Locator .
+
+cms:Sports-Stats
+      rdf:type owl:Class ;
+      rdfs:comment "This locator is used to create locators for the sports-stats system"^^xsd:string ;
+      rdfs:isDefinedBy cms: ;
+      rdfs:subClassOf cms:Locator .
+
+cms:iScript
+      rdf:type owl:Class ;
+      rdfs:comment "This class of locators is used to retrieve things sent to LDP from iScript"^^xsd:string ;
+      rdfs:isDefinedBy cms: ;
+      rdfs:subClassOf cms:Locator .
+
+cms:locator
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates a thing with a locator in a CMS"^^xsd:string ;
+      rdfs:isDefinedBy cms: ;
+      rdfs:range cms:Locator .
+
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

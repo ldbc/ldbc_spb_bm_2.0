@@ -1,0 +1,110 @@
+# Saved by TopBraid on Fri Apr 26 13:23:51 BST 2013
+# baseURI: http://www.bbc.co.uk/ontologies/news/
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.bbc.co.uk/ontologies/coreconcepts/
+# imports: http://purl.org/NET/c4dm/timeline.owl
+# imports: http://xmlns.com/foaf/0.1/
+
+@prefix core:    <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix news:    <http://www.bbc.co.uk/ontologies/news/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix provenance:  <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:    <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+news:
+      rdf:type owl:Ontology ;
+      rdfs:comment "The Core News Ontology describes the basic concepts that journalists can associate with a Creative Work."^^xsd:string ;
+      rdfs:label "Core News Ontology"^^xsd:string ;
+      owl:imports <http://purl.org/NET/c4dm/timeline.owl> , foaf: , <http://purl.org/dc/elements/1.1/> , core: ;
+      owl:versionInfo "1.2"^^xsd:string ;
+      foaf:maker <http://www.topdrawersausage.net/foaf.rdf#jeremytarling> .
+
+news:Event
+      rdf:type owl:Class ;
+      rdfs:comment "A compound entity, the intersection of Person/Organisation doing something at a Place and Time"^^xsd:string ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "An event in the news"^^xsd:string ;
+      rdfs:subClassOf core:Event .
+
+news:Organisation
+      rdf:type owl:Class ;
+      rdfs:comment "A generic organisation class for news"^^xsd:string ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "An organisation in the news"^^xsd:string ;
+      rdfs:subClassOf core:Organisation .
+
+news:Person
+      rdf:type owl:Class ;
+      rdfs:comment "A generic person class for news"^^xsd:string ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "A person in the news"^^xsd:string ;
+      rdfs:subClassOf core:Person .
+
+news:Place
+      rdf:type owl:Class ;
+      rdfs:comment "A generic place class for news"^^xsd:string ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "A place in the news"^^xsd:string ;
+      rdfs:subClassOf core:Place .
+
+news:Theme
+      rdf:type owl:Class ;
+      rdfs:comment "An intangible theme or topic of a News asset, e.g. recession, horsemeat, snow, etc"^^xsd:string ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "A theme or topic"^^xsd:string ;
+      rdfs:subClassOf core:Theme .
+
+news:notablyAssociatedWith
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "property to associate People, Organisations, Places, Intangibles and Events"^^xsd:string ;
+      rdfs:domain core:Thing ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "is notably associated with"^^xsd:string ;
+      rdfs:range core:Thing .
+
+news:organisation
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates an Event with an Organisation(s)"^^xsd:string ;
+      rdfs:domain news:Event ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "has agent"^^xsd:string ;
+      rdfs:range news:Organisation .
+
+news:person
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates an Event with Person(s)"^^xsd:string ;
+      rdfs:domain news:Event ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "has agent"^^xsd:string ;
+      rdfs:range news:Person .
+
+news:place
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "The location an Event took place in"^^xsd:string ;
+      rdfs:domain news:Event ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "took place in"^^xsd:string ;
+      rdfs:range news:Place .
+
+news:theme
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "property to associate Intangibles with Events"^^xsd:string ;
+      rdfs:domain news:Event ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "has theme"^^xsd:string ;
+      rdfs:range news:Theme ;
+      rdfs:subPropertyOf news:notablyAssociatedWith .
+
+news:time
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "The time an Event took place at"^^xsd:string ;
+      rdfs:domain news:Event ;
+      rdfs:isDefinedBy news: ;
+      rdfs:label "took place on"^^xsd:string ;
+      rdfs:range time:Interval .
+
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

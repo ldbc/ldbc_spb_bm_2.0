@@ -1,0 +1,55 @@
+# Saved by TopBraid on Mon Jan 28 12:07:05 GMT 2013
+# baseURI: http://www.bbc.co.uk/ontologies/person/
+# imports: http://www.bbc.co.uk/ontologies/bbc/
+
+@prefix bbc:     <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix person:  <http://www.bbc.co.uk/ontologies/person/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+person:
+      rdf:type owl:Ontology ;
+      rdfs:comment "The generic BBC ontology for people"^^xsd:string ;
+      owl:imports bbc: ;
+      owl:versionInfo "0.2"^^xsd:string .
+
+person:Person
+      rdf:type owl:Class ;
+      rdfs:comment "The class of people in the BBC"^^xsd:string ;
+      rdfs:isDefinedBy person: ;
+      rdfs:label "Person"^^xsd:string ;
+      rdfs:subClassOf bbc:Thing .
+
+person:Role
+      rdf:type owl:Class ;
+      rdfs:comment "A generic class of Roles that people hold (or have held)"^^xsd:string ;
+      rdfs:isDefinedBy person: ;
+      rdfs:label "Role"^^xsd:string .
+
+person:firstName
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "The first name of a person"^^xsd:string ;
+      rdfs:domain person:Person ;
+      rdfs:isDefinedBy person: ;
+      rdfs:label "firstName"^^xsd:string ;
+      rdfs:range xsd:string .
+
+person:lastName
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "The last name of a person"^^xsd:string ;
+      rdfs:domain person:Person ;
+      rdfs:isDefinedBy person: ;
+      rdfs:label "lastName"^^xsd:string ;
+      rdfs:range xsd:string .
+
+person:role
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Connects the Person with a role. This is a generic property"^^xsd:string ;
+      rdfs:domain person:Person ;
+      rdfs:isDefinedBy person: ;
+      rdfs:label "role"^^xsd:string ;
+      rdfs:range person:Role .
+
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

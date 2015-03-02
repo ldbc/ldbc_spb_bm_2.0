@@ -1,0 +1,96 @@
+#Defines the allocation amount of About tags in a Creative Work (total sum should be equal to 1.0)
+#  e.g. 10% of Creative Works will have 1 about tag, 23% - 2 about tags, 30% - 3 about tags... etc.
+aboutsAllocations=0.1006, 0.2313, 0.3088, 0.2278, 0.1035, 0.028
+
+#Defines the allocation amount of Mention tags in a Creative Work (total sum should be equal to 1.0)
+#  e.g. 94% of Creative Works will have 1 mentions tag, 3% will have 2 mentions tags... etc.
+mentionsAllocations=0.9477, 0.0382, 0.0093, 0.0031, 0.0012, 0.0005
+
+#Defines popularity of an entity in the reference datasets (total sum should be equal to 1.0)
+#  e.g. 5% of all entities from reference datasets are popular, 95% - regular 
+entityPopularity=0.05, 0.95
+
+#Defines allocation amount of popular entities to be used for tagging in Creative Works or in aggregation queries (total sum should be equal to 1.0)
+#  e.g. in 30% of occasions when generating or inserting a Creative Work, a popular entity will be used
+usePopularEntities=0.3, 0.7
+
+#Defines the allocation amount of Creative Work Types during data-generation (total sum should be equal to 1.0)
+#  e.g. 45% of total number will be of type BlogPost, 35% - NewsItem, 20% - Programme
+creativeWorkTypesAllocation=0.45, 0.35, 0.2
+
+#Defines the allocation amount of about or mentions in aggregation criteria, used by the 'main' aggregation query (total sum should be equal to 1.0)
+#  e.g. 'main' aggregation query will use 'about' for aggregation criteria in 85% of its executions
+aboutAndMentionsAllocation=0.85, 0.15
+
+#Defines the allocation amount of INSERT, UPDATE, DELETE queries that each editorial agent will execute (total sum should be equal to 1.0)
+#  e.g. execution amount of insert.txt query will be 80% of total, update.txt - 10%, delete.txt - 10%
+editorialOperationsAllocation=0.8, 0.1, 0.1
+
+#Defines the allocation amount of aggregation queries starting from query1, query2, query3...
+#  e.g. chance for execution of each query will be equally distributed in the query mix
+aggregationOperationsAllocation=0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.1
+
+#Defines the maximum number of creative works that an entity can be tagged about. Exponential decay function will start from the value defined
+exponentialDecayUpperLimitOfCWs=5000
+
+#Defines the exponential decay rate. Used values to be in range 0.01 (for gentle slope) to 1 (for steep slope)
+exponentialDecayRate=0.1
+
+#Defines the threshold in percents of exponential decay, below that threshold values will be ignored. Threshold is defined as the ratio of : currentExponentialDecayValue / exponentialDecayUpperLimitOfCWs
+# e.g. 5% threshold will be the value of 0.05
+exponentialDecayThresholdPercent=0.05
+
+#Defines the maximum number of 'major' events that could happen during data generation period. Each major event will be tagged by a number of Creative Works which will decay exponentially in time.
+#(using current settings, ~1M triples per major event are generated)
+majorEvents=5
+
+#Defines the maximum number of 'minor' events that could happen during data generation period. Each minor event will be tagged by a number of Creative Works which will decay exponentially in time.
+#Value of exponentialDecayUpperLimitOfCWs for minor events will be ten times smaller for them.
+#(using current settings, ~100K triples per minor event are generated)
+minorEvents=100
+
+#Defines a seed year that will be used for generating the Creative Works.
+# e.g. seedYear=2014 will have all creative works have dateCreated randomly picked in 2014, and dateModified in future interval
+seedYear=2011
+
+#Defines the period (in years) of the gnerated data, starting from 'seedYear'
+dataGenerationPeriodYears=1
+
+#Defines the number of correlations between entities that will be generated in the dataset
+# e.g. correlationsAmount=200 will produce 200 correlations between popular entities. 
+#(using current settings, ~260K triples per correlation are generated)
+correlationsAmount=50
+
+#Defines maximum amount of Creative Works that will be generated for a particular correlation in a single day
+correlationsMagnitude=60
+
+#Defines the duration of correlation between two entities
+# e.g. correlationDuration=0.2 defines that 20% of total generation period will have Creative Works that are about or mentioning the two entities
+correlationDuration=0.2
+
+#Defines the lifespan of each entity that participates in a correlation
+# e.g. correlationEntityLifespan=0.5 defines that 50% of total generation period will be the lifespan of an entity that participates in a correlation, i.e. tagged in Creative Works
+correlationEntityLifespan=0.5
+
+#Geo-spatial properties
+#Defines minimum latitude
+# use minlat=36.0 when including geonames data from optional datasets
+minLat = 50.45
+ 
+#Defines maximum latitude
+# use maxLat=71.2 when including geonames data from optional datasets
+maxLat = 53.25
+
+#Defines minimum longitude
+# use minLong=-10.0 when including geonames data from optional datasets
+minLong = -2.15
+
+#Defines maximum longitude
+# use maxLong=31.5 when including geonames data from optional datasets
+maxLong = 0.25
+
+#Defines the position in terms of percents at which a milestone query is executed (see Online and Replication Benchmark feature)
+mileStoneQueryPosition = 0.5
+
+#Defines a pool of queries, where each pool contains unique set of queries. During query execution, each query from the pool gets executed just once until all queries have been executed. The query pool is defined by a set of curly braces {}. If empty value is used, then query pool is not created and all queries are executed according to distributions defined in parameter 'aggregationOperationsAllocation'
+queryPools={1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11} 

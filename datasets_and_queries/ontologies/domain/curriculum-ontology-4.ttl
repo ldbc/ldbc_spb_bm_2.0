@@ -1,0 +1,296 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix olo:     <http://purl.org/ontology/olo/core#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix curric:  <http://www.bbc.co.uk/ontologies/curriculum/> .
+@prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+
+
+curric:
+      rdf:type owl:Ontology ;
+      dc:date "$Date: 2012/10/09 10:26:23 $" ;
+      owl:versionInfo "Revision: 0.9" ;
+      rdfs:label "curriculum ontology" ;
+      rdfs:comment "This ontology aims to provide data model and vocabularies for describing the national curricula within the UK" .
+
+curric:Age
+      rdf:type owl:Class ;
+      rdfs:label "age" ;
+      rdfs:comment "Age or age range is a way to specify the stages of education." ;
+      rdfs:isDefinedBy curric: ;
+      rdfs:subClassOf curric:Level ;
+      vs:term_status "stable".
+
+curric:Year
+      rdf:type owl:Class ;
+      rdfs:label "year" ;
+      rdfs:comment "Year is a way to specify the stages of education." ;
+      rdfs:isDefinedBy curric: ;
+      rdfs:subClassOf curric:Level ;
+      vs:term_status "stable".
+
+curric:KeyStage
+      rdf:type owl:Class ;
+      rdfs:label "key stage" ;
+      rdfs:comment "Key Stage is a way to specify the stage of the state education system in England, Wales, Northern Ireland." ;
+      rdfs:subClassOf curric:Level ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:Phase
+      rdf:type owl:Class ;
+      rdfs:label "phase" ;
+      rdfs:comment "This concept is borrowed from the controlled terms for describing phase of education, which are published by the data.gov.uk. The phases of education include Primary, Secondary and 16-Plus." ;
+      rdfs:subClassOf curric:Level ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:Level
+      rdf:type owl:Class ;
+      rdfs:label "level" ;
+      rdfs:comment "Levels refers to the stages of education. Typically, there are four different ways to specify the levels: age range, year, key stage and phase." ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:FieldOfStudy
+      rdf:type owl:Class ;
+      rdfs:subClassOf tagging:TagConcept ;
+      rdfs:label "field of study" ;
+      rdfs:comment "Fields of study refers to the disciplines of a curriculum, e.g. Science, Maths, Science, etc." ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:ProgrammeOfStudy
+      rdf:type owl:Class ;
+      rdfs:label "programme of study" ;
+      rdfs:comment "A programme of study is the combination of a nation, an educational level such as Key Stage 3 and the subject being studied, Science, Maths etc." ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:Topic
+      rdf:type owl:Class ;
+      rdfs:subClassOf tagging:TagConcept ;
+      rdfs:label "topic" ;
+      rdfs:comment "Topic can highlight the content of the learning resources in a way more specific than the Field of Study. For example, energy is a topic of physics." ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:TopicOfStudy
+      rdf:type owl:Class ;
+      rdfs:label "topic of study" ;
+      rdfs:comment "Topic of study is topic within the context of a programme of study. It aims to provide a formal learning context to an asset or a collection of assets. " ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:TopicOfStudyList
+      rdf:type owl:Class ;
+      rdfs:label "topic of study list" ;
+      rdfs:comment "A ordered list of topics of study" ;
+      rdfs:subClassOf olo:OrderedList ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:Nation
+      rdf:type owl:Class ;
+      rdfs:label "nation" ;
+      rdfs:comment "Nation is the concept to describe the four parts of the UK, i.e. England, Wales, Scotland and Northern Ireland." ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:ExamBoard
+      rdf:type owl:Class ;
+      rdfs:label "exam board" ;
+      rdfs:comment "Exam board is the organization holds some exams." ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:PaperTier
+      rdf:type owl:Class ;
+      rdfs:label "paper tier" ;
+      rdfs:comment "Paper tier reflects the difficulty of a exam. It can be standard or higher." ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:Language
+      rdf:type owl:Class ;
+      rdfs:label "language" ;
+      rdfs:comment "Examples of language are English, Welsh, Scottish Gaelic and Irish Gaelic." ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:subLevelOf
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "sub-level of" ;
+      rdfs:comment "Capture the hierarchy of level." ;
+      rdfs:domain curric:Level ;
+      rdfs:range curric:Level ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:lowerAgeBoundary
+      rdf:type owl:DatatypeProperty ;
+      rdfs:label "lower age bound" ;
+      rdfs:comment "The lower bound of the age range of a educational level." ;
+      rdfs:domain curric:Level ;
+      rdfs:range xsd:integer ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:upperAgeBoundary
+      rdf:type owl:DatatypeProperty ;
+      rdfs:label "upper age bound" ;
+      rdfs:comment "The upper bound of the age range of a educational level." ;
+      rdfs:domain curric:Level ;
+      rdfs:range xsd:integer ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:subFieldOf
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "sub-field of" ;
+      rdfs:comment "Capture the hierarchy of fields of study." ;
+      rdfs:domain curric:FieldOfStudy ;
+      rdfs:range curric:FieldOfStudy ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:subProgrammeOf
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "sub-programme of" ;
+      rdfs:comment "Capture the hierarchy of programmes of study." ;
+      rdfs:domain curric:ProgrammeOfStudy ;
+      rdfs:range curric:ProgrammeOfStudy ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:taughtAtLevel
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "taught at level" ;
+      rdfs:comment "Specify the level of a programme of study." ;
+      rdfs:domain curric:ProgrammeOfStudy ;
+      rdfs:range curric:Level ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:taughtInField
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "taught in field" ;
+      rdfs:comment "Specify the field of a programme of study." ;
+      rdfs:domain curric:ProgrammeOfStudy ;
+      rdfs:range curric:FieldOfStudy ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:taughtInNation
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "taught in nation" ;
+      rdfs:comment "Specify the nation of a level." ;
+      rdfs:domain curric:Level ;
+      rdfs:range curric:Nation ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:publishedAt
+      rdf:type owl:DatatypeProperty ;
+      rdfs:label "published at" ;
+      rdfs:comment "The date when a programme of study is published" ;
+      rdfs:range xsd:dateTime ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+curric:subTopicOf
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "sub-topic of" ;
+      rdfs:comment "Capture the hierarchy of topics." ;
+      rdfs:domain curric:Topic ;
+      rdfs:range curric:Topic ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:providesContextTo
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "provides context to" ;
+      rdfs:comment "Link topics of study to BBC assets." ;
+      rdfs:domain curric:TopicOfStudy ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:about
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "about" ;
+      rdfs:comment "Link topic of study views to topics." ;
+      rdfs:domain curric:TopicOfStudy ;
+      rdfs:range curric:Topic ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:appropriateFor
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "appropriate for" ;
+      rdfs:comment "Link topic of study to a programme of study." ;
+      rdfs:domain curric:TopicOfStudy ;
+      rdfs:range curric:ProgrammeOfStudy ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:topics
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "topics" ;
+      rdfs:comment "Link a topic of study or a programme of study to an ordered list of topics of study." ;
+      rdfs:range curric:TopicOfStudyList ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:language
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "language" ;
+      rdfs:comment "The property of an asset being in a specific language." ;
+      rdfs:range curric:Language ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:examBoard
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "exam board" ;
+      rdfs:comment "Specify an asset is useful for preparing exams provided by an exam board." ;
+      rdfs:range curric:ExamBoard ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:paperTier
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "paper tier" ;
+      rdfs:comment "Specify the difficulty level of an asset" ;
+      rdfs:range curric:PaperTier ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:nation
+      rdf:type owl:ObjectProperty ;
+      rdfs:label "nation" ;
+      rdfs:comment "Specify an asset could be useful for a certain nation" ;
+      rdfs:range curric:Nation ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:includesTopicOfStudy a owl:ObjectProperty ;
+      rdfs:label "includes topic of study" ;
+      rdfs:comment "a short cut from a programme of study or a topic of study to the member of its topic of study list" ;
+      rdfs:range curric:TopicOfStudy ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable".
+
+curric:depictionPID
+      rdf:type owl:DatatypeProperty ;
+      rdfs:label "depiction PID" ;
+      rdfs:comment "The PID of the depiction (image)." ;
+      rdfs:range xsd:string ;
+      rdfs:isDefinedBy curric: ;
+      vs:term_status "stable" .
+
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

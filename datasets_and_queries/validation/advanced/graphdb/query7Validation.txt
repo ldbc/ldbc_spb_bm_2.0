@@ -1,0 +1,19 @@
+[SubstitutionParameters]
+FILTER(?pcCount > 2);ORDER BY DESC(?count) ?mentions
+
+[ExpectedResultsSize]
+10
+
+[Results]
+7
+6
+<http://sws.geonames.org/7301664/>
+<http://sws.geonames.org/2640275/>
+<http://sws.geonames.org/2642559/>
+<http://sws.geonames.org/2652458/>
+<http://sws.geonames.org/6285847/>
+<http://sws.geonames.org/6286704/>
+<http://sws.geonames.org/6286713/>
+<http://sws.geonames.org/6287125/>
+<http://sws.geonames.org/7290596/>
+<http://sws.geonames.org/7291300/>

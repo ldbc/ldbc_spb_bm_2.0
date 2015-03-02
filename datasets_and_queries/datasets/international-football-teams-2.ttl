@@ -1,0 +1,446 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.bbc.co.uk/contexts/df0ec87a-0964-40b5-bcf1-11bdb976a815#id> a provenance:Dataset ;
+rdfs:label "International Football Teams"^^xsd:string ;
+provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/datasets/sport/football/international-football-teams-1.ttl"^^xsd:string ;
+provenance:changeReason "Removing extraneous prefixes."^^xsd:string ;
+provenance:version "2"^^xsd:int ;
+provenance:provider <mailto:tom.grahame@bbc.co.uk> .
+
+<http://dbpedia.org/resource/Croatia_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Czech_Republic_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Denmark_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/England_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/France_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Germany_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Greece_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Italy_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Netherlands_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Poland_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Portugal_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Republic_of_Ireland_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Russia_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Spain_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Sweden_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Ukraine_national_football_team>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://nv.fotbal.cz/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://svenskfotboll.se/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://team.dfb.de/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/croatia>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/czech-republic>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/denmark>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/england>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/france>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/germany>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/greece>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/italy>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/netherlands>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/poland>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/portugal>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/republic-of-ireland>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/russia>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/spain>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/sweden>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/ukraine>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/18d7cd44-bde2-4b14-97a4-c32f4f17e1c1#id>
+    domain:canonicalName "Italy national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/italy>, <http://www.figc.it/index_en.shtml> ;
+    domain:externalId <http://dbpedia.org/resource/Italy_national_football_team>, <urn:sports-stats:137371012> ;
+    domain:name "Italy"^^xsd:string ;
+    domain:shortName "Italy"^^xsd:string ;
+    domain:slug "italy"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/280cfc54-a128-417c-a74e-b663a7f2f61f#id>
+    domain:canonicalName "Germany national football team"^^xsd:string ;
+    domain:document <http://team.dfb.de/>, <http://www.bbc.co.uk/sport/football/teams/germany> ;
+    domain:externalId <http://dbpedia.org/resource/Germany_national_football_team>, <urn:sports-stats:138829997> ;
+    domain:name "Germany"^^xsd:string ;
+    domain:shortName "Germany"^^xsd:string ;
+    domain:slug "germany"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/3ac8c344-8b15-4324-b772-5e3d52a704fc#id>
+    domain:canonicalName "Sweden national football team"^^xsd:string ;
+    domain:document <http://svenskfotboll.se/>, <http://www.bbc.co.uk/sport/football/teams/sweden> ;
+    domain:externalId <http://dbpedia.org/resource/Sweden_national_football_team>, <urn:sports-stats:138950987> ;
+    domain:name "Sweden"^^xsd:string ;
+    domain:shortName "Sweden"^^xsd:string ;
+    domain:slug "sweden"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/3d119357-390d-458a-b33c-3910532977fd#id>
+    domain:canonicalName "Poland national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/poland>, <http://www.pzpn.pl/> ;
+    domain:externalId <http://dbpedia.org/resource/Poland_national_football_team>, <urn:sports-stats:137370084> ;
+    domain:name "Poland"^^xsd:string ;
+    domain:shortName "Poland"^^xsd:string ;
+    domain:slug "poland"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/50e8aed7-1ce9-4784-962f-e61fea038990#id>
+    domain:canonicalName "Portugal national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/portugal>, <http://www.fpf.pt/portal/page/portal/PORTAL_FUTEBOL> ;
+    domain:externalId <http://dbpedia.org/resource/Portugal_national_football_team>, <urn:sports-stats:138948077> ;
+    domain:name "Portugal"^^xsd:string ;
+    domain:shortName "Portugal"^^xsd:string ;
+    domain:slug "portugal"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/51bc6665-92bc-4926-8689-969dc76a9d34#id>
+    domain:canonicalName "France national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/france>, <http://www.fff.fr/> ;
+    domain:externalId <http://dbpedia.org/resource/France_national_football_team>, <urn:sports-stats:137370053> ;
+    domain:name "France"^^xsd:string ;
+    domain:shortName "France"^^xsd:string ;
+    domain:slug "france"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/611ecd3d-8b08-48d5-aee9-d01e7620d2a4#id>
+    domain:canonicalName "England national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/england>, <http://www.thefa.com/England> ;
+    domain:externalId <http://dbpedia.org/resource/England_national_football_team>, <urn:sports-stats:137368377> ;
+    domain:name "England"^^xsd:string ;
+    domain:shortName "England"^^xsd:string ;
+    domain:slug "england"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/65e33e6b-ded0-450a-80fb-0c25fe88b5f6#id>
+    domain:canonicalName "Republic of Ireland national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/republic-of-ireland>, <http://www.fai.ie/> ;
+    domain:externalId <http://dbpedia.org/resource/Republic_of_Ireland_national_football_team>, <urn:sports-stats:137368374> ;
+    domain:name "Republic of Ireland"^^xsd:string ;
+    domain:shortName "R. of Ireland"^^xsd:string ;
+    domain:slug "republic-of-ireland"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/6d4a2858-462e-4375-b51b-2a4fb480eee2#id>
+    domain:canonicalName "Netherlands national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/netherlands>, <http://www.knvb.nl/> ;
+    domain:externalId <http://dbpedia.org/resource/Netherlands_national_football_team>, <urn:sports-stats:137370107> ;
+    domain:name "Netherlands"^^xsd:string ;
+    domain:shortName "Netherlands"^^xsd:string ;
+    domain:slug "netherlands"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/6ed6e732-c8ca-4f4a-9377-76fee24216a4#id>
+    domain:canonicalName "Czech Republic national football team"^^xsd:string ;
+    domain:document <http://nv.fotbal.cz/>, <http://www.bbc.co.uk/sport/football/teams/czech-republic> ;
+    domain:externalId <http://dbpedia.org/resource/Czech_Republic_national_football_team>, <urn:sports-stats:138975883> ;
+    domain:name "Czech Republic"^^xsd:string ;
+    domain:shortName "Czech Rep."^^xsd:string ;
+    domain:slug "czech-republic"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/a80d80f4-c47e-4417-b1c7-de1af76a03a7#id>
+    domain:canonicalName "Russia national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/russia>, <http://www.rfs.ru/> ;
+    domain:externalId <http://dbpedia.org/resource/Russia_national_football_team>, <urn:sports-stats:138950927> ;
+    domain:name "Russia"^^xsd:string ;
+    domain:shortName "Russia"^^xsd:string ;
+    domain:slug "russia"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/a96d9920-594f-45f2-b2aa-4d3a8b3b6966#id>
+    domain:canonicalName "Greece national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/greece>, <http://www.epo.gr/> ;
+    domain:externalId <http://dbpedia.org/resource/Greece_national_football_team>, <urn:sports-stats:138975137> ;
+    domain:name "Greece"^^xsd:string ;
+    domain:shortName "Greece"^^xsd:string ;
+    domain:slug "greece"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/af6492fe-1a6e-4066-8410-83fd00f513c7#id>
+    domain:canonicalName "Ukraine national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/ukraine>, <http://www.ffu.org.ua/> ;
+    domain:externalId <http://dbpedia.org/resource/Ukraine_national_football_team>, <urn:sports-stats:138975102> ;
+    domain:name "Ukraine"^^xsd:string ;
+    domain:shortName "Ukraine"^^xsd:string ;
+    domain:slug "ukraine"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/b9bb453a-a3e2-46b4-9d20-35efa09d72b8#id>
+    domain:canonicalName "Spain national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/spain>, <http://www.rfef.es/> ;
+    domain:externalId <http://dbpedia.org/resource/Spain_national_football_team>, <urn:sports-stats:137373184> ;
+    domain:name "Spain"^^xsd:string ;
+    domain:shortName "Spain"^^xsd:string ;
+    domain:slug "spain"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/f032f98f-c256-4c2f-8bdc-d2fadf20a65a#id>
+    domain:canonicalName "Croatia national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/croatia>, <http://www.hns-cff.hr/> ;
+    domain:externalId <http://dbpedia.org/resource/Croatia_national_football_team>, <urn:sports-stats:138857898> ;
+    domain:name "Croatia"^^xsd:string ;
+    domain:shortName "Croatia"^^xsd:string ;
+    domain:slug "croatia"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/ff9bb350-0bed-4966-9997-704f830d93c5#id>
+    domain:canonicalName "Denmark national football team"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/denmark>, <http://www.dbu.dk/> ;
+    domain:externalId <http://dbpedia.org/resource/Denmark_national_football_team>, <urn:sports-stats:137373150> ;
+    domain:name "Denmark"^^xsd:string ;
+    domain:shortName "Denmark"^^xsd:string ;
+    domain:slug "denmark"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>, <http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.dbu.dk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.epo.gr/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fai.ie/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fff.fr/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.ffu.org.ua/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.figc.it/index_en.shtml>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.fpf.pt/portal/page/portal/PORTAL_FUTEBOL>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.hns-cff.hr/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.knvb.nl/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.pzpn.pl/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.rfef.es/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.rfs.ru/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.thefa.com/England>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:137368374>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137368377>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137370053>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137370084>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137370107>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137371012>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137373150>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137373184>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:138829997>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:138857898>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:138948077>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:138950927>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:138950987>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:138975102>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:138975137>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:138975883>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+

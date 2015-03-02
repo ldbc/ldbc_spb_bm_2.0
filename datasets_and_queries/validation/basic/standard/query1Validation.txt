@@ -1,0 +1,184 @@
+[SubstitutionParameters]
+cwork:about;<http://www.wikidata.org/wiki/Q260489>
+
+[ExpectedResultsSize]
+1070
+
+[Results]
+<http://www.bbc.co.uk/things/1183461870#id>
+<http://www.bbc.co.uk/things/176046607#id>
+<http://www.bbc.co.uk/things/35745#id>
+<http://www.bbc.co.uk/things/10762#id>
+<http://www.bbc.co.uk/things/264822249#id>
+<http://www.bbc.co.uk/thumbnail/433064465>
+<http://www.bbc.co.uk/thumbnail/2135749636>
+<http://www.bbc.co.uk/things/848092898#id>
+<http://www.bbc.co.uk/things/1786145897#id>
+<http://www.bbc.co.uk/things/632850559#id>
+<http://www.bbc.co.uk/things/1381260465#id>
+<http://www.bbc.co.uk/things/999435689#id>
+<http://www.bbc.co.uk/thumbnail/1874805809>
+<http://www.bbc.co.uk/thumbnail/48040563>
+<http://www.bbc.co.uk/things/365847652#id>
+<http://www.bbc.co.uk/things/518817673#id>
+<http://www.bbc.co.uk/things/2106751328#id>
+<http://www.bbc.co.uk/thumbnail/1875767270>
+<http://www.bbc.co.uk/things/2024666504#id>
+<http://www.bbc.co.uk/thumbnail/440287097>
+<http://www.bbc.co.uk/things/43547#id>
+<http://www.bbc.co.uk/thumbnail/1006232682>
+<http://www.bbc.co.uk/things/1984978990#id>
+<http://www.bbc.co.uk/things/612966188#id>
+<http://www.bbc.co.uk/things/171551134#id>
+<http://www.bbc.co.uk/things/602760573#id>
+<http://www.bbc.co.uk/thumbnail/1101985716>
+<http://www.bbc.co.uk/things/1850226638#id>
+<http://www.bbc.co.uk/things/gd7d8f71b-40de-4dbd-b2b5-9e8dd1b4d8c0#id>
+<http://www.bbc.co.uk/things/24387#id>
+<http://www.bbc.co.uk/thumbnail/1057121051>
+<http://www.bbc.co.uk/things/863574645#id>
+<http://www.bbc.co.uk/things/1754278205#id>
+<http://www.bbc.co.uk/things/2709#id>
+<http://www.bbc.co.uk/things/6139#id>
+<http://www.bbc.co.uk/things/14963#id>
+<http://www.bbc.co.uk/things/g8301b148-5bf6-4bbd-b45e-2a481bf7f62e#id>
+<http://www.bbc.co.uk/things/7526#id>
+<http://www.bbc.co.uk/things/9719#id>
+<http://www.bbc.co.uk/things/226517954#id>
+<http://www.bbc.co.uk/things/37426563#id>
+<http://www.bbc.co.uk/things/11516#id>
+<http://www.bbc.co.uk/thumbnail/1912308123>
+"referral object demolition alone purpose your amassed any administer pay."
+"Stephen Hammond"
+<http://sws.geonames.org/7298269/>
+"Fiona O'Donnell at entirely apartheid about over users court assembly one-fifth territorial."
+<http://www.wikidata.org/wiki/Q272041>
+"2012-03-23T08:59:25.494+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/things/999435689#id>
+<http://dbpedia.org/resource/James_Wharton>
+"2012-05-26T03:07:39.050+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"notion professionally exist craftsmen against members worst personal fixtures out sport taxation when official enactments responsible over sessions fortune leading see."
+<http://www.bbc.co.uk/ontologies/creativework/Programme>
+<http://www.bbc.co.uk/thumbnail/1875767270>
+"Philip Hammond 2006 attracts democratic politics early even individual's we ticket ever."
+"out unfair supported proof one that phrase evident which cricket."
+<http://sws.geonames.org/2654186/>
+<http://www.bbc.co.uk/thumbnail/1006232682>
+"Margot James others plead content an town also personally merely ever has."
+"James Morris least popular fact line visit attracted administration preferences best and."
+<http://www.bbc.co.uk/ontologies/creativework/NewsItem>
+<http://dbpedia.org/resource/Stephen_Pound>
+"2011-08-25T12:58:33.756+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2012-05-10T10:07:49.275+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://sws.geonames.org/7295181/>
+"Jeremy Wright any refusing entirely soon originate alone cricket partisan web-surfing clergy."
+<http://dbpedia.org/resource/Tessa_Munt>
+"2011-10-08T00:42:52.739+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"Jeremy Wright relate political rather enable from enjoyment show see combined automatically."
+<http://www.bbc.co.uk/things/37426563#id>
+<http://dbpedia.org/resource/Margot_James>
+<http://www.bbc.co.uk/thumbnail/1912308123>
+"2011-11-04T02:28:13.621+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"Jeremy Wright practiced data browsers purposes strongest appear sometimes many adopted our."
+<http://www.fionaodonnellmp.org/>
+<http://www.bbc.co.uk/ontologies/bbc/HighWeb>
+<http://www.wikidata.org/wiki/Q216594>
+<http://dbpedia.org/resource/Jane_Ellison>
+"secular pretension layout including attendance large cases purposes all consistent facts compete assembly at even would usage one-fifth set millions payment however."
+<http://www.bbc.co.uk/thumbnail/433064465>
+<http://www.johnglenmp.com/>
+<http://sws.geonames.org/7293724/>
+<http://www.bbc.co.uk/things/1381260465#id>
+"Tessa Munt attracted society because practiced both carry century include sums come."
+<http://www.russellbrownmp.com/>
+"Alasdair McDonnell times see that often meant serve provide to vote which."
+"2012-09-11T18:02:52.303+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://sws.geonames.org/7291319/>
+<http://www.guardian.co.uk/politics/person/6184/>
+<http://dbpedia.org/resource/Sion_James_(politician)>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25221.stm>
+<http://www.jamesmorrismp.com/>
+<http://www.bbc.co.uk/things/612966188#id>
+"2012-04-10T08:55:45.448+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/things/171551134#id>
+<http://www.bbc.co.uk/thumbnail/1101985716>
+"pretty place may out terms areas need institutions which help very century rugby display approach government electorate man ambition impact."
+<http://dbpedia.org/resource/Philip_Hammond>
+"improve kinds christendom official machinery charge created ads around viewing attendance million laws servers at primitive appear cherished person candidates line would components revolves."
+<http://www.bbc.co.uk/thumbnail/1057121051>
+"over others players referral demolition used a help little internet."
+<http://www.bbc.co.uk/things/1754278205#id>
+<http://www.kerrymccarthymp.org/>
+<http://sws.geonames.org/6286836/>
+"life always competitions patterns competitive integrity service some started adaptability."
+"people orders peasants a practiced consistent sports day and hundreds."
+"2011-10-04T02:54:53.145+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2011-07-08T16:49:53.147+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"seen pretension athletes attract computer practical substantial time without usage."
+"2012-04-26T20:33:58.720+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/things/1183461870#id>
+<http://sws.geonames.org/7300125/>
+"2012-07-19T00:29:44.544+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/things/264822249#id>
+"cookies decided view another still cricket mediums this king compete permitted parliaments television common."
+"themselves data million boxing christendom relate web-surfing page line there."
+<http://www.bbc.co.uk/things/1786145897#id>
+<http://www.bbc.co.uk/things/632850559#id>
+<http://www.bbc.co.uk/things/93441dc1-5d81-4c85-81df-89956b63b4cc#id>
+"2011-11-16T10:03:48.147+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"into but web amassed nobility who after had 23 adaptability."
+<http://www.bbc.co.uk/thumbnail/1874805809>
+<http://www.bbc.co.uk/thumbnail/48040563>
+<http://www.bbc.co.uk/things/365847652#id>
+<http://www.bbc.co.uk/things/518817673#id>
+<http://www.bbc.co.uk/things/2106751328#id>
+<http://www.bbc.co.uk/ontologies/bbc/Mobile>
+"name higher while browsers many compete pretension address from is centuries."
+<http://www.bbc.co.uk/thumbnail/440287097>
+"2011-05-27T02:01:01.684+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/ontologies/creativework/CreativeWork>
+<http://www.bbc.co.uk/things/1984978990#id>
+<http://sws.geonames.org/7290991/>
+"web occasion privilege come website taxes related at origin type."
+<http://www.w3.org/2002/07/owl#Thing>
+<http://www.bbc.co.uk/ontologies/creativework/TextualFormat>
+<http://www.bbc.co.uk/things/gd7d8f71b-40de-4dbd-b2b5-9e8dd1b4d8c0#id>
+<http://www.bbc.co.uk/things/863574645#id>
+"2011-06-03T18:29:20.932+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2012-05-09T21:18:13.457+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://dbpedia.org/resource/Zac_Goldsmith>
+<http://www.bbc.co.uk/ontologies/creativework/VideoFormat>
+<http://www.bbc.co.uk/things/226517954#id>
+<http://www.bbc.co.uk/ontologies/creativework/BlogPost>
+"2011-05-16T20:04:26.967+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://rdf.freebase.com/ns/m.026nlt>
+<http://www.guardian.co.uk/politics/person/9205/>
+"they rival europe its cricket record-keeping by unfair beyond reporting be movement has primary ip 1988 would log at machinery lower professional gather effective legislation."
+<http://rdf.freebase.com/ns/m.062pfm>
+"clergy preferences amassed can view church outlet activity cup record-keeping peasants europe eligible reason content pay engine customer there beyond log amounts cookie may."
+<http://www.bbc.co.uk/things/176046607#id>
+"and commerce professional amateur fact king customer permitted king services."
+<http://www.bbc.co.uk/ontologies/creativework/Thumbnail>
+<http://www.bbc.co.uk/thumbnail/2135749636>
+<http://www.bbc.co.uk/things/848092898#id>
+"modern system incur it browser such country site competed."
+<http://rdf.freebase.com/ns/m.027clb>
+"Ian Lucas a amounts analyze remotely inform territorial relate violent faster our."
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/95400.stm>
+<http://www.bbc.co.uk/ontologies/creativework/InteractiveFormat>
+"2012-04-20T17:31:20.763+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://sws.geonames.org/6287315/>
+"2012-06-09T06:13:47.671+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2011-10-22T08:42:43.853+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://google.com/search?btnI&q=site:http://www.guardian.co.uk/politics/person/+Jonathan+Reynolds>
+"data last relate carried against worldwide originally computer times south legislation set olympics over automatically does you apartheid ever."
+<http://www.bbc.co.uk/ontologies/creativework/AudioFormat>
+<http://www.bbc.co.uk/things/2024666504#id>
+<http://www.wikidata.org/wiki/Q262201>
+<http://www.bbc.co.uk/things/602760573#id>
+"Simon Hart"
+<http://www.bbc.co.uk/things/1850226638#id>
+<http://sws.geonames.org/7297291/>
+<http://rdf.freebase.com/ns/m.061700>
+<http://www.wikidata.org/wiki/Q260489>
+<http://www.bbc.co.uk/things/g8301b148-5bf6-4bbd-b45e-2a481bf7f62e#id>

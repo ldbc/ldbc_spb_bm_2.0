@@ -1,0 +1,32 @@
+# Saved by TopBraid on Tue Apr 16 14:54:53 BST 2013
+# baseURI: urn:ldp-systemlogic/
+# imports: http://www.geonames.org/ontology
+# imports: http://www.bbc.co.uk/ontologies/coreconcepts/
+
+@prefix core:    <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix geonames:  <http://www.geonames.org/ontology#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skosCore:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix systemlogic:  <urn:ldp-systemlogic/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+core:Person
+      rdfs:subClassOf systemlogic:TagConcept .
+
+core:Place
+      rdfs:subClassOf systemlogic:TagConcept .
+
+geonames:Feature
+      rdfs:subClassOf core:Place .
+
+systemlogic:
+      rdf:type rdfs:Resource ;
+      owl:imports core: , <http://www.geonames.org/ontology> .
+
+systemlogic:TagConcept
+      rdf:type owl:Class ;
+      rdfs:label "TagConcept"^^xsd:string .
+
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

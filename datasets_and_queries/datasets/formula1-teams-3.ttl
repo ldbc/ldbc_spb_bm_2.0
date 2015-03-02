@@ -1,0 +1,111 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.bbc.co.uk/contexts/b06ede67-986c-47fb-8905-aa1886cf0af7#id>
+    provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/datasets/sport/formula1/formula1-teams-3.ttl" ;
+    provenance:changeReason "Fixing incorrect canonicalLocation"^^xsd:string ;
+    provenance:provider <mailto:tom.grahame@bbc.co.uk> ;
+    provenance:version "3"^^xsd:int ;
+    a provenance:Dataset ;
+    rdfs:label "Formula1 Teams"^^xsd:string .
+
+<http://www.bbc.co.uk/things/2c109a1b-dd90-481e-a742-0165590bfac4#id>
+    domain:canonicalName "Toro Rosso"^^xsd:string ;
+    domain:name "Toro Rosso"^^xsd:string ;
+    domain:shortName "Toro Rosso"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/3fc5a7ef-3147-49dd-8745-fd8883c80ce6#id>
+    domain:canonicalName "Williams"^^xsd:string ;
+    domain:name "Williams"^^xsd:string ;
+    domain:shortName "Williams"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/45c1f909-9a49-4599-ad31-0b483652de83#id>
+    domain:canonicalName "Caterham"^^xsd:string ;
+    domain:name "Caterham"^^xsd:string ;
+    domain:shortName "Caterham"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/5e9bbf98-ae7d-4445-8df3-4858627020f9#id>
+    domain:canonicalName "Force India"^^xsd:string ;
+    domain:name "Force India"^^xsd:string ;
+    domain:shortName "Force India"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/667e2d56-8c18-4819-b407-cc5ddcbf2688#id>
+    domain:canonicalName "McLaren"^^xsd:string ;
+    domain:name "McLaren"^^xsd:string ;
+    domain:shortName "McLaren"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/86e9f8e2-5c2e-4622-997a-a5af7a470a25#id>
+    domain:canonicalName "Lotus"^^xsd:string ;
+    domain:name "Lotus"^^xsd:string ;
+    domain:shortName "Lotus"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/baed9b23-287f-4f21-9ade-12238879c0ce#id>
+    domain:canonicalName "BMW Sauber"^^xsd:string ;
+    domain:name "BMW Sauber"^^xsd:string ;
+    domain:shortName "BMW Sauber"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/bc540490-969d-4888-a031-47f664ece511#id>
+    domain:canonicalName "Ferrari"^^xsd:string ;
+    domain:name "Ferrari"^^xsd:string ;
+    domain:shortName "Ferrari"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/d5e292af-83a4-4773-8361-385bb6920093#id>
+    domain:canonicalName "Mercedes GP"^^xsd:string ;
+    domain:name "Mercedes GP"^^xsd:string ;
+    domain:shortName "Mercedes"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/d62f9c98-9332-463a-be97-a645380ad8cf#id>
+    domain:canonicalName "Marussia"^^xsd:string ;
+    domain:name "Marussia"^^xsd:string ;
+    domain:shortName "Marussia"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/efee5735-c0c3-4e26-84a9-ea8acc44d9bd#id>
+    domain:canonicalName "Hispania Racing Team"^^xsd:string ;
+    domain:name "Hispania Racing Team"^^xsd:string ;
+    domain:shortName "Hispania"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/f58ec73b-d0d3-4a3b-ae3a-b1dff63ae6ef#id>
+    domain:canonicalName "Red Bull"^^xsd:string ;
+    domain:name "Red Bull"^^xsd:string ;
+    domain:shortName "Red Bull"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/67c60513-7577-436b-9f0b-fd0dcfbb6441#id> , <http://www.bbc.co.uk/things/21f5a70e-b2c5-41ba-ae11-b21c6b850db5#id> , <http://www.bbc.co.uk/things/30f0bd1a-6efe-4a34-bc3a-3258ab9af756#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/13c4b240-b966-410e-a23a-f06dfa0b444b#id> ;
+    a sport:CompetitiveSportingOrganisation .
+

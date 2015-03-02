@@ -1,0 +1,40 @@
+# Saved by TopBraid on Fri Jan 18 12:25:40 GMT 2013
+# baseURI: http://www.bbc.co.uk/ontologies/tagging/
+# imports: http://www.bbc.co.uk/ontologies/bbc/
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tagging:  <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+tagging:
+      rdf:type owl:Ontology ;
+      rdfs:comment "This ontology is used to represent the class of tag concepts. All things subclassed (typed by a subclass of it) or typed by the class TagConcept will appear in tagging clients."^^xsd:string ;
+      rdfs:label "Tagging"^^xsd:string ;
+      owl:imports <http://www.bbc.co.uk/ontologies/bbc/> ;
+      owl:versionInfo "1.0"^^xsd:string .
+
+tagging:TagConcept
+      rdf:type owl:Class ;
+      rdfs:comment "This represents the concepts (things) that are exposed in the taggins applications. This is a subclass of bbc:Thing, which means that not all bbc:Things are TagConcepts but if they need to be then they must be explicitly linked to the class TagConcept"^^xsd:string ;
+      rdfs:isDefinedBy tagging: ;
+      rdfs:label "TagConcept"^^xsd:string ;
+      rdfs:subClassOf <http://www.bbc.co.uk/ontologies/bbc/Thing> .
+
+tagging:TagSet
+      rdf:type owl:Class ;
+      rdfs:comment "Set of tags used for a domain specific tagging purpose"^^xsd:string ;
+      rdfs:isDefinedBy tagging: ;
+      rdfs:label "TagConcept"^^xsd:string ;
+      rdfs:subClassOf owl:Thing .
+
+tagging:tagSet
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Indicates that a tag belongs to a tagset"^^xsd:string ;
+      rdfs:domain tagging:TagConcept ;
+      rdfs:isDefinedBy tagging: ;
+      rdfs:label "tagSet"^^xsd:string ;
+      rdfs:range tagging:TagSet .
+
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

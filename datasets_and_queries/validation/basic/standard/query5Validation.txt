@@ -1,0 +1,11 @@
+[SubstitutionParameters]
+cwork:BlogPost;cwork:InternationalAudience;"2011-07-19T10:18:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;"2011-07-19T11:18:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+
+[ExpectedResultsSize]
+14
+
+[Results]
+1
+none
+John Stevenson
+Charles Hendry

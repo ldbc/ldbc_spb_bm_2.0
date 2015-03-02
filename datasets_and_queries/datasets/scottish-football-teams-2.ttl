@@ -1,0 +1,1148 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.bbc.co.uk/contexts/7145f622-9f73-4ce5-b4d1-847f029dfbe7#id> a provenance:Dataset ;
+rdfs:label "Scottish Football Teams"^^xsd:string ;
+provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/datasets/sport/football/scottish-football-teams-2.ttl"^^xsd:string ;
+provenance:changeReason "Removing extraneous prefixes."^^xsd:string ;
+provenance:version "2"^^xsd:int ;
+provenance:provider <mailto:tom.grahame@bbc.co.uk> .
+
+<http://dbpedia.org/resource/Aberdeen_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Airdrie_United_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Albion_Rovers_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Alloa_Athletic_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Annan_Athletic_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Arbroath_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Ayr_United_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Berwick_Rangers_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Brechin_City_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Celtic_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Clyde_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Cowdenbeath_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Dumbarton_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Dundee_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Dundee_United_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Dunfermline_Athletic_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/East_Fife_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/East_Stirlingshire_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Elgin_City_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Falkirk_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Forfar_Athletic_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Greenock_Morton_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Hamilton_Academical_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Heart_of_Midlothian_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Hibernian_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Inverness_Caledonian_Thistle_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Kilmarnock_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Livingston_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Montrose_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Motherwell_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Partick_Thistle_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Peterhead_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Queen's_Park_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Queen_of_the_South_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Raith_Rovers_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Rangers_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Ross_County_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/St._Johnstone_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/St._Mirren_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Stenhousemuir_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Stirling_Albion_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/Stranraer_F.C.>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.acciesfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.afc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.airdrieunitedfc.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.albionrovers.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.alloaathletic.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.annanathleticfc.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.arbroathfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.ayrunitedfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/aberdeen>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/airdrie-united>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/albion-rovers>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/alloa-athletic>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/annan-athletic>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/arbroath>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/ayr-united>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/berwick-rangers>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/brechin-city>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/celtic>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/clyde>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/cowdenbeath>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/dumbarton>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/dundee>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/dundee-united>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/dunfermline-athletic>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/east-fife>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/east-stirlingshire>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/elgin-city>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/falkirk>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/forfar-athletic>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/greenock-morton>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/hamilton-academical>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/heart-of-midlothian>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/hibernian>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/inverness-caledonian-thistle>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/kilmarnock>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/livingston>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/montrose>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/motherwell>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/partick-thistle>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/peterhead>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/queen-of-the-south>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/queens-park>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/raith-rovers>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/rangers>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/ross-county>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/st-johnstone>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/st-mirren>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/stenhousemuir>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/stirling-albion>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/sport/football/teams/stranraer>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/0d2bccc3-ba40-7741-b741-485ee78acdf2#id>
+    domain:canonicalName "Clyde"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/clyde>, <http://www.clydefc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Clyde_F.C.>, <urn:sports-stats:137365214> ;
+    domain:name "Clyde"^^xsd:string ;
+    domain:shortName "Clyde"^^xsd:string ;
+    domain:slug "clyde"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/11f60fdb-df70-3348-a54d-6a7bcda03b8d#id>
+    domain:canonicalName "Motherwell"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/motherwell>, <http://www.motherwellfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Motherwell_F.C.>, <urn:sports-stats:137365208> ;
+    domain:name "Motherwell"^^xsd:string ;
+    domain:shortName "Motherwell"^^xsd:string ;
+    domain:slug "motherwell"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id>, <http://www.bbc.co.uk/things/ebe9d0c8-0a38-4d55-be5a-e43f46192057#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/2389e7d4-b6ee-8b42-b430-806fd9a5a7e9#id>
+    domain:canonicalName "Forfar Athletic"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/forfar-athletic>, <http://www.forfarathletic.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Forfar_Athletic_F.C.>, <urn:sports-stats:137365217> ;
+    domain:name "Forfar Athletic"^^xsd:string ;
+    domain:shortName "Forfar"^^xsd:string ;
+    domain:slug "forfar-athletic"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>, <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/28028aab-5b3f-0e41-99dd-bca1c431d27b#id>
+    domain:canonicalName "Dundee"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/dundee>, <http://www.dundeefc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Dundee_F.C.>, <urn:sports-stats:137318403> ;
+    domain:name "Dundee"^^xsd:string ;
+    domain:shortName "Dundee"^^xsd:string ;
+    domain:slug "dundee"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/329aa45b-dcba-3e43-b3a0-ae5cb3220384#id>
+    domain:canonicalName "Dunfermline Athletic"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/dunfermline-athletic>, <http://www.dafc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Dunfermline_Athletic_F.C.>, <urn:sports-stats:137318405> ;
+    domain:name "Dunfermline"^^xsd:string ;
+    domain:shortName "Dunfermline"^^xsd:string ;
+    domain:slug "dunfermline-athletic"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/33d68d3d-a0aa-1047-84d0-dc382de3e875#id>
+    domain:canonicalName "Ayr United"^^xsd:string ;
+    domain:document <http://www.ayrunitedfc.co.uk/>, <http://www.bbc.co.uk/sport/football/teams/ayr-united> ;
+    domain:externalId <http://dbpedia.org/resource/Ayr_United_F.C.>, <urn:sports-stats:137365213> ;
+    domain:name "Ayr United"^^xsd:string ;
+    domain:shortName "Ayr"^^xsd:string ;
+    domain:slug "ayr-united"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/3c7725e6-ab7c-2a44-b9c8-08f1b39fa95c#id>
+    domain:canonicalName "Raith Rovers"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/raith-rovers>, <http://www.raithroversfc.com/> ;
+    domain:externalId <http://dbpedia.org/resource/Raith_Rovers_F.C.>, <urn:sports-stats:137365243> ;
+    domain:name "Raith Rovers"^^xsd:string ;
+    domain:shortName "Raith Rovers"^^xsd:string ;
+    domain:slug "raith-rovers"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/3d94fcd2-2af0-7941-aedd-c7670238ee20#id>
+    domain:canonicalName "East Fife"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/east-fife>, <http://www.eastfife.org/> ;
+    domain:externalId <http://dbpedia.org/resource/East_Fife_F.C.>, <urn:sports-stats:137365271> ;
+    domain:name "East Fife"^^xsd:string ;
+    domain:shortName "East Fife"^^xsd:string ;
+    domain:slug "east-fife"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>, <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/3e6e2f9a-79f9-7546-bf97-31f46ba6cd5a#id>
+    domain:canonicalName "Hibernian"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/hibernian>, <http://www.hibernianfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Hibernian_F.C.>, <urn:sports-stats:137318407> ;
+    domain:name "Hibernian"^^xsd:string ;
+    domain:shortName "Hibernian"^^xsd:string ;
+    domain:slug "hibernian"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/491e9338-1549-1e49-b202-b157c149271d#id>
+    domain:canonicalName "Queen of the South"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/queen-of-the-south>, <http://www.qosfc.com/> ;
+    domain:externalId <http://dbpedia.org/resource/Queen_of_the_South_F.C.>, <urn:sports-stats:137365275> ;
+    domain:name "Queen of the South"^^xsd:string ;
+    domain:shortName "Queen of Sth"^^xsd:string ;
+    domain:slug "queen-of-the-south"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/4a604f70-d799-fe48-b32d-fc5b1471b2d6#id>
+    domain:canonicalName "Arbroath"^^xsd:string ;
+    domain:document <http://www.arbroathfc.co.uk/>, <http://www.bbc.co.uk/sport/football/teams/arbroath> ;
+    domain:externalId <http://dbpedia.org/resource/Arbroath_F.C.>, <urn:sports-stats:137365245> ;
+    domain:name "Arbroath"^^xsd:string ;
+    domain:shortName "Arbroath"^^xsd:string ;
+    domain:slug "arbroath"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>, <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/4b054c51-dff4-a243-a876-fc6595124b47#id>
+    domain:canonicalName "Partick Thistle"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/partick-thistle>, <http://www.ptfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Partick_Thistle_F.C.>, <urn:sports-stats:137365242> ;
+    domain:name "Partick Thistle"^^xsd:string ;
+    domain:shortName "Partick Thistle"^^xsd:string ;
+    domain:slug "partick-thistle"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/5074d279-989b-5b40-b54b-a6b834b265e5#id>
+    domain:canonicalName "Brechin City"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/brechin-city>, <http://www.brechincity.com/> ;
+    domain:externalId <http://dbpedia.org/resource/Brechin_City_F.C.>, <urn:sports-stats:137365247> ;
+    domain:name "Brechin City"^^xsd:string ;
+    domain:shortName "Brechin"^^xsd:string ;
+    domain:slug "brechin-city"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>, <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/5840c45e-73f4-9942-b653-8d7eb8067fc9#id>
+    domain:canonicalName "Rangers"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/rangers>, <http://www.rangers.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Rangers_F.C.>, <urn:sports-stats:137365209> ;
+    domain:name "Rangers"^^xsd:string ;
+    domain:shortName "Rangers"^^xsd:string ;
+    domain:slug "rangers"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/69eec8aa-359c-624d-bb16-1a80f25fad1e#id>
+    domain:canonicalName "Elgin City"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/elgin-city>, <http://www.elgincity.com/> ;
+    domain:externalId <http://dbpedia.org/resource/Elgin_City_F.C.>, <urn:sports-stats:139007720> ;
+    domain:name "Elgin City"^^xsd:string ;
+    domain:shortName "Elgin"^^xsd:string ;
+    domain:slug "elgin-city"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/6d397eab-9d0d-b84a-a746-8062a76649e5#id>
+    domain:canonicalName "Celtic"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/celtic>, <http://www.celticfc.net/> ;
+    domain:externalId <http://dbpedia.org/resource/Celtic_F.C.>, <urn:sports-stats:137318402> ;
+    domain:name "Celtic"^^xsd:string ;
+    domain:shortName "Celtic"^^xsd:string ;
+    domain:slug "celtic"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id>, <http://www.bbc.co.uk/things/ebe9d0c8-0a38-4d55-be5a-e43f46192057#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/6f30ea40-789b-a147-bdcc-9f17b4e2323f#id>
+    domain:canonicalName "East Stirlingshire"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/east-stirlingshire>, <http://www.eaststirlingshirefc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/East_Stirlingshire_F.C.>, <urn:sports-stats:137365272> ;
+    domain:name "East Stirlingshire"^^xsd:string ;
+    domain:shortName "East Stirling"^^xsd:string ;
+    domain:slug "east-stirlingshire"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/6ff32eef-0eed-474a-9443-6df2831253fd#id>
+    domain:canonicalName "Cowdenbeath"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/cowdenbeath>, <http://www.cowdenbeathfc.com/> ;
+    domain:externalId <http://dbpedia.org/resource/Cowdenbeath_F.C.>, <urn:sports-stats:137365248> ;
+    domain:name "Cowdenbeath"^^xsd:string ;
+    domain:shortName "Cowdenbeath"^^xsd:string ;
+    domain:slug "cowdenbeath"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/76976a76-f9f7-3949-bae4-2daa704aa395#id>
+    domain:canonicalName "Heart of Midlothian"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/heart-of-midlothian>, <http://www.heartsfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Heart_of_Midlothian_F.C.>, <urn:sports-stats:137318406> ;
+    domain:name "Heart of Midlothian"^^xsd:string ;
+    domain:shortName "Hearts"^^xsd:string ;
+    domain:slug "heart-of-midlothian"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id>, <http://www.bbc.co.uk/things/e364e93b-22b7-4de8-9d4d-94b4b874a543#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/7c461293-7845-3e49-a7bf-96b2c3f6de43#id>
+    domain:canonicalName "St Mirren"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/st-mirren>, <http://www.saintmirren.net/> ;
+    domain:externalId <http://dbpedia.org/resource/St._Mirren_F.C.>, <urn:sports-stats:137365210> ;
+    domain:name "St Mirren"^^xsd:string ;
+    domain:shortName "St Mirren"^^xsd:string ;
+    domain:slug "st-mirren"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/85740113-82ee-4e4e-bb35-fd546ecd48a7#id>
+    domain:canonicalName "Stirling Albion"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/stirling-albion>, <http://www.stirlingalbionfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Stirling_Albion_F.C.>, <urn:sports-stats:137365278> ;
+    domain:name "Stirling Albion"^^xsd:string ;
+    domain:shortName "Stirling"^^xsd:string ;
+    domain:slug "stirling-albion"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/88ea67d2-4ee7-ac4c-956a-470565f83cf1#id>
+    domain:canonicalName "Ross County"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/ross-county>, <http://www.rosscountyfootballclub.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Ross_County_F.C.>, <urn:sports-stats:137372067> ;
+    domain:name "Ross County"^^xsd:string ;
+    domain:shortName "Ross County"^^xsd:string ;
+    domain:slug "ross-county"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/898f3cbc-2605-ea4e-96cc-b3d186bb7483#id>
+    domain:canonicalName "Dumbarton"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/dumbarton>, <http://www.dumbartonfootballclub.com/> ;
+    domain:externalId <http://dbpedia.org/resource/Dumbarton_F.C.>, <urn:sports-stats:137365270> ;
+    domain:name "Dumbarton"^^xsd:string ;
+    domain:shortName "Dumbarton"^^xsd:string ;
+    domain:slug "dumbarton"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/8a535cd8-2260-1a49-8fb2-62f8e7b54ffc#id>
+    domain:canonicalName "Dundee United"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/dundee-united>, <http://www.dundeeunitedfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Dundee_United_F.C.>, <urn:sports-stats:137318404> ;
+    domain:name "Dundee United"^^xsd:string ;
+    domain:shortName "Dundee Utd"^^xsd:string ;
+    domain:slug "dundee-united"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id>, <http://www.bbc.co.uk/things/e364e93b-22b7-4de8-9d4d-94b4b874a543#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/90e7c0da-d0f3-934a-9c30-c9418ccb0e88#id>
+    domain:canonicalName "Berwick Rangers"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/berwick-rangers>, <http://www.berwickrangers.net/> ;
+    domain:externalId <http://dbpedia.org/resource/Berwick_Rangers_F.C.>, <urn:sports-stats:137365246> ;
+    domain:name "Berwick Rangers"^^xsd:string ;
+    domain:shortName "Berwick"^^xsd:string ;
+    domain:slug "berwick-rangers"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/92cec538-f1f2-f549-a75e-c95210ed7f7f#id>
+    domain:canonicalName "Stranraer"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/stranraer>, <http://www.stranraerfc.org/> ;
+    domain:externalId <http://dbpedia.org/resource/Stranraer_F.C.>, <urn:sports-stats:137365279> ;
+    domain:name "Stranraer"^^xsd:string ;
+    domain:shortName "Stranraer"^^xsd:string ;
+    domain:slug "stranraer"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/98c8f8a4-b663-cf4e-a8d9-77a32c4d5392#id>
+    domain:canonicalName "Peterhead"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/peterhead>, <http://www.peterheadfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Peterhead_F.C.>, <urn:sports-stats:139007842> ;
+    domain:name "Peterhead"^^xsd:string ;
+    domain:shortName "Peterhead"^^xsd:string ;
+    domain:slug "peterhead"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/aabd5eb3-73c0-6b47-a00d-0b0d6531acbc#id>
+    domain:canonicalName "Kilmarnock"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/kilmarnock>, <http://www.kilmarnockfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Kilmarnock_F.C.>, <urn:sports-stats:137365273> ;
+    domain:name "Kilmarnock"^^xsd:string ;
+    domain:shortName "Kilmarnock"^^xsd:string ;
+    domain:slug "kilmarnock"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/aad59b59-891c-a54c-bff9-bef648c06766#id>
+    domain:canonicalName "Hamilton Academical"^^xsd:string ;
+    domain:document <http://www.acciesfc.co.uk/>, <http://www.bbc.co.uk/sport/football/teams/hamilton-academical> ;
+    domain:externalId <http://dbpedia.org/resource/Hamilton_Academical_F.C.>, <urn:sports-stats:137365239> ;
+    domain:name "Hamilton Academical"^^xsd:string ;
+    domain:shortName "Hamilton"^^xsd:string ;
+    domain:slug "hamilton-academical"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/b0e4a498-fbda-c74a-81b0-d85e5012dcf1#id>
+    domain:canonicalName "Greenock Morton"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/greenock-morton>, <http://www.gmfc.net/> ;
+    domain:externalId <http://dbpedia.org/resource/Greenock_Morton_F.C.>, <urn:sports-stats:137365241> ;
+    domain:name "Greenock Morton"^^xsd:string ;
+    domain:shortName "Morton"^^xsd:string ;
+    domain:slug "greenock-morton"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/bcb5f9e3-776e-e041-9b3b-5d2dedb04e53#id>
+    domain:canonicalName "Montrose"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/montrose>, <http://www.montrosefc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Montrose_F.C.>, <urn:sports-stats:137365274> ;
+    domain:name "Montrose"^^xsd:string ;
+    domain:shortName "Montrose"^^xsd:string ;
+    domain:slug "montrose"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/beb634cb-1d91-fb42-a3af-da4754910dff#id>
+    domain:canonicalName "Airdrie United"^^xsd:string ;
+    domain:document <http://www.airdrieunitedfc.com/>, <http://www.bbc.co.uk/sport/football/teams/airdrie-united> ;
+    domain:externalId <http://dbpedia.org/resource/Airdrie_United_F.C.>, <urn:sports-stats:186975012> ;
+    domain:name "Airdrie United"^^xsd:string ;
+    domain:shortName "Airdrie Utd"^^xsd:string ;
+    domain:slug "airdrie-united"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/bec294ac-1022-ac44-a26b-3b220983fd30#id>
+    domain:canonicalName "Livingston"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/livingston>, <http://www.livingstonfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Livingston_F.C.>, <urn:sports-stats:137365240> ;
+    domain:name "Livingston"^^xsd:string ;
+    domain:shortName "Livingston"^^xsd:string ;
+    domain:slug "livingston"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/c2995909-a4ed-bc4d-b659-c56c1dcf65dc#id>
+    domain:canonicalName "Inverness Caledonian Thistle"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/inverness-caledonian-thistle>, <http://www.ictfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Inverness_Caledonian_Thistle_F.C.>, <urn:sports-stats:138828011> ;
+    domain:name "Inverness Caledonian Thistle"^^xsd:string ;
+    domain:shortName "Inverness CT"^^xsd:string ;
+    domain:slug "inverness-caledonian-thistle"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/c2f82556-447b-7249-a2db-bc5106d32f06#id>
+    domain:canonicalName "Albion Rovers"^^xsd:string ;
+    domain:document <http://www.albionrovers.com/>, <http://www.bbc.co.uk/sport/football/teams/albion-rovers> ;
+    domain:externalId <http://dbpedia.org/resource/Albion_Rovers_F.C.>, <urn:sports-stats:137365211> ;
+    domain:name "Albion Rovers"^^xsd:string ;
+    domain:shortName "Albion"^^xsd:string ;
+    domain:slug "albion-rovers"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>, <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/de96e227-7e77-974f-aab2-2e37598c5cc2#id>
+    domain:canonicalName "Aberdeen"^^xsd:string ;
+    domain:document <http://www.afc.co.uk/>, <http://www.bbc.co.uk/sport/football/teams/aberdeen> ;
+    domain:externalId <http://dbpedia.org/resource/Aberdeen_F.C.>, <urn:sports-stats:137318401> ;
+    domain:name "Aberdeen"^^xsd:string ;
+    domain:shortName "Aberdeen"^^xsd:string ;
+    domain:slug "aberdeen"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/dea7c3a1-9534-e245-b01f-68741851d2ae#id>
+    domain:canonicalName "Stenhousemuir"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/stenhousemuir>, <http://www.stenhousemuirfc.com/> ;
+    domain:externalId <http://dbpedia.org/resource/Stenhousemuir_F.C.>, <urn:sports-stats:137365277> ;
+    domain:name "Stenhousemuir"^^xsd:string ;
+    domain:shortName "Stenhousemuir"^^xsd:string ;
+    domain:slug "stenhousemuir"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/35a00960-fee5-4811-ab6d-92e64d4b5362#id>, <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/e0bd00b9-6ae5-1e43-af34-71fde286da18#id>
+    domain:canonicalName "St Johnstone"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/st-johnstone>, <http://www.perthstjohnstonefc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/St._Johnstone_F.C.>, <urn:sports-stats:137365244> ;
+    domain:name "St Johnstone"^^xsd:string ;
+    domain:shortName "St Johnstone"^^xsd:string ;
+    domain:slug "st-johnstone"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/b0c84dc3-7b55-4b88-bfc1-8013a6fe2530#id>, <http://www.bbc.co.uk/things/cc0391f1-ea46-4291-a11d-08708f327429#id>, <http://www.bbc.co.uk/things/e364e93b-22b7-4de8-9d4d-94b4b874a543#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/e490e57e-9ef9-e940-b08e-6c8b381298e2#id>
+    domain:canonicalName "Falkirk"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/falkirk>, <http://www.falkirkfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Falkirk_F.C.>, <urn:sports-stats:137365216> ;
+    domain:name "Falkirk"^^xsd:string ;
+    domain:shortName "Falkirk"^^xsd:string ;
+    domain:slug "falkirk"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9518d7c0-1491-488c-abe0-c7a8426141e6#id>, <http://www.bbc.co.uk/things/c759c671-fb8a-4557-9e1b-b9bd16492b96#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/e870971d-d6e3-504d-888f-d8558d4a4817#id>
+    domain:canonicalName "Queens Park"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/teams/queens-park>, <http://www.queensparkfc.co.uk/> ;
+    domain:externalId <http://dbpedia.org/resource/Queen's_Park_F.C.>, <urn:sports-stats:137365276> ;
+    domain:name "Queens Park"^^xsd:string ;
+    domain:shortName "Queens Park"^^xsd:string ;
+    domain:slug "queens-park"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/e93a3145-285d-4940-8018-8bafdc498ff0#id>
+    domain:canonicalName "Annan Athletic"^^xsd:string ;
+    domain:document <http://www.annanathleticfc.com/>, <http://www.bbc.co.uk/sport/football/teams/annan-athletic> ;
+    domain:externalId <http://dbpedia.org/resource/Annan_Athletic_F.C.>, <urn:sports-stats:184261145> ;
+    domain:name "Annan Athletic"^^xsd:string ;
+    domain:shortName "Annan Athletic"^^xsd:string ;
+    domain:slug "annan-athletic"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/0c882d8f-9ae8-4393-9d4a-15385b70e12a#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.bbc.co.uk/things/ecf61a12-6be0-3948-8a94-98ede890bf33#id>
+    domain:canonicalName "Alloa Athletic"^^xsd:string ;
+    domain:document <http://www.alloaathletic.co.uk/>, <http://www.bbc.co.uk/sport/football/teams/alloa-athletic> ;
+    domain:externalId <http://dbpedia.org/resource/Alloa_Athletic_F.C.>, <urn:sports-stats:137365212> ;
+    domain:name "Alloa Athletic"^^xsd:string ;
+    domain:shortName "Alloa"^^xsd:string ;
+    domain:slug "alloa-athletic"^^xsd:string ;
+    sport:competesIn <http://www.bbc.co.uk/things/9ad9354c-4c91-408d-8d53-fcdeeb9393de#id>, <http://www.bbc.co.uk/things/eec2af13-00d3-4fa8-adec-71476a6d2e72#id> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:CompetitiveSportingOrganisation .
+
+<http://www.berwickrangers.net/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.brechincity.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.celticfc.net/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.clydefc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.cowdenbeathfc.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.dafc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.dumbartonfootballclub.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.dundeefc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.dundeeunitedfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.eastfife.org/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.eaststirlingshirefc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.elgincity.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.falkirkfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.forfarathletic.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.gmfc.net/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.heartsfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.hibernianfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.ictfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.kilmarnockfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.livingstonfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.montrosefc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.motherwellfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.perthstjohnstonefc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.peterheadfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.ptfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.qosfc.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.queensparkfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.raithroversfc.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.rangers.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.rosscountyfootballclub.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.saintmirren.net/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.stenhousemuirfc.com/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.stirlingalbionfc.co.uk/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.stranraerfc.org/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:137318401>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137318402>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137318403>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137318404>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137318405>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137318406>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137318407>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365208>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365209>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365210>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365211>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365212>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365213>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365214>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365216>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365217>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365239>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365240>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365241>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365242>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365243>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365244>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365245>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365246>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365247>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365248>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365270>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365271>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365272>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365273>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365274>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365275>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365276>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365277>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365278>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137365279>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:137372067>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:138828011>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:139007720>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:139007842>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:184261145>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<urn:sports-stats:186975012>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+

@@ -1,0 +1,111 @@
+PREFIX bbcevent:<http://www.bbc.co.uk/ontologies/event/> 
+PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#> 
+PREFIX bbc:<http://www.bbc.co.uk/ontologies/bbc/> 
+PREFIX time:<http://www.w3.org/2006/time#> 
+PREFIX event:<http://purl.org/NET/c4dm/event.owl#> 
+PREFIX music-ont:<http://purl.org/ontology/mo/> 
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX foaf:<http://xmlns.com/foaf/0.1/> 
+PREFIX provenance:<http://www.bbc.co.uk/ontologies/provenance/> 
+PREFIX owl:<http://www.w3.org/2002/07/owl#> 
+PREFIX cms:<http://www.bbc.co.uk/ontologies/cms/> 
+PREFIX news:<http://www.bbc.co.uk/ontologies/news/> 
+PREFIX cnews:<http://www.bbc.co.uk/ontologies/news/cnews/> 
+PREFIX cconcepts:<http://www.bbc.co.uk/ontologies/coreconcepts/> 
+PREFIX dbp-prop:<http://dbpedia.org/property/> 
+PREFIX geonames:<http://sws.geonames.org/> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX domain:<http://www.bbc.co.uk/ontologies/domain/> 
+PREFIX dbpedia:<http://dbpedia.org/resource/> 
+PREFIX geo-ont:<http://www.geonames.org/ontology#> 
+PREFIX bbc-pont:<http://purl.org/ontology/po/> 
+PREFIX tagging:<http://www.bbc.co.uk/ontologies/tagging/> 
+PREFIX sport:<http://www.bbc.co.uk/ontologies/sport/> 
+PREFIX skosCore:<http://www.w3.org/2004/02/skos/core#> 
+PREFIX dbp-ont:<http://dbpedia.org/ontology/> 
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#> 
+PREFIX core:<http://www.bbc.co.uk/ontologies/coreconcepts/> 
+PREFIX curric:<http://www.bbc.co.uk/ontologies/curriculum/> 
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
+PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/> 
+PREFIX fb:<http://rdf.freebase.com/ns/>
+PREFIX ot:<http://www.ontotext.com/>
+
+#  Query name : query1
+#  Query Description : 
+#  Retrieve creative works about thing t (or that mention t)
+#  reasoning: rdfs:subClassOf, rdf:type
+#  join ordering: cwork:dateModified rdf:type owl:FunctionalProperty
+#  join ordering: cwork:dateCreated rdf:type  owl:FunctionalProperty  
+
+CONSTRUCT {
+  ?creativeWork a cwork:CreativeWork ;
+    a ?type ;
+    cwork:title ?title ;
+    cwork:shortTitle ?shortTitle ;
+    cwork:about ?about ;
+    cwork:mentions ?mentions ;
+    cwork:dateCreated ?created ;
+    cwork:dateModified ?modified ;
+    cwork:description ?description ;
+    cwork:primaryFormat ?primaryFormat ;
+    bbc:primaryContentOf ?webDocument .
+  ?webDocument bbc:webDocumentType ?webDocType .
+  ?about rdfs:label ?aboutLabel ;
+    bbc:shortLabel ?aboutShortLabel ;
+    bbc:preferredLabel ?aboutPreferredLabel .
+  ?mentions rdfs:label ?mentionsLabel ;
+    bbc:shortLabel ?mentionsShortLabel ;
+    bbc:preferredLabel ?mentionsPreferredLabel .
+  ?creativeWork cwork:thumbnail ?thumbnail .
+  ?thumbnail a cwork:Thumbnail ;
+    cwork:altText ?thumbnailAltText ;
+    cwork:thumbnailType ?thumbnailType .
+}
+FROM ot:disable-sameAs
+WHERE {
+  {
+    SELECT ?creativeWork
+      WHERE {
+              ?creativeWork {{{cwAboutOrMentions}}} {{{cwAboutOrMentionsUri}}} .
+              ?creativeWork a cwork:CreativeWork ;
+              cwork:dateModified ?modified .
+      }
+      ORDER BY DESC(?modified)
+      LIMIT 10
+  }
+  ?creativeWork a cwork:CreativeWork ;
+                a ?type ;
+                cwork:title ?title ;
+                cwork:dateModified ?modified .
+  OPTIONAL { ?creativeWork cwork:shortTitle ?shortTitle . }
+  OPTIONAL { ?creativeWork cwork:description ?description . }
+  OPTIONAL { ?creativeWork cwork:about ?about .
+             OPTIONAL { ?about rdfs:label ?aboutLabel . }
+             OPTIONAL { ?about bbc:shortLabel ?aboutShortLabel . }
+             OPTIONAL { ?about bbc:preferredLabel ?aboutPreferredLabel . }
+           }
+  OPTIONAL {
+             ?creativeWork cwork:mentions ?mentions .
+             OPTIONAL { ?mentions rdfs:label ?mentionsLabel . }
+             OPTIONAL { ?mentions bbc:shortLabel ?mentionsShortLabel . }
+             OPTIONAL { ?mentions bbc:preferredLabel ?mentionsPreferredLabel . }
+           }
+  OPTIONAL { ?creativeWork cwork:dateCreated ?created . }
+  OPTIONAL { ?creativeWork cwork:primaryFormat ?primaryFormat . }
+  OPTIONAL {
+            { 
+              ?webDocument bbc:primaryContent ?creativeWork . 
+              OPTIONAL { ?webDocument bbc:webDocumentType ?webDocType . }
+            }
+            UNION
+            { 
+              ?webDocument ^bbc:primaryContentOf ?creativeWork . 
+              OPTIONAL { ?webDocument bbc:webDocumentType ?webDocType . } 
+            }
+  }
+  OPTIONAL { ?creativeWork cwork:thumbnail ?thumbnail .
+             OPTIONAL { ?thumbnail cwork:altText ?thumbnailAltText . }
+             OPTIONAL { ?thumbnail cwork:thumbnailType ?thumbnailType . }
+  }
+}

@@ -1,0 +1,67 @@
+PREFIX bbcevent:<http://www.bbc.co.uk/ontologies/event/> 
+PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#> 
+PREFIX bbc:<http://www.bbc.co.uk/ontologies/bbc/> 
+PREFIX time:<http://www.w3.org/2006/time#> 
+PREFIX event:<http://purl.org/NET/c4dm/event.owl#> 
+PREFIX music-ont:<http://purl.org/ontology/mo/> 
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX foaf:<http://xmlns.com/foaf/0.1/> 
+PREFIX provenance:<http://www.bbc.co.uk/ontologies/provenance/> 
+PREFIX owl:<http://www.w3.org/2002/07/owl#> 
+PREFIX cms:<http://www.bbc.co.uk/ontologies/cms/> 
+PREFIX news:<http://www.bbc.co.uk/ontologies/news/> 
+PREFIX cnews:<http://www.bbc.co.uk/ontologies/news/cnews/> 
+PREFIX cconcepts:<http://www.bbc.co.uk/ontologies/coreconcepts/> 
+PREFIX dbp-prop:<http://dbpedia.org/property/> 
+PREFIX geonames:<http://sws.geonames.org/> 
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX domain:<http://www.bbc.co.uk/ontologies/domain/> 
+PREFIX dbpedia:<http://dbpedia.org/resource/> 
+PREFIX geo-ont:<http://www.geonames.org/ontology#> 
+PREFIX bbc-pont:<http://purl.org/ontology/po/> 
+PREFIX tagging:<http://www.bbc.co.uk/ontologies/tagging/> 
+PREFIX sport:<http://www.bbc.co.uk/ontologies/sport/> 
+PREFIX skosCore:<http://www.w3.org/2004/02/skos/core#> 
+PREFIX dbp-ont:<http://dbpedia.org/ontology/> 
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#> 
+PREFIX core:<http://www.bbc.co.uk/ontologies/coreconcepts/> 
+PREFIX curric:<http://www.bbc.co.uk/ontologies/curriculum/> 
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
+PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/> 
+PREFIX fb:<http://rdf.freebase.com/ns/>
+PREFIX geo:<http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX ldbc:<http://www.ldbc.eu/ontologies/sempub#>
+PREFIX ot:<http://www.ontotext.com/>
+
+#  Query name : query22
+#  Query Description : 
+#  A faceted search query, several iterations of that query follow, adding up more constraints to previous iterations:
+#    - FTS search on a random word in Creative Works' titles and adding a category type constraint
+#    - Group by year and month of creation
+#    - Group by tag (tagged entity being mentioned or tagged about)
+#    - Group by primary format
+#    - Finally selecting title and date of creation by adding a constraint on: month of the year
+#  All query iterations from current drill-down will have same query IDs!
+
+SELECT {{{projection}}} 
+FROM ot:disable-sameAs
+{
+	?creativework a cwork:CreativeWork .
+	?creativework cwork:title ?title .
+	?creativework cwork:description ?description .
+	?creativework cwork:category ?category .
+	?creativework cwork:tag ?tag .
+	?creativework cwork:audience ?audience .
+	?creativework cwork:liveCoverage ?liveCoverage .
+	?creativework cwork:primaryFormat ?primaryFormat .
+	?creativework cwork:dateCreated ?dateCreated .
+	BIND (day(?dateCreated) as ?day) .
+	BIND (year(?dateCreated) as ?year) .
+	BIND (month(?dateCreated) as ?month) .
+	{{{filter1}}}
+	{{{filter2}}}
+	{{{filter3}}}
+}
+{{{groupBy}}}
+{{{orderBy}}}
+LIMIT 500

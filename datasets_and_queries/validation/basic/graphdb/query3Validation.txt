@@ -1,0 +1,143 @@
+[SubstitutionParameters]
+<http://www.guardian.co.uk/politics/person/9343/>;cwork:InternationalAudience;10000
+
+[ExpectedResultsSize]
+303
+
+[Results]
+<http://www.bbc.co.uk/things/31030#id>
+<http://www.bbc.co.uk/things/13851#id>
+<http://www.bbc.co.uk/things/23607#id>
+<http://www.bbc.co.uk/things/13450#id>
+<http://www.bbc.co.uk/things/2172#id>
+<http://www.bbc.co.uk/things/19426#id>
+<http://www.bbc.co.uk/things/12294#id>
+<http://www.bbc.co.uk/things/29836#id>
+<http://www.bbc.co.uk/things/28670#id>
+<http://www.bbc.co.uk/things/281291174#id>
+"Maria Miller are such notion a apartheid society historically preclude beginning one."
+<http://rdf.freebase.com/ns/m.0bwjwv9>
+"2011-06-21T07:15:10.924+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2011-12-04T17:59:10.150+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2012-01-02T09:48:42.886+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"solely raise venue policy day criticism present supported attract responsible."
+"related permitted impact enable head created servers conscientious installed this."
+<http://sws.geonames.org/7297620/>
+"strongest achieve dogma origin whenever 2006 war side granting boxing."
+<http://rdf.freebase.com/ns/m.0by1gqy>
+<http://www.bbc.co.uk/thumbnail/2141833884>
+<http://sws.geonames.org/7297172/>
+<http://www.peterluff.org.uk/>
+"2011-09-22T17:27:28.954+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://sws.geonames.org/7300389/>
+"2011-08-17T12:32:38.559+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"could purposes competition saving state man cricket demolition contested common town data following your experience charge royal progress world pay these themselves ioc."
+<http://www.bbc.co.uk/things/1494467460#id>
+"thumbnail atlText for CW http://www.bbc.co.uk/context/23607#id"
+<http://www.bbc.co.uk/things/2130974772#id>
+<http://www.bbc.co.uk/things/g4ecdbe1b-c6c1-48c8-987c-d80c23e02786#id>
+<http://www.bbc.co.uk/things/920461242#id>
+"2011-07-08T00:39:06.738+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2011-11-04T22:02:11.698+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://sws.geonames.org/7298124/>
+<http://www.bbc.co.uk/things/1341853355#id>
+<http://www.bbc.co.uk/things/1094050006#id>
+"Peter Luff those automatically majority guaranteeing principle usage computer africa web whole."
+<http://www.bbc.co.uk/thumbnail/925555482>
+<http://sws.geonames.org/6286295/>
+<http://www.bbc.co.uk/things/1667631809#id>
+<http://dbpedia.org/resource/Paul_Goggins>
+<http://rdf.freebase.com/ns/m.01fhnm>
+<http://www.bbc.co.uk/things/dc6e72e6-b0a1-4385-a734-f37a9ffd4de7#id>
+"2011-06-22T00:58:30.351+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.guardian.co.uk/politics/person/9343/>
+<http://www.bbc.co.uk/things/1635214378#id>
+<http://www.bbc.co.uk/thumbnail/232971112>
+"broadcasters global their a assigned themselves among activity method solely has for already related."
+<http://www.guardian.co.uk/politics/person/14330/>
+"thumbnail atlText for CW http://www.bbc.co.uk/context/2172#id"
+<http://www.bbc.co.uk/things/403036376#id>
+"2011-10-04T11:42:37.332+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"Gloria De Piero after preclude patterns people attracted central olympics power representative those."
+<http://www.bbc.co.uk/things/1715265619#id>
+"when eligible achievement without any are church still which."
+<http://www.guardian.co.uk/politics/person/9254/>
+"Stephen Barclay assigned diagnose as you being adopt retain century petition exist."
+<http://www.georgefreeman.co.uk/>
+"money party not does identifiable additionally attract appear adopt problems."
+<http://dbpedia.org/resource/Bob_Ainsworth>
+"pretty object court came territorial rights lead personally your refused cherished than than payment private that clergy."
+"2012-06-18T13:28:30.021+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"Dan Byles number negatively usage see administer maintained refuse practiced normally reject."
+<http://www.bbc.co.uk/category/PoliticsPersonsReference>
+<http://rdf.freebase.com/ns/m.05xkqq>
+"2011-07-26T20:35:51.053+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2011-05-19T11:05:41.781+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/things/gc4649a07-a301-4311-b8dd-be2bb8514dd2#id>
+"thumbnail atlText for CW http://www.bbc.co.uk/context/12294#id"
+<http://sws.geonames.org/19006/>
+<http://www.bbc.co.uk/thumbnail/265022334>
+<http://www.wikidata.org/wiki/Q271935>
+<http://sws.geonames.org/7294681/>
+<http://www.bbc.co.uk/ontologies/creativework/InternationalAudience>
+<http://www.guardian.co.uk/politics/person/6189/>
+"automatically responsible boxing entered side a were to pages while request object private."
+"thumbnail atlText for CW http://www.bbc.co.uk/context/28670#id"
+<http://www.bbc.co.uk/things/1176371467#id>
+<http://www.bbc.co.uk/thumbnail/700124260>
+"thumbnail atlText for CW http://www.bbc.co.uk/context/29836#id"
+<http://sws.geonames.org/7301532/>
+<http://www.bbc.co.uk/category/PoliticsPersonsAdditional>
+<http://www.bbc.co.uk/things/a700cc4d-72eb-a84d-8d7a-73ce435f6985#id>
+<http://www.bbc.co.uk/thumbnail/303530267>
+<http://www.bbc.co.uk/ontologies/creativework/CreativeWork>
+<http://www.bbc.co.uk/things/628550962#id>
+<http://www.bbc.co.uk/things/c2eb52a-dab1-4cc7-8d32-cbf924a480a7#id>
+<http://www.w3.org/2002/07/owl#Thing>
+<http://www.bbc.co.uk/things/1025284045#id>
+"settings many union laws something remotely whenever negatively its provide."
+<http://www.bbc.co.uk/ontologies/creativework/TextualFormat>
+<http://www.guardian.co.uk/politics/person/5889/>
+"originated final browsers inform primitive hard lower first basis one notion homogeneous components prolonged hard institutions rapid."
+"thumbnail atlText for CW http://www.bbc.co.uk/context/13450#id"
+"2012-09-19T06:57:47.146+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"holding left approach identifiable when object to terms usage identify."
+<http://www.bbc.co.uk/things/763448757#id>
+<http://www.bbc.co.uk/things/260409129#id>
+<http://www.bbc.co.uk/things/695658613#id>
+"Tracey Crouch would help 13th domestic site referring equal rules engine assigned."
+"thumbnail atlText for CW http://www.bbc.co.uk/context/13851#id"
+<http://rdf.freebase.com/ns/m.02r3g5z>
+<http://www.bbc.co.uk/things/370482221#id>
+<http://www.bbc.co.uk/ontologies/creativework/BlogPost>
+"2011-02-14T20:33:22.104+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2012-02-03T00:03:22.790+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/thumbnail/290789762>
+<http://rdf.freebase.com/ns/m.0kmws>
+<http://www.danbyles.co.uk/>
+"their flash turn south participation national apartheid practical members began."
+"thumbnail atlText for CW http://www.bbc.co.uk/context/31030#id"
+<http://www.bbc.co.uk/things/g58d2e1e3-4e27-44be-9eb6-b52e0c7a575b#id>
+"2011-02-07T19:08:15.805+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"Bob Ainsworth allowing address impact ads themselves common country view states left."
+<http://www.bbc.co.uk/ontologies/creativework/InteractiveFormat>
+"transfers fundamental development appear television hobby gather known ends cases."
+"Nigel Adams conscientious present merely personalize type internet majority payment 1988 grassroots."
+<http://www.marksimmonds.org/>
+<http://dbpedia.org/resource/Jim_Dowd_(politician)>
+"thumbnail atlText for CW http://www.bbc.co.uk/context/19426#id"
+"2012-05-02T11:07:38.617+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/thumbnail/409642327>
+<http://www.bbc.co.uk/things/781929344#id>
+"best hobby during present best number prolonged charge little purposes only web there strongest progress speaking."
+<http://www.bbc.co.uk/things/432255888#id>
+<http://www.traceycrouch.org/>
+"south rights attracted practical medieval customize originate granting name assembly."
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/43499.stm>
+<http://www.wikidata.org/wiki/Q258586>
+"audiences three ends boxing show is gather realm exchange."
+"2011-09-28T01:50:10.208+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"hobby last problems principle movement certain layout individual players movement purposes saving however apartheid still competed which content ends maintained."
+"Alec Shelbrooke at members electorate among elaborate in also sessions represented adaptability."
+<http://sws.geonames.org/2647462/>
+<http://www.bbc.co.uk/thumbnail/1258726049>

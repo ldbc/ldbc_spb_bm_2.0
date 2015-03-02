@@ -1,0 +1,11 @@
+[SubstitutionParameters]
+<http://www.wikidata.org/wiki/Q265028>;<http://www.bbc.co.uk/things/gd9f52f1c-9607-442a-bbaa-f43349d7a9d5#id>;FILTER (?dateCreated >= "2011-03-14T00:19:33Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> && ?dateCreated < "2011-12-14T00:19:33Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>) . 
+
+[ExpectedResultsSize]
+1
+
+[Results]
+2011
+6
+14
+1

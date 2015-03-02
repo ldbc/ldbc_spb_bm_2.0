@@ -1,0 +1,93 @@
+[SubstitutionParameters]
+<http://dbpedia.org/resource/Michael_Fabricant>;cwork:TextualFormat;cwork:NewsItem;10000
+
+[ExpectedResultsSize]
+647
+
+[Results]
+<http://www.bbc.co.uk/things/32392#id>
+<http://www.bbc.co.uk/things/18884#id>
+<http://www.bbc.co.uk/things/31825#id>
+<http://www.bbc.co.uk/things/29160#id>
+<http://www.bbc.co.uk/things/15157#id>
+<http://www.bbc.co.uk/things/46407#id>
+<http://sws.geonames.org/7299598/>
+<http://www.wikidata.org/wiki/Q575205>
+<http://dbpedia.org/resource/Rebecca_Harris>
+<http://sws.geonames.org/7298680/>
+<http://www.bbc.co.uk/things/1304197577#id>
+"Jesse Norman head remotely the weak represented request started using rather laws."
+<http://www.bbc.co.uk/things/1214141119#id>
+<http://www.bbc.co.uk/ontologies/creativework/NationalAudience>
+<http://www.bbc.co.uk/thumbnail/1004557362>
+"substantial to best cherished assigned peasants equality ads log conscientious."
+"2012-10-12T18:24:15.155+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"Michael Fabricant effects nobles parliaments soon rapid strongest day combined settings representative."
+<http://www.bbc.co.uk/things/1935214046#id>
+"thumbnail atlText for CW http://www.bbc.co.uk/context/32392#id"
+<http://www.bbc.co.uk/thumbnail/390501468>
+<http://www.bbc.co.uk/category/PoliticsPersonsAdditional>
+<http://www.bbc.co.uk/things/392770609#id>
+<http://www.bbc.co.uk/ontologies/creativework/CreativeWork>
+<http://www.bbc.co.uk/thumbnail/1657436003>
+"2011-11-18T19:52:12.049+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.w3.org/2002/07/owl#Thing>
+<http://www.bbc.co.uk/ontologies/creativework/TextualFormat>
+<http://www.bbc.co.uk/things/1762798891#id>
+<http://dbpedia.org/resource/Michael_Fabricant>
+"domain cricket kinds record exchange grounds covers violent enable movement."
+"attract century has settings have cookies enable incur related during."
+<http://www.bbc.co.uk/thumbnail/1328242227>
+<http://www.bbc.co.uk/ontologies/creativework/NewsItem>
+<http://www.aloksharma.co.uk/>
+"Michael Fabricant like sometimes assembly although retain remotely mentality tensions amateur ends."
+<http://www.wikidata.org/wiki/Q580784>
+<http://www.bbc.co.uk/things/874110934#id>
+"being impact progress has object century fundamental and/or ads does."
+<http://www.cathyjamieson.com/>
+"professional enjoyment professional pits interesting those day lower normally life celibacy seat related centuries are."
+"2011-11-13T16:40:07.761+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"started fundamental always often revolves viewing interesting a personally experience inform side progress display rival had eg web."
+"2011-12-21T11:02:42.807+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/things/1156187236#id>
+<http://www.bbc.co.uk/thumbnail/822535154>
+<http://dbpedia.org/resource/Gordon_Marsden>
+"2011-10-03T22:18:30.089+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"where servers one purely identify your internet where purely diagnose but those global using petition cookies record 1988 usage phrase internet seen originally however provider."
+"Michael Fabricant states integrity clergy player leading line state entrance including whenever."
+"thumbnail atlText for CW http://www.bbc.co.uk/context/15157#id"
+<http://www.bbc.co.uk/things/g355f991c-bd2b-4f59-b0af-f66a610bc1c3#id>
+"state adopted realm historically merely entrance while sprang pay-per-view primitive large eventual logged ip popular enjoyment interesting these centuries 2007 which these rival."
+"2011-10-20T17:16:26.062+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.nickbrownmp.com/>
+"2012-06-30T12:55:40.353+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2011-10-08T13:47:52.188+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"can number sporting cannot weak the homogeneous type display proof responsible pope eg."
+<http://www.bbc.co.uk/things/1501421120#id>
+"thumbnail atlText for CW http://www.bbc.co.uk/context/29160#id"
+<http://www.bbc.co.uk/ontologies/creativework/InteractiveFormat>
+<http://www.bbc.co.uk/things/g6dd9f010-ce03-4a71-b3cf-b744a7713e98#id>
+"Michael Fabricant grounds player protocol broadcasters with viewers sessions those than professionally."
+<http://sws.geonames.org/7296296/>
+<http://sws.geonames.org/2647310/>
+"Michael Fabricant on television participation approach land assembly pits to both little."
+"christendom drive eventual ads platform global principle through entered occasion."
+"2011-10-03T02:09:20.973+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://www.bbc.co.uk/thumbnail/854145741>
+<http://www.bbc.co.uk/things/2048534931#id>
+"thumbnail atlText for CW http://www.bbc.co.uk/context/46407#id"
+"2011-12-30T04:18:56.258+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"settings out one states seat attendance outlet boxing out 700."
+<http://www.bbc.co.uk/things/1722318209#id>
+<http://news.bbc.co.uk/democracylive/hi/representatives/profiles/25630.stm>
+<http://sws.geonames.org/6286898/>
+"took diagnose petitions meant modern particularly you customize because commentators money hundreds participants being assembly wealthy or others however politics sometimes celibacy."
+<http://dbpedia.org/resource/Simon_Danczuk>
+<http://rdf.freebase.com/ns/m.025y8g>
+<http://google.com/search?btnI&q=site:http://www.guardian.co.uk/politics/person/+Lee+Scott>
+<http://rdf.freebase.com/ns/m.0f3qg5>
+"thumbnail atlText for CW http://www.bbc.co.uk/context/31825#id"
+"thumbnail atlText for CW http://www.bbc.co.uk/context/18884#id"
+<http://sws.geonames.org/7299888/>
+"2012-11-11T08:08:54.559+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2011-09-30T02:42:02.993+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>

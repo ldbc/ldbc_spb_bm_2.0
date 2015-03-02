@@ -1,0 +1,275 @@
+# Saved by TopBraid on Tue Mar 19 18:09:10 GMT 2013
+# baseURI: http://www.bbc.co.uk/ontologies/creativework/
+# imports: http://www.bbc.co.uk/ontologies/coreconcepts/
+
+@prefix cwork:   <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+cwork:
+      rdf:type owl:Ontology ;
+      rdfs:comment "This is a continuously evolving model which supports functionality that is bound to change (fixedSizeThumbnails, category) but also supports the new APIs."^^xsd:string ;
+      owl:imports <http://www.bbc.co.uk/ontologies/coreconcepts/> ;
+      owl:versionInfo "0.9"^^xsd:string .
+
+cwork:Audience
+      rdf:type owl:Class ;
+      rdfs:comment "Enumerated class of the audiences"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "Audience"^^xsd:string ;
+      owl:oneOf (cwork:NationalAudience cwork:InternationalAudience) .
+
+cwork:AudioFormat
+      rdf:type cwork:Format ;
+      rdfs:comment "Used to represent that the primary format of a CreativeWork is Audio"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "AudioFormat"^^xsd:string .
+
+cwork:BlogPost
+      rdf:type owl:Class ;
+      rdfs:comment "This is the class of creative works that are associated with particular journalists or correspondents. The analysis, commentary and personal viewpoint of the creator is reflected on the blog post and the blog post is usually associated prominently with the name of the creator. BlogPost can be have liveCoverage or not and different types of formats"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "BlogPost"^^xsd:string ;
+      rdfs:subClassOf cwork:CreativeWork .
+
+cwork:CloseUpThumbnail
+      rdf:type cwork:ThumbnailType ;
+      rdfs:comment "A 16x9 image, focused and zoomed in one part of the image, usually when the standard thumbnail is very small to be meaningful (e.g., in mobile)"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "CloseUpThumbnail"^^xsd:string .
+
+cwork:CreativeWork
+      rdf:type owl:Class ;
+      rdfs:comment "The class of creative works produced by the BBC. The ontology is continuously evolving and the current subtypes of this class are selected as those few ones that do not overlap. For the other differentiations of types of content we have the primaryFormat, liveCoverage and category properties)"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "CreativeWork"^^xsd:string ;
+      rdfs:subClassOf owl:Thing .
+
+cwork:FixedSize226Thumbnail
+      rdf:type cwork:ThumbnailType ;
+      rdfs:comment "Fixed size thumbnail (will be deprecated)"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "FixedSize226Thumbnail"^^xsd:string .
+
+cwork:FixedSize466Thumbnail
+      rdf:type cwork:ThumbnailType ;
+      rdfs:comment "Fixed size thumbnail (will be deprecated)"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "FixedSize466Thumbnail"^^xsd:string .
+
+cwork:FixedSize66Thumbnail
+      rdf:type cwork:ThumbnailType ;
+      rdfs:comment "Fixed size thumbnail (will be deprecated)"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "FixedSize66Thumbnail"^^xsd:string .
+
+cwork:Format
+      rdf:type owl:Class ;
+      rdfs:comment "The primary format of the CreativeWork and it can be one of the five instances. This is needed for selecting the appropriate icon with which to overlay the preview thumbnail of the creative work."^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "Format"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      owl:oneOf (cwork:AudioFormat cwork:TextualFormat cwork:ImageFormat cwork:InteractiveFormat cwork:PictureGalleryFormat cwork:VideoFormat) .
+
+cwork:ImageFormat
+      rdf:type cwork:Format ;
+      rdfs:comment "Used to represent that the primary format of a CreativeWork is Image"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "ImageFormat"^^xsd:string .
+
+cwork:InteractiveFormat
+      rdf:type cwork:Format ;
+      rdfs:comment "Used to represent that the primary format of a CreativeWork is Interactive"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "InteractiveFormat"^^xsd:string .
+
+cwork:InternationalAudience
+      rdf:type cwork:Audience ;
+      rdfs:comment "The international (non UK) audience. The creative works linked to this instance are *only available to the international audience*."^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "InternationalAudience"^^xsd:string .
+
+cwork:NationalAudience
+      rdf:type cwork:Audience ;
+      rdfs:comment "The national audience. The creative works linked to this instance are *only available to the national audience*."^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "NationalAudience"^^xsd:string .
+
+cwork:NewsItem
+      rdf:type owl:Class ;
+      rdfs:comment "The class of all news items that the BBC produces. They can be textual articles, or media asset pages (audio or video) or live coverage of events (use the liveCoverage property). "^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "NewsItem"^^xsd:string ;
+      rdfs:subClassOf cwork:CreativeWork .
+
+cwork:PictureGalleryFormat
+      rdf:type cwork:Format ;
+      rdfs:comment "Used to represent that the primary format of a CreativeWork is of PictureGallery (this is a mid-term solution for the modelling of galleries)"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "PictureGalleryFormat"^^xsd:string .
+
+cwork:Programme
+      rdf:type owl:Class ;
+      rdfs:comment "The class of programmes produced by the BBC"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "Programme"^^xsd:string ;
+      rdfs:subClassOf cwork:CreativeWork .
+
+cwork:StandardThumbnail
+      rdf:type cwork:ThumbnailType ;
+      rdfs:comment "A 16x9 image used in most occasions"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "StandardThumbnail"^^xsd:string .
+
+cwork:TextualFormat
+      rdf:type cwork:Format ;
+      rdfs:comment "Used to represent that the primary format of a CreativeWork is Text"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "TextualFormat"^^xsd:string .
+
+cwork:Thumbnail
+      rdf:type owl:Class ;
+      rdfs:comment "Used to associate a Creative Work with the canonical location of the thumbnail. The URI of each of its instances is the full canonical location of the thumbnail"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "Thumbnail"^^xsd:string ;
+      rdfs:subClassOf owl:Thing .
+
+cwork:ThumbnailType
+      rdf:type owl:Class ;
+      rdfs:comment "Enumerated class of the allowed thumbnail types"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "ThumbnailType"^^xsd:string ;
+      rdfs:subClassOf owl:Thing ;
+      owl:oneOf (cwork:StandardThumbnail cwork:CloseUpThumbnail) .
+
+cwork:VideoFormat
+      rdf:type cwork:Format ;
+      rdfs:comment "Used to represent that the primary format of a CreativeWork is Video"^^xsd:string ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "VideoFormat"^^xsd:string .
+
+cwork:about
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Indicates that the creative work is about a tag concept (*stable*)"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "about"^^xsd:string ;
+      rdfs:range <http://www.bbc.co.uk/ontologies/coreconcepts/Thing> ;
+      rdfs:subPropertyOf cwork:tag .
+
+cwork:altText
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "The alternative text for a thumbnail in case the URL is not resolved"^^xsd:string ;
+      rdfs:domain cwork:Thumbnail ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "altText"^^xsd:string ;
+      rdfs:range xsd:string .
+
+cwork:audience
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates the Creative Work with an audience instance"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "audience"^^xsd:string ;
+      rdfs:range cwork:Audience .
+
+cwork:category
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "The category property is another mid term solution for maintaining the functionality supporting individual clients. For example, the type of gossip is something that the sports pal use for the moment. The values of the property are decided by the client teams in collaboration with LDP"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "primaryFormat"^^xsd:string ;
+      rdfs:range xsd:anyURI .
+
+cwork:dateCreated
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "Date created of CreativeWork"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "dateCreated"^^xsd:string ;
+      rdfs:range xsd:date .
+
+cwork:dateModified
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "Date modified of CreativeWork"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "dateModified"^^xsd:string ;
+      rdfs:range xsd:date .
+
+cwork:description
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "The description of the Creative Work"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "description"^^xsd:string ;
+      rdfs:range xsd:string .
+
+cwork:liveCoverage
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "This property is used to decribe that a creative work (news item, blog post or programme) is a coverage of a live event. (Note that this isn't meant to describe the fact that the event is live currently. An example of a creative work with liveCoverage true is the live event page covering live last saturday's football matches or last year's elections)"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "liveCoverage"^^xsd:string ;
+      rdfs:range xsd:boolean .
+
+cwork:mentions
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Indicates that the creative work mentions a tag concept (*stable*)"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "about"^^xsd:string ;
+      rdfs:range <http://www.bbc.co.uk/ontologies/coreconcepts/Thing> ;
+      rdfs:subPropertyOf cwork:tag .
+
+cwork:primaryFormat
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates the Creative Work with the Primary Format instance"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "primaryFormat"^^xsd:string ;
+      rdfs:range cwork:Format .
+
+cwork:shortTitle
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "The sort title of the Creative Work"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "shortTitle"^^xsd:string ;
+      rdfs:range xsd:string .
+
+cwork:tag
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Indicates that the creative work is tagged with tag concept"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "tag"^^xsd:string ;
+      rdfs:range <http://www.bbc.co.uk/ontologies/coreconcepts/Thing> .
+
+cwork:thumbnail
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates the Creative Work with the Thumbnail instance"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "thumbnail"^^xsd:string ;
+      rdfs:range cwork:Thumbnail .
+
+cwork:thumbnailType
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment "Associates the Thumbnail instance with a Thumbnail type"^^xsd:string ;
+      rdfs:domain cwork:Thumbnail ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "thumbnailType"^^xsd:string ;
+      rdfs:range cwork:ThumbnailType .
+
+cwork:title
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "The title of the Creative Work"^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "title"^^xsd:string ;
+      rdfs:range xsd:string .
+
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

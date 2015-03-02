@@ -1,0 +1,239 @@
+@prefix bbcevent: <http://www.bbc.co.uk/ontologies/event/> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix timelineowl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.bbc.co.uk/contexts/65eead50-6579-4a5f-9473-432210c24e68#id> a provenance:Dataset ;
+rdfs:label "International Football Competitions"^^xsd:string ;
+provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/datasets/sport/football/international-football-competitions-3.ttl"^^xsd:string ;
+provenance:changeReason "Modelling World Cup 2014"^^xsd:string ;
+provenance:version "3"^^xsd:int ;
+provenance:provider <mailto:tom.grahame@bbc.co.uk> .
+
+<http://dbpedia.org/resource/UEFA_Champions_League>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/champions-league>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/1e5c6e40-0b48-cb44-86ae-be47f66aac8a#id>
+    domain:canonicalName "Champions League"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/champions-league>, <http://www.uefa.com/uefachampionsleague/> ;
+    domain:externalId <http://dbpedia.org/resource/UEFA_Champions_League>, <urn:sports-stats:118999958> ;
+    domain:name "UEFA Champions League"^^xsd:string ;
+    domain:shortName "Champions League"^^xsd:string ;
+    domain:slug "champions-league"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/european-cup> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/900dcba6-7e45-42e6-bc82-36faab07a4bb#id>
+    event:time <http://www.bbc.co.uk/things/e56b0712-2616-445a-bb2c-a8bfa83e6d90#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/1e5c6e40-0b48-cb44-86ae-be47f66aac8a#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/e56b0712-2616-445a-bb2c-a8bfa83e6d90#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/e9dad30a-33eb-4f88-9d93-a67b400ee0d6#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/ebe9d0c8-0a38-4d55-be5a-e43f46192057#id>
+    event:time <http://www.bbc.co.uk/things/e9dad30a-33eb-4f88-9d93-a67b400ee0d6#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/1e5c6e40-0b48-cb44-86ae-be47f66aac8a#id> ;
+    a sport:Competition .
+
+<http://www.uefa.com/uefachampionsleague/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118999958>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/UEFA_Europa_League>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/europa-league>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/2afbdda7-71d4-544d-bcc6-d9ff50314b2a#id>
+    domain:canonicalName "Europa League"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/europa-league>, <http://www.uefa.com/uefaeuropaleague/> ;
+    domain:externalId <http://dbpedia.org/resource/UEFA_Europa_League>, <urn:sports-stats:118999989> ;
+    domain:name "UEFA Europa League"^^xsd:string ;
+    domain:shortName "Europa League"^^xsd:string ;
+    domain:slug "europa-league"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/european-cup> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.bbc.co.uk/things/50ca5717-f3ed-4814-9d82-f77e67552f00#id>
+    timelineowl:hasBeginning "2012-06-18"^^xsd:date ;
+    timelineowl:hasEnd "2013-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/90e3a521-011d-433c-add5-6053bba6f2d0#id>
+    timelineowl:hasBeginning "2011-06-17"^^xsd:date ;
+    timelineowl:hasEnd "2012-06-17"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/91d8e6ab-7b74-4333-ae06-e05fd72f154f#id>
+    event:time <http://www.bbc.co.uk/things/90e3a521-011d-433c-add5-6053bba6f2d0#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/2afbdda7-71d4-544d-bcc6-d9ff50314b2a#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/e364e93b-22b7-4de8-9d4d-94b4b874a543#id>
+    event:time <http://www.bbc.co.uk/things/50ca5717-f3ed-4814-9d82-f77e67552f00#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/2afbdda7-71d4-544d-bcc6-d9ff50314b2a#id> ;
+    a sport:Competition .
+
+<http://www.uefa.com/uefaeuropaleague/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:118999989>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+<http://dbpedia.org/resource/UEFA_European_Football_Championship>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/sport/football/european-championship>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<http://www.bbc.co.uk/things/6413c5bb-e672-4c20-8434-035dae657585#id>
+    timelineowl:hasBeginning "2012-04-18"^^xsd:date ;
+    timelineowl:hasEnd "2016-06-07"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/e02ad728-a9b5-4d71-9c8e-1631d8d5f383#id>
+    event:time <http://www.bbc.co.uk/things/6413c5bb-e672-4c20-8434-035dae657585#id> ;
+    domain:canonicalName "Euro 2012"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/european-championship/2012> ;
+    domain:externalId <http://dbpedia.org/resource/UEFA_Euro_2012> ;
+    domain:name "UEFA European Championship 2012"^^xsd:string ;
+    domain:shortName "Euro 2012"^^xsd:string ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/eecba9c9-afb4-4d64-9c1f-b7e62da658bf#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/sport/football/european-championship/2012>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/bbc-document>, <http://www.bbc.co.uk/things/document-types/homepage> .
+    
+<http://dbpedia.org/resource/UEFA_Euro_2012>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/things/eecba9c9-afb4-4d64-9c1f-b7e62da658bf#id>
+    domain:canonicalName "European Championship"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/european-championship>, <http://www.uefa.com/uefaeuro/> ;
+    domain:externalId <http://dbpedia.org/resource/UEFA_European_Football_Championship>, <urn:sports-stats:119002035> ;
+    domain:name "UEFA European Championship"^^xsd:string ;
+    domain:shortName "European Championship"^^xsd:string ;
+    domain:slug "european-championship"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.uefa.com/uefaeuro/>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:119002035>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+
+
+# World Cup 2014 Qualifying - European Region
+
+<http://dbpedia.org/resource/2014_FIFA_World_Cup_qualification>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+
+<http://www.bbc.co.uk/things/26cc7770-3fbc-4920-b173-e5431a388df5#id>
+    timelineowl:hasBeginning "2012-08-01"^^xsd:date ;
+    timelineowl:hasEnd "2013-12-31"^^xsd:date ;
+    a time:TemporalEntity .
+
+<http://www.bbc.co.uk/things/befcf82a-83c3-4f3f-962a-7a442c816222#id>
+    domain:canonicalName "World Cup Qualifying - European"^^xsd:string ;
+    domain:name "FIFA World Cup 2014 Qualifying - European Region"^^xsd:string ;
+    domain:shortName "World Cup Qualifying - European"^^xsd:string ;
+    event:time <http://www.bbc.co.uk/things/26cc7770-3fbc-4920-b173-e5431a388df5#id> ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/f0cdd6cd-cfd8-432f-adfb-8e0cf3b2a99d#id> ;
+    a sport:Competition .
+
+<http://www.bbc.co.uk/things/f0cdd6cd-cfd8-432f-adfb-8e0cf3b2a99d#id>
+    domain:canonicalName "World Cup Qualifying - European"^^xsd:string ;
+    domain:document <http://www.fifa.com/worldcup/index.html> ;
+    domain:externalId <http://dbpedia.org/resource/2014_FIFA_World_Cup_qualification>, <urn:sports-stats:119001881> ;
+    domain:name "FIFA World Cup Qualifying - European Region"^^xsd:string ;
+    domain:shortName "World Cup Qualifying - European"^^xsd:string ;
+    domain:slug "world-cup-qualifying-european"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+
+<http://www.fifa.com/worldcup/index.html>
+    domain:documentType <http://www.bbc.co.uk/things/document-types/external>, <http://www.bbc.co.uk/things/document-types/homepage> ;
+    a domain:Document .
+
+<urn:sports-stats:119001881>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/bbc-sport-stats> ;
+    a domain:ExternalId .
+    
+    
+
+# World Cup Proper
+    
+<http://www.bbc.co.uk/things/af181038-2e4b-4873-936e-b5c5c9390ea0#id>
+	event:time <http://www.bbc.co.uk/things/7e43963c-a210-47df-8604-c420ce69e3b1#id> ;
+    domain:canonicalName "World Cup 2014"^^xsd:string ;
+    domain:document <http://www.bbc.co.uk/sport/football/world-cup/2014> ;
+    domain:externalId <http://dbpedia.org/resource/FIFA_World_Cup_2014> ;
+    domain:name "FIFA World Cup 2014"^^xsd:string ;
+    domain:shortName "World Cup 2014"^^xsd:string ;
+    bbcevent:recurringEvent <http://www.bbc.co.uk/things/de6a07ff-47ff-4551-9b71-7494a71aceac#id> ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    a sport:Competition .
+    
+<http://dbpedia.org/resource/FIFA_World_Cup_2014>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
+    
+<http://www.bbc.co.uk/things/7e43963c-a210-47df-8604-c420ce69e3b1#id>
+    timelineowl:hasBeginning "2010-07-12"^^xsd:date ;
+    timelineowl:hasEnd "2018-06-07"^^xsd:date ;
+    a time:TemporalEntity .
+    
+
+<http://www.bbc.co.uk/things/de6a07ff-47ff-4551-9b71-7494a71aceac#id>
+	domain:canonicalName "World Cup"^^xsd:string ;
+    domain:document <http://www.fifa.com/worldcup/index.html> ;
+    domain:externalId <http://dbpedia.org/resource/FIFA_World_Cup> ;
+    domain:name "FIFA World Cup"^^xsd:string ;
+    domain:shortName "World Cup"^^xsd:string ;
+    domain:slug "world-cup"^^xsd:string ;
+    sport:competitionType <http://www.bbc.co.uk/things/competition-types/international> ;
+    sport:discipline <http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id> ;
+    a sport:RecurringCompetition .
+    
+<http://dbpedia.org/resource/FIFA_World_Cup>
+    domain:externalIdType <http://www.bbc.co.uk/things/external-id-types/dbpedia> ;
+    a domain:ExternalId .
