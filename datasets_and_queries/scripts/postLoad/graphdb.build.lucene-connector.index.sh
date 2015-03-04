@@ -11,7 +11,7 @@ curl -g -H 'Accept: application/xml' --data-urlencode 'update=
 PREFIX luceneConnector: <http://www.ontotext.com/connectors/lucene#>
 PREFIX inst: <http://www.ontotext.com/connectors/lucene/instance#>
 INSERT DATA {
-    inst:cwLuceneConnectorIndex luceneConnector:createConnector '\'''\'''\''
+  inst:cwLuceneConnectorIndex luceneConnector:createConnector '\'''\'''\''
 {
   "types": [
     "http://www.bbc.co.uk/ontologies/creativework/CreativeWork"
@@ -21,13 +21,15 @@ INSERT DATA {
       "fieldName": "title",
       "propertyChain": [
         "http://www.bbc.co.uk/ontologies/creativework/title"
-      ]
+      ],
+      "facet": false
     },
     {
       "fieldName": "description",
       "propertyChain": [
         "http://www.bbc.co.uk/ontologies/creativework/description"
-      ]
+      ],
+      "facet": false
     },
     {
       "fieldName": "dateModified",
@@ -35,6 +37,8 @@ INSERT DATA {
         "http://www.bbc.co.uk/ontologies/creativework/dateModified"
       ],
       "sort": true
+      "noindex": true,
+      "facet": false
     }
   ]
 }
