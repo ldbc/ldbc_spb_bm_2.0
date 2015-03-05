@@ -1,4 +1,4 @@
-LDBC Semantic Publishing Benchmark v1.5
+LDBC Semantic Publishing Benchmark v2.0
 
 
 
