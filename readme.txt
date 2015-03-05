@@ -82,7 +82,7 @@ How to run the benchmark :
 
   * Prepare and start a new RDF repository. 
   
-    - Use rule-set : RDFS
+    - Use rule-set : RDFS(subPropertyOf, subClassOf), OWL(TransitiveProperty, SymmetricProperty, SameAs)
     - Enable context indexing if available
     - Enable text indexing if available
     - Enable geo-spatial indexing if available
