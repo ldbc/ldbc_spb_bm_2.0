@@ -158,6 +158,7 @@ How to run the benchmark :
     - enableEditorialOpeartionsValidation   (enables validation of editorial operations (insert/delete) during benchmark run. Validation is performed on each 'editorialOpsValidationInterval' operation, default : true)
     - editorialOpsValidationInterval    (sets the validation interval for editorial operations, default : 100)
     - enableCompressionOnGeneratedData  (enables gzip compression on generated data, default: false)                   									
+    - currentRateReportPeriodSeconds    (defines a time windows which is used to report current performance rate of editorial and aggregation operations. If set to zero this metric is disabled, defaut:0)
                                              
                                          Note : For optimal results the sum of editorial and aggregation agents should be set to be equal to the number of CPU cores.
 		
