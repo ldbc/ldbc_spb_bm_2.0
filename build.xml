@@ -1,6 +1,6 @@
 <project name="semanticpublishingbenchmark" basedir="." default="show-usage">
-	<property name="version.number.major" value="1" />
-	<property name="version.number.minor" value="5" />
+	<property name="version.number.major" value="2" />
+	<property name="version.number.minor" value="0" />
 	
 	<property name="dir.src" location="src"/>
 	<property name="dir.bin" location="bin"/>
