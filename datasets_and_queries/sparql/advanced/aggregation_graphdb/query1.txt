@@ -74,38 +74,40 @@ WHERE {
       ORDER BY DESC(?modified)
       LIMIT 10
   }
-  ?creativeWork a cwork:CreativeWork ;
-                a ?type ;
-                cwork:title ?title ;
-                cwork:dateModified ?modified .
-  OPTIONAL { ?creativeWork cwork:shortTitle ?shortTitle . }
-  OPTIONAL { ?creativeWork cwork:description ?description . }
-  OPTIONAL { ?creativeWork cwork:about ?about .
-             OPTIONAL { ?about rdfs:label ?aboutLabel . }
-             OPTIONAL { ?about bbc:shortLabel ?aboutShortLabel . }
-             OPTIONAL { ?about bbc:preferredLabel ?aboutPreferredLabel . }
-           }
-  OPTIONAL {
-             ?creativeWork cwork:mentions ?mentions .
-             OPTIONAL { ?mentions rdfs:label ?mentionsLabel . }
-             OPTIONAL { ?mentions bbc:shortLabel ?mentionsShortLabel . }
-             OPTIONAL { ?mentions bbc:preferredLabel ?mentionsPreferredLabel . }
-           }
-  OPTIONAL { ?creativeWork cwork:dateCreated ?created . }
-  OPTIONAL { ?creativeWork cwork:primaryFormat ?primaryFormat . }
-  OPTIONAL {
-            { 
-              ?webDocument bbc:primaryContent ?creativeWork . 
-              OPTIONAL { ?webDocument bbc:webDocumentType ?webDocType . }
-            }
-            UNION
-            { 
-              ?webDocument ^bbc:primaryContentOf ?creativeWork . 
-              OPTIONAL { ?webDocument bbc:webDocumentType ?webDocType . } 
-            }
-  }
-  OPTIONAL { ?creativeWork cwork:thumbnail ?thumbnail .
-             OPTIONAL { ?thumbnail cwork:altText ?thumbnailAltText . }
-             OPTIONAL { ?thumbnail cwork:thumbnailType ?thumbnailType . }
+  {
+      ?creativeWork a cwork:CreativeWork ;
+                    a ?type ;
+                    cwork:title ?title ;
+                    cwork:dateModified ?modified .
+      OPTIONAL { ?creativeWork cwork:shortTitle ?shortTitle . }
+      OPTIONAL { ?creativeWork cwork:description ?description . }
+      OPTIONAL { ?creativeWork cwork:about ?about .
+                 OPTIONAL { ?about rdfs:label ?aboutLabel . }
+                 OPTIONAL { ?about bbc:shortLabel ?aboutShortLabel . }
+                 OPTIONAL { ?about bbc:preferredLabel ?aboutPreferredLabel . }
+               }
+      OPTIONAL {
+                 ?creativeWork cwork:mentions ?mentions .
+                 OPTIONAL { ?mentions rdfs:label ?mentionsLabel . }
+                 OPTIONAL { ?mentions bbc:shortLabel ?mentionsShortLabel . }
+                 OPTIONAL { ?mentions bbc:preferredLabel ?mentionsPreferredLabel . }
+               }
+      OPTIONAL { ?creativeWork cwork:dateCreated ?created . }
+      OPTIONAL { ?creativeWork cwork:primaryFormat ?primaryFormat . }
+      OPTIONAL {
+                { 
+                  ?webDocument bbc:primaryContent ?creativeWork . 
+                  OPTIONAL { ?webDocument bbc:webDocumentType ?webDocType . }
+                }
+                UNION
+                { 
+                  ?webDocument ^bbc:primaryContentOf ?creativeWork . 
+                  OPTIONAL { ?webDocument bbc:webDocumentType ?webDocType . } 
+                }
+      }
+      OPTIONAL { ?creativeWork cwork:thumbnail ?thumbnail .
+                 OPTIONAL { ?thumbnail cwork:altText ?thumbnailAltText . }
+                 OPTIONAL { ?thumbnail cwork:thumbnailType ?thumbnailType . }
+      }
   }
 }
