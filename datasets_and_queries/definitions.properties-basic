@@ -75,19 +75,19 @@ correlationEntityLifespan=0.5
 #Geo-spatial properties
 #Defines minimum latitude
 # use minlat=36.0 when including geonames data from optional datasets
-minLat = 50.45
+minLat = 36.5
  
 #Defines maximum latitude
 # use maxLat=71.2 when including geonames data from optional datasets
-maxLat = 53.25
+maxLat = 70.0
 
 #Defines minimum longitude
 # use minLong=-10.0 when including geonames data from optional datasets
-minLong = -2.15
+minLong = -9.5
 
 #Defines maximum longitude
 # use maxLong=31.5 when including geonames data from optional datasets
-maxLong = 0.25
+maxLong = 31.0
 
 #Defines the position in terms of percents at which a milestone query is executed (see Online and Replication Benchmark feature)
 mileStoneQueryPosition = 0.5
