@@ -64,7 +64,8 @@ public class AggregateOperationsValidator extends Validator {
 		loadValidationData();
 		
 		//refresh statistics
-		testDriver.populateRefDataEntitiesLists(false, false, true, "\t");
+		String validationPath = configuration.getString(Configuration.VALIDATION_PATH);
+		testDriver.populateRefDataEntitiesListsFromFiles(true, false, true, "\t", validationPath + File.separator + "entities.txt", validationPath + File.separator + "dbpediaLocations.txt", validationPath + File.separator + "geonamesIDs.txt");
 
 		Class<SubstitutionParametersGenerator> c = null;
 		Constructor<?> cc = null;
@@ -73,7 +74,7 @@ public class AggregateOperationsValidator extends Validator {
 		String queryString = "";
 		String queryResult = "";
 		QueryType queryType;
-		
+
 		for (int i = 0; i < Statistics.AGGREGATE_QUERIES_COUNT; i++) {
 			ValidationValuesModel validationValues = validationValuesManager.getValidationValuesFor(i);
 			

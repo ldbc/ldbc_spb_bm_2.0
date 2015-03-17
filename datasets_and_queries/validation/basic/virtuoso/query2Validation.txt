@@ -1,25 +1,30 @@
 [SubstitutionParameters]
-<http://www.bbc.co.uk/things/18399#id>
+<http://www.bbc.co.uk/things/25783#id>
 
 [ExpectedResultsSize]
-61
+104
 
 [Results]
-<http://www.bbc.co.uk/things/144065337#id>
-<http://www.bbc.co.uk/things/655108673#id>
-<http://www.bbc.co.uk/things/18399#id>
-<http://www.bbc.co.uk/things/34413190#id>
-<http://www.bbc.co.uk/things/144065337#id>
-<http://www.bbc.co.uk/ontologies/creativework/CreativeWork>
-<http://www.bbc.co.uk/ontologies/bbc/HighWeb>
-"2011-02-08T22:23:53.225+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-<http://www.bbc.co.uk/things/34413190#id>
-"James Paice secular war popular domain enforced primitive provides present transfers pay-per-view."
-"2011-02-28T08:37:34.498+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-<http://rdf.freebase.com/ns/m.025kpn>
-<http://www.bbc.co.uk/ontologies/creativework/NewsItem>
-<http://www.wikidata.org/wiki/Q750078>
-<http://www.bbc.co.uk/things/655108673#id>
-<http://www.wikidata.org/wiki/Q576067>
-<http://www.annemcintosh.org.uk/>
-<http://www.bbc.co.uk/ontologies/bbc/Mobile>
+<http://www.bbc.co.uk/things/25783#id>
+<http://www.bbc.co.uk/things/760822512#id>
+<http://www.bbc.co.uk/things/1949934902#id>
+<http://www.bbc.co.uk/things/2072716784#id>
+<http://www.bbc.co.uk/things/1353889013#id>
+"Mahdia campaign sums site assembly result those click because piece although realm."
+"2011-09-19T19:25:26.635+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+"2012-03-11T04:23:37.718+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+<http://dbpedia.org/resource/Action_of_8_January_1780>
+<http://www.bbc.co.uk/things/760822512#id>
+<http://www.bbc.co.uk/things/1949934902#id>
+<http://www.bbc.co.uk/things/2072716784#id>
+<http://www.bbc.co.uk/things/1353889013#id>
+<http://rdf.freebase.com/ns/m.0bbz4yp>
+<http://ru.dbpedia.org/resource/\u0411\u043E\u0439_8_\u044F\u043D\u0432\u0430\u0440\u044F_1780>
+<http://wikidata.dbpedia.org/resource/Q4090282>
+<http://wikidata.org/entity/Q4090282>
+<http://dbpedia.org/resource/ILYA>
+<http://dbpedia.org/resource/Don_Flanagan>
+<http://dbpedia.org/resource/Samuel_Lisle>
+<http://dbpedia.org/resource/Bryn_Griffiths_(writer)>
+<http://dbpedia.org/resource/David_Otunga>
+http://pl.dbpedia.org/resource/Wyprawa_na_Mahdij\u0119_(1087)

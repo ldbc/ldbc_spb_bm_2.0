@@ -196,7 +196,7 @@ public class TestDriver {
 		//retrieve entity URIs from database
 		ReferenceDataAnalyzer refDataAnalyzer = new ReferenceDataAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
 		ArrayList<Entity> entitiesList = refDataAnalyzer.analyzeEntities();
-
+	
 		long popularEntitiesCount = (int)(entitiesList.size() * Definitions.entityPopularity.getAllocationsArray()[0]);
 		
 		for (int i = 0; i < entitiesList.size(); i++) {
@@ -226,6 +226,7 @@ public class TestDriver {
 		for (String s : locationsIds) {
 			DataManager.locationsIdsList.add(s);
 		}
+			
 		locationsIds.clear();
 		
 		//retrieve Geonames locations IDs from database
@@ -235,7 +236,72 @@ public class TestDriver {
 		for (String s : locationsIds) {
 			DataManager.geonamesIdsList.add(s);
 		}
+
+		//initialize dataset info, required for query parameters
+		if (populateFromDatasetInfoFile) {
+			if ((DataManager.correlatedEntitiesList.size() + DataManager.exponentialDecayEntitiesMinorList.size() + DataManager.exponentialDecayEntitiesMajorList.size()) == 0) {
+				String datasetInfoFile = DataManager.buildDataInfoFilePath(configuration);
+				if (!datasetInfoFile.isEmpty()) {			
+					DataManager.initDatasetInfo(datasetInfoFile, suppressDatasetInfoWarnings);
+				}
+			}
+		}
 		
+		if (configuration.getBoolean(Configuration.VERBOSE) && showDetails) {
+			System.out.println(messagePrefix + "\t(reference data entities size : " + entitiesList.size() + ", greatest Creative Work id : " + creativeWorksCount + ", dbpedia locations : " + DataManager.locationsIdsList.size() + ", geonames locations : " + DataManager.geonamesIdsList.size() + ")");
+		}
+	}
+	
+	public void populateRefDataEntitiesListsFromFiles(boolean showDetails, boolean populateFromDatasetInfoFile, boolean suppressDatasetInfoWarnings, String messagePrefix, String entitiesFullPath, String dbpediaLocationsFullPathName, String geonamesFullPathName) throws IOException {
+		
+		if (showDetails) {
+			System.out.println(messagePrefix + "Analyzing existing reference knowledge in database from persisted data...");
+		}
+		
+		//retrieve entity URIs from database
+		ReferenceDataAnalyzer refDataAnalyzer = new ReferenceDataAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
+		ArrayList<Entity> entitiesList = refDataAnalyzer.initFromFile(entitiesFullPath);
+	
+		long popularEntitiesCount = (int)(entitiesList.size() * Definitions.entityPopularity.getAllocationsArray()[0]);
+		
+		for (int i = 0; i < entitiesList.size(); i++) {
+			Entity e = entitiesList.get(i);
+			if (i <= popularEntitiesCount) {
+				DataManager.popularEntitiesList.add(e);
+			} else {
+				DataManager.regularEntitiesList.add(e);
+			}
+		}
+
+		//retrieve the greatest id of creative works from database if not set explicitly in test.properties
+		long creativeWorksCount = configuration.getLong(Configuration.CREATIVE_WORK_NEXT_ID);
+		if (creativeWorksCount > 0) {
+			DataManager.creativeWorksNextId.set(creativeWorksCount);
+			System.out.println("\tNext id for Creative Works : " + creativeWorksCount);
+		} else {		
+			CreativeWorksAnalyzer cwk = new CreativeWorksAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
+			creativeWorksCount = cwk.getResult();		
+			DataManager.creativeWorksNextId.set(creativeWorksCount);
+		}
+
+		//retrieve DBpedia locations IDs from database
+		LocationsAnalyzer gna = new LocationsAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
+		ArrayList<String> locationsIds = gna.initFromFile(dbpediaLocationsFullPathName);
+
+		for (String s : locationsIds) {
+			DataManager.locationsIdsList.add(s);
+		}
+			
+		locationsIds.clear();
+		
+		//retrieve Geonames locations IDs from database
+		gna = new LocationsAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
+		locationsIds = gna.initFromFile(geonamesFullPathName);
+
+		for (String s : locationsIds) {
+			DataManager.geonamesIdsList.add(s);
+		}
+
 		//initialize dataset info, required for query parameters
 		if (populateFromDatasetInfoFile) {
 			if ((DataManager.correlatedEntitiesList.size() + DataManager.exponentialDecayEntitiesMinorList.size() + DataManager.exponentialDecayEntitiesMajorList.size()) == 0) {
@@ -433,17 +499,18 @@ public class TestDriver {
 	public void validateQueryResults(boolean enable) throws Exception {
 		if (enable) {
 			System.out.println("Validating operations...");
+			String validationPath = configuration.getString(Configuration.VALIDATION_PATH);
 			
-			if (DataManager.regularEntitiesList.size() == 0 || DataManager.correlatedEntitiesList.size() == 0) {
-				populateRefDataEntitiesLists(false, true, true, "\t");
+			if (DataManager.regularEntitiesList.size() == 0 || DataManager.correlatedEntitiesList.size() == 0) {				
+				populateRefDataEntitiesListsFromFiles(true, true, true, "\t", validationPath + File.separator + "entities.txt", validationPath + File.separator + "dbpediaLocations.txt", validationPath + File.separator + "geonamesIDs.txt");
 			}
 			validationValuesManager.initValidationValues(configuration.getString(Configuration.VALIDATION_PATH), false);
 
-			EditorialOperationsValidator eov = new EditorialOperationsValidator(queryExecuteManager, randomGenerator, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.EDITORIAL), mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.VALIDATION), configuration, definitions);
+			EditorialOperationsValidator eov = new EditorialOperationsValidator(queryExecuteManager, randomGenerator, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.EDITORIAL), mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.VALIDATION), configuration, definitions);		
 			eov.validate();
 			
 			//refresh info about reference data and CWs stored in database 
-			populateRefDataEntitiesLists(false, true, true, "");
+			populateRefDataEntitiesListsFromFiles(false, true, true, "", validationPath + File.separator + "entities.txt", validationPath + File.separator + "dbpediaLocations.txt", validationPath + File.separator + "geonamesIDs.txt");
 			
 			AggregateOperationsValidator aov = new AggregateOperationsValidator(this, validationValuesManager, queryExecuteManager, randomGenerator, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.AGGREGATION), configuration, definitions);
 			aov.validate();

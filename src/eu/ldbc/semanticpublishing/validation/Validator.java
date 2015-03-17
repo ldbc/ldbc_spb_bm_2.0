@@ -3,6 +3,8 @@ package eu.ldbc.semanticpublishing.validation;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 public class Validator {
 	
 	/**
@@ -59,16 +61,16 @@ public class Validator {
 		return totalErrors;
 	}
 	
-	protected int validateAggregate(String result, long actualResultsSize, long expectedResultSize, String validateOperation, int iteration, List<String> validationList, boolean strict) {
+	protected int validateAggregate(String result, long actualResultsSize, long expectedResultSize, String validateOperation, int iteration, List<String> validationList, boolean strict) throws UnsupportedEncodingException {
 		int totalErrors = 0;
 		String value;
+		String escapedString = StringEscapeUtils.escapeJava(result).replace("\\\\", "\\");
 				
 		for (String v : validationList) {
 			int validationErrorsCount = 0;
-			
+
 			value = transformString(v, strict, false);
-			
-			if (!result.contains(value)) {
+			if (!escapedString.contains(value)) {
 				validationErrorsCount++;
 			}
 			
@@ -76,7 +78,7 @@ public class Validator {
 			if (validationErrorsCount > 0) {
 				value = transformString(v, strict, true);
 
-				if (result.contains(value)) {
+				if (escapedString.contains(value)) {
 					validationErrorsCount--;
 				}
 			}
@@ -111,6 +113,9 @@ public class Validator {
 			result = result.replace("\"", "");
 		}
 		
+		//escapeJava() returns UTF-8 escaped chars with double "\\"
+		result = StringEscapeUtils.escapeJava(result).replace("\\\\", "\\");		
+		
 		result = customURLEncode(result, forceOptionalEncodings);
 		
 		return result;
@@ -118,7 +123,9 @@ public class Validator {
 	
 	private String customURLEncode(String str, boolean forceOptionalEncodings) {
 		String result = str;
-		if (str.contains("&")) {
+		if (str.contains("&amp;")) {
+			result = str.replace("&amp;", "&");
+		} else if (str.contains("&")) {
 			result = str.replace("&", "&amp;");
 		}
 		if (forceOptionalEncodings) {

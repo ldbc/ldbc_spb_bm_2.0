@@ -1,11 +1,78 @@
 [SubstitutionParameters]
-cwork:BlogPost;cwork:InternationalAudience;"2011-07-19T10:18:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;"2011-07-19T11:18:44Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+cwork:BlogPost;cwork:InternationalAudience;"2011-06-23T11:44:04Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;"2011-06-24T00:44:04Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>
 
 [ExpectedResultsSize]
-14
+354
 
 [Results]
+4
+2
 1
+1936 Soviet Cup Final
+MBC Plus Media
+Herbalife
+ThinkFilm
+Eat'n Park
+Sacrifice (2014)
+Athletics at the 1920 Summer Olympics – Men's marathon
+2007 Recopa Sudamericana
+Erin Good
+Kent Kitzmann
+Kevin Mallon
 none
-John Stevenson
-Charles Hendry
+Harman International Industries
+Battle of Fredericksburg
+2011 Guzzini Challenger
+Kohei Shimizu
+James Wellwood Johnston
+Robert Spencer
+Marcus Annius Verus
+Julie Goiorani
+Dongfeng Motor
+1HDTV
+Ittefaq Group
+Tamil Nadu Magnesite Limited
+Siege of Fort Zeelandia
+Feroze Gandhi
+Christopher Morse
+Marian Salzman
+Abdelkader Ouaraghli
+Battle of Port Moresby
+Kamel Ouejdide
+Rosario Silva de Lapuerta
+Qeshm Airlines
+Cowley Club
+Highland Capital Management
+Alberic Of Monte Cassino
+Mats Gren
+Steve Green
+Nestor Plasencia
+Charles Janssens
+Jacob Jansz. van Velsen
+LegalShield
+Supermono studios
+Alan Jerrard
+William Cochrane
+Joshua C. Stoddard
+Maarten Arens
+Olaf Hajek
+David Stewart
+Lionel Wendt
+Isfin (Islamic finance lawyers)
+Titanic Brewery
+Midtfyns Festival
+Battle of Placentia (271)
+Mark Keil
+Scott Neal
+Kid Lavigne
+Kathrin Entner
+WY Records
+Inside Edge
+Brazilian general election, 2006
+Freddie Starr
+Arlen Realty and Development Corporation
+Call4care
+NCB Group
+Ballaban's campaign of 1465
+Amir Attaran
+Curtis Wright

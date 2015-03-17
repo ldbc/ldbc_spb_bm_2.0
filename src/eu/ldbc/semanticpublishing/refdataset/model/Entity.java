@@ -101,4 +101,9 @@ public class Entity {
 	public int hashCode() {
 		return getURI().hashCode();
 	}
+	
+	@Override
+	public String toString() {
+		return aboutURI + ";" + getLabel() + ";" + getCategory() + ";" + getRank();		
+	}
 }
