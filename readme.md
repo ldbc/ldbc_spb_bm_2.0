@@ -48,7 +48,6 @@ Result of build process is saved to a distribution folder: _'dist/'_ :
 ###Install
 
 All necessary files required to run the benchmark are saved to folder: 'dist/'. The benchmark can be started from there or can be moved to a new location.
-Optionally, additinal reference datasets can be added - they can be dowloaded from https://github.com/ldbc/ldbc_spb_optional_datasets. All files should be unzipped in folder 'data/datasets/'
 
 ###Configure
 

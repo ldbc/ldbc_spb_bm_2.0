@@ -18,10 +18,6 @@ Download :
 LDBC Semantic Publishing Benchmark
     - https://github.com/ldbc/ldbc_spb_bm
 
-Additional datasets - optional datasets which can be used to further enrich reference knowledge data for benchmark's data generation process
-    - https://github.com/ldbc/ldbc_spb_optional_datasets
-
-
 
 Build :
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -43,7 +39,6 @@ Install :
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 All necessary components are saved to folder : 'dist/'. SPB can be started from the 'dist/'.
-Additinal reference datasets can also be added - by downloading (https://github.com/ldbc/ldbc_spb_optional_datasets) and unziping them to folder 'data/datasets/'
 
 
 
