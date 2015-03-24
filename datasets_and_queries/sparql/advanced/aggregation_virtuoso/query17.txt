@@ -49,7 +49,7 @@ SELECT DISTINCT ?cwork ?geonamesId ?lat ?long ?dateModified {
     ?geonamesId geo:lat ?lat . 
     ?geonamesId geo:geometry ?geo . 
     ?geonamesId geo:long ?long . 
-    FILTER(CONTAINS(STR(?geonamesId), "geonames")) . 
+    ?geonamesId a geo-ont:Feature . 
 
     BIND({{{refLatitude}}} AS ?referenceLat) .
     BIND({{{refLongtitude}}} AS ?referenceLong) .

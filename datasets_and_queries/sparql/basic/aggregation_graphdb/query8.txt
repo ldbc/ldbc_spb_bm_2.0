@@ -136,8 +136,8 @@ WHERE {
   }
   ?cWork a ?type .
   ?type rdfs:subClassOf cwork:CreativeWork . 
+  ?cWork cwork:dateModified ?dateModified . 
   OPTIONAL { ?cWork cwork:dateCreated ?dateCreated . }
-  OPTIONAL { ?cWork cwork:dateModified ?dateModified . }  
   OPTIONAL { ?cWork cwork:about ?about .}   
   OPTIONAL { ?cWork cwork:category ?category . }  
   OPTIONAL { 

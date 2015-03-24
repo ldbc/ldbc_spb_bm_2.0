@@ -564,7 +564,8 @@ public class RandomUtil {
 			//reading the WordsDictionary.txt file as a resource from jar
 //			InputStream is = getClass().getResourceAsStream(textFilePath);
 //			br = new BufferedReader(new InputStreamReader(is));
-			br = new BufferedReader(new FileReader(textFilePath));
+//			br = new BufferedReader(new FileReader(textFilePath));
+			br = new BufferedReader(new InputStreamReader(new FileInputStream(new File(textFilePath)), "UTF-8"));			
 
 			String line = br.readLine();
 

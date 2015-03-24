@@ -44,8 +44,10 @@ WHERE {
     }
     GROUP BY (?creativeWork)
   }
+  #FILTER(?pcCount > %d)
   {{{filterCondition}}}
 } 
 GROUP BY ?mentions
+#ORDER BY DESC(?count)
 {{{orderBy}}}
 LIMIT 10

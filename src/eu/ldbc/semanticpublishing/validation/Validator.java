@@ -16,7 +16,8 @@ public class Validator {
 	 */
 	protected int validateEditorial(String result, String validateOperation, boolean resultIsFromAskQuery, int iteration, String[] parameterValues, boolean strict) throws UnsupportedEncodingException {
 		int totalErrors = 0;
-	
+		String escapedString = StringEscapeUtils.escapeJava(result).replace("\\\\", "\\");
+		
 		if (resultIsFromAskQuery) {
 			if (!result.toLowerCase().contains(">false<") && !result.toLowerCase().contains(">no<")) {			
 				totalErrors++;
@@ -38,7 +39,7 @@ public class Validator {
 				
 				value = transformString(value, strict, false);
 				
-				if (!result.contains(value)) {
+				if (!escapedString.contains(value)) {
 					validationErrorsCount++;
 				}
 				
@@ -46,7 +47,7 @@ public class Validator {
 				if (validationErrorsCount > 0) {
 					value = transformString(value, strict, true);
 					
-					if (result.contains(value)) {
+					if (escapedString.contains(value)) {
 						validationErrorsCount--;						
 					}
 				}				

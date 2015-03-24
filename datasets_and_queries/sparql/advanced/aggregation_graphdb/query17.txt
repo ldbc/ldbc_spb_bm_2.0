@@ -62,7 +62,7 @@ FROM ot:disable-sameAs
   ?cwork cwork:dateModified ?dateModified .
   ?geonamesId geo:lat ?lat . 
   ?geonamesId geo:long ?long . 
-  FILTER(CONTAINS(STR(?geonamesId), "geonames")) . 
+  ?geonamesId a geo-ont:Feature . 
 
 }
 {{{orderBy}}}
