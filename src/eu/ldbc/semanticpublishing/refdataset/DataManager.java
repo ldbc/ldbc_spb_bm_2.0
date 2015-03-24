@@ -3,9 +3,10 @@ package eu.ldbc.semanticpublishing.refdataset;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.ArrayList;
@@ -71,7 +72,7 @@ public class DataManager {
 		
 		//do not serialize if no file name is specified
 		try {
-			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(destinationFullPath)));
+			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(destinationFullPath), "UTF-8"));
 			
 			//serialize next ID of creative Work
 			writer.write(String.format("%s\n", CREATIVE_WORK_NEXT_ID_TEXT));
@@ -120,7 +121,7 @@ public class DataManager {
 		actionsEnum action = actionsEnum.NONE;
 
 		try {
-			br = new BufferedReader(new FileReader(filePath));
+			br = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), "UTF-8"));
 			
 			String line = br.readLine();
 			while (line != null) {
