@@ -1,5 +1,5 @@
 define input:inference "ldbc"
-
+define input:same-as "yes"
 PREFIX bbcevent:<http://www.bbc.co.uk/ontologies/event/> 
 PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#> 
 PREFIX bbc:<http://www.bbc.co.uk/ontologies/bbc/> 
@@ -52,17 +52,15 @@ SELECT DISTINCT ?cwork ?geonamesId ?lat ?long ?dateModified {
     ?cwork cwork:dateModified ?dateModified .
     ?geonamesId geo:lat ?lat . 
     ?geonamesId geo:long ?long . 
-    ?geonamesId a geo-ont:Feature . 
+    FILTER(CONTAINS(STR(?geonamesId), "geonames")) . 
 
     BIND({{{refLatitude}}} AS ?referenceLat) .
     BIND({{{refLongtitude}}} AS ?referenceLong) .
     BIND({{{refDeviation}}} AS ?deviation) . 
 
-    FILTER( 
-     (xsd:double(?lat) >= (?referenceLat - ?deviation)) &&
-     (xsd:double(?lat) <= (?referenceLat + ?deviation)) && 
-     (xsd:double(?long) >= (?referenceLong - ?deviation)) && 
-     (xsd:double(?long) <= (?referenceLong + ?deviation)) ) . 
+    ?geonamesId geo:geometry ?geo .
+FILTER(  bif:st_intersects (?geo, bif:st_get_bounding_box (bif:st_linestring (bif:st_point (?referenceLong - ?deviation, ?referenceLat - ?deviation), bif:st_point (?referenceLong + ?deviation, ?referenceLat + ?deviation))))) .
+
 }
 {{{orderBy}}}
 LIMIT {{{randomLimit}}}

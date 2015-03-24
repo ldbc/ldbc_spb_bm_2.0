@@ -1,4 +1,5 @@
 define input:inference "ldbc"
+define input:same-as "yes"
 
 PREFIX bbcevent:<http://www.bbc.co.uk/ontologies/event/> 
 PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#> 
@@ -40,11 +41,7 @@ PREFIX fb:<http://rdf.freebase.com/ns/>
 SELECT ?cw ?title ?dateModified {
   {{{geonamesFeatureURI}}} geo-ont:parentFeature ?province .
   ?province geo-ont:featureCode geo-ont:A.ADM1 .    
-  {
-    ?location geo-ont:parentFeature ?province .
-  } UNION {
-    BIND(?province as ?location) .
-  }
+    ?location geo-ont:parentFeature * ?province .
   ?cw a cwork:CreativeWork ;
       cwork:tag ?location ;
       cwork:title ?title ;
