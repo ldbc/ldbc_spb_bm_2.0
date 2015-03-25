@@ -84,8 +84,12 @@ Rules
 	------------------------------------
 	  a d c
 
-
-	Id: rdfs9
+    Id: rdfs10
+         x  <rdf:type>  <rdfs:Class>
+        -------------------------------
+         x  <rdfs:subClassOf>  x
+    
+    Id: rdfs9
 
 	  a <rdf:type> b
 	  b <rdfs:subClassOf> c [Constraint b != c]

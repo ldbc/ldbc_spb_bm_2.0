@@ -58,11 +58,10 @@ CONSTRUCT {
   ?pco bbc:webDocumentType ?webDocType . 
 } 
 WHERE { 
-  ?cWork a cwork:CreativeWork ; 
-    a ?type ; 
+  ?type rdfs:subClassOf cwork:CreativeWork . 
+  ?cWork a ?type ;
     cwork:title ?title ;
     cwork:description ?description .
-  ?type rdfs:subClassOf cwork:CreativeWork . 
   ?cWork cwork:dateModified ?dateModified . 
   OPTIONAL { ?cWork cwork:dateCreated ?dateCreated . }
   OPTIONAL { ?cWork cwork:about ?about .}   
