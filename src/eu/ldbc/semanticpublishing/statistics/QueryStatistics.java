@@ -22,7 +22,7 @@ public class QueryStatistics {
 		failuresCount = new AtomicLong(0);
 	}
 	
-	public void reportSuccess(long currentExecutionTimeMs) {
+	public synchronized void reportSuccess(long currentExecutionTimeMs) {
 		runsCount.incrementAndGet();
 		minExecutionTimeMs = (minExecutionTimeMs == 0) ? currentExecutionTimeMs : (minExecutionTimeMs > currentExecutionTimeMs ? currentExecutionTimeMs : minExecutionTimeMs);
 		maxExecutionTimeMs = (currentExecutionTimeMs > maxExecutionTimeMs) ? currentExecutionTimeMs : maxExecutionTimeMs;
