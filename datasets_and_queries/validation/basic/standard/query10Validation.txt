@@ -1,5 +1,5 @@
 [SubstitutionParameters]
-<http://dbpedia.org/resource/Cullercoats>;FILTER(?dateModified >= "2011-12-08T00:00:00.000"^^<http://www.w3.org/2001/XMLSchema#dateTime> && ?dateModified < "2011-12-13T23:59:59.999"^^<http://www.w3.org/2001/XMLSchema#dateTime>) .
+<http://dbpedia.org/resource/Cullercoats>;<http://dbpedia.org/resource/Cullercoats>;FILTER(?dateModified >= "2011-12-08T00:00:00.000"^^<http://www.w3.org/2001/XMLSchema#dateTime> && ?dateModified < "2011-12-13T23:59:59.999"^^<http://www.w3.org/2001/XMLSchema#dateTime>) .
 
 [ExpectedResultsSize]
 46
