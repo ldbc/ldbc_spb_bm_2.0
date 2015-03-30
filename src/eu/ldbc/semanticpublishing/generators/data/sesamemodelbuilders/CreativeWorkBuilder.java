@@ -391,7 +391,7 @@ public class CreativeWorkBuilder implements SesameBuilder {
 		int random = ru.nextInt(1, 4 + 1);
 		for (int i = 0; i < random; i++) {
 			predicate = sesameValueFactory.createURI(bbcNamespace + "primaryContentOf");
-			String primaryContentUri = ru.randomURI("things", false, true);
+			String primaryContentUri = ru.numberURI("document", DataManager.webDocumentNextId.incrementAndGet(), false, true);
 			object = sesameValueFactory.createURI(primaryContentUri);
 			
 			model.add(subject, predicate, object, context);

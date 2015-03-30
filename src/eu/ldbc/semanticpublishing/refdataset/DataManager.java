@@ -51,6 +51,9 @@ public class DataManager {
 	//stores the ID of a Creative Work which is has the greatest value, used for further CRUD operations
 	public static AtomicLong creativeWorksNextId = new AtomicLong(0);
 	
+	//stores the ID of a Web Document
+	public static AtomicLong webDocumentNextId = new AtomicLong(0);
+	
 	//Dataset info constants for persisting
 	private static final String CREATIVE_WORK_NEXT_ID_TEXT = "[CreativeWorkNextId]";
 	private static final String EXP_DECAY_ENTITIES_MAJOR_TEXT = "[ExponentialDecayEntitiesMajor]";

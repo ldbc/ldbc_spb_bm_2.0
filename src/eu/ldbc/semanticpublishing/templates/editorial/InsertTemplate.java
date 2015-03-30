@@ -400,7 +400,7 @@ public class InsertTemplate extends MustacheTemplate implements SubstitutionPara
 		}		
 		
 		for (int i = 0; i < ru.nextInt(1, 4 + 1); i++) {
-			primaryContent.add(new PrimaryContentUri(ru.randomURI("things", true, true), ru.nextBoolean() ? "bbc:HighWeb" : "bbc:Mobile"));
+			primaryContent.add(new PrimaryContentUri(ru.numberURI("document", (long)(1E14 + DataManager.webDocumentNextId.incrementAndGet()), true, true), ru.nextBoolean() ? "bbc:HighWeb" : "bbc:Mobile"));
 		}
 		
 		return primaryContent;
@@ -490,7 +490,7 @@ public class InsertTemplate extends MustacheTemplate implements SubstitutionPara
 			if (primaryContentList.size() > 0) {
 				//executing one iteration on purpose, future TODO
 				for (int j = 0; j < 1; j++) {
-					sb.append(ru.randomURI("things", true, true));
+					sb.append(ru.numberURI("document", (long)(1E14 + DataManager.webDocumentNextId.incrementAndGet()), true, true));
 					sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
 					sb.append(ru.nextBoolean() ? RdfUtils.expandNamepsacePrefix("bbc:HighWeb") : RdfUtils.expandNamepsacePrefix("bbc:Mobile"));
 				}
