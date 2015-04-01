@@ -16,6 +16,8 @@ then
     exit
 fi
 
+isql $PORT dba dba ns.sql
+#isql $PORT dba dba spbcset.sql #enable when using feature/emergent branch
 isql $PORT dba dba exec="ld_dir_all ('$SPB/dist/data/ontologies', '*.ttl', 'ldbc-onto')"
 isql $PORT dba dba exec="ld_dir_all ('$SPB/dist/data/datasets', '*.ttl', 'ldbc')"
 for i in {1..8}; do isql $PORT dba dba exec="rdf_loader_run()" & done
@@ -29,4 +31,5 @@ for i in {1..16}; do isql $PORT dba dba exec="rdf_loader_run()" & done
 isql $PORT dba dba exec="VT_INC_INDEX_DB_DBA_RDF_OBJ()" &
 isql $PORT dba dba exec="rdf_geo_fill ()"
 wait
+isql $PORT dba dba exec='grant "SPARQL_UPDATE" to "SPARQL"'
 isql $PORT dba dba exec="checkpoint"
