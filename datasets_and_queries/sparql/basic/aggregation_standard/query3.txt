@@ -43,31 +43,33 @@ PREFIX fb:<http://rdf.freebase.com/ns/>
 #      start their execution as soon as possible thus eliminating intermediate results
 #    - Optimizer could consider the possibility to choose a query plan that would facilitate the ordering (ORDER BY) of result
 
-DESCRIBE ?creativework
+CONSTRUCT { ?creativeWork ?pred ?value }
 WHERE {
   {
-    SELECT DISTINCT ?creativework
+    SELECT DISTINCT ?creativeWork
     {
-      ?creativework cwork:dateCreated ?created .
-      ?creativework cwork:tag {{{cwAboutUri}}} .
+      ?creativeWork cwork:dateCreated ?created .
+      ?creativeWork cwork:tag {{{cwAboutUri}}} .
       
       {
-        { ?creativework cwork:primaryFormat cwork:TextualFormat . }
+        { ?creativeWork cwork:primaryFormat cwork:TextualFormat . }
         UNION
-        { ?creativework cwork:primaryFormat cwork:InteractiveFormat . }
+        { ?creativeWork cwork:primaryFormat cwork:InteractiveFormat . }
         UNION
-        { ?creativework cwork:primaryFormat cwork:PictureGalleryFormat . }
+        { ?creativeWork cwork:primaryFormat cwork:PictureGalleryFormat . }
       }
           # formats
       {
-        { ?creativework a cwork:NewsItem . }
+        { ?creativeWork a cwork:NewsItem . }
         UNION
-        { ?creativework a cwork:BlogPost . }
+        { ?creativeWork a cwork:BlogPost . }
       }
-      OPTIONAL { ?creativework cwork:audience ?audience } .
+      OPTIONAL { ?creativeWork cwork:audience ?audience } .
       FILTER (!BOUND(?audience) || ?audience = {{{cwAudience}}}) .
     }
+    ORDER BY DESC(?created)
+    LIMIT {{{randomLimit}}}
   }
+  ?creativeWork ?pred ?value.
+  FILTER (?pred NOT IN (cwork:tag, cwork:about, cwork:mention))   
 }
-ORDER BY DESC(?created)
-LIMIT {{{randomLimit}}}

@@ -45,14 +45,15 @@ PREFIX ldbc:<http://www.ldbc.eu/ontologies/sempub#>
 #    - Optimizer should be able to split the FILTER conditions into conjunction of conditions and execute them as soon as possible, 
 #      which will limit the amount of intermediate results
 
-SELECT DISTINCT ?cwork ?geonamesId ?lat ?long ?dateModified {
-
+SELECT DISTINCT ?creativeWork ?locationName ?lat ?long ?dateModified 
+{
     ?cwork a cwork:CreativeWork . 
     ?cwork cwork:tag ?geonamesId . 
     ?cwork cwork:dateModified ?dateModified .
     ?geonamesId geo:lat ?lat . 
     ?geonamesId geo:long ?long . 
-    ?geonamesId a geo-ont:Feature .
+    ?geonamesId a geo-ont:Feature . 
+    ?geonamesId geo-ont:name ?locationName .
 
     BIND({{{refLatitude}}} AS ?referenceLat) .
     BIND({{{refLongtitude}}} AS ?referenceLong) .

@@ -31,6 +31,7 @@ PREFIX curric:<http://www.bbc.co.uk/ontologies/curriculum/>
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
 PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/> 
 PREFIX fb:<http://rdf.freebase.com/ns/>
+PREFIX ldbcspb:<http://www.ldbcouncil.org/spb#> 
 
 #  Query Name : query1
 #  Query Description : 
@@ -54,8 +55,8 @@ CONSTRUCT {
     a ?type ;
     cwork:title ?title ;
     cwork:shortTitle ?shortTitle ;
-    cwork:about ?about ;
-    cwork:mentions ?mentions ;
+    cwork:aboutPrefLabel ?aboutPreflabel ;
+    cwork:mentionsPrefLabel ?mentionsPreflabel ;
     cwork:dateCreated ?created ;
     cwork:dateModified ?modified ;
     cwork:description ?description ;
@@ -75,7 +76,7 @@ CONSTRUCT {
 }
 WHERE {
   {
-    SELECT ?creativeWork
+    SELECT DISTINCT ?creativeWork
       WHERE {
               ?creativeWork {{{cwAboutOrMentions}}} {{{cwAboutOrMentionsUri}}} .
               ?creativeWork a cwork:CreativeWork ;
@@ -94,12 +95,14 @@ WHERE {
              OPTIONAL { ?about rdfs:label ?aboutLabel . }
              OPTIONAL { ?about bbc:shortLabel ?aboutShortLabel . }
              OPTIONAL { ?about bbc:preferredLabel ?aboutPreferredLabel . }
+			 OPTIONAL { ?about ldbcspb:prefLabel ?aboutPrefLabel . }
            }
   OPTIONAL {
              ?creativeWork cwork:mentions ?mentions .
              OPTIONAL { ?mentions rdfs:label ?mentionsLabel . }
              OPTIONAL { ?mentions bbc:shortLabel ?mentionsShortLabel . }
              OPTIONAL { ?mentions bbc:preferredLabel ?mentionsPreferredLabel . }
+			 OPTIONAL { ?mentions ldbcspb:prefLabel ?mentionsPrefLabel . }
            }
   OPTIONAL { ?creativeWork cwork:dateCreated ?created . }
   OPTIONAL { ?creativeWork cwork:primaryFormat ?primaryFormat . }

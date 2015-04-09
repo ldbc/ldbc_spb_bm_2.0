@@ -46,41 +46,40 @@ PREFIX ldbc:<http://www.ldbc.eu/ontologies/sempub#>
 #    - A possibility for optimizing the full-text search by using appropriate index
 
 CONSTRUCT { 
-  ?cWork a cwork:CreativeWork ; 
+  ?creativeWork a cwork:CreativeWork ; 
     a ?type ; 
     cwork:title ?title ; 
     cwork:description ?description ; 
     cwork:dateCreated ?dateCreated ;
     cwork:dateModified ?dateModified ;
-    cwork:about ?about ; 
     cwork:category ?category ; 
     bbc:primaryContentOf ?pco . 
   ?pco bbc:webDocumentType ?webDocType . 
 } 
 WHERE { 
-#  ?cWork a cwork:CreativeWork . 
-   ?cWork   a ?type  ; 
+#  ?creativeWork a cwork:CreativeWork . 
+   ?creativeWork   a ?type  ; 
     cwork:title ?title ;
     cwork:description ?description .
-  ?type rdfs:subClassOf cwork:CreativeWork . 
-   ?cWork cwork:dateModified ?dateModified . 
-  OPTIONAL { ?cWork cwork:dateCreated ?dateCreated . }
-  OPTIONAL { ?cWork cwork:about ?about .}   
-  OPTIONAL { ?cWork cwork:category ?category . }  
+   ?type rdfs:subClassOf cwork:CreativeWork . 
+   ?creativeWork cwork:dateModified ?dateModified . 
+  OPTIONAL { ?creativeWork cwork:dateCreated ?dateCreated . }
+  OPTIONAL { ?creativeWork cwork:about ?about .}   
+  OPTIONAL { ?creativeWork cwork:category ?category . }  
   OPTIONAL { 
-    ?cWork bbc:primaryContentOf ?pco . 
+    ?creativeWork bbc:primaryContentOf ?pco . 
     ?pco bbc:webDocumentType ?webDocType . 
   } 
   { 
-    SELECT DISTINCT ?cWork  WHERE
+    SELECT DISTINCT ?creativeWork  WHERE
     {
       {
-        ?cWork cwork:title ?title .
+        ?creativeWork cwork:title ?title .
         ?title bif:contains '{{{word}}}'
       }
       UNION
       {
-        ?cWork cwork:description ?description .
+        ?creativeWork cwork:description ?description .
         ?description bif:contains '{{{word}}}'
       }
     }

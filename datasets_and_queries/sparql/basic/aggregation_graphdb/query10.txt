@@ -36,7 +36,7 @@ PREFIX ot:<http://www.ontotext.com/>
 #  Retrieve creative works that mention locations in the same province (A.ADM1) as the specified one.
 #  Additional constraint on time interval further limits returned result.
 
-SELECT ?cw ?title ?dateModified 
+SELECT DISTINCT ?creativeWork ?title ?dateModified 
 FROM ot:disable-sameAs
 {
   {{{geonamesFeatureURI}}} geo-ont:parentFeature ?province .
@@ -46,7 +46,7 @@ FROM ot:disable-sameAs
   } UNION {
     BIND(?province as ?location) .
   }
-  ?cw a cwork:CreativeWork ;
+  ?creativeWork a cwork:CreativeWork ;
       cwork:tag ?location ;
       cwork:title ?title ;
       cwork:dateModified ?dateModified .

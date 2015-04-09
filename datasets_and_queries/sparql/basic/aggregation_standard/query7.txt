@@ -42,13 +42,14 @@ PREFIX ldbc:<http://www.ldbc.eu/ontologies/sempub#>
 #    - Optimizer should be able to split the FILTER conditions into conjunction of conditions and execute them as soon as possible, 
 #      which will limit the amount of intermediate results
 
-SELECT ?cwork ?dateModif ?title ?category ?liveCoverage ?audience {
-  ?cwork a {{{cwType}}}  .
-  ?cwork cwork:dateModified ?dateModif .
-  ?cwork cwork:title ?title .
-  ?cwork cwork:category ?category .
-  ?cwork cwork:liveCoverage ?liveCoverage .
-  ?cwork cwork:audience ?audience .
+SELECT ?creativeWork ?dateModif ?title ?category ?liveCoverage ?audience 
+{
+  ?creativeWork a {{{cwType}}}  .
+  ?creativeWork cwork:dateModified ?dateModif .
+  ?creativeWork cwork:title ?title .
+  ?creativeWork cwork:category ?category .
+  ?creativeWork cwork:liveCoverage ?liveCoverage .
+  ?creativeWork cwork:audience ?audience .
   {{{cwFilterDateModifiedCondition}}} 
 }
 {{{orderBy}}}

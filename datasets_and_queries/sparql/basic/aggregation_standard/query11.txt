@@ -35,7 +35,7 @@ PREFIX fb:<http://rdf.freebase.com/ns/>
 #  Retrieve a list of the most recent Creative Works that have tagged with entities, related to a specific popular entity from reference dataset
 #  Relations can be  (inbound and outbound; explicit or inferred)
 
-SELECT DISTINCT ?cw ?title ?description ?dateModified ?primaryContent
+SELECT DISTINCT ?creativeWork ?title ?description ?dateModified ?primaryContent
 {
   { 
     {{{entitiyOfInterest}}} ?p ?e .
@@ -45,7 +45,7 @@ SELECT DISTINCT ?cw ?title ?description ?dateModified ?primaryContent
     ?e ?p {{{entitiyOfInterest}}} .
   }
   ?e a core:Thing .
-  ?cw cwork:tag ?e ;
+  ?creativeWork cwork:tag ?e ;
     cwork:title ?title ;
     cwork:description ?description ;
     cwork:dateModified ?dateModified ;

@@ -30,6 +30,7 @@ PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
 PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/> 
 PREFIX fb:<http://rdf.freebase.com/ns/>
 PREFIX ot:<http://www.ontotext.com/>
+PREFIX ldbcspb:<http://www.ldbcouncil.org/spb#> 
 
 #  Query name : query2
 #  Query Description : 
@@ -38,8 +39,8 @@ PREFIX ot:<http://www.ontotext.com/>
 #  join ordering: cwork:dateModified rdf:type owl:FunctionalProperty
 #  join ordering: cwork:dateCreated rdf:type owl:FunctionalProperty
 
-#  optimization: ?cWork a ?type . ?type rdfs:subClassOf cwork:CreativeWork 
-#  should be eliminated since ?cWork a cwork:CreativeWork 
+#  optimization: ?creativeWork a ?type . ?type rdfs:subClassOf cwork:CreativeWork 
+#  should be eliminated since ?creativeWork a cwork:CreativeWork 
 
 #  Choke Points : 
 #    - join ordering based on cardinality of functional proerties cwork:dateCreated, cwork:dateModified
@@ -47,32 +48,34 @@ PREFIX ot:<http://www.ontotext.com/>
 #    - OPTIONAL clauses (treated by query optimizer as nested sub-queries)
 #      Optimizer should recognize that FILTER condition contains variables which are part of the OPTINAL clauses
 #      and unlike query1 to start execution of OPTIONAL clause as soon as possible thus eliminating the intermediate results.
-#    - query optimizer has the chance to recognize the triple pattern : ?cWork a ?type . ?type rdfs:subClassOf cwork:CreativeWork 
-#      and eliminate first triple (?cwork a ?type .) since ?cwork is a cwork:CreativeWork
+#    - query optimizer has the chance to recognize the triple pattern : ?creativeWork a ?type . ?type rdfs:subClassOf cwork:CreativeWork 
+#      and eliminate first triple (?creativeWork a ?type .) since ?creativeWork is a cwork:CreativeWork
 
 
 CONSTRUCT { 
-  ?cWork a cwork:CreativeWork ; 
+  ?creativeWork a cwork:CreativeWork ; 
     a ?type ; 
     cwork:title ?title ; 
     cwork:dateCreated ?dateCreated ;
     cwork:dateModified ?dateModified ;
-    cwork:about ?about ; 
+    cwork:aboutPrefLabel ?aboutPreflabel ;
     bbc:primaryContentOf ?pco . 
   ?pco bbc:webDocumentType ?webDocType . 
 } 
 FROM ot:disable-sameAs
 WHERE { 
-  ?cWork a cwork:CreativeWork ; 
+  ?creativeWork a cwork:CreativeWork ; 
     a ?type ; 
     cwork:title ?title .  
   ?type rdfs:subClassOf cwork:CreativeWork . 
-  OPTIONAL { ?cWork cwork:dateCreated ?dateCreated . }
-  OPTIONAL { ?cWork cwork:dateModified ?dateModified . }
-  OPTIONAL { ?cWork cwork:about ?about .} 
+  OPTIONAL { ?creativeWork cwork:dateCreated ?dateCreated . }
+  OPTIONAL { ?creativeWork cwork:dateModified ?dateModified . }
+  OPTIONAL { ?creativeWork cwork:about ?about . 
+            OPTIONAL { ?about ldbcspb:prefLabel ?aboutPrefLabel . }         
+  } 
   OPTIONAL { 
-    ?cWork bbc:primaryContentOf ?pco . 
+    ?creativeWork bbc:primaryContentOf ?pco . 
     ?pco bbc:webDocumentType ?webDocType . 
   } 
-  FILTER (?cWork = {{{cwUri}}})
+  FILTER (?creativeWork = {{{cwUri}}})
 }

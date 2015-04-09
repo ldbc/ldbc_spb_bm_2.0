@@ -34,17 +34,23 @@ PREFIX fb:<http://rdf.freebase.com/ns/>
 
 #  Query name : query4
 #  Query Description : 
-#  Describes all blog posts tagged with a topic and order them by creation date
+#  Describes all blog posts tagged with a topic and order them by creation date. The size of the resultset is limited by a random number between 5 and 20.
 
 #  Choke Points : 
 #    - Optimizer could consider the possibility to choose a query plan that would facilitate the ordering (ORDER BY) of result
 
-DESCRIBE ?creativework
+CONSTRUCT { ?creativeWork ?pred ?value }
 WHERE {
-  ?creativework cwork:tag {{{cwAboutUri}}} ;
-    cwork:dateCreated ?created ;
-    cwork:primaryFormat {{{cwFormat}}} ;
-    a {{{cwType}}} .
+  {
+    SELECT DISTINCT ?creativeWork {
+      ?creativeWork cwork:tag {{{cwAboutUri}}} ;
+        cwork:dateCreated ?created ;
+        cwork:primaryFormat {{{cwFormat}}} ;    
+        a {{{cwType}}}.
+    }
+    ORDER BY DESC( xsd:dateTime(str(?created)) )
+    LIMIT {{{randomLimit}}}
+  }
+  ?creativeWork ?pred ?value.
+  FILTER (?pred NOT IN (cwork:tag, cwork:about, cwork:mention))
 }
-ORDER BY DESC(?created)
-LIMIT {{{randomLimit}}}

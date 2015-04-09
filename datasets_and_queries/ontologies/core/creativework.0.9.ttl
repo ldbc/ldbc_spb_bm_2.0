@@ -271,5 +271,21 @@ cwork:title
       rdfs:isDefinedBy cwork: ;
       rdfs:label "title"^^xsd:string ;
       rdfs:range xsd:string .
+      
+cwork:aboutPrefLabel
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "This property is used to describe the prefLabel defined for each entity in reference data (for about tag)."^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "aboutPrefLabel"^^xsd:string ;
+      rdfs:range xsd:string .      
+      
+cwork:mentionsPrefLabel
+      rdf:type owl:DatatypeProperty ;
+      rdfs:comment "This property is used to describe the prefLabel defined for each entity in reference data (for mentions tag)."^^xsd:string ;
+      rdfs:domain cwork:CreativeWork ;
+      rdfs:isDefinedBy cwork: ;
+      rdfs:label "mentionsPrefLabel"^^xsd:string ;
+      rdfs:range xsd:string .            
 
 _:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

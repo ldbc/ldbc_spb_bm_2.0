@@ -33,47 +33,65 @@ PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/>
 PREFIX fb:<http://rdf.freebase.com/ns/>
 
 #  Query name : query9
-#  Query Description : 
-#  Retrieve similar creative works regarding the ’things’ they are about or mention.
-#  Calculates a score for a particular Creative Work, about most similar articles
-#  Creative Works with same abouts count for 2, mentioning the about counts for 1, a mentions in common counts for 0.5
-#  reasoning : rdfs:subPropertyOf
+#  Query Description :
+#  Retrieve most recent Creative Works related to a particular one, namely such that are tagged with the same concepts
+#  Calculates a score for a particular Creative Work, based on the number of Creative Works that it shares tags with
+#  The different combinations of cwork:about and cwork:mention count with factors between 0.5 and 2
+#  When calculating the score, multiplication of results due to owl:sameAs equivalence should be suppressed
+#  For instance, if only the following two statements are asserted in the repository
+#      <cw1 cwork:tag e1> and <e1 owl:sameAs e2>
+#  The query SELECT (COUNT(*) AS ?cnt) { cw1 cwork:tag ?e } should return 1, instead of 2
+#  Reasoning : rdfs:subPropertyOf reasoning with respect to cwork:tag; owl:sameAs with respect to tags
 
-#  Choke Points : 
+#  Choke Points :
 #    - Optimizer should consider cardinality of star-shaped sub-queries for choosing the optimal join ordering.
 #    - Optimizer should identify the possibility of asynchronous execution of the  aggregate sub-queries.
-#    - Optimizer should consider the selectivity of the DISTINCT for choosing the right execution plan. The distinct's state 
+#    - Optimizer should consider the selectivity of the DISTINCT for choosing the right execution plan. The distinct's state
 #      should be shared between threads or should be merged after the top order sort.
+#    - Engines which support optimized handling owl:sameAs reasoning that allows for control of query results expansion
+#       can implement this query in a much simpler and efficient way. The first sub-query may look as follows:
+#         SELECT (COUNT(*) AS ?cnt_2) 
+#         WHERE { 
+#           ?other_cw cwork:about ?oa . 
+#           <CreativeWorkUri> cwork:about ?oa .
+#         }  
 
-SELECT ?other ?dt ((?cnt_2 * 2 + ?cnt_1 + ?cnt_0_5 * 5e-1) AS ?score) 
+SELECT ?other_cw ?dt ((?cnt_2 * 2 + ?cnt_1_5 * 15e-1 + ?cnt_1 + ?cnt_0_5 * 5e-1) AS ?score) 
 WHERE {
   {
     SELECT (COUNT(*) AS ?cnt_2) 
     WHERE { 
-      ?other cwork:about ?oa . 
+      ?other_cw cwork:about ?oa . 
       {{{cwUri}}} cwork:about ?oa .
     }      
   } .
   {
+     SELECT (COUNT(*) AS ?cnt_1_5) 
+     WHERE {
+       ?other_cw cwork:about ?oa . 
+       {{{cwUri}}} cwork:mentions ?oa .
+     }      
+  } .  
+  {
      SELECT (COUNT(*) AS ?cnt_1) 
      WHERE {
-       ?other cwork:mentions ?oa . 
+       ?other_cw cwork:mentions ?oa . 
        {{{cwUri}}} cwork:about ?oa .
      }      
   } .
   {
      SELECT (COUNT(*) AS ?cnt_0_5)
      WHERE { 
-       ?other cwork:mentions ?om . 
+       ?other_cw cwork:mentions ?om . 
        {{{cwUri}}} cwork:mentions ?om .
      }      
   } .
   { 
-    SELECT DISTINCT ?other ?dt
+    SELECT DISTINCT ?other_cw ?dt
     WHERE {
       {{{cwUri}}} cwork:tag ?tag .
-      ?other cwork:tag ?tag .
-      ?other cwork:dateModified ?dt .
+      ?other_cw cwork:tag ?tag .
+      ?other_cw cwork:dateModified ?dt .
     }
   }
 }

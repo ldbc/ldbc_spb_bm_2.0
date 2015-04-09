@@ -35,7 +35,7 @@ PREFIX fb:<http://rdf.freebase.com/ns/>
 #  Retrieve creative works that mention locations in the same province (A.ADM1) as the specified one.
 #  Additional constraint on time interval further limits returned result.
 
-SELECT ?cw ?title ?dateModified 
+SELECT ?creativeWork ?title ?dateModified 
 {    
   {
     {{{geonamesFeatureURI}}} geo-ont:parentFeature ?province .
@@ -45,7 +45,7 @@ SELECT ?cw ?title ?dateModified
     {{{geonamesFeatureURI}}} geo-ont:parentFeature ?location .
     ?location geo-ont:featureCode geo-ont:A.ADM1 .    
   }
-  ?cw a cwork:CreativeWork ;
+  ?creativeWork a cwork:CreativeWork ;
       cwork:tag ?location ;
       cwork:title ?title ;
       cwork:dateModified ?dateModified .

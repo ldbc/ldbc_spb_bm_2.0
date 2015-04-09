@@ -30,6 +30,7 @@ PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
 PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/> 
 PREFIX fb:<http://rdf.freebase.com/ns/>
 PREFIX ot:<http://www.ontotext.com/>
+PREFIX ldbcspb:<http://www.ldbcouncil.org/spb#> 
 
 #  Query name : query5
 #  Query Description : 
@@ -45,7 +46,7 @@ PREFIX ot:<http://www.ontotext.com/>
 #    - Optimizer should be able to split the FILTER conditions into conjunction of conditions and execute the as soon as possible,
 #      which will limit the amount of intermediate results
 
-SELECT (COALESCE(?name, ?label1, "none") as ?label) ?cnt
+SELECT DISTINCT (COALESCE(?name, ?label1, ?tagPrefLabel, "none") as ?label) ?cnt
 FROM ot:disable-sameAs
 {
   {
@@ -69,6 +70,9 @@ FROM ot:disable-sameAs
   }
   OPTIONAL {
     ?topic foaf:name ?name .
+  }
+  OPTIONAL {
+    ?topic ldbcspb:prefLabel ?tagPrefLabel .
   }
 }
 ORDER BY DESC(?cnt)
