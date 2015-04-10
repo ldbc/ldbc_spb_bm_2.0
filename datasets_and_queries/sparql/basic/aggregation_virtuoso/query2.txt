@@ -53,30 +53,27 @@ PREFIX ldbcspb:<http://www.ldbcouncil.org/spb#>
 #    - query optimizer has the chance to recognize the triple pattern : ?creativeWork a ?type . ?type rdfs:subClassOf cwork:CreativeWork 
 #      and eliminate first triple (?creativeWork a ?type .) since ?creativeWork is a cwork:CreativeWork
 
-
-CONSTRUCT { 
-  ?creativeWork a cwork:CreativeWork ; 
-    a ?type ; 
-    cwork:title ?title ; 
+CONSTRUCT {
+  ?creativeWork a cwork:CreativeWork ;
+    a ?type ;
+    cwork:title ?title ;
     cwork:dateCreated ?dateCreated ;
     cwork:dateModified ?dateModified ;
-    cwork:aboutPrefLabel ?aboutPreflabel ;
-    bbc:primaryContentOf ?pco . 
-  ?pco bbc:webDocumentType ?webDocType . 
-} 
-WHERE { 
-  ?creativeWork a cwork:CreativeWork ; 
-    a ?type ; 
-    cwork:title ?title .  
-  ?type rdfs:subClassOf cwork:CreativeWork . 
+    cwork:aboutPrefLabel ?aboutPrefLabel ;
+    bbc:primaryContentOf ?pco .
+  ?pco bbc:webDocumentType ?webDocType .
+}
+WHERE {
+  ?creativeWork a cwork:CreativeWork ;
+    a ?type ;
+    cwork:title ?title .
+  ?type rdfs:subClassOf cwork:CreativeWork .
   OPTIONAL { ?creativeWork cwork:dateCreated ?dateCreated . }
   OPTIONAL { ?creativeWork cwork:dateModified ?dateModified . }
-  OPTIONAL { ?creativeWork cwork:about ?about . 
-            OPTIONAL { ?about ldbcspb:prefLabel ?aboutPrefLabel . }         
-  } 
-  OPTIONAL { 
-    ?creativeWork bbc:primaryContentOf ?pco . 
-    ?pco bbc:webDocumentType ?webDocType . 
-  } 
+  OPTIONAL { ?creativeWork cwork:about [ ldbcspb:prefLabel ?aboutPrefLabel ] . }
+  OPTIONAL {
+    ?creativeWork bbc:primaryContentOf ?pco .
+    ?pco bbc:webDocumentType ?webDocType .
+  }
   FILTER (?creativeWork = {{{cwUri}}})
 }

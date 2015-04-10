@@ -46,33 +46,20 @@ PREFIX ldbcspb:<http://www.ldbcouncil.org/spb#>
 #    - Optimizer should be able to split the FILTER conditions into conjunction of conditions and execute the as soon as possible,
 #      which will limit the amount of intermediate results
 
-SELECT DISTINCT (COALESCE(?name, ?label1, ?tagPrefLabel, "none") as ?label) ?cnt
+SELECT DISTINCT ((MAX(?topicPrefLabel)) AS ?topicLabel) ((COUNT(*)) AS ?cnt)
 FROM ot:disable-sameAs
-{
+WHERE {
   {
-    SELECT ?topic ((COUNT(*)) AS ?cnt)
-    WHERE 
-    {
-      {
-        ?creativeWork a {{{cwType}}} ;
-          cwork:tag ?topic ;
-          cwork:dateModified ?dt ;
-          cwork:audience {{{cwAudience}}} .
-        FILTER (?dt > {{{cwStartDateTime}}} && ?dt < {{{cwEndDateTime}}}) .
-      } UNION {
-        BIND(<urn:fake> as ?topic)
-      }
-    }
-    GROUP BY ?topic
-  }
-  OPTIONAL {
-    ?topic rdfs:label ?label1 .
-  }
-  OPTIONAL {
-    ?topic foaf:name ?name .
-  }
-  OPTIONAL {
-    ?topic ldbcspb:prefLabel ?tagPrefLabel .
+    ?creativeWork a {{{cwType}}} ;
+       cwork:tag ?topic ;
+       cwork:dateModified ?dt ;
+       cwork:audience {{{cwAudience}}} .
+     FILTER (?dt > {{{cwStartDateTime}}} && ?dt < {{{cwEndDateTime}}}) .
+     ?topic ldbcspb:prefLabel ?topicPrefLabel .
+  } UNION {
+     BIND(<urn:fake> as ?topic) .
+     BIND(<urn:fake> as ?topicPrefLabel) .
   }
 }
+GROUP BY ?topic
 ORDER BY DESC(?cnt)
