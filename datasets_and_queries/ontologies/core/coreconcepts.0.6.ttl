@@ -145,5 +145,6 @@ dbp-ont:parentCompany a owl:TransitiveProperty .
 dbp-ont:Person rdfs:subClassOf core:Thing .
 foaf:Person rdfs:subClassOf core:Thing .
 dbp-ont:Event rdfs:subClassOf core:Thing .
+geo-ont:Feature rdfs:subClassOf core:Thing .
 
 _:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

@@ -35,24 +35,22 @@ PREFIX ot:<http://www.ontotext.com/>
 
 #  Query name : query7
 #  Query Description : 
-#  Retrieve creative works that have been modified within a defined date-time range and order them by modification date.
-#  Additional constraint added the type of creative works modified in that time range.
+#  Retrieve creative works that have been created within a defined date-time range and order them by creation date.
+#  Additional constraint added the type of creative works created in that time range.
 
 #  Choke Points : 
 #    - Date range query
 #    - Optimizer should be able to split the FILTER conditions into conjunction of conditions and execute them as soon as possible, 
 #      which will limit the amount of intermediate results
 
-SELECT ?creativeWork ?dateModif ?title ?category ?liveCoverage ?audience 
+SELECT ?creativeWork ?dateCreated ?title ?category ?liveCoverage ?audience 
 FROM ot:disable-sameAs
 {
   ?creativeWork a {{{cwType}}}  .
-  ?creativeWork cwork:dateModified ?dateModif .
+  ?creativeWork cwork:dateCreated ?dateCreated .
   ?creativeWork cwork:title ?title .
   ?creativeWork cwork:category ?category .
   ?creativeWork cwork:liveCoverage ?liveCoverage .
   ?creativeWork cwork:audience ?audience .
-  {{{cwFilterDateModifiedCondition}}} 
+  {{{cwFilterdateCreatediedCondition}}} 
 }
-{{{orderBy}}}
-LIMIT {{{randomLimit}}}

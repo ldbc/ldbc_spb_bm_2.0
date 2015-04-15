@@ -37,14 +37,19 @@ PREFIX fb:<http://rdf.freebase.com/ns/>
 
 SELECT DISTINCT ?creativeWork ?title ?description ?dateModified ?primaryContent
 {
-  { 
-    {{{entitiyOfInterest}}} ?p ?e .
+  {
+    SELECT DISTINCT ?e 
+    {
+      { 
+        {{{entitiyOfInterest}}} ?p ?e .
+      }
+      UNION
+      { 
+        ?e ?p {{{entitiyOfInterest}}} .
+      }
+      ?e a core:Thing .    
+    }
   }
-  UNION
-  { 
-    ?e ?p {{{entitiyOfInterest}}} .
-  }
-  ?e a core:Thing .
   ?creativeWork cwork:tag ?e ;
     cwork:title ?title ;
     cwork:description ?description ;

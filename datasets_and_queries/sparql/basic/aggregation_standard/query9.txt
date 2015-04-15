@@ -54,7 +54,7 @@ PREFIX fb:<http://rdf.freebase.com/ns/>
 #           <CreativeWorkUri> cwork:about ?oa .
 #         }  
 
-SELECT ?other_cw ?dt ((?cnt_2 * 2 + ?cnt_1_5 * 15e-1 + ?cnt_1 + ?cnt_0_5 * 5e-1) AS ?score) 
+SELECT ?other_creativeWork ?dt ((?cnt_2 * 2 + ?cnt_1_5 * 15e-1 + ?cnt_1 + ?cnt_0_5 * 5e-1) AS ?score) 
 WHERE {
   {
     SELECT (?cnt2_sameAs + ?cnt2_noSameAs AS ?cnt_2) {
@@ -145,13 +145,13 @@ WHERE {
     } 
   } .
   { 
-    SELECT DISTINCT ?other_cw ?dt
+    SELECT DISTINCT ?other_creativeWork ?dt
     WHERE {
       {{{cwUri}}} cwork:tag ?tag .
-      ?other_cw cwork:tag ?tag .
-      ?other_cw cwork:dateModified ?dt .
+      ?other_creativeWork cwork:tag ?tag .
+      ?other_creativeWork cwork:dateModified ?dt .
     }
   }
 }
-ORDER BY DESC(?score) DESC(?dt)
+ORDER BY DESC(?dt)
 LIMIT 10
