@@ -1,3 +1,6 @@
+define input:inference "ldbc"
+define input:same-as "yes"
+
 PREFIX bbcevent:<http://www.bbc.co.uk/ontologies/event/> 
 PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#> 
 PREFIX bbc:<http://www.bbc.co.uk/ontologies/bbc/> 
@@ -29,37 +32,29 @@ PREFIX curric:<http://www.bbc.co.uk/ontologies/curriculum/>
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
 PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/> 
 PREFIX fb:<http://rdf.freebase.com/ns/>
-PREFIX geo:<http://www.w3.org/2003/01/geo/wgs84_pos#>
-PREFIX ldbc:<http://www.ldbc.eu/ontologies/sempub#>
+PREFIX ot:<http://www.ontotext.com/> 
+PREFIX ldbcspb:<http://www.ldbcouncil.org/spb#>
 
-#  Query name : query6
-#  Query Description :
-#  Retrieve creative works within a certain range defined by geo-coordinates 
-#  Retrieves a list of all creative works that are mentioning entities within a geo-spatial range.
+#  Query Name : query12
+#  Query Description : 
+#  Retrieve the descriptions of the latest creative works tagged with a specific location. Consider that the description of each specific 
+#  Creative Work is stored in dedicated named graph. The result should include only the explicit statements about the creative work, without owl:sameAs 
+#  equivalence and without statements inferred otherwise .
 
-#  Choke Points : 
-#    - A geo-spatial query
-#      Allows each RDF engine could use its custom geo-spatial implementations.
-#    - Optimizer should be able to split the FILTER conditions into conjunction of conditions and execute them as soon as possible, 
-#      which will limit the amount of intermediate results
+SELECT ?cworkGraph ?s ?p ?o
+WHERE {
+  {
+    SELECT DISTINCT ?creativeWork ?cworkGraph
+    WHERE {
+        ?creativeWork cwork:tag {{{creativeWorkTag}}} ; 
+                      a cwork:CreativeWork .
+        GRAPH ?cworkGraph { ?creativeWork cwork:dateModified ?modified . }
+      }
+      ORDER BY DESC(?modified)
+      LIMIT 10
+  }
 
-SELECT DISTINCT ?creativeWork ?locationName ?lat ?long ?dateModified 
-{
-    ?cwork a cwork:CreativeWork . 
-    ?cwork cwork:tag ?geonamesId . 
-    ?cwork cwork:dateModified ?dateModified .
-    ?geonamesId geo:lat ?lat . 
-    ?geonamesId geo:long ?long . 
-    ?geonamesId a geo-ont:Feature . 
-    ?geonamesId geo-ont:name ?locationName .
+  GRAPH ?cworkGraph { ?s ?p ?o . }
 
-    BIND({{{refLatitude}}} AS ?referenceLat) .
-    BIND({{{refLongtitude}}} AS ?referenceLong) .
-    BIND({{{refDeviation}}} AS ?deviation) . 
-
-    FILTER( 
-     (xsd:double(?lat) >= (?referenceLat - ?deviation)) &&
-     (xsd:double(?lat) <= (?referenceLat + ?deviation)) && 
-     (xsd:double(?long) >= (?referenceLong - ?deviation)) && 
-     (xsd:double(?long) <= (?referenceLong + ?deviation)) ) . 
-}
+} 
+ORDER BY ?cworkGraph ?s ?p ?o 

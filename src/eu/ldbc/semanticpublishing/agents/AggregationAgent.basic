@@ -138,7 +138,11 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 				case 10 :
 					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
 					aggregateQuery = new Query11Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;							
+					break;		
+				case 11 : 
+					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+					aggregateQuery = new Query12Template(ru, queryTemplates, definitions, querySubstParameters);
+					break;	
 			}
 			
 			queryString = aggregateQuery.compileMustacheTemplate();

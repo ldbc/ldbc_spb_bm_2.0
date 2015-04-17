@@ -62,14 +62,14 @@ public class Query10Template extends MustacheTemplate implements SubstitutionPar
 	
 	/**
 	 * A method for replacing mustache template : {{{dateTimeRangeFilter}}}
-	 * with a FILTER constraint evaluating time range conditions set to generate a 10 days time range
+	 * with a FILTER constraint evaluating time range conditions set to generate a 1 day time range
 	 */	
 	public String dateTimeRangeFilter() {
 		if (substitutionParameters != null) {
 			return substitutionParameters[parameterIndex++];
 		}		
 		
-		return generateFilterDateString2("dateModified", year, month, day, 5);
+		return generateFilterDateString2("dateModified", year, month, day, 0);
 	}
 
 	private String generateFilterDateString2(String variableName,int startYear, int startMonth, int startDay, int daysOffset) {
@@ -113,8 +113,8 @@ public class Query10Template extends MustacheTemplate implements SubstitutionPar
 		sbStartRange.append(":");
 		sbEndRange.append(":");		
 		
-		sbStartRange.append("00.000");
-		sbEndRange.append("59.999");
+		sbStartRange.append("00.000Z");
+		sbEndRange.append("59.999Z");
 		
 		sbStartRange.append("\"");
 		sbEndRange.append("\"");

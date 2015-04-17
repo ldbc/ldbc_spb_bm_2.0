@@ -34,7 +34,7 @@ PREFIX ot:<http://www.ontotext.com/>
 #  Query name : query10
 #  Query Description : 
 #  Retrieve creative works that mention locations in the same province (A.ADM1) as the specified one.
-#  Additional constraint on time interval further limits returned result.
+#  Additional constraint on time interval further limits returned result within one hour.
 
 SELECT DISTINCT ?creativeWork ?title ?dateModified 
 FROM ot:disable-sameAs
@@ -46,10 +46,8 @@ FROM ot:disable-sameAs
   } UNION {
     BIND(?province as ?location) .
   }
-  ?creativeWork a cwork:CreativeWork ;
-      cwork:tag ?location ;
+  ?creativeWork cwork:tag ?location ;
       cwork:title ?title ;
       cwork:dateModified ?dateModified .
       {{{dateTimeRangeFilter}}}
-  }
-LIMIT 100
+}

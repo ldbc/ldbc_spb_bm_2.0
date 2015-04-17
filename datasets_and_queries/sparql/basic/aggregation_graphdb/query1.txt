@@ -94,16 +94,8 @@ WHERE {
                }
       OPTIONAL { ?creativeWork cwork:dateCreated ?created . }
       OPTIONAL { ?creativeWork cwork:primaryFormat ?primaryFormat . }
-      OPTIONAL {
-                {
-                  ?webDocument bbc:primaryContent ?creativeWork .
+      OPTIONAL { ?webDocument bbc:primaryContent ?creativeWork .
                   OPTIONAL { ?webDocument bbc:webDocumentType ?webDocType . }
-                }
-                UNION
-                {
-                  ?webDocument ^bbc:primaryContentOf ?creativeWork .
-                  OPTIONAL { ?webDocument bbc:webDocumentType ?webDocType . }
-                }
       }
       OPTIONAL { ?creativeWork cwork:thumbnail ?thumbnail .
                  OPTIONAL { ?thumbnail cwork:altText ?thumbnailAltText . }

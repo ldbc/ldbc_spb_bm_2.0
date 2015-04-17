@@ -8,7 +8,7 @@ public class Statistics {
 	private static final String DELETE_QUERIES_STATISTICS = "DELETE";
 	private static final String AGGREGATE_QUERIES_STATISTICS = "AGGREGATE";
 	
-	public static final int AGGREGATE_QUERIES_COUNT = 11;
+	public static final int AGGREGATE_QUERIES_COUNT = 12;
 	public static final int EDITORIAL_QUERIES_COUNT = 3;
 	
 	public static final String AGGREGATE_QUERY_NAME = "query";

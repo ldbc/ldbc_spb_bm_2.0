@@ -49,17 +49,12 @@ PREFIX ldbcspb:<http://www.ldbcouncil.org/spb#>
 
 SELECT DISTINCT ((MAX(?topicPrefLabel)) AS ?topicLabel) ((COUNT(*)) AS ?cnt)
 WHERE {
-  {
-    ?creativeWork a {{{cwType}}} ;
-       cwork:tag ?topic ;
-       cwork:dateModified ?dt ;
-       cwork:audience {{{cwAudience}}} .
-     FILTER (?dt > {{{cwStartDateTime}}} && ?dt < {{{cwEndDateTime}}}) .
-     ?topic ldbcspb:prefLabel ?topicPrefLabel .
-  } UNION {
-     BIND(<urn:fake> as ?topic) .
-     BIND(<urn:fake> as ?topicPrefLabel) .
-  }
+  ?creativeWork a {{{cwType}}} ;
+     cwork:tag ?topic ;
+     cwork:dateModified ?dt ;
+     cwork:audience {{{cwAudience}}} .
+   FILTER (?dt > {{{cwStartDateTime}}} && ?dt < {{{cwEndDateTime}}}) .
+   ?topic ldbcspb:prefLabel ?topicPrefLabel .
 }
 GROUP BY ?topic
 ORDER BY DESC(?cnt)

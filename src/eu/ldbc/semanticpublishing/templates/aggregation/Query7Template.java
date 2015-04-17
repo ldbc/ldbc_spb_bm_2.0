@@ -133,8 +133,8 @@ public class Query7Template extends MustacheTemplate implements SubstitutionPara
 		sbStartRange.append(":");
 		sbEndRange.append(":");		
 		
-		sbStartRange.append("00.000");
-		sbEndRange.append("00.000");
+		sbStartRange.append("00.000Z");
+		sbEndRange.append("00.000Z");
 		
 		sbStartRange.append("\"");
 		sbEndRange.append("\"");

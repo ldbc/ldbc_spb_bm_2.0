@@ -35,7 +35,7 @@ PREFIX ot:<http://www.ontotext.com/>
 
 #  Query name : query7
 #  Query Description : 
-#  Retrieve creative works that have been created within a defined date-time range and order them by creation date.
+#  Retrieve creative works that have been created within a defined date-time range of one hour.
 #  Additional constraint added the type of creative works created in that time range.
 
 #  Choke Points : 

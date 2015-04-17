@@ -69,6 +69,4 @@ FROM ot:disable-sameAs
   ?geonamesId a geo-ont:Feature . 
   ?geonamesId geo-ont:name ?locationName .
 }
-{{{orderBy}}}
-LIMIT {{{randomLimit}}}
 

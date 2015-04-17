@@ -63,5 +63,3 @@ SELECT DISTINCT ?creativeWork ?locationName ?lat ?long ?dateModified
 FILTER(  bif:st_intersects (?geo, bif:st_get_bounding_box (bif:st_linestring (bif:st_point (?referenceLong - ?deviation, ?referenceLat - ?deviation), bif:st_point (?referenceLong + ?deviation, ?referenceLat + ?deviation))))) .
 
 }
-{{{orderBy}}}
-LIMIT {{{randomLimit}}}

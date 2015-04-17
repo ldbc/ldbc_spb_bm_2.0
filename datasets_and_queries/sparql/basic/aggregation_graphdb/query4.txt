@@ -48,7 +48,7 @@ WHERE {
         cwork:primaryFormat {{{cwFormat}}} ;    
         a {{{cwType}}}.
     }
-    ORDER BY DESC( xsd:dateTime(str(?created)) )
+    ORDER BY DESC(?created)
     LIMIT {{{randomLimit}}}
   }
   ?creativeWork ?pred ?value.

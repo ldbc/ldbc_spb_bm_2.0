@@ -34,7 +34,7 @@ PREFIX ldbcspb:<http://www.ldbcouncil.org/spb#>
 
 #  Query name : query2
 #  Query Description : 
-#  Retrieve creative works that are about or mention things that have specific properties
+#  Retrieve proeprties of a concrete creative work.
 #  reasoning rdfs:subClassOf, rdf:type
 #  join ordering: cwork:dateModified rdf:type owl:FunctionalProperty
 #  join ordering: cwork:dateCreated rdf:type owl:FunctionalProperty

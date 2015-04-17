@@ -28,7 +28,7 @@ editorialOperationsAllocation=0.8, 0.1, 0.1
 
 #Defines the allocation amount of aggregation queries starting from query1, query2, query3...
 #  e.g. chance for execution of each query will be equally distributed in the query mix
-aggregationOperationsAllocation=0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.1
+aggregationOperationsAllocation=0.087, 0.083, 0.083, 0.083, 0.083, 0.083, 0.083, 0.083, 0.083, 0.083, 0.083, 0.083
 
 #Defines the maximum number of creative works that an entity can be tagged about. Exponential decay function will start from the value defined
 exponentialDecayUpperLimitOfCWs=5000
@@ -97,4 +97,4 @@ maxLong = 31.0
 mileStoneQueryPosition = 0.5
 
 #Defines a pool of queries, where each pool contains unique set of queries. During query execution, each query from the pool gets executed just once until all queries have been executed. The query pool is defined by a set of curly braces {}. If empty value is used, then query pool is not created and all queries are executed according to distributions defined in parameter 'aggregationOperationsAllocation'
-queryPools={1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11} 
+queryPools={1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12} 

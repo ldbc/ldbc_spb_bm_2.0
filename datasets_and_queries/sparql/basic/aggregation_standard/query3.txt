@@ -32,7 +32,7 @@ PREFIX fb:<http://rdf.freebase.com/ns/>
 
 #  Query name : query3
 #  Query Description : 
-#  Describes all creative works about a topic with certain fixed properties and order them by creation date
+#  Describes all creative works about a topic with certain fixed properties and order them by creation date. The size of the resultset is limited by a random number between 5 and 20.
 
 #  Choke Points : 
 #    - UNIONS - optimizer should execute the UNIONs in terms or in parallel

@@ -33,7 +33,7 @@ PREFIX fb:<http://rdf.freebase.com/ns/>
 #  Query name : query10
 #  Query Description : 
 #  Retrieve creative works that mention locations in the same province (A.ADM1) as the specified one.
-#  Additional constraint on time interval further limits returned result.
+#  Additional constraint on time interval further limits returned result within one hour.
 
 SELECT ?creativeWork ?title ?dateModified 
 {    
@@ -45,10 +45,8 @@ SELECT ?creativeWork ?title ?dateModified
     {{{geonamesFeatureURI}}} geo-ont:parentFeature ?location .
     ?location geo-ont:featureCode geo-ont:A.ADM1 .    
   }
-  ?creativeWork a cwork:CreativeWork ;
-      cwork:tag ?location ;
+  ?creativeWork cwork:tag ?location ;
       cwork:title ?title ;
       cwork:dateModified ?dateModified .
       {{{dateTimeRangeFilter}}}
-  }
-LIMIT 100
+}
