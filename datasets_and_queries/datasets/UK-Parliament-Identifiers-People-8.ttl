@@ -8,10 +8,10 @@
 
 <http://www.bbc.co.uk/contexts/8ec696a8-ddd5-4eca-a853-5b5e8b4a1b76#id> a provenance:Dataset ;
   rdfs:label "all 650 UK Members of Parliament"^^xsd:string ;
-  provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/datasets/news/politics/UK-Parliament-Identifiers-People-%version%.ttl";
+  provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/datasets/news/politics/UK-Parliament-Identifiers-People-8.ttl";
   provenance:changeReason "fixed typo in cnews URI"^^xsd:string ;
   provenance:provider <mailto:jeremy.tarling@bbc.co.uk> ;
-  provenance:version "6"^^xsd:int .
+  provenance:version "8"^^xsd:int .
 
 <http://www.bbc.co.uk/things/g3947cd18-59c0-45e7-aa00-4252b335a111#id> a news:Person ;
 	bbc:preferredLabel "Diane Abbott" ;
