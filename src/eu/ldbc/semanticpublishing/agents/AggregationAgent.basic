@@ -17,7 +17,7 @@ import eu.ldbc.semanticpublishing.endpoint.SparqlQueryExecuteManager;
 import eu.ldbc.semanticpublishing.properties.Definitions;
 import eu.ldbc.semanticpublishing.substitutionparameters.SubstitutionQueryParametersManager;
 import eu.ldbc.semanticpublishing.resultanalyzers.sax.SPARQLResultStatementsCounter;
-import eu.ldbc.semanticpublishing.resultanalyzers.sesame.RDFXMLResultStatementsCounter;
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.TurtleResultStatementsCounter;
 import eu.ldbc.semanticpublishing.statistics.Statistics;
 import eu.ldbc.semanticpublishing.statistics.querypool.Pool;
 import eu.ldbc.semanticpublishing.templates.MustacheTemplate;
@@ -41,7 +41,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	private SparqlQueryConnection connection;
 	private Definitions definitions;
 	private SubstitutionQueryParametersManager substitutionQueryParametersMngr;
-	private RDFXMLResultStatementsCounter rdfxmlResultStatementsCounter;
+	private TurtleResultStatementsCounter turtleResultStatementsCounter;
 	private SPARQLResultStatementsCounter sparqlResultStatementsCounter;
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
@@ -57,7 +57,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
 		this.definitions = definitions;
 		this.substitutionQueryParametersMngr = substitutionQueryParametersMngr;
-		this.rdfxmlResultStatementsCounter = new RDFXMLResultStatementsCounter();
+		this.turtleResultStatementsCounter = new TurtleResultStatementsCounter();
 		this.sparqlResultStatementsCounter = new SPARQLResultStatementsCounter();
 		this.queryMixPool = new Pool(definitions.getString(Definitions.QUERY_POOLS), Statistics.totalStartedQueryMixRuns, Statistics.totalCompletedQueryMixRuns);
 		this.benchmarkByQueryMixRuns = benchmarkByQueryMixRuns;
@@ -195,8 +195,8 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 			if ((!queryResult.trim().isEmpty())) {			
             iStream = new ByteArrayInputStream(queryResult.getBytes("UTF-8"));
 		        if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
-		          resultsCount = rdfxmlResultStatementsCounter.getStatementsCount(iStream);
-		          Statistics.timeCorrectionsMS.addAndGet(rdfxmlResultStatementsCounter.getParseTime());
+		          resultsCount = turtleResultStatementsCounter.getStatementsCount(iStream);
+		          Statistics.timeCorrectionsMS.addAndGet(turtleResultStatementsCounter.getParseTime());
 		        } else {
 		          resultsCount = sparqlResultStatementsCounter.getStatementsCount(iStream);
 		          Statistics.timeCorrectionsMS.addAndGet(sparqlResultStatementsCounter.getParseTime());

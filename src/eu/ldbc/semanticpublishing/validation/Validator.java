@@ -1,9 +1,18 @@
 package eu.ldbc.semanticpublishing.validation;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.openrdf.query.QueryEvaluationException;
+import org.openrdf.query.TupleQueryResultHandlerException;
+import org.openrdf.query.resultio.QueryResultParseException;
+import org.openrdf.rio.RDFHandlerException;
+import org.openrdf.rio.RDFParseException;
+
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.SparqlResultValidator;
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.TurtleResultValidator;
 
 public class Validator {
 	
@@ -62,6 +71,19 @@ public class Validator {
 		return totalErrors;
 	}
 	
+	/**
+	 * Almost deprecated method, will not be used for validation.
+	 * 
+	 * @param result
+	 * @param actualResultsSize
+	 * @param expectedResultSize
+	 * @param validateOperation
+	 * @param iteration
+	 * @param validationList
+	 * @param strict
+	 * @return
+	 * @throws UnsupportedEncodingException
+	 */
 	protected int validateAggregate(String result, long actualResultsSize, long expectedResultSize, String validateOperation, int iteration, List<String> validationList, boolean strict) throws UnsupportedEncodingException {
 		int totalErrors = 0;
 		String value;
@@ -98,6 +120,24 @@ public class Validator {
 		return totalErrors;
 	}
 	
+	protected int validateAggregateTurtleResult(String validationModel, String resultModel) throws RDFParseException, RDFHandlerException, IOException {
+		int errors = 0;
+		
+		TurtleResultValidator validator = new TurtleResultValidator();
+		errors = validator.validate(validationModel, resultModel);
+
+		return errors;		
+	}
+	
+	protected int validateAggregateSparqlResult(String validationModel, String resultModel) throws TupleQueryResultHandlerException, QueryResultParseException, QueryEvaluationException, IOException {
+		int errors = 0;
+		
+		SparqlResultValidator validator = new SparqlResultValidator();
+		errors = validator.validate(validationModel, resultModel);
+		
+		return errors;
+	}
+		
 	private String transformString(String str, boolean strict, boolean forceOptionalEncodings) {
 		String result = str;
 		if (!strict) {

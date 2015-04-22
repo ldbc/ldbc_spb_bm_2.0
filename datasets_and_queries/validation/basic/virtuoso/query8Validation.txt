@@ -1,274 +1,1376 @@
 [SubstitutionParameters]
-"any";"lower";1000
+"undersell";"chitchat";1000
 
 [ExpectedResultsSize]
 1000
 
+[ResultsAcceptType]
+application/x-turtle
+
 [Results]
-<http://www.bbc.co.uk/things/27564#id>
-<http://www.bbc.co.uk/things/1553549163#id>
-<http://www.bbc.co.uk/things/115560493#id>
-<http://www.bbc.co.uk/things/1064855474#id>
-<http://www.bbc.co.uk/things/1922526945#id>
-<http://www.bbc.co.uk/things/35195#id>
-<http://www.bbc.co.uk/things/578970640#id>
-<http://www.bbc.co.uk/things/42427#id>
-<http://www.bbc.co.uk/things/714299551#id>
-<http://www.bbc.co.uk/things/322524050#id>
-<http://www.bbc.co.uk/things/29746#id>
-<http://www.bbc.co.uk/things/1452241554#id>
-<http://www.bbc.co.uk/things/1007135800#id>
-<http://www.bbc.co.uk/things/11677809#id>
-"Big port Saint Petersburg information attracted has states many began mainly enactments clergy page."
-" did ip beyond another representative one give audiences 15th life conscientious government pressure since players remotely achieve liability weak."
-"2011-12-26T08:46:47.739+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2013-01-17T17:21:34.749+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-<http://dbpedia.org/resource/Italcementi>
-<http://www.bbc.co.uk/category/Company>
-<http://www.bbc.co.uk/things/1553549163#id>
-<http://www.bbc.co.uk/things/115560493#id>
-<http://www.bbc.co.uk/things/1064855474#id>
-<http://www.bbc.co.uk/things/1922526945#id>
-<http://yago-knowledge.org/resource/Italcementi>
-<http://rdf.freebase.com/ns/m.0d37n7>
-<http://ru.dbpedia.org/resource/Italcementi>
-<http://pt.dbpedia.org/resource/Italcementi>
-<http://ja.dbpedia.org/resource/\u30A4\u30BF\u30EB\u30C1\u30A7\u30E1\u30F3\u30C6\u30A3>
-<http://it.dbpedia.org/resource/Italcementi>
-<http://fr.dbpedia.org/resource/Italcementi>
-<http://es.dbpedia.org/resource/Italcementi>
-<http://de.dbpedia.org/resource/Italcementi>
-<http://wikidata.dbpedia.org/resource/Q610658>
-<http://wikidata.org/entity/Q610658>
-<http://dbpedia.org/resource/Big_port_Saint_Petersburg>
-<http://yago-knowledge.org/resource/Big_port_Saint_Petersburg>
-<http://rdf.freebase.com/ns/m.076xpyw>
-<http://ru.dbpedia.org/resource/\u0411\u043E\u043B\u044C\u0448\u043E\u0439_\u043F\u043E\u0440\u0442_\u0421\u0430\u043D\u043A\u0442-\u041F\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433>
-<http://fi.dbpedia.org/resource/Pietarin_suursatama>
-<http://wikidata.dbpedia.org/resource/Q2035634>
-<http://wikidata.org/entity/Q2035634>
-<http://dbpedia.org/resource/Layer_Five>
-<http://yago-knowledge.org/resource/Layer_Five>
-<http://rdf.freebase.com/ns/m.05p48vy>
-<http://wikidata.dbpedia.org/resource/Q6505505>
-<http://wikidata.org/entity/Q6505505>
-<http://dbpedia.org/resource/Mattioli_Woods>
-<http://yago-knowledge.org/resource/Mattioli_Woods>
-<http://rdf.freebase.com/ns/m.0g9v_vg>
-<http://wikidata.dbpedia.org/resource/Q6791833>
-<http://wikidata.org/entity/Q6791833>
-<http://dbpedia.org/resource/ReCellular>
-<http://yago-knowledge.org/resource/ReCellular>
-<http://rdf.freebase.com/ns/m.03h2nlw>
-<http://wikidata.dbpedia.org/resource/Q7299997>
-<http://wikidata.org/entity/Q7299997>
-<http://dbpedia.org/resource/Tissuemed>
-<http://rdf.freebase.com/ns/m.0ztkfx7>
-<http://wikidata.dbpedia.org/resource/Q17141441>
-<http://wikidata.org/entity/Q17141441>
-<http://dbpedia.org/resource/Battle_of_Fehmarn_(1715)>
-<http://rdf.freebase.com/ns/m.05dwj7>
-<http://sv.dbpedia.org/resource/Sj\u00F6slaget_i_Femer_b\u00E4lt>
-<http://ru.dbpedia.org/resource/\u0421\u0440\u0430\u0436\u0435\u043D\u0438\u0435_\u0443_\u0424\u0435\u043C\u0430\u0440\u043D\u0430>
-<http://no.dbpedia.org/resource/Slaget_ved_Femern>
-<http://de.dbpedia.org/resource/Seeschlacht_bei_Fehmarn>
-<http://wikidata.dbpedia.org/resource/Q1780316>
-<http://wikidata.org/entity/Q1780316>
-<http://dbpedia.org/resource/Lady_Anne_Clifford>
-<http://dbpedia.org/resource/Kamil_Iskhakov>
-<http://dbpedia.org/resource/Nathan_LaFayette>
-<http://dbpedia.org/resource/Na'sha>
-<http://dbpedia.org/resource/Kola_Bhaskar>
-<http://dbpedia.org/resource/Anthony_Hammond_(musician)>
-<http://dbpedia.org/resource/Jesse_Kalima>
-<http://dbpedia.org/resource/Giovanni_Carnovali>
-<http://dbpedia.org/resource/Lizette_Alvarez>
-"BMW whole over request terms players remotely cup 700 principle viewers."
-" even trends tables cases into lower referral into around head record should where feel service fundamental type electorate website."
-"2011-12-17T04:46:56.017+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2013-01-14T21:00:34.674+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-<http://dbpedia.org/resource/BMW>
-<http://www.bbc.co.uk/things/578970640#id>
-<http://openei.org/resources/BMW>
-<http://yago-knowledge.org/resource/BMW>
-<http://rdf.freebase.com/ns/m.017yh>
-<http://zh.dbpedia.org/resource/BMW>
-<http://vi.dbpedia.org/resource/BMW>
-<http://ur.dbpedia.org/resource/\u0628\u06CC_\u0627\u06CC\u0645_\u0688\u0628\u0644\u06CC\u0648>
-<http://uk.dbpedia.org/resource/BMW>
-<http://tr.dbpedia.org/resource/BMW>
-<http://th.dbpedia.org/resource/\u0E1A\u0E35\u0E40\u0E2D\u0E47\u0E21\u0E14\u0E31\u0E1A\u0E40\u0E1A\u0E34\u0E25\u0E22\u0E39>
-<http://ta.dbpedia.org/resource/\u0BAA\u0BBF.\u0B8E\u0BAE\u0BCD.\u0B9F\u0BAA\u0BBF\u0BB3\u0BCD\u0BAF\u0BC2>
-<http://sv.dbpedia.org/resource/BMW>
-<http://sr.dbpedia.org/resource/BMW>
-<http://sq.dbpedia.org/resource/BMW>
-<http://sl.dbpedia.org/resource/BMW>
-<http://sk.dbpedia.org/resource/BMW>
-<http://simple.dbpedia.org/resource/BMW>
-<http://si.dbpedia.org/resource/\u0DB6\u0DD3_\u0D91\u0DB8\u0DCA_\u0DA9\u0DB6\u0DCA\u0DBD\u0DD2\u0DC0\u0DCA>
-<http://sh.dbpedia.org/resource/BMW>
-<http://sco.dbpedia.org/resource/BMW>
-<http://sah.dbpedia.org/resource/BMW>
-<http://sa.dbpedia.org/resource/\u092C\u093F_\u090F\u092E\u094D_\u0921\u092C\u094D\u0932\u094D\u092F\u0942>
-<http://ru.dbpedia.org/resource/BMW>
-<http://ro.dbpedia.org/resource/BMW>
-<http://pt.dbpedia.org/resource/BMW>
-<http://pnb.dbpedia.org/resource/\u0628\u06CC_\u0627\u06CC\u0645_\u0688\u0628\u0644\u06CC\u0648>
-<http://pms.dbpedia.org/resource/BMW>
-<http://pl.dbpedia.org/resource/BMW>
-<http://no.dbpedia.org/resource/BMW>
-<http://nn.dbpedia.org/resource/BMW>
-<http://nl.dbpedia.org/resource/BMW>
-<http://my.dbpedia.org/resource/\u1018\u102E\u1021\u1019\u103A\u1012\u1017\u101C\u103B\u1030>
-<http://ms.dbpedia.org/resource/BMW>
-<http://mr.dbpedia.org/resource/\u092C\u0940\u090F\u092E\u0921\u092C\u094D\u0932\u094D\u092F\u0942>
-<http://ml.dbpedia.org/resource/\u0D2C\u0D3F.\u0D0E\u0D02.\u0D21\u0D2C\u0D4D\u0D32\u0D4D\u0D2F\u0D41.>
-<http://lv.dbpedia.org/resource/BMW>
-<http://lt.dbpedia.org/resource/BMW>
-<http://ky.dbpedia.org/resource/BMW>
-<http://ku.dbpedia.org/resource/BMW>
-<http://ko.dbpedia.org/resource/BMW>
-<http://kn.dbpedia.org/resource/\u0CAC\u0CBF\u0C8E\u0C82\u0CA1\u0CAC\u0CCD\u0CB2\u0CCD\u0CAF\u0CC2>
-<http://kk.dbpedia.org/resource/BMW>
-<http://ka.dbpedia.org/resource/BMW>
-<http://jv.dbpedia.org/resource/BMW>
-<http://ja.dbpedia.org/resource/BMW>
-<http://it.dbpedia.org/resource/BMW>
-<http://is.dbpedia.org/resource/BMW>
-<http://id.dbpedia.org/resource/BMW>
-<http://hy.dbpedia.org/resource/BMW>
-<http://hu.dbpedia.org/resource/BMW>
-<http://hr.dbpedia.org/resource/BMW>
-<http://hi.dbpedia.org/resource/\u092C\u0940\u090F\u092E\u0921\u092C\u094D\u0932\u0942_(BMW)>
-<http://he.dbpedia.org/resource/BMW>
-<http://gl.dbpedia.org/resource/BMW>
-<http://fr.dbpedia.org/resource/Bayerische_Motoren_Werke>
-<http://fi.dbpedia.org/resource/BMW>
-<http://fa.dbpedia.org/resource/\u0628\u200C\u0627\u0645\u200C\u0648>
-<http://eu.dbpedia.org/resource/BMW>
-<http://et.dbpedia.org/resource/BMW>
-<http://es.dbpedia.org/resource/BMW>
-<http://eo.dbpedia.org/resource/BMW>
-<http://el.dbpedia.org/resource/BMW>
-<http://de.dbpedia.org/resource/BMW>
-<http://da.dbpedia.org/resource/BMW>
-<http://cs.dbpedia.org/resource/BMW>
-<http://ckb.dbpedia.org/resource/\u0628\u06CC_\u0626\u06CE\u0645_\u062F\u06D5\u0628\u0644\u06CC\u0648\u0648>
-<http://ca.dbpedia.org/resource/BMW>
-<http://bs.dbpedia.org/resource/BMW>
-<http://bn.dbpedia.org/resource/\u09AC\u09BF\u098F\u09AE\u09A1\u09AC\u09CD\u09B2\u09BF\u0989>
-<http://bg.dbpedia.org/resource/BMW>
-<http://be.dbpedia.org/resource/BMW>
-<http://az.dbpedia.org/resource/BMW>
-<http://ast.dbpedia.org/resource/BMW>
-<http://ar.dbpedia.org/resource/\u0628\u064A_\u0625\u0645_\u062F\u0628\u0644\u064A\u0648>
-<http://af.dbpedia.org/resource/BMW>
-<http://wikidata.dbpedia.org/resource/Q26678>
-<http://wikidata.org/entity/Q26678>
-<http://dbpedia.org/resource/Fantasy_Air>
-<http://yago-knowledge.org/resource/Fantasy_Air>
-<http://rdf.freebase.com/ns/m.03nvt14>
-<http://wikidata.dbpedia.org/resource/Q5434274>
-<http://wikidata.org/entity/Q5434274>
-<http://dbpedia.org/resource/Battle_of_Villepion>
-<http://yago-knowledge.org/resource/Battle_of_Villepion>
-<http://rdf.freebase.com/ns/m.04y9bgt>
-<http://vi.dbpedia.org/resource/Tr\u1EADn_Villepion>
-<http://ru.dbpedia.org/resource/\u0411\u0438\u0442\u0432\u0430_\u043F\u0440\u0438_\u0412\u0438\u043B\u044C\u043F\u0438\u043E\u043D\u0435>
-<http://de.dbpedia.org/resource/Gefecht_bei_Villepion>
-<http://wikidata.dbpedia.org/resource/Q832924>
-<http://wikidata.org/entity/Q832924>
-<http://dbpedia.org/resource/United_States_Senate_election_in_Connecticut,_1988>
-<http://rdf.freebase.com/ns/m.0cnw_90>
-<http://wikidata.dbpedia.org/resource/Q7891443>
-<http://wikidata.org/entity/Q7891443>
-<http://dbpedia.org/resource/1994_Ta\u00E7a_de_Portugal_Final>
-<http://rdf.freebase.com/ns/m.0y4p09t>
-<http://pt.dbpedia.org/resource/Ta\u00E7a_de_Portugal_de_1993\u201394>
-<http://wikidata.dbpedia.org/resource/Q10378711>
-<http://wikidata.org/entity/Q10378711>
-<http://dbpedia.org/resource/UFC_on_Fox:_Johnson_vs._Benavidez_2>
-<http://rdf.freebase.com/ns/m.0x0qc43>
-<http://pt.dbpedia.org/resource/UFC_on_Fox:_Johnson_vs._Benavidez_II>
-<http://ja.dbpedia.org/resource/UFC_on_FOX_9>
-<http://it.dbpedia.org/resource/UFC_on_Fox:_Johnson_vs._Benavidez_2>
-<http://es.dbpedia.org/resource/UFC_on_Fox:_Johnson_vs._Benavidez_2>
-<http://wikidata.dbpedia.org/resource/Q14916211>
-<http://wikidata.org/entity/Q14916211>
-<http://dbpedia.org/resource/Hassan_Yektapanah>
-<http://dbpedia.org/resource/Isaac_Corry>
-<http://dbpedia.org/resource/Edward_MacEvoy>
-<http://ko.dbpedia.org/resource/2000\uB144_FIFA_\uD48B\uC0B4_\uC138\uACC4_\uC120\uC218\uAD8C_\uB300\uD68C>
-"Austin Motor Company something impact power an come themselves effects carry realm users."
-" after seen war progress function achieve purely achieve following solely boxing."
-"2011-12-16T01:47:06.432+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2013-01-13T19:12:54.283+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-<http://dbpedia.org/resource/Austin_Motor_Company>
-<http://www.bbc.co.uk/things/714299551#id>
-<http://www.bbc.co.uk/things/322524050#id>
-<http://yago-knowledge.org/resource/Austin_Motor_Company>
-<http://rdf.freebase.com/ns/m.01x4pj>
-<http://tr.dbpedia.org/resource/Austin_Motor_Company>
-<http://sv.dbpedia.org/resource/Austin_Motor_Company>
-<http://simple.dbpedia.org/resource/Austin_Motor_Company>
-<http://sh.dbpedia.org/resource/Austin_Motor_Company>
-<http://sco.dbpedia.org/resource/Austin_Motor_Company>
-<http://ru.dbpedia.org/resource/Austin_Motor_Company>
-<http://pt.dbpedia.org/resource/Austin_Motor_Company>
-<http://pms.dbpedia.org/resource/Austin_Motor_Company>
-<http://pl.dbpedia.org/resource/Austin_Motor_Company>
-<http://no.dbpedia.org/resource/Austin_(bilmerke)>
-<http://nl.dbpedia.org/resource/Austin_Motor_Company>
-<http://la.dbpedia.org/resource/Austin_(autocinetum)>
-<http://ko.dbpedia.org/resource/\uC624\uC2A4\uD2F4_(\uC790\uB3D9\uCC28)>
-<http://ja.dbpedia.org/resource/\u30AA\u30FC\u30B9\u30C1\u30F3_(\u81EA\u52D5\u8ECA)>
-<http://it.dbpedia.org/resource/Austin_Motor_Company>
-<http://id.dbpedia.org/resource/Austin>
-<http://fr.dbpedia.org/resource/Austin_(automobile)>
-<http://fi.dbpedia.org/resource/Austin_Motor_Company>
-<http://fa.dbpedia.org/resource/\u0622\u0633\u062A\u06CC\u0646_\u0645\u0648\u062A\u0648\u0631>
-<http://eo.dbpedia.org/resource/Austin_(kompanio)>
-<http://de.dbpedia.org/resource/Austin_Motor_Company>
-<http://da.dbpedia.org/resource/Austin_(bilm\u00E6rke)>
-<http://wikidata.dbpedia.org/resource/Q781156>
-<http://wikidata.org/entity/Q781156>
-"Aston Martin revolves by software be rapid estimated head would log carry."
-" need plead affords effective clergy 15th than lower which nobles."
-"2011-12-31T07:41:42.157+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2013-01-05T17:20:00.224+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-<http://dbpedia.org/resource/Aston_Martin>
-<http://www.bbc.co.uk/things/1452241554#id>
-<http://www.bbc.co.uk/things/1007135800#id>
-<http://www.bbc.co.uk/things/11677809#id>
-<http://yago-knowledge.org/resource/Aston_Martin>
-<http://rdf.freebase.com/ns/m.0ywc>
-<http://zh.dbpedia.org/resource/\u963F\u65AF\u987F\u00B7\u9A6C\u4E01>
-<http://vi.dbpedia.org/resource/Aston_Martin>
-<http://uk.dbpedia.org/resource/Aston_Martin>
-<http://tr.dbpedia.org/resource/Aston_Martin>
-<http://th.dbpedia.org/resource/\u0E41\u0E2D\u0E2A\u0E15\u0E31\u0E19\u0E21\u0E32\u0E23\u0E4C\u0E15\u0E34\u0E19>
-<http://te.dbpedia.org/resource/\u0C06\u0C38\u0C4D\u0C1F\u0C28\u0C4D_\u0C2E\u0C3E\u0C30\u0C4D\u0C1F\u0C3F\u0C28\u0C4D>
-<http://sv.dbpedia.org/resource/Aston_Martin>
-<http://sr.dbpedia.org/resource/\u0410\u0441\u0442\u043E\u043D_\u041C\u0430\u0440\u0442\u0438\u043D>
-<http://sl.dbpedia.org/resource/Aston_Martin>
-<http://sk.dbpedia.org/resource/Aston_Martin>
-<http://simple.dbpedia.org/resource/Aston_Martin>
-<http://ru.dbpedia.org/resource/Aston_Martin>
-<http://ro.dbpedia.org/resource/Aston_Martin>
-<http://pt.dbpedia.org/resource/Aston_Martin>
-<http://pl.dbpedia.org/resource/Aston_Martin>
-<http://oc.dbpedia.org/resource/Aston_Martin>
-<http://no.dbpedia.org/resource/Aston_Martin>
-<http://nl.dbpedia.org/resource/Aston_Martin>
-<http://ms.dbpedia.org/resource/Aston_Martin>
-<http://lv.dbpedia.org/resource/Aston_Martin>
-<http://lt.dbpedia.org/resource/Aston_Martin>
-<http://ko.dbpedia.org/resource/\uC560\uC2A4\uD134_\uB9C8\uD2F4>
-<http://kn.dbpedia.org/resource/\u0C86\u200D\u0CAF\u0CCD\u200C\u0CB8\u0CCD\u0C9F\u0CA8\u0CCD_\u0CAE\u0CBE\u0CB0\u0CCD\u0C9F\u0CC0\u0CA8\u0CCD\u200C>
-<http://ja.dbpedia.org/resource/\u30A2\u30B9\u30C8\u30F3\u30DE\u30FC\u30C1\u30F3>
-<http://it.dbpedia.org/resource/Aston_Martin>
-<http://id.dbpedia.org/resource/Aston_Martin>
-<http://hu.dbpedia.org/resource/Aston_Martin>
-<http://hr.dbpedia.org/resource/Aston_Martin>
-<http://hi.dbpedia.org/resource/\u090F\u0938\u094D\u200D\u091F\u0928_\u092E\u093E\u0930\u094D\u091F\u093F\u0928>
-<http://he.dbpedia.org/resource/\u05D0\u05E1\u05D8\u05D5\u05DF_\u05DE\u05E8\u05D8\u05D9\u05DF>
+@prefix bbcevent: <http://www.bbc.co.uk/ontologies/event/> .
+@prefix geo-pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix music-ont: <http://purl.org/ontology/mo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix cms: <http://www.bbc.co.uk/ontologies/cms/> .
+@prefix news: <http://www.bbc.co.uk/ontologies/news/> .
+@prefix cnews: <http://www.bbc.co.uk/ontologies/news/cnews/> .
+@prefix cconcepts: <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix dbp-prop: <http://dbpedia.org/property/> .
+@prefix geonames: <http://sws.geonames.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix geo-ont: <http://www.geonames.org/ontology#> .
+@prefix bbc-pont: <http://purl.org/ontology/po/> .
+@prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix skosCore: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbp-ont: <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix curric: <http://www.bbc.co.uk/ontologies/curriculum/> .
+@prefix cwork: <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix fb: <http://rdf.freebase.com/ns/> .
+@prefix ldbc: <http://www.ldbc.eu/ontologies/sempub#> .
+@prefix luceneConnector: <http://www.ontotext.com/connectors/lucene#> .
+@prefix inst: <http://www.ontotext.com/connectors/lucene/instance#> .
+@prefix ot: <http://www.ontotext.com/> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://www.bbc.co.uk/things/130442#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Mario Antonio Núñez Villarroel plumb infuriates enchantingly conclusions speared expatriating ales plaudit mountebanks parasites." ;
+	cwork:description " ragweed stringently pallbearers nutty parks busses rubbish mistreat finisher's soliloquise triptychs savoring contravened wadis portability finality chitchat stapling." ;
+	cwork:dateCreated "2012-01-11T11:25:09.219+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2013-02-02T15:44:27.751+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/373778#id> .
+
+<http://www.bbc.co.uk/document/373778#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/130442#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/373779#id> .
+
+<http://www.bbc.co.uk/document/373779#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/130442#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/373780#id> .
+
+<http://www.bbc.co.uk/document/373780#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/183010#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "New England Venture Capital Association gelled medial undersell rims baseboard intuiting windowsill godhood oxidises obfuscating." ;
+	cwork:description " distaff individualistic feasibly hedonists melding euros intertwined fastidious trefoils hardline refrigerate infuriates lays gallivanting preexisted lamb scatter feds floozy schism hulls toleration fattens." ;
+	cwork:dateCreated "2011-12-28T10:04:32.261+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2013-01-25T03:45:56.211+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/457771#id> .
+
+<http://www.bbc.co.uk/document/457771#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/183010#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/457772#id> .
+
+<http://www.bbc.co.uk/document/457772#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/183010#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/457773#id> .
+
+<http://www.bbc.co.uk/document/457773#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/183010#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/457774#id> .
+
+<http://www.bbc.co.uk/document/457774#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/152262#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Giovana retiring sheave peritoneum personable undersell announce spokespersons callouses males vale." ;
+	cwork:description " hearings fathers nitpicked downier denunciations coccyx clayey teethed austere spites incremental reenact dauphin euros officiates voodooed." ;
+	cwork:dateCreated "2011-12-09T01:47:10.633+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2013-01-06T05:42:36.713+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/346637#id> .
+
+<http://www.bbc.co.uk/document/346637#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/152262#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/346638#id> .
+
+<http://www.bbc.co.uk/document/346638#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/152262#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/346639#id> .
+
+<http://www.bbc.co.uk/document/346639#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/152262#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/346640#id> .
+
+<http://www.bbc.co.uk/document/346640#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/171399#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "DETA Air jumpy undersell electrocuting dredge leasehold perspicacity democratically utterances docilely navy." ;
+	cwork:description " cambering sulfuric profit overpasses shaped pudgy solider flagellum." ;
+	cwork:dateCreated "2011-12-08T22:58:43.001+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2013-01-03T19:15:20.803+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/428933#id> .
+
+<http://www.bbc.co.uk/document/428933#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/170038#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "West Bend Housewares inveigling groundswell matrons aftershaves wonderment terraced eigenvalue taint pedigreed dismally." ;
+	cwork:description " customising mummification veil's cotes focuses furrowed sewerage dictations perk announce excretion chitchat inaner seismology butterier stagecoach descending summering." ;
+	cwork:dateCreated "2011-11-26T03:20:33.614+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-12-16T01:52:42.022+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/425528#id> .
+
+<http://www.bbc.co.uk/document/425528#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/158314#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Tom Spahn billions stopcocks workhouses amplifiers undersell potshots cadged oxides foretasting slingshot." ;
+	cwork:description " lotion bays autocracy discotheque forensic gauzy pension lifeworks cardiopulmonary shallowness moldings morasses morrow lasses tried smidgeons initiating nonscheduled strands displaying particulates equilaterals geared." ;
+	cwork:dateCreated "2011-11-21T14:09:14.447+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-12-11T00:33:57.243+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/387542#id> .
+
+<http://www.bbc.co.uk/document/387542#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/184957#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Thomas Fitzgerald O'Driscoll naphtha duck despoils decriminalise droll beck find fluctuated foretold greasiest." ;
+	cwork:description " gumming backslash theatrical chitchat thence burble poxes disputations installations phenomena booster infatuation." ;
+	cwork:dateCreated "2011-11-14T02:08:48.018+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-12-09T06:17:18.632+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/462667#id> .
+
+<http://www.bbc.co.uk/document/462667#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/177859#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Diana Hansen-Young entanglements debilitates melancholics ovulate stringency ringside foursquare facilitating egotistical advised." ;
+	cwork:description " viral mainstreamed invitations juxtaposed weaken riot sheepishly timidity chitchat." ;
+	cwork:dateCreated "2011-11-11T02:15:34.106+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-12-07T09:08:20.854+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/444971#id> .
+
+<http://www.bbc.co.uk/document/444971#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/58988#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Ettore Conti jaggeder extracting naivety imprecisely gluttonous curtain's lumpiness listings foxtrotting insidious." ;
+	cwork:description " cremates recopied enslaving pimples unfrocked swain indescribably undermining twangs wedding allergies wharf unhurt chitchat ringside spiriting." ;
+	cwork:dateCreated "2011-10-14T10:22:34.424+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-13T11:47:48.130+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/261300#id> .
+
+<http://www.bbc.co.uk/document/261300#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/58988#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/261301#id> .
+
+<http://www.bbc.co.uk/document/261301#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/58988#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/261302#id> .
+
+<http://www.bbc.co.uk/document/261302#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/58988#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/261303#id> .
+
+<http://www.bbc.co.uk/document/261303#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/28134#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "International Conference on Language Resources and Evaluation cabarets servicemen ignoramuses rodents forces tamer wooden mismanaged ridging assays." ;
+	cwork:description " characteristic crowning imbue dominants confab peter payee impulsion acutest marmot chitchat jumpy cycling delude gooey mallards jackknifes directory day rehab starts equinoctial." ;
+	cwork:dateCreated "2011-10-23T09:39:40.206+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-02T04:04:11.132+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/258891#id> .
+
+<http://www.bbc.co.uk/document/258891#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/28134#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/258892#id> .
+
+<http://www.bbc.co.uk/document/258892#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/28134#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/258893#id> .
+
+<http://www.bbc.co.uk/document/258893#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/12354#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Makoto Sato movies considerably dispense acetaminophen dross niggles chose carousal acidifies connotative." ;
+	cwork:description " tissues prostrations elaborateness vagrancy welcomed teaspoon leotards nectar chitchat educators forgathering nips." ;
+	cwork:dateCreated "2011-10-10T10:38:53.527+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-01T02:39:30.704+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/247409#id> .
+
+<http://www.bbc.co.uk/document/247409#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/167230#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Olav Klokk quorums cuttings insectivore declamation conveyors sightseeing laughing serviced hooding materially." ;
+	cwork:description " concourses unwary mendicants octagon flautists freeholds formalised pollutes flubbing sveltest chitchat graphologists sneezing bigness angles recounts belching post extolling disengagement livers skydive spareribs." ;
+	cwork:dateCreated "2011-11-16T03:16:16.054+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-10-28T03:51:17.680+02:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/418526#id> .
+
+<http://www.bbc.co.uk/document/418526#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/147909#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "2013 PTT Pattaya Open unstressed ambles preconceives snaffled solstice balky nightclubbing bolster foaled expressible." ;
+	cwork:description " slump indisposition smoother command invalidate capitol moulder ounces chitchat waywardly vigilant retraced grisliest leprechauns tipped chronologies fairs outrider recriminated organising delusion slacked perpetrators healers scalier." ;
+	cwork:dateCreated "2011-12-13T15:39:04.184+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-10-22T02:56:54.033+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Event> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/317298#id> .
+
+<http://www.bbc.co.uk/document/317298#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/147909#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/317299#id> .
+
+<http://www.bbc.co.uk/document/317299#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/59389#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "2012 Volkswagen Challenger gaseous railings colorful clerked pussyfoots undies recognising cosigned eked sculls." ;
+	cwork:description " treaty sharply grainiest chitchat stipulation ricochet furnished orbital asynchronous eastwards." ;
+	cwork:dateCreated "2011-10-22T12:08:59.428+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-10-17T02:54:23.849+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Event> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/269160#id> .
+
+<http://www.bbc.co.uk/document/269160#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/59389#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/269161#id> .
+
+<http://www.bbc.co.uk/document/269161#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/59389#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/269162#id> .
+
+<http://www.bbc.co.uk/document/269162#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/132922#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Johnson Family Enterprises assigns deflation complexioned hokey safeguarded kilocycles seismology decipher catalpa guaranteed." ;
+	cwork:description " nonresidents limy pencilling chitchat transgression's earwax darkens stubbly repertory sinuses bluest matriarchal sarcasms." ;
+	cwork:dateCreated "2011-11-01T08:38:58.073+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-10-08T16:49:44.375+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/323365#id> .
+
+<http://www.bbc.co.uk/document/323365#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/132922#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/323366#id> .
+
+<http://www.bbc.co.uk/document/323366#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/132922#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/323367#id> .
+
+<http://www.bbc.co.uk/document/323367#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/132922#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/323368#id> .
+
+<http://www.bbc.co.uk/document/323368#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/136652#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Matthew Hall philtre monstrosities initiating mercuric pulchritude unenthusiastic prognosticating libertarians sinkholes horse." ;
+	cwork:description " atavism conceivably graduation chitchat homosexuals fermenting cowhides novitiate gridirons currency touchiest boiler resolute sunsets iodises overcharge divvying savior lineally obedience censoring toilers amongst fly curricula tearjerkers." ;
+	cwork:dateCreated "2011-11-25T23:00:20.977+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-10-08T11:50:08.420+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/398807#id> .
+
+<http://www.bbc.co.uk/document/398807#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/136652#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/398808#id> .
+
+<http://www.bbc.co.uk/document/398808#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/28221#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Operation Rhino fig fetid zing carats wigwag octettes sulphuric speedboats grooved intellectualise." ;
+	cwork:description " trams chitchatted rephrases massacres silks universes astounding troubleshoots chitchat horizons nonuser gestates trudging animatedly floss oaten gawking hulas prospective boxwood's venue shaft." ;
+	cwork:dateCreated "2011-10-25T13:40:04.739+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-10-06T20:21:48.413+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Event> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/260666#id> .
+
+<http://www.bbc.co.uk/document/260666#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/28221#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/260667#id> .
+
+<http://www.bbc.co.uk/document/260667#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/156738#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Ernst Rudiger von Starhemberg grungier irrigates heave calories attacking enjoys intrenching bumper's averaging imitates." ;
+	cwork:description " consistent chuck traipse crusty moire squabbles hypertext clarifications chitchat subversive pituitaries weeing misunderstanding trimmest tanked bluest." ;
+	cwork:dateCreated "2011-09-08T08:46:08.811+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-10-05T22:56:39.672+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/376446#id> .
+
+<http://www.bbc.co.uk/document/376446#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/156738#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/376447#id> .
+
+<http://www.bbc.co.uk/document/376447#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/156738#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/376448#id> .
+
+<http://www.bbc.co.uk/document/376448#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/156738#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/376449#id> .
+
+<http://www.bbc.co.uk/document/376449#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/127224#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Mehmood Shaam deletes alternately mollify stingily bypassing hottest excitingly muscle makeshift superlatives." ;
+	cwork:description " information nonsmoking charge disconsolately avails chitchat gorges pendant embraced taster goldsmith mockingbirds sooner basic notorious portrayal axons instantaneous advance hilariously." ;
+	cwork:dateCreated "2011-12-30T10:16:04.774+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-09-24T19:02:11.709+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/310029#id> .
+
+<http://www.bbc.co.uk/document/310029#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/127224#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/310030#id> .
+
+<http://www.bbc.co.uk/document/310030#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/127224#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/310031#id> .
+
+<http://www.bbc.co.uk/document/310031#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/127224#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/310032#id> .
+
+<http://www.bbc.co.uk/document/310032#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/109907#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Adrenaline Family Entertainment briskest newel child harkened cinctures wildernesses tether twilled insectivore canter." ;
+	cwork:description " knew cannily tyres gibbeting chitchat firmly pains bankrupting bibles trailed." ;
+	cwork:dateCreated "2011-11-09T02:09:22.544+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-09-08T09:18:06.251+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/163618#id> .
+
+<http://www.bbc.co.uk/document/163618#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/109907#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/163619#id> .
+
+<http://www.bbc.co.uk/document/163619#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/109907#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/163620#id> .
+
+<http://www.bbc.co.uk/document/163620#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/109907#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/163621#id> .
+
+<http://www.bbc.co.uk/document/163621#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/58919#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "William Thomas Mercer sidelights skiers undersell clambake tiffed encode guesstimating fogginess faiths cowpuncher's." ;
+	cwork:description " mucks sundials lithography carcinogenics collation commemorative nabob answered bamboo adversity." ;
+	cwork:dateCreated "2011-10-14T09:51:44.141+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-09-04T06:32:11.675+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/260008#id> .
+
+<http://www.bbc.co.uk/document/260008#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/58919#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/260009#id> .
+
+<http://www.bbc.co.uk/document/260009#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/12501#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Magnicharters misappropriated plexus refills mythological undersell appellant enviousness debases skydiving's woodland." ;
+	cwork:description " should lactose campsite mossy subcontracts assignment hues detention bouquets evildoer seducing grit shrive alum empowering discolour tracker forsooth fathering undeclared croûton overpopulation." ;
+	cwork:dateCreated "2011-10-12T09:34:35.926+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-09-01T03:39:40.844+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/250147#id> .
+
+<http://www.bbc.co.uk/document/250147#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/12501#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/250148#id> .
+
+<http://www.bbc.co.uk/document/250148#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/12501#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/250149#id> .
+
+<http://www.bbc.co.uk/document/250149#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/163737#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Yusup Abdusalomov amateurism cur fathering chancelleries densely silo birthed tubular peonies carnivores." ;
+	cwork:description " practices flanks extents pelvic irrigates financially paradigms ruckus's sundowns booster chitchat regularity spiriting." ;
+	cwork:dateCreated "2011-09-23T11:55:46.343+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-31T00:55:47.769+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/409763#id> .
+
+<http://www.bbc.co.uk/document/409763#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/163737#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/409764#id> .
+
+<http://www.bbc.co.uk/document/409764#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/163737#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/409765#id> .
+
+<http://www.bbc.co.uk/document/409765#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/14925#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Amiraslan Isgandarov maxim imposingly colourless melancholics hopefulness dash chagrin oxygenating tankard undersell." ;
+	cwork:description " rumpled capacitance loosed sketchy fawn swallow distinctest caves newsworthiest card monarchists crumbliest felting besoms daughters silting jailors reactor." ;
+	cwork:dateCreated "2011-11-27T12:46:37.577+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-28T14:34:41.487+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/299045#id> .
+
+<http://www.bbc.co.uk/document/299045#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/14925#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/299046#id> .
+
+<http://www.bbc.co.uk/document/299046#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/14925#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/299047#id> .
+
+<http://www.bbc.co.uk/document/299047#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/14925#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/299048#id> .
+
+<http://www.bbc.co.uk/document/299048#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/121681#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "George Ticknor peddling crueler parallelled hated undersell unfaithfully odder chucking materially devouring." ;
+	cwork:description " asthmatics matadors countersinking diagramming blistered quietuses shticks limitings scallion undoubted s invitational bawdiest propelling tipi cooperative minibus lipsticked sobbed extremer growl terraria colt." ;
+	cwork:dateCreated "2011-08-22T16:01:19.316+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-28T07:35:13.495+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/298830#id> .
+
+<http://www.bbc.co.uk/document/298830#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/72451#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "William Smith Obrien countermanding dialects tinsel disapproval fro grouses excreta froths win demising." ;
+	cwork:description " toupee impatiences unbending debunked defecate surest jailer chitchat ponderous puffiness." ;
+	cwork:dateCreated "2011-08-21T14:18:09.004+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-22T13:33:19.820+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/224268#id> .
+
+<http://www.bbc.co.uk/document/224268#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/72451#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/224269#id> .
+
+<http://www.bbc.co.uk/document/224269#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/72451#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/224270#id> .
+
+<http://www.bbc.co.uk/document/224270#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/72451#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/224271#id> .
+
+<http://www.bbc.co.uk/document/224271#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/26164#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Stoomvaart Maatschappij Zeeland intelligible midwifed overreach gong snakebite rosining undersell equaliser washable applicant's." ;
+	cwork:description " nonprofessionals mainsprings sandbag transshipping woven belligerently contents corpulence desecrate compensates insisting ravaged fishy bane westbound polyphonic creepiest rickshaw clanking dicing firehouse clamps." ;
+	cwork:dateCreated "2011-09-15T09:07:49.297+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-15T00:19:30.795+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/218902#id> .
+
+<http://www.bbc.co.uk/document/218902#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/88984#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Salah Suheimat pensively corpus forty fogged harmlessness gloaming granularity tunnels franchising freighters." ;
+	cwork:description " effervescent pailful laptop dilemmas reanimating writings peeps laded tartest tangibles sterling tendinitis solitaires hundreds asterisked parrakeets sealants pharmaceuticals glamors chitchat kaboom disaffecting forgers leprechauns repair." ;
+	cwork:dateCreated "2011-09-18T23:22:19.573+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-14T04:07:03.516+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/243122#id> .
+
+<http://www.bbc.co.uk/document/243122#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/88984#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/243123#id> .
+
+<http://www.bbc.co.uk/document/243123#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/88984#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/243124#id> .
+
+<http://www.bbc.co.uk/document/243124#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/111718#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "1999–2000 UEFA Champions League forensic madrases synod lumped typists swig bunny volatile enlistees overcompensation." ;
+	cwork:description " upholsterer's counsellor stain's stopgaps bedding scrimps chitchat evening faithlessly inaner detonations." ;
+	cwork:dateCreated "2011-11-27T08:54:30.099+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-12T01:51:19.114+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Event> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/199208#id> .
+
+<http://www.bbc.co.uk/document/199208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/111718#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/199209#id> .
+
+<http://www.bbc.co.uk/document/199209#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/30460#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Air Arabia Maroc dietetics desecrating peacetime mountainsides syringe cadmium veranda abrasiveness neutralisers reenact." ;
+	cwork:description " dint disturbance retrogressing representational indivisibility anybody desist handcrafted chitchat nodule longitudinally merged cyst reaper chattiness united teetotallers." ;
+	cwork:dateCreated "2011-12-07T17:12:42.425+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-08T22:42:43.081+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/305577#id> .
+
+<http://www.bbc.co.uk/document/305577#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/44592#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Emergent BioSolutions decipher validness loons contrails battier bookworms iciness patriarchal opportunities rally." ;
+	cwork:description " preservers prearrangement enrolled chained boxcars holdovers potshots reanimate chitchat patriot fits refocusing uncommunicative worsted." ;
+	cwork:dateCreated "2011-10-28T22:36:44.823+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-02T23:10:01.007+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/279594#id> .
+
+<http://www.bbc.co.uk/document/279594#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/44592#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/279595#id> .
+
+<http://www.bbc.co.uk/document/279595#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/57439#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Wout Brama capable chargers veil's bugling augury monotonic neckties uncontrollably pressures smooching." ;
+	cwork:description " cosmogonies exempted flosses crossbar choppered signature chitchat balminess memorialise stenography purrs fading truanting contagious conversation likeable." ;
+	cwork:dateCreated "2011-09-16T04:56:12.160+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-31T18:04:27.165+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/231646#id> .
+
+<http://www.bbc.co.uk/document/231646#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/57439#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/231647#id> .
+
+<http://www.bbc.co.uk/document/231647#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/57439#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/231648#id> .
+
+<http://www.bbc.co.uk/document/231648#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/57439#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/231649#id> .
+
+<http://www.bbc.co.uk/document/231649#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/74510#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "David Wilder spouting undersell billowed squirmy serf vileness matte pickaxe trellis dilute." ;
+	cwork:description " libels packages unregistered receive firewalls profusion phantasying camber decants beetle smitten interrupted birdbrained impact snuffbox polarising copeck time." ;
+	cwork:dateCreated "2011-09-29T14:36:33.389+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-30T02:32:07.809+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/265475#id> .
+
+<http://www.bbc.co.uk/document/265475#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/74510#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/265476#id> .
+
+<http://www.bbc.co.uk/document/265476#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/74510#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/265477#id> .
+
+<http://www.bbc.co.uk/document/265477#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/74510#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/265478#id> .
+
+<http://www.bbc.co.uk/document/265478#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/182877#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Martin Andanar outvoted criteria umbrage stockholder barium ingress lissom dribblers lumbago motorcades." ;
+	cwork:description " miscarrying chitchat thronging yellowed maizes suppleness garaging transgressors disrupts bedevilment snifters grosses dungeons sledged unsupervised congregations sediment roughneck pigment reopens withers purifies arisen culminates dramatics." ;
+	cwork:dateCreated "2011-12-21T09:57:20.890+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-22T17:56:18.645+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/457467#id> .
+
+<http://www.bbc.co.uk/document/457467#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/182877#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/457468#id> .
+
+<http://www.bbc.co.uk/document/457468#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/129362#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "FreeCast (company) compositors impeachments adventuring sweetener mortar drinkable quiches owned undersell adulterous." ;
+	cwork:description " austere misappropriation eastwards pickaxe spoonerisms alphabetic ridiculous honourably bellow gouty closing northerly tailed asked cynic northeast refuelling kibitzes raunchiest idler." ;
+	cwork:dateCreated "2012-01-05T21:38:33.224+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-22T04:36:21.955+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/352572#id> .
+
+<http://www.bbc.co.uk/document/352572#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/129362#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/352573#id> .
+
+<http://www.bbc.co.uk/document/352573#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/129362#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/352574#id> .
+
+<http://www.bbc.co.uk/document/352574#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/129362#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/352575#id> .
+
+<http://www.bbc.co.uk/document/352575#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/121312#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Clean Edge boyishly justified undersell drones bunt idyls diatribes fossil welcomed emplacement." ;
+	cwork:description " observable pothole jiving defecating scrutinising click unruliest patterns romances fastidious renegade uncommunicative immobility numskulls medallion deposing spartan tiredest jump rescheduled jouncing sours vials bulged corroborate upholsterer." ;
+	cwork:dateCreated "2011-08-16T03:14:41.729+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-19T18:06:05.868+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/291616#id> .
+
+<http://www.bbc.co.uk/document/291616#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/121312#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/291617#id> .
+
+<http://www.bbc.co.uk/document/291617#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/121312#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/291618#id> .
+
+<http://www.bbc.co.uk/document/291618#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/182763#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Lee Marmon undersell yippee matrix vinegary yakked woodcut inelegantly gifted sided torpedoing." ;
+	cwork:description " unmanlier alphabetise chapt favouritism jabbing horsefly tangy beggars contraptions strolling grazes lamppost more polyps creakier intending vocalist plaint leaflet." ;
+	cwork:dateCreated "2011-11-23T12:50:54.042+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-19T05:53:49.397+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/457163#id> .
+
+<http://www.bbc.co.uk/document/457163#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/182763#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/457164#id> .
+
+<http://www.bbc.co.uk/document/457164#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/182763#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/457165#id> .
+
+<http://www.bbc.co.uk/document/457165#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/182763#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/457166#id> .
+
+<http://www.bbc.co.uk/document/457166#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/100632#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Dniproavia cockscombs assassinating neutrality billowed aplenty brunt torpidity cruise's arson greasiest." ;
+	cwork:description " boor districts grovelled forerunner nihilist allocate chitchat hypotheses tubby seminarian rediscovered pry patienter." ;
+	cwork:dateCreated "2011-06-12T18:28:11.450+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-10T16:14:17.926+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/73987#id> .
+
+<http://www.bbc.co.uk/document/73987#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/22033#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Conrad Johnstone undersell dwellings photosensitive amphitheater updates capitalises shiftiness abated showboats turtleneck." ;
+	cwork:description " ouster carillons subsystem contrived dilapidated slumberous intonation purloin prizefights diagnose backlog preps intake teeing hypos censoring succours digitises suffocate surfboards mimicries righteousness shims." ;
+	cwork:dateCreated "2011-07-01T01:50:33.283+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-09T14:06:07.116+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/136330#id> .
+
+<http://www.bbc.co.uk/document/136330#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/149528#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Charles P. Cumont macrocosm sunburn oarsmen kiddie undersell polymorphic miniaturised pantomiming nappy pursed." ;
+	cwork:description " kinder blazoning surmised connived anomalies recalls bloggers inferring betrothals underworld skippers spurs invariable gooier sullenness giving chanced ovaries entrenching separates discontented extents swaggered griddles." ;
+	cwork:dateCreated "2011-10-28T22:43:19.173+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-08T06:58:12.860+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/328042#id> .
+
+<http://www.bbc.co.uk/document/328042#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/149528#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/328043#id> .
+
+<http://www.bbc.co.uk/document/328043#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/157615#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Vladimirs Mamonovs instructional mellower borers story deforms twinged conquer toxins foreigner signers." ;
+	cwork:description " ghastly inherent grouts obtusely contrarily refined furnishings optimums perseverance forevermore foggy palates chattered overdraws egoism rapaciously papering cyberspace siestas chitchat." ;
+	cwork:dateCreated "2011-09-22T11:17:16.300+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-04T06:25:40.390+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/382489#id> .
+
+<http://www.bbc.co.uk/document/382489#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/157615#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/382490#id> .
+
+<http://www.bbc.co.uk/document/382490#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/157615#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/382491#id> .
+
+<http://www.bbc.co.uk/document/382491#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/23909#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Kil-nam Oh sepals slinky description blasts denature undersell interred synchronise updates drearier." ;
+	cwork:description " episcopate kamikazes nub rout crassness chagrin fussed employ wiggler runaways expunged." ;
+	cwork:dateCreated "2011-08-05T01:45:27.913+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-02T04:23:57.929+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/173227#id> .
+
+<http://www.bbc.co.uk/document/173227#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/23909#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/173228#id> .
+
+<http://www.bbc.co.uk/document/173228#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/23909#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/173229#id> .
+
+<http://www.bbc.co.uk/document/173229#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/76369#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "George A. Burton freshness privet panoplies frivolities deliciously rectify panaceas synapses abhor gales." ;
+	cwork:description " bodyguards threefold opulence chitchat toddy tuning earners disused predecease respectful disadvantageous trendies enfeeble gantlet anthologise." ;
+	cwork:dateCreated "2011-11-03T18:22:51.743+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-01T17:31:21.675+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/303857#id> .
+
+<http://www.bbc.co.uk/document/303857#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/76369#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/303858#id> .
+
+<http://www.bbc.co.uk/document/303858#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/76369#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/303859#id> .
+
+<http://www.bbc.co.uk/document/303859#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/76369#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/303860#id> .
+
+<http://www.bbc.co.uk/document/303860#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/129894#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Vitorino Nemesio presence round sicklier undersell skirts programmes shareholder nighthawks ideals calcite." ;
+	cwork:description " deregulated forsakes mashed hereabout waterlines neurotically slimming lambaste lollipop pulls sticklers emulator kingly distributed sublimates poetess eddied caging handguns dickey's postmarks drivers declared." ;
+	cwork:dateCreated "2012-01-08T20:23:55.794+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-07-01T15:24:10.295+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/363301#id> .
+
+<http://www.bbc.co.uk/document/363301#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/41607#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Montague Burton embroiling gilded cataclysmic undersell woodland devises novelties observantly humidity cruciforms." ;
+	cwork:description " radiantly natures owning withdrawn baboon mooting prospectors unloose imaginations machismo qualities eagerer warranty shrike turbulence starchy lasting designating storefront devolves jeans." ;
+	cwork:dateCreated "2011-08-31T12:19:21.797+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-29T14:40:28.605+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/220597#id> .
+
+<http://www.bbc.co.uk/document/220597#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/41607#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/220598#id> .
+
+<http://www.bbc.co.uk/document/220598#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/118636#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Samsung India Software Center procrastinator morocco ratcheting figured winch braggart rattier flashed dispatching precipitations." ;
+	cwork:description " maidenhood renovators overtures obscurely shapeliest letter obscurely acceptable parameciums hollers infuse intending symposium decedents pulpy monaural timbre headdresses chitchat genii gay golly inductive furnishings resonators bewilderment." ;
+	cwork:dateCreated "2011-08-01T00:20:12.967+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-27T10:16:37.579+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/238721#id> .
+
+<http://www.bbc.co.uk/document/238721#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/118636#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/238722#id> .
+
+<http://www.bbc.co.uk/document/238722#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/118636#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/238723#id> .
+
+<http://www.bbc.co.uk/document/238723#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/118636#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/238724#id> .
+
+<http://www.bbc.co.uk/document/238724#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/181807#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Kelly Sheehan delicacies voluntary intrigued couplings cruddiest undersell casualness précising legals grafting." ;
+	cwork:description " habituation secretariat hockshop masseuse revisited panderer traversed disciplines brainstorming sergeants servile center." ;
+	cwork:dateCreated "2011-11-08T20:49:11.703+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-21T03:42:43.446+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/454775#id> .
+
+<http://www.bbc.co.uk/document/454775#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/181807#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/454776#id> .
+
+<http://www.bbc.co.uk/document/454776#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/181807#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/454777#id> .
+
+<http://www.bbc.co.uk/document/454777#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/181807#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/454778#id> .
+
+<http://www.bbc.co.uk/document/454778#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/185798#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Strip Art Features truncates gerrymanders pommels hammerings bugaboos middlebrows undersell bloats plenaries overthrown." ;
+	cwork:description " jibes ionospheres subterfuge rebroadcasting blanked anaesthetizing tankfuls bucktooth newspaper superb ghostlier overstay pleads screeches accord authenticating animator conscientiously aweigh naphtha disinclination roundish cried sprinklings operate defoliating." ;
+	cwork:dateCreated "2011-08-18T02:20:57.403+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-20T00:45:21.694+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/464747#id> .
+
+<http://www.bbc.co.uk/document/464747#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/185798#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/464748#id> .
+
+<http://www.bbc.co.uk/document/464748#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/185798#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/464749#id> .
+
+<http://www.bbc.co.uk/document/464749#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/131143#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Leonid Raikhman decomposed withholds videodiscs predicative semiprofessionals piety suddenly precipitating mulches copilots." ;
+	cwork:description " chitchat panderer instructing gambles skied sissy paralysing selecting vital sandbagging boycotting taxation's vary hereabout nutritious." ;
+	cwork:dateCreated "2012-01-17T13:28:46.268+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-19T13:02:06.686+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/387725#id> .
+
+<http://www.bbc.co.uk/document/387725#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/131143#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/387726#id> .
+
+<http://www.bbc.co.uk/document/387726#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/131143#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/387727#id> .
+
+<http://www.bbc.co.uk/document/387727#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/182155#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Dudley Knowles bandits almond suck preceding cutesier machinist enthroning bitingly clanging prejudiced." ;
+	cwork:description " fragility suitor revisited thief write randomised truncheons chitchat manageable sublimest toleration's solicitations sustenance bingeing hardware putrefied wigwag sticklers wombs dilettantes unsuccessful tawnier industrially." ;
+	cwork:dateCreated "2011-07-11T16:10:47.922+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-17T17:52:24.938+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/455635#id> .
+
+<http://www.bbc.co.uk/document/455635#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/182155#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/455636#id> .
+
+<http://www.bbc.co.uk/document/455636#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/182155#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/455637#id> .
+
+<http://www.bbc.co.uk/document/455637#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/169806#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Sharps Bedrooms shortsighted disassemble burglarising breezing seriousness imposters swaggered dismantles unconventional adroitness." ;
+	cwork:description " frogs darkly bayberries phony swindler absconding proton's chitchat romaine postdoc cheapskates afield apse liquefies coldly." ;
+	cwork:dateCreated "2011-07-08T17:42:58.388+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-07T11:45:47.975+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/424938#id> .
+
+<http://www.bbc.co.uk/document/424938#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/169806#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/424939#id> .
+
+<http://www.bbc.co.uk/document/424939#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/169806#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/424940#id> .
+
+<http://www.bbc.co.uk/document/424940#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/169806#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/424941#id> .
+
+<http://www.bbc.co.uk/document/424941#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/5532#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Malik Rose lieutenants blatantly lithographic butterfat scarifies reappoint pudgy coincided suspense's excels." ;
+	cwork:description " smacking prate gayest lamppost sensitive excitedly chitchat layers anywhere backsliders resilient sinkholes amazes liberalisation required superlative dehydrate." ;
+	cwork:dateCreated "2011-06-02T00:36:26.036+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-06T13:28:19.959+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/110020#id> .
+
+<http://www.bbc.co.uk/document/110020#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/5532#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/110021#id> .
+
+<http://www.bbc.co.uk/document/110021#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/85360#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Tishman Speyer banged spinier betokens cognate sturdier wimpier scramblers woodcarvings endive discovering." ;
+	cwork:description " chitchat presides contraband's twee leggiest inwardly proud highchairs." ;
+	cwork:dateCreated "2011-07-11T22:14:52.607+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-02T10:51:56.417+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/170801#id> .
+
+<http://www.bbc.co.uk/document/170801#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/131851#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Louis Primeau rescues nastiest operatives hinging correlatives imbecilic clove pidgins undersell mistreat." ;
+	cwork:description " ordinal nursemaids glancing inventing redressing opened fewest barristers modifiers woodenly sedentary choicest." ;
+	cwork:dateCreated "2011-10-29T10:54:10.342+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-30T01:29:37.242+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/303140#id> .
+
+<http://www.bbc.co.uk/document/303140#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/131851#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/303141#id> .
+
+<http://www.bbc.co.uk/document/303141#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/10788#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Robert Weaver peppermints disentangles pleasurably andiron stabilisers sequesters cowardly atom linkages toque." ;
+	cwork:description " showbiz disease monitored harkened shims chitchat accrued shoddiest starter's neuralgia solenoids cowlings systematises bowl dives heinously woolgathering bossily." ;
+	cwork:dateCreated "2011-09-10T20:00:46.410+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-28T01:46:07.448+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/215614#id> .
+
+<http://www.bbc.co.uk/document/215614#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/10788#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/215615#id> .
+
+<http://www.bbc.co.uk/document/215615#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/6390#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Miho Fukumoto displeased leapfrog decelerating pretzels undersell snowshoed magnet pullbacks eels udders." ;
+	cwork:description " complication wattled outstrips tenderise vinegary neither transvestites celibates pip scows cobalt transactions inhale cunnilingus colanders lick remake rehabilitates supplicants matadors sinners morticed slyly." ;
+	cwork:dateCreated "2011-06-18T22:01:09.074+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-26T20:22:52.983+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/127067#id> .
+
+<http://www.bbc.co.uk/document/127067#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/21745#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Thom Noble longhairs resumes intermediate girdle bewitch undersell brushing chemises detoxified sacs." ;
+	cwork:description " respectable specifics importations lacks subletting applicant's bustled desecrate stilted conches nosey duellist frontiersmen unhindered sufferings reemphasised designate collieries feedbags pharyngeal." ;
+	cwork:dateCreated "2011-06-25T08:48:03.564+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-22T02:15:39.873+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/131080#id> .
+
+<http://www.bbc.co.uk/document/131080#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/21745#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/131081#id> .
+
+<http://www.bbc.co.uk/document/131081#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/21745#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/131082#id> .
+
+<http://www.bbc.co.uk/document/131082#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/8719#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Max Welti designating cummerbund widely inflates ranchers gesturing disease genii bucketed editorialise." ;
+	cwork:description " shelf tummy requesting hatted unattractive kneecapping clinked appeasements nurtured marts jaundicing pinwheeling endocrines parliamentarian dullards beginners ceramic chitchat ionizers panaceas scabbards overrated typhoon." ;
+	cwork:dateCreated "2011-08-01T12:33:22.349+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-21T22:35:33.745+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/174543#id> .
+
+<http://www.bbc.co.uk/document/174543#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/8719#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/174544#id> .
+
+<http://www.bbc.co.uk/document/174544#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/8719#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/174545#id> .
+
+<http://www.bbc.co.uk/document/174545#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/8719#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/174546#id> .
+
+<http://www.bbc.co.uk/document/174546#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/170177#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Arnoldo Martinez Verdugo advised espoused servicemen skywriting uterus undersell reeve oppressing reactivation commuted." ;
+	cwork:description " berated combing overriding surreys outbacks exporting hoopla adjustments spinier unqualified judgmental aligns apprised impenetrably lepers burnish chamomile tablespoonfuls bans disembody crawl interlude organise meditative labelling unmistakable." ;
+	cwork:dateCreated "2011-10-07T17:08:03.369+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-21T13:12:26.738+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/425875#id> .
+
+<http://www.bbc.co.uk/document/425875#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/139884#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Wilhelm Von Schutz uninterpreted undersell desensitised posing naivety stunningly crown grooved bestseller shushed." ;
+	cwork:description " pidgins suspects housebroke planting craftsmanship aptitude acoustic flashed greedier definer total diffraction castors unresolved vanquished." ;
+	cwork:dateCreated "2011-05-03T20:33:21.538+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-20T05:53:23.564+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/370246#id> .
+
+<http://www.bbc.co.uk/document/370246#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/139884#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/370247#id> .
+
+<http://www.bbc.co.uk/document/370247#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/139884#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/370248#id> .
+
+<http://www.bbc.co.uk/document/370248#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/139884#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/370249#id> .
+
+<http://www.bbc.co.uk/document/370249#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/11538#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "SirsiDynix statesmanlike hawthorn arguments djinni harpy guilder succulent attractive opaquer bide." ;
+	cwork:description " victual misspelling wending entrances divisiveness tobacconists industriously ayatollah carbohydrates tool slouch rivet safeguarded chitchat helm vantages recluse constructed." ;
+	cwork:dateCreated "2011-09-24T19:34:11.285+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-18T07:43:39.940+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/230971#id> .
+
+<http://www.bbc.co.uk/document/230971#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/11538#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/230972#id> .
+
+<http://www.bbc.co.uk/document/230972#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/11538#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/230973#id> .
+
+<http://www.bbc.co.uk/document/230973#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/11538#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/230974#id> .
+
+<http://www.bbc.co.uk/document/230974#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/55480#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Shaun McSkimming panegyrics curtain's shepherds beck bevelled unsay searchlights romanticism strangeness undersell." ;
+	cwork:description " cinnabar legations chaffing soul alley preceding skedaddle fates biassed bullfight cryptic smelter dissension pockets iterate refinishing breathier simplifies daemons soused moralistic asses." ;
+	cwork:dateCreated "2011-08-09T18:51:03.036+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-15T06:04:54.270+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/193134#id> .
+
+<http://www.bbc.co.uk/document/193134#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/55480#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/193135#id> .
+
+<http://www.bbc.co.uk/document/193135#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/55480#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/193136#id> .
+
+<http://www.bbc.co.uk/document/193136#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/116501#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Lion-Peugeot flexible phonetician vulcanises companions derived waked recompensed astrakhan disorganise deescalates." ;
+	cwork:description " maidenhood flurrying parcels impracticality reopen synched hookey vertiginous poodle belatedly memorised gravitating published delusive chubbiness chitchat sparest manner indispensables pizzicati skims sanitation ritualism momentarily." ;
+	cwork:dateCreated "2011-08-23T13:02:13.849+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-15T03:33:05.441+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/291975#id> .
+
+<http://www.bbc.co.uk/document/291975#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/110341#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "William L. Hendricks bidders undersell falsifying charged scramblers ribs selecting venerable doubtless italics." ;
+	cwork:description " enthralled wiggles innocently gleams nitroglycerine cosmological recited tocsins notaries reversible." ;
+	cwork:dateCreated "2011-11-11T16:50:27.823+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-09T18:47:16.885+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/172794#id> .
+
+<http://www.bbc.co.uk/document/172794#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/110341#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/172795#id> .
+
+<http://www.bbc.co.uk/document/172795#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/110341#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/172796#id> .
+
+<http://www.bbc.co.uk/document/172796#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/147841#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Henry Webster undersell distinctions unsent vindicating swathe hem diabolical fungi bribed applicant." ;
+	cwork:description " sucker intervenes diamonds wordiness labour gabbled triggers unpromising protégé phenomenon koalas focus hasp drunks configurations interurban scrammed magisterial lusciously reliability foxiest unprecedented." ;
+	cwork:dateCreated "2011-08-24T15:11:32.294+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-06T17:11:43.256+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/316834#id> .
+
+<http://www.bbc.co.uk/document/316834#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/166044#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Bob Brady unfaithfully backfiring tempera sundae dumbbells automated eighteenths nit charts cordoning." ;
+	cwork:description " farina cabbages confederating leaps serener pinky iodises pealed chitchat showboats zigzagged wooing." ;
+	cwork:dateCreated "2011-05-25T18:55:27.115+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-06T16:34:56.102+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/415558#id> .
+
+<http://www.bbc.co.uk/document/415558#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/166044#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/415559#id> .
+
+<http://www.bbc.co.uk/document/415559#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/166044#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/415560#id> .
+
+<http://www.bbc.co.uk/document/415560#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/166044#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/415561#id> .
+
+<http://www.bbc.co.uk/document/415561#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/178321#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Henry D. Sahakian excavation huskier undersell conceives truncheons hitchhikers megaphones peeving helix baptists." ;
+	cwork:description " clerestories pockets divine unkindlier dispersing séances mole schoolgirl gargling clumsy deceived sinuous catastrophe queered resembles soundest tanneries spud intrusts adjectival." ;
+	cwork:dateCreated "2011-07-19T22:24:11.959+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-06T05:08:49.551+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/446133#id> .
+
+<http://www.bbc.co.uk/document/446133#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/135561#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Karl Blodig bandits chafe paralytic overcharge undersell indivisibility catholicity overpowered dock insulating." ;
+	cwork:description " dustiest indigestible smoggier mortgaging bitterer exhaustive proportion coeducation loyaler handiness softer padlocked monolinguals trafficker penetrating brittlest caboodle fishy omitting excises yuppie." ;
+	cwork:dateCreated "2011-11-11T08:46:25.560+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-04T00:59:19.530+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/376618#id> .
+
+<http://www.bbc.co.uk/document/376618#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/135561#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/376619#id> .
+
+<http://www.bbc.co.uk/document/376619#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/135561#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/376620#id> .
+
+<http://www.bbc.co.uk/document/376620#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/108764#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Trijicon bicker shutdowns unstuck trees racer uproars handicapped undersell alarmed swashbuckler's." ;
+	cwork:description " lyrically fiddler push tackler steering creation meet spiny playwrights wallets inabilities filches debugged elicit impersonally consort barters." ;
+	cwork:dateCreated "2011-11-05T01:22:03.968+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-05-03T22:26:48.483+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/139892#id> .
+
+<http://www.bbc.co.uk/document/139892#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/74593#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Brian Kolb lacy exes circularising orderlies sprinkler undersell baton enunciated piping freshness." ;
+	cwork:description " bluebell purposefully loafer amethyst dopes spasms usually subsystem omelets priesthoods oregano exponents dunking genuine hamper taxidermists chicaneries disposable pasturing trialling popovers pillorying." ;
+	cwork:dateCreated "2011-10-01T16:54:33.666+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-30T19:30:17.820+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/267293#id> .
+
+<http://www.bbc.co.uk/document/267293#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/74593#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/267294#id> .
+
+<http://www.bbc.co.uk/document/267294#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/74593#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/267295#id> .
+
+<http://www.bbc.co.uk/document/267295#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/107771#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Santiago Armada corresponding billowing macaws booming mayhem bereave flyspecks concerto fiancé doorstep." ;
+	cwork:description " distillery departments behaved stumpy patent resonate barbecuing twelfth robustly vicing pushes inhering limitations chitchat disrupts attacking." ;
+	cwork:dateCreated "2011-11-02T00:53:22.794+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-30T14:08:24.190+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/119868#id> .
+
+<http://www.bbc.co.uk/document/119868#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/20573#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Crescent City Records incarcerating yield illiterate offing communicate undersell vanquished commissary contuses haircut." ;
+	cwork:description " gibberish ankh wallets pessimistic vandalise wheresoever eavesdropper matrix sowers plainness acquiescing drizzliest rumour congests gain." ;
+	cwork:dateCreated "2011-06-03T19:45:41.810+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-28T02:37:45.181+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/107096#id> .
+
+<http://www.bbc.co.uk/document/107096#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/20573#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/107097#id> .
+
+<http://www.bbc.co.uk/document/107097#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/20573#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/107098#id> .
+
+<http://www.bbc.co.uk/document/107098#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/20573#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/107099#id> .
+
+<http://www.bbc.co.uk/document/107099#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/127554#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Andrzej Tęczyński forms watered debunked cantering touchstones gangster eggplants undersell address rhapsodising." ;
+	cwork:description " rebuses upfront augmentation kenning eulogises crud sombre consummate withholds coldly savoring née lumber totted care boardrooms fiftieths continue dazzles facially horticulturists colloquially hastes frankfurters massaging." ;
+	cwork:dateCreated "2011-12-31T20:02:59.327+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-26T19:39:09.719+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/316381#id> .
+
+<http://www.bbc.co.uk/document/316381#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/2530#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Glass Sport Motors spacewalking restructures wail cowpunchers admiring persuasive encoding semifinal chemical woodenly." ;
+	cwork:description " convocation attaché lipid lambaste sampling chitchat substitution bodice impetuous maundering transiency made." ;
+	cwork:dateCreated "2011-04-04T21:43:34.920+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-26T03:00:59.478+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/49988#id> .
+
+<http://www.bbc.co.uk/document/49988#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/2530#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/49989#id> .
+
+<http://www.bbc.co.uk/document/49989#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/2530#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/49990#id> .
+
+<http://www.bbc.co.uk/document/49990#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/2530#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/49991#id> .
+
+<http://www.bbc.co.uk/document/49991#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/100640#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "WIND (Italy) marinates monoxide undersell miscarried swathe appliqués label misappropriated plied shantytowns." ;
+	cwork:description " palmiest elongate boost lachrymal disenfranchising lukewarm whirls umpires cannily oxides flay twists divvies fooling saintlier gutting mucilage icy spun phylum alertness perplexity northeasters." ;
+	cwork:dateCreated "2011-06-12T14:47:59.731+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-24T06:58:40.366+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/74134#id> .
+
+<http://www.bbc.co.uk/document/74134#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/100640#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/74135#id> .
+
+<http://www.bbc.co.uk/document/74135#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/37288#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "RealD bagged undersell legality poise limitings palaces sundry foresight calumniated spiffier." ;
+	cwork:description " forgot nimbly waterproof role backtracks codicil briquet forceful defect urging punting prototype." ;
+	cwork:dateCreated "2011-06-09T21:34:27.416+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-23T23:42:51.959+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/134280#id> .
+
+<http://www.bbc.co.uk/document/134280#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/37288#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/134281#id> .
+
+<http://www.bbc.co.uk/document/134281#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/37288#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/134282#id> .
+
+<http://www.bbc.co.uk/document/134282#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/37288#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/134283#id> .
+
+<http://www.bbc.co.uk/document/134283#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/109921#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Slovart Music clever malingering limitings leagues rediscovery coagulant emphysema menagerie paniers utilitarians." ;
+	cwork:description " pomade saboteur underpaid counselings josh asphyxiated clarify dwarfs innocently fucks mountaintops push sating whereof twee calculuses nodal republished vulgarises escapist equinoctial strands chitchat sheds." ;
+	cwork:dateCreated "2011-11-09T20:22:24.102+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-19T03:10:37.686+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/163905#id> .
+
+<http://www.bbc.co.uk/document/163905#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/109921#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/163906#id> .
+
+<http://www.bbc.co.uk/document/163906#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/76007#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Santo Cattaneo stickiest stopcocks brightness profusion transplantation extremism jetted crustaceans philistines travails." ;
+	cwork:description " communities sadder motorways tracheotomies armies underage extract unopened midair byproducts milestone's nylon visionaries chitchat rustic." ;
+	cwork:dateCreated "2011-10-27T17:01:39.939+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-16T11:19:01.266+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/296419#id> .
+
+<http://www.bbc.co.uk/document/296419#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/140549#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "William Wright backpacks pear shipyard libel's teleconference misidentified charted undersell attacking flake." ;
+	cwork:description " starchy capabilities cooperative underpaid airily farthest wheresoever arrogates pawed romance circularise meringue nationalisations sickening uninsured trays rostrum renumber solemnise unscrewed implicates stucco swifter disobeys." ;
+	cwork:dateCreated "2011-05-07T08:18:20.170+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-15T13:38:07.326+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/383418#id> .
+
+<http://www.bbc.co.uk/document/383418#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/140549#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/383419#id> .
+
+<http://www.bbc.co.uk/document/383419#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/127037#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Zbigniew Lengren incarcerating stables braziers wetlands undersell gopher hussars standoffs twaddled irritable." ;
+	cwork:description " aggrandise mastheads lodgers trashing puckish me austere recanting despairs scragglier homes prosody sidekicks." ;
+	cwork:dateCreated "2011-12-30T07:25:48.222+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-14T09:09:22.206+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/306399#id> .
+
+<http://www.bbc.co.uk/document/306399#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/3388#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "RNDeer drawer baobab straggliest betrothals forebodes bombings kindergartens formative underscore spiriting." ;
+	cwork:description " attic magnetosphere monarchists chitchat waxwork cicada pecks tasks mummy stirrer." ;
+	cwork:dateCreated "2011-04-21T18:48:20.468+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-13T18:35:07.448+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/67282#id> .
+
+<http://www.bbc.co.uk/document/67282#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/25843#id> a cwork:CreativeWork , cwork:Programme ;
+	cwork:title "Steyr Motors GmbH garnering jaundicing reckless posing roadway's impracticality yen superfluity parents prophecy." ;
+	cwork:description " serous ablutions embarrassing huckleberry baritone maturities transceiver beachcomber garters underwriters catastrophe ravelled floundering spectacularly chitchat hokum publicising reflect shepherds coercing milquetoast filmmakers corning patronised." ;
+	cwork:dateCreated "2011-09-10T13:37:58.716+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-13T00:21:42.828+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/212263#id> .
+
+<http://www.bbc.co.uk/document/212263#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/25843#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/212264#id> .
+
+<http://www.bbc.co.uk/document/212264#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/25843#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/212265#id> .
+
+<http://www.bbc.co.uk/document/212265#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/25843#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/212266#id> .
+
+<http://www.bbc.co.uk/document/212266#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/59139#id> a cwork:CreativeWork , cwork:BlogPost ;
+	cwork:title "Domo (company) misconducts grayest vantages saddling riot ant saith overslept haloed grate." ;
+	cwork:description " mucilage coats rarest gadflies interacting chitchat phloem drew motocross vibraphone desalinates lotus braked plundered scalar stooge." ;
+	cwork:dateCreated "2011-10-17T17:43:17.548+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-12T17:54:20.229+03:00"^^xsd:dateTime ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/264112#id> .
+
+<http://www.bbc.co.uk/document/264112#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/170099#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Square (company) yodelers weltered elite biology's womanly ubiquitous erstwhile mistreat recanting swirlier." ;
+	cwork:description " overgrown querulous photosensitive lustiness bullied transshipment chitchat plump rebelliousness promenading carbines menages zeniths calipered reticent allocations jerk programmes ethic atmospheres cropping virtuosos inhumanely puckish epoxy." ;
+	cwork:dateCreated "2011-11-20T19:41:55.351+02:00"^^xsd:dateTime .

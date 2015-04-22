@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Constructor;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -21,7 +20,7 @@ import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection.QueryType;
 import eu.ldbc.semanticpublishing.properties.Configuration;
 import eu.ldbc.semanticpublishing.properties.Definitions;
 import eu.ldbc.semanticpublishing.resultanalyzers.sax.SPARQLResultStatementsCounter;
-import eu.ldbc.semanticpublishing.resultanalyzers.sesame.RDFXMLResultStatementsCounter;
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.TurtleResultStatementsCounter;
 import eu.ldbc.semanticpublishing.statistics.Statistics;
 import eu.ldbc.semanticpublishing.substitutionparameters.SubstitutionParametersGenerator;
 import eu.ldbc.semanticpublishing.templates.MustacheTemplate;
@@ -37,8 +36,11 @@ public class AggregateOperationsValidator extends Validator {
 	private HashMap<String, String> aggregateQueryTemplates;
 	private Configuration configuration;
 	private Definitions definitions;
-	private RDFXMLResultStatementsCounter rdfxmlResultStatementsCounter;
+	private TurtleResultStatementsCounter turtleResultStatementsCounter;
 	private SPARQLResultStatementsCounter sparqlResultStatementsCounter;
+	
+	private final static String APPLICATION_SPARQL_RESULT_XML = "application/sparql-results+xml";
+	private final static String APPLICATION_X_TURTLE = "application/x-turtle";
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(EditorialAgent.class.getName());
 	private final static Logger BRIEF_LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());	
@@ -52,7 +54,7 @@ public class AggregateOperationsValidator extends Validator {
 		this.aggregateQueryTemplates = aggregateQueryTemplates;
 		this.configuration = configuration;
 		this.definitions = definitions;
-		this.rdfxmlResultStatementsCounter = new RDFXMLResultStatementsCounter();
+		this.turtleResultStatementsCounter = new TurtleResultStatementsCounter();
 		this.sparqlResultStatementsCounter = new SPARQLResultStatementsCounter();	
 	}
 	
@@ -76,11 +78,11 @@ public class AggregateOperationsValidator extends Validator {
 		QueryType queryType;
 
 		for (int i = 0; i < Statistics.AGGREGATE_QUERIES_COUNT; i++) {
-			ValidationValuesModel validationValues = validationValuesManager.getValidationValuesFor(i);
+			ValidationValuesModel validationValuesModel = validationValuesManager.getValidationValuesFor(i);
 			
 			c = (Class<SubstitutionParametersGenerator>) Class.forName(String.format("eu.ldbc.semanticpublishing.templates.aggregation.Query%dTemplate", (i + 1)));
 			cc = c.getConstructor(RandomUtil.class, HashMap.class, Definitions.class, String[].class);
-			queryTemplate = (MustacheTemplate) cc.newInstance(ru, aggregateQueryTemplates, definitions, validationValues.getSubstitutionParameters());
+			queryTemplate = (MustacheTemplate) cc.newInstance(ru, aggregateQueryTemplates, definitions, validationValuesModel.getSubstitutionParameters());
 			
 			queryType = queryTemplate.getTemplateQueryType();
 			queryName = queryTemplate.getTemplateFileName();
@@ -91,26 +93,29 @@ public class AggregateOperationsValidator extends Validator {
 			long actualResultsSize = 0;
 			InputStream iStream = null;
 					
-			try {
-				iStream = new ByteArrayInputStream(queryResult.getBytes("UTF-8"));
-				
-				if ((!queryResult.trim().isEmpty())) {
-					if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
-						actualResultsSize = rdfxmlResultStatementsCounter.getStatementsCount(iStream);
-					} else {
-						actualResultsSize = sparqlResultStatementsCounter.getStatementsCount(iStream);
-					}
-				}
+			iStream = new ByteArrayInputStream(queryResult.getBytes("UTF-8"));
 			
-				BRIEF_LOGGER.info(String.format("Query [%s] executed, iteration %d, results %d", queryName, (i + 1), actualResultsSize));
-				LOGGER.info("\n*** Query [" + queryName + "], iteration " + (i + 1) + ", results " + actualResultsSize + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
+			if ((!queryResult.trim().isEmpty())) {
+				if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
+					actualResultsSize = turtleResultStatementsCounter.getStatementsCount(iStream);
+				} else {
+					actualResultsSize = sparqlResultStatementsCounter.getStatementsCount(iStream);
+				}
+			}
 		
-				System.out.println(String.format("\tQuery %-1d : ", (i + 1)));
-				int errorsForQuery = validateAggregate(queryResult, actualResultsSize, validationValues.getExpectedResultsSize(), "AGGREGATE", (i + 1), validationValues.getValidationResultsList(), false);
-				System.out.print(String.format("\t\t%d errors found in %d validation values, at least %d expected results, %d returned results\n", errorsForQuery, validationValues.getValidationResultsList().size(), validationValues.getExpectedResultsSize(), actualResultsSize));
-			} catch (UnsupportedEncodingException e) {
-				e.printStackTrace();
-			}			
+			BRIEF_LOGGER.info(String.format("Query [%s] executed, iteration %d, results %d", queryName, (i + 1), actualResultsSize));
+			LOGGER.info("\n*** Query [" + queryName + "], iteration " + (i + 1) + ", results " + actualResultsSize + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
+	
+			System.out.println(String.format("\tQuery %-1d : ", (i + 1)));
+			int errorsForQuery = 0;
+			
+			if (validationValuesModel.getResultAcceptType().equals(APPLICATION_X_TURTLE)) {			
+				errorsForQuery = validateAggregateTurtleResult(validationValuesModel.getValidationResultsAsString(), queryResult);
+			} else if (validationValuesModel.getResultAcceptType().equals(APPLICATION_SPARQL_RESULT_XML)) {
+				errorsForQuery = validateAggregateSparqlResult(validationValuesModel.getValidationResultsAsString(), queryResult);
+			}
+			
+			System.out.print(String.format("\t\t%d errors found in %d validation values\n", errorsForQuery, actualResultsSize));
 		}
 	}
 	

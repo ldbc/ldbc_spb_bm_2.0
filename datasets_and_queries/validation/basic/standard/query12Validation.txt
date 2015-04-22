@@ -1,0 +1,497 @@
+[SubstitutionParameters]
+<http://dbpedia.org/resource/Coballes>
+
+[ExpectedResultsSize]
+34
+
+[ResultsAcceptType]
+application/sparql-results+xml
+
+[Results]
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='cworkGraph'/>
+		<variable name='s'/>
+		<variable name='p'/>
+		<variable name='o'/>
+	</head>
+	<results>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/HighWeb</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/document/305656#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/webDocumentType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/Mobile</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/document/305657#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/webDocumentType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/Mobile</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/document/305658#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/webDocumentType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/HighWeb</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/document/305659#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/webDocumentType</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/document/305656#id</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/primaryContentOf</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/document/305657#id</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/primaryContentOf</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/document/305658#id</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/primaryContentOf</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/document/305659#id</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/bbc/primaryContentOf</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Alin_Chibulcutean</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Francesco_Stella</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Hashim_Khan</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Jan_Lammers_(athlete)</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Mamertinus_of_Auxerre</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Mihajlo_Apostolski</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Nicky_Hilton</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Nicol\u00E1s_Urquiza</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Philip_Howard_(pianist)</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Pier_Paolo_Scarrone</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Roloff_Beny</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Sally_Eastall</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://dbpedia.org/resource/Yevgeni_Grishkov</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/about</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<literal>thumbnail atlText for CW http://www.bbc.co.uk/context/122185#id</literal>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/altText</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/InternationalAudience</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/audience</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/category</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-28T20:16:02.084+03:00</literal>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/dateCreated</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-11T01:35:17.871+03:00</literal>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/dateModified</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<literal> blanked shekel sinuses firebrand imperil hoppers lubber reenforces upbringings capons summered.</literal>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/description</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/liveCoverage</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://sws.geonames.org/3124920/</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/mentions</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/TextualFormat</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/primaryFormat</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<literal> roweled undershoot famine sidebars thous unknowing aspic gust selflessly acknowledging.</literal>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/shortTitle</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/thumbnail/2123746428</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/thumbnail</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<literal>Arne Rettedal twinkling festoon's huge roadblock antithesis amatory sleaziness concurrence waists indict.</literal>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/title</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='o'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/BlogPost</uri>
+			</binding>
+			<binding name='cworkGraph'>
+				<uri>http://www.bbc.co.uk/context/122185#id</uri>
+			</binding>
+			<binding name='s'>
+				<uri>http://www.bbc.co.uk/things/122185#id</uri>
+			</binding>
+			<binding name='p'>
+				<uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
+			</binding>
+		</result>
+	</results>
+</sparql>

@@ -1,437 +1,192 @@
 [SubstitutionParameters]
-<http://wikidata.dbpedia.org/resource/Q4563865>;cwork:NationalAudience;9
+<http://dbpedia.org/resource/Laurentius_Paulinus_Gothus>;cwork:InternationalAudience;10
 
 [ExpectedResultsSize]
-871
+179
+
+[ResultsAcceptType]
+application/x-turtle
 
 [Results]
-<http://www.bbc.co.uk/things/15285#id>
-<http://www.bbc.co.uk/things/1546678891#id>
-<http://www.bbc.co.uk/things/1590441956#id>
-<http://www.bbc.co.uk/things/764439773#id>
-<http://www.bbc.co.uk/things/15287#id>
-<http://www.bbc.co.uk/things/1506559032#id>
-<http://www.bbc.co.uk/things/15292#id>
-<http://www.bbc.co.uk/things/945134525#id>
-<http://www.bbc.co.uk/things/15294#id>
-<http://www.bbc.co.uk/things/304793374#id>
-<http://www.bbc.co.uk/things/514008544#id>
-<http://www.bbc.co.uk/things/15295#id>
-<http://www.bbc.co.uk/things/1125711360#id>
-<http://www.bbc.co.uk/things/474102400#id>
-<http://www.bbc.co.uk/things/1539637307#id>
-<http://www.bbc.co.uk/things/2031929791#id>
-<http://www.bbc.co.uk/things/15296#id>
-<http://www.bbc.co.uk/things/721823999#id>
-<http://www.bbc.co.uk/things/15299#id>
-<http://www.bbc.co.uk/things/2026574490#id>
-<http://www.bbc.co.uk/things/1943245901#id>
-<http://www.bbc.co.uk/things/15305#id>
-<http://www.bbc.co.uk/things/603086075#id>
-<http://www.bbc.co.uk/things/15306#id>
-<http://www.bbc.co.uk/things/1678428197#id>
-<http://www.bbc.co.uk/things/1546678891#id>
-<http://www.bbc.co.uk/things/1590441956#id>
-<http://www.bbc.co.uk/things/764439773#id>
-<http://dbpedia.org/resource/1936_Soviet_Cup_Final>
-<http://rdf.freebase.com/ns/m.0bwgw1z>
-<http://ru.dbpedia.org/resource/\u0424\u0438\u043D\u0430\u043B_\u041A\u0443\u0431\u043A\u0430_\u0421\u0421\u0421\u0420_\u043F\u043E_\u0444\u0443\u0442\u0431\u043E\u043B\u0443_1936>
-<http://wikidata.dbpedia.org/resource/Q4563865>
-<http://wikidata.org/entity/Q4563865>
-<http://dbpedia.org/resource/Fencing_at_the_1960_Summer_Olympics_\u2013_Men's_team_\u00E9p\u00E9e>
-<http://rdf.freebase.com/ns/m.0dsb0t7>
-<http://wikidata.dbpedia.org/resource/Q5443077>
-<http://wikidata.org/entity/Q5443077>
-<http://dbpedia.org/resource/San_Francisco_mayoral_election,_1999>
-<http://rdf.freebase.com/ns/m.05mw2sl>
-<http://pt.dbpedia.org/resource/Elei\u00E7\u00E3o_para_prefeito_de_S\u00E3o_Francisco_em_1999>
-<http://wikidata.dbpedia.org/resource/Q7414184>
-<http://wikidata.org/entity/Q7414184>
-<http://dbpedia.org/resource/John_Leekley>
-<http://dbpedia.org/resource/Hanna_Herman>
-<http://dbpedia.org/resource/Annica_Svensson>
-<http://dbpedia.org/resource/Katie_Kox>
-<http://sws.geonames.org/658722/>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/15285#id"
-<http://www.bbc.co.uk/category/Company>
-"2011-05-04T22:11:25.166+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2011-05-24T12:03:20.992+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" legislation cannot while ip same compete best piece sprang all educated most billion states 12th layout."
-"false"^^<http://www.w3.org/2001/XMLSchema#boolean>
-" church historically pretension participants attracted whole view domain fundamental state."
-<http://www.bbc.co.uk/thumbnail/216277354>
-"Aigle Azur usage exist often rival celibacy may web faster least laws."
-<http://www.bbc.co.uk/things/15285#id>
-<http://www.w3.org/2002/07/owl#Thing>
-<http://www.bbc.co.uk/things/1506559032#id>
-<http://dbpedia.org/resource/SDV_International_Logistics>
-<http://rdf.freebase.com/ns/m.0ndxj1w>
-<http://wikidata.dbpedia.org/resource/Q3459367>
-<http://wikidata.org/entity/Q3459367>
-<http://dbpedia.org/resource/Shuhei_Uchida>
-<http://dbpedia.org/resource/Ninfa_Salinas_Sada>
-<http://pt.dbpedia.org/resource/T\u00EAnis_de_mesa_nos_Jogos_Ol\u00EDmpicos_de_Ver\u00E3o_de_2012_-_Equipes_femininas>
-<http://dbpedia.org/resource/Reiner_Pla\u00DFhenrich>
-<http://dbpedia.org/resource/Tennis_at_the_1908_Summer_Olympics_\u2013_Men's_indoor_singles>
-<http://dbpedia.org/resource/Prix_Imprudence>
-<http://yago-knowledge.org/resource/Prix_Imprudence>
-<http://rdf.freebase.com/ns/m.02751z6>
-<http://wikidata.dbpedia.org/resource/Q7246385>
-<http://wikidata.org/entity/Q7246385>
-<http://dbpedia.org/resource/Timothy_Flanigan>
-<http://dbpedia.org/resource/Nathalie_Lancien>
-<http://sws.geonames.org/259808/>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/15287#id"
-"2011-05-05T01:18:05.108+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2011-05-05T16:30:22.990+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" used faster gather petition olympics charge record pressure contested view does through venue court who purposes view own object as sport."
-" dogma sporting in custom occasion system player remotely principle elaborate."
-<http://www.bbc.co.uk/thumbnail/1611279240>
-"British American Tobacco achievement number rapid supported competed higher sent basic any national."
-<http://www.bbc.co.uk/things/15287#id>
-<http://www.bbc.co.uk/things/945134525#id>
-<http://dbpedia.org/resource/Halfords>
-<http://yago-knowledge.org/resource/Halfords>
-<http://rdf.freebase.com/ns/m.07h56x>
-<http://pl.dbpedia.org/resource/Halfords>
-<http://nl.dbpedia.org/resource/Halfords>
-<http://cy.dbpedia.org/resource/Halfords>
-<http://cs.dbpedia.org/resource/Halfords>
-<http://wikidata.dbpedia.org/resource/Q3398786>
-<http://wikidata.org/entity/Q3398786>
-<http://dbpedia.org/resource/Boundary_Waters_Blues_Festival>
-<http://yago-knowledge.org/resource/Boundary_Waters_Blues_Festival>
-<http://rdf.freebase.com/ns/m.04gmwns>
-<http://wikidata.dbpedia.org/resource/Q4949958>
-<http://wikidata.org/entity/Q4949958>
-<http://dbpedia.org/resource/Miki_Berkovich>
-<http://dbpedia.org/resource/Erminio_Blotta>
-<http://dbpedia.org/resource/Anthony_Anaxagorou>
-<http://th.dbpedia.org/resource/\u0E41\u0E1A\u0E23\u0E01\u0E01\u0E34\u0E49\u0E07_\u0E44\u0E23\u0E17\u0E4C\u0E2A_(2009)>
-<http://sws.geonames.org/843801/>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/15292#id"
-<http://www.bbc.co.uk/category/Persons>
-"2011-05-05T03:13:25.614+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2012-05-23T12:56:10.974+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" best fundamental set complete own preclude little after venue ambition society individual audience."
-" commentators flash only least software the page tensions used attract."
-<http://www.bbc.co.uk/thumbnail/1517084977>
-"Ralf Hauptmann person institutions type broadcasters existence normally adoption until europe consistent."
-<http://www.bbc.co.uk/things/15292#id>
-<http://www.bbc.co.uk/things/304793374#id>
-<http://www.bbc.co.uk/things/514008544#id>
-<http://dbpedia.org/resource/Giacomini>
-<http://yago-knowledge.org/resource/Giacomini>
-<http://rdf.freebase.com/ns/m.0b6fcf1>
-<http://wikidata.dbpedia.org/resource/Q5557833>
-<http://wikidata.org/entity/Q5557833>
-<http://dbpedia.org/resource/Great_Plains_Energy>
-<http://yago-knowledge.org/resource/Great_Plains_Energy>
-<http://rdf.freebase.com/ns/m.0h25wx>
-<http://wikidata.dbpedia.org/resource/Q5599779>
-<http://wikidata.org/entity/Q5599779>
-<http://dbpedia.org/resource/Ptolemy_(son_of_Philip)>
-<http://dbpedia.org/resource/1969_Intercontinental_Cup>
-<http://rdf.freebase.com/ns/m.0c3_msq>
-<http://sv.dbpedia.org/resource/Interkontinentala_cupen_1969>
-<http://pt.dbpedia.org/resource/Copa_Intercontinental_de_1969>
-<http://nl.dbpedia.org/resource/Wereldbeker_voetbal_1969>
-<http://it.dbpedia.org/resource/Coppa_Intercontinentale_1969>
-<http://id.dbpedia.org/resource/Piala_Interkontinental_1969>
-<http://fr.dbpedia.org/resource/Coupe_intercontinentale_1969>
-<http://es.dbpedia.org/resource/Copa_Intercontinental_1969>
-<http://wikidata.dbpedia.org/resource/Q2623910>
-<http://wikidata.org/entity/Q2623910>
-<http://dbpedia.org/resource/1975_Winter_Universiade>
-<http://rdf.freebase.com/ns/m.0brs56>
-<http://zh.dbpedia.org/resource/1975\u5E74\u51AC\u5B63\u4E16\u754C\u5927\u5B78\u904B\u52D5\u6703>
-<http://tr.dbpedia.org/resource/1975_D\u00FCnya_\u00DCniversiteler_K\u0131\u015F_Oyunlar\u0131>
-<http://th.dbpedia.org/resource/\u0E01\u0E35\u0E2C\u0E32\u0E21\u0E2B\u0E32\u0E27\u0E34\u0E17\u0E22\u0E32\u0E25\u0E31\u0E22\u0E42\u0E25\u0E01\u0E24\u0E14\u0E39\u0E2B\u0E19\u0E32\u0E27_1975>
-<http://ru.dbpedia.org/resource/\u0417\u0438\u043C\u043D\u044F\u044F_\u0423\u043D\u0438\u0432\u0435\u0440\u0441\u0438\u0430\u0434\u0430_1975>
-<http://pt.dbpedia.org/resource/Univers\u00EDada_de_Inverno_de_1975>
-<http://pl.dbpedia.org/resource/Zimowa_Uniwersjada_1975>
-<http://ko.dbpedia.org/resource/1975\uB144_\uB3D9\uACC4_\uC720\uB2C8\uBC84\uC2DC\uC544\uB4DC>
-<http://ja.dbpedia.org/resource/1975\u5E74\u51AC\u5B63\u30E6\u30CB\u30D0\u30FC\u30B7\u30A2\u30FC\u30C9>
-<http://it.dbpedia.org/resource/VIII_Universiade_invernale>
-<http://fr.dbpedia.org/resource/Universiade_d'hiver_de_1975>
-<http://wikidata.dbpedia.org/resource/Q1353662>
-<http://wikidata.org/entity/Q1353662>
-<http://dbpedia.org/resource/Riccardo_Scamarcio>
-<http://dbpedia.org/resource/Wohlk_brothers_(1920_blizzard_victims)>
-<http://dbpedia.org/resource/Goody_Petronelli>
-<http://dbpedia.org/resource/Ronald_Alan_Waldron>
-<http://dbpedia.org/resource/C._G._Master>
-<http://dbpedia.org/resource/Harald_Kidde>
-<http://tr.dbpedia.org/resource/1966-67_\u0130ngiltere_Lig_Kupas\u0131>
-<http://sws.geonames.org/3013397/>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/15294#id"
-"2011-05-04T17:45:25.352+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2012-05-20T11:35:29.550+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" 23 legislation person pope nobility all purely always activity remotely originated power exchange viewing people analyze final those rapid legislation power mentality."
-" inform celibacy party spectators plead man internet speaking come internal."
-<http://www.bbc.co.uk/thumbnail/2135063666>
-"Joseph Thauvette hundreds with country turn christendom audiences amateur only site affords."
-<http://www.bbc.co.uk/things/15294#id>
-<http://www.bbc.co.uk/things/1125711360#id>
-<http://www.bbc.co.uk/things/474102400#id>
-<http://www.bbc.co.uk/things/1539637307#id>
-<http://www.bbc.co.uk/things/2031929791#id>
-<http://dbpedia.org/resource/Oriflame>
-<http://yago-knowledge.org/resource/Oriflame>
-<http://rdf.freebase.com/ns/m.0bzlg6>
-<http://vi.dbpedia.org/resource/Oriflame>
-<http://uk.dbpedia.org/resource/\u041E\u0440\u0456\u0444\u043B\u0435\u0439\u043C>
-<http://tr.dbpedia.org/resource/Oriflame>
-<http://sv.dbpedia.org/resource/Oriflame>
-<http://su.dbpedia.org/resource/Oriflame>
-<http://sr.dbpedia.org/resource/\u041E\u0440\u0438\u0444\u043B\u0435\u0458\u043C>
-<http://ru.dbpedia.org/resource/Oriflame>
-<http://ro.dbpedia.org/resource/Oriflame>
-<http://pt.dbpedia.org/resource/Oriflame>
-<http://pl.dbpedia.org/resource/Oriflame>
-<http://no.dbpedia.org/resource/Oriflame>
-<http://kk.dbpedia.org/resource/\u041E\u0440\u0438\u0444\u043B\u044D\u0439\u043C>
-<http://ka.dbpedia.org/resource/\u10DD\u10E0\u10D8\u10E4\u10DA\u10D4\u10D8\u10DB\u10D8>
-<http://jv.dbpedia.org/resource/Oriflame>
-<http://id.dbpedia.org/resource/Oriflame>
-<http://hy.dbpedia.org/resource/\u0555\u0580\u056B\u0586\u056C\u0565\u0575\u0574>
-<http://hu.dbpedia.org/resource/Oriflame>
-<http://fr.dbpedia.org/resource/Oriflame>
-<http://fi.dbpedia.org/resource/Oriflame>
-<http://fa.dbpedia.org/resource/\u0627\u0648\u0631\u06CC\u0641\u200C\u0644\u06CC\u0645>
-<http://es.dbpedia.org/resource/Oriflame>
-<http://cs.dbpedia.org/resource/Oriflame>
-<http://bg.dbpedia.org/resource/\u041E\u0440\u0438\u0444\u043B\u0435\u0439\u043C>
-<http://be.dbpedia.org/resource/Oriflame>
-<http://ar.dbpedia.org/resource/\u0623\u0648\u0631\u064A\u0641\u0644\u0627\u0645>
-<http://wikidata.dbpedia.org/resource/Q730893>
-<http://wikidata.org/entity/Q730893>
-<http://dbpedia.org/resource/1994_British_Grand_Prix>
-<http://rdf.freebase.com/ns/m.0485vs>
-<http://sv.dbpedia.org/resource/Storbritanniens_Grand_Prix_1994>
-<http://sl.dbpedia.org/resource/Velika_nagrada_Velike_Britanije_1994>
-<http://ru.dbpedia.org/resource/\u0413\u0440\u0430\u043D-\u043F\u0440\u0438_\u0412\u0435\u043B\u0438\u043A\u043E\u0431\u0440\u0438\u0442\u0430\u043D\u0438\u0438_1994_\u0433\u043E\u0434\u0430>
-<http://pt.dbpedia.org/resource/Grande_Pr\u00EAmio_da_Gr\u00E3-Bretanha_de_1994_(F\u00F3rmula_1)>
-<http://pl.dbpedia.org/resource/Formu\u0142a_1_-_Grand_Prix_Wielkiej_Brytanii_1994>
-<http://nl.dbpedia.org/resource/Grand_Prix_Formule_1_van_Groot-Brittanni\u00EB_1994>
-<http://ms.dbpedia.org/resource/Grand_Prix_British_1994>
-<http://ja.dbpedia.org/resource/1994\u5E74\u30A4\u30AE\u30EA\u30B9\u30B0\u30E9\u30F3\u30D7\u30EA>
-<http://it.dbpedia.org/resource/Gran_Premio_di_Gran_Bretagna_1994>
-<http://id.dbpedia.org/resource/Grand_Prix_F1_Inggris_1994>
-<http://hu.dbpedia.org/resource/1994-es_Formula\u20131_brit_nagyd\u00EDj>
-<http://fr.dbpedia.org/resource/Grand_Prix_automobile_de_Grande-Bretagne_1994>
-<http://fi.dbpedia.org/resource/Britannian_Grand_Prix_1994>
-<http://es.dbpedia.org/resource/Anexo:Gran_Premio_de_Gran_Breta\u00F1a_de_1994>
-<http://cs.dbpedia.org/resource/Grand_Prix_Velk\u00E9_Brit\u00E1nie_1994>
-<http://ca.dbpedia.org/resource/Gran_Premi_de_Gran_Bretanya_del_1994>
-<http://bg.dbpedia.org/resource/1994_\u0413\u043E\u043B\u044F\u043C\u0430_\u043D\u0430\u0433\u0440\u0430\u0434\u0430_\u043D\u0430_\u0412\u0435\u043B\u0438\u043A\u043E\u0431\u0440\u0438\u0442\u0430\u043D\u0438\u044F>
-<http://wikidata.dbpedia.org/resource/Q306984>
-<http://wikidata.org/entity/Q306984>
-<http://dbpedia.org/resource/Civil_war_in_Afghanistan_(1992\u201396)>
-<http://rdf.freebase.com/ns/m.0gc4t0>
-<http://ru.dbpedia.org/resource/\u0413\u0440\u0430\u0436\u0434\u0430\u043D\u0441\u043A\u0430\u044F_\u0432\u043E\u0439\u043D\u0430_\u0432_\u0410\u0444\u0433\u0430\u043D\u0438\u0441\u0442\u0430\u043D\u0435_(1992\u20141996)>
-<http://pt.dbpedia.org/resource/Guerra_Civil_Afeg\u00E3_(1992-1996)>
-<http://nn.dbpedia.org/resource/Den_afghanske_borgarkrigen_(1992-1996)>
-<http://ja.dbpedia.org/resource/\u30A2\u30D5\u30AC\u30CB\u30B9\u30BF\u30F3\u7D1B\u4E89_(1989\u5E74-2001\u5E74)>
-<http://it.dbpedia.org/resource/Guerra_civile_afghana_(1992-1996)>
-<http://fr.dbpedia.org/resource/Guerre_civile_d'Afghanistan_(1992-1996)>
-<http://fa.dbpedia.org/resource/\u062C\u0646\u06AF\u200C\u0647\u0627\u06CC_\u06A9\u0627\u0628\u0644>
-<http://es.dbpedia.org/resource/Guerra_civil_afgana_(1992-2001)>
-<http://wikidata.dbpedia.org/resource/Q1980081>
-<http://wikidata.org/entity/Q1980081>
-<http://dbpedia.org/resource/2011_OFC_Beach_Soccer_Championship>
-<http://rdf.freebase.com/ns/m.0cc6n61>
-<http://es.dbpedia.org/resource/Campeonato_de_F\u00FAtbol_Playa_de_Ocean\u00EDa_2011>
-<http://wikidata.dbpedia.org/resource/Q2264042>
-<http://wikidata.org/entity/Q2264042>
-<http://dbpedia.org/resource/Irish_St_Leger_Trial_Stakes>
-<http://rdf.freebase.com/ns/m.0j3fwcz>
-<http://wikidata.dbpedia.org/resource/Q4852076>
-<http://wikidata.org/entity/Q4852076>
-<http://dbpedia.org/resource/Victor_Fung>
-<http://dbpedia.org/resource/Lori_Rom>
-<http://dbpedia.org/resource/Just_Jack>
-<http://dbpedia.org/resource/Yuko_Tojo>
-<http://dbpedia.org/resource/Suga_Pop>
-<http://dbpedia.org/resource/Luis_Cavaco>
-<http://dbpedia.org/resource/Macey_(baseball)>
-<http://dbpedia.org/resource/Isao_Kobayashi>
-<http://dbpedia.org/resource/Sydney_Rayner>
-<http://vi.dbpedia.org/resource/Chi\u1EBFn_d\u1ECBch_\u0110\u01B0\u1EDDng_14_-_Ph\u01B0\u1EDBc_Long>
-<http://sws.geonames.org/647258/>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/15295#id"
-"2011-05-04T20:50:34.474+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2011-09-07T09:19:07.762+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" against page day wrestling purpose best other movement private ambition internal considered audience."
-" professional retain olympics attendance referring least were areas principle historically."
-<http://www.bbc.co.uk/thumbnail/2122818696>
-"TVR attract notion address out assigned originally ioc basis approach maintained."
-<http://www.bbc.co.uk/things/15295#id>
-<http://www.bbc.co.uk/things/721823999#id>
-<http://dbpedia.org/resource/Redbox>
-<http://yago-knowledge.org/resource/Redbox>
-<http://rdf.freebase.com/ns/m.04d75z>
-<http://wikidata.dbpedia.org/resource/Q7305489>
-<http://wikidata.org/entity/Q7305489>
-<http://dbpedia.org/resource/United_States_presidential_election_in_Rhode_Island,_1964>
-<http://rdf.freebase.com/ns/m.011bqh19>
-<http://wikidata.dbpedia.org/resource/Q7893070>
-<http://wikidata.org/entity/Q7893070>
-<http://dbpedia.org/resource/Bitty_Schram>
-<http://dbpedia.org/resource/Dmitri_Galin>
-<http://dbpedia.org/resource/Marina_Kumysh>
-<http://dbpedia.org/resource/L\u00FCbeck_martyrs>
-<http://sws.geonames.org/3054117/>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/15296#id"
-<http://www.bbc.co.uk/category/Event>
-"2011-05-04T16:08:25.614+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2011-10-19T05:11:37.527+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" taxation make adoption 12th set people government equal combined purely those local represented."
-" achievement such head features effective come service not line originate."
-<http://www.bbc.co.uk/thumbnail/71374940>
-"United States House of Representatives elections in California, 1886 or equality created enable venue inform in meant athletes browsing."
-<http://www.bbc.co.uk/things/15296#id>
-<http://www.bbc.co.uk/things/2026574490#id>
-<http://www.bbc.co.uk/things/1943245901#id>
-<http://dbpedia.org/resource/Scarab_Productions>
-<http://rdf.freebase.com/ns/m.04gvgc3>
-<http://wikidata.dbpedia.org/resource/Q7430231>
-<http://wikidata.org/entity/Q7430231>
-<http://dbpedia.org/resource/1983_Virginia_Slims_Championships>
-<http://rdf.freebase.com/ns/m.076ww44>
-<http://it.dbpedia.org/resource/Virginia_Slims_Championships_1983>
-<http://fr.dbpedia.org/resource/Masters_de_tennis_f\u00E9minin_1983>
-<http://wikidata.dbpedia.org/resource/Q3297980>
-<http://wikidata.org/entity/Q3297980>
-<http://dbpedia.org/resource/Vince_Clarke>
-<http://dbpedia.org/resource/Kym_Barrett>
-<http://dbpedia.org/resource/Carlo_Lombardi_(Unionist_soldier)>
-<http://ru.dbpedia.org/resource/\u0413\u0440\u0430\u043D-\u043F\u0440\u0438_\u041F\u0435\u0441\u043A\u0430\u0440\u044B_1957_\u0433\u043E\u0434\u0430>
-<http://pa.dbpedia.org/resource/\u0A2B\u0A40\u0A2B\u0A3E_\u0A35\u0A3F\u0A38\u0A3C\u0A35_\u0A15\u0A71\u0A2A_2010>
-<http://ru.dbpedia.org/resource/\u041E\u0441\u0430\u0434\u0430_\u041F\u0443\u0441\u0430\u043D\u0430_(1592)>
-<http://ta.dbpedia.org/resource/\u0B9A\u0BCB\u0BB5\u0BBF\u0BAF\u0BA4\u0BCD_\u0BAA\u0B9F\u0BC8\u0B95\u0BB3\u0BBF\u0BA9\u0BCD_\u0BA4\u0BBE\u0BB2\u0BBF\u0BA9\u0BCD_\u0B95\u0BBE\u0BB2\u0BBF\u0B9A\u0BC6\u0BAF\u0BCD\u0BA4\u0BB2\u0BCD>
-<http://sws.geonames.org/2827701/>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/15299#id"
-"2011-05-04T23:20:51.521+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2011-12-13T01:28:12.920+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" affords days impact global browsing commerce adopted eg for vote ioc eg address by million phrase celibacy."
-" address 700 national they historical approach another participants 23 on."
-<http://www.bbc.co.uk/thumbnail/210017631>
-"Eva Pracht majority adopt apartheid violent features trends 2007 custom conscientious such."
-<http://www.bbc.co.uk/things/15299#id>
-<http://www.bbc.co.uk/things/603086075#id>
-<http://dbpedia.org/resource/Safilo>
-<http://yago-knowledge.org/resource/Safilo>
-<http://rdf.freebase.com/ns/m.09g9w3x>
-<http://pt.dbpedia.org/resource/Safilo>
-<http://it.dbpedia.org/resource/Safilo>
-<http://de.dbpedia.org/resource/Safilo>
-<http://wikidata.dbpedia.org/resource/Q950766>
-<http://wikidata.org/entity/Q950766>
-<http://dbpedia.org/resource/Vozrozhdenie_Bank>
-<http://yago-knowledge.org/resource/Vozrozhdenie_Bank>
-<http://rdf.freebase.com/ns/m.0j432j9>
-<http://ru.dbpedia.org/resource/\u0412\u043E\u0437\u0440\u043E\u0436\u0434\u0435\u043D\u0438\u0435_(\u0431\u0430\u043D\u043A)>
-<http://es.dbpedia.org/resource/Vozrozhdenie_Bank>
-<http://wikidata.dbpedia.org/resource/Q4114952>
-<http://wikidata.org/entity/Q4114952>
-<http://dbpedia.org/resource/Sei_Young_Animation_Co.,_Ltd.>
-<http://yago-knowledge.org/resource/Sei_Young_Animation_Co.,_Ltd.>
-<http://rdf.freebase.com/ns/m.0gj8lqy>
-<http://wikidata.dbpedia.org/resource/Q7446555>
-<http://wikidata.org/entity/Q7446555>
-<http://dbpedia.org/resource/Francis_Younghusband>
-<http://dbpedia.org/resource/Davona_Dale_Stakes>
-<http://yago-knowledge.org/resource/Davona_Dale_Stakes>
-<http://rdf.freebase.com/ns/m.0c2vgj>
-<http://wikidata.dbpedia.org/resource/Q5242076>
-<http://wikidata.org/entity/Q5242076>
-<http://dbpedia.org/resource/Hugh_Peacock>
-<http://sws.geonames.org/3304891/>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/15305#id"
-"2011-05-05T06:11:37.072+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2011-12-03T09:40:56.373+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" democratic boxing incur very members left cookie person is person outlet."
-" majority always broadcasters record reject country created originate enjoyment little."
-<http://www.bbc.co.uk/thumbnail/1547918376>
-"Wealth Transfer Group enjoyment sprang cricket petitions privilege took celibacy territorial mainly 1988."
-<http://www.bbc.co.uk/things/15305#id>
-<http://www.bbc.co.uk/things/1678428197#id>
-<http://dbpedia.org/resource/Madras_Fertilizers>
-<http://rdf.freebase.com/ns/m.0nd33n8>
-<http://wikidata.dbpedia.org/resource/Q6728484>
-<http://wikidata.org/entity/Q6728484>
-<http://dbpedia.org/resource/Mexican_Drug_War>
-<http://sw.cyc.com/concept/Mx4ry_iabIQsSsS4v_sud_ZSfA>
-<http://yago-knowledge.org/resource/Mexican_Drug_War>
-<http://rdf.freebase.com/ns/m.0273lbz>
-<http://zh.dbpedia.org/resource/\u58A8\u897F\u54E5\u6BD2\u54C1\u6230\u722D>
-<http://vi.dbpedia.org/resource/Chi\u1EBFn_tranh_ma_t\u00FAy_M\u00E9xico>
-<http://sv.dbpedia.org/resource/Drogkriget_i_Mexiko>
-<http://sr.dbpedia.org/resource/\u0420\u0430\u0442_\u043F\u0440\u043E\u0442\u0438\u0432_\u043D\u0430\u0440\u043A\u043E-\u043A\u0430\u0440\u0442\u0435\u043B\u0430_\u0443_\u041C\u0435\u043A\u0441\u0438\u043A\u0443>
-<http://ru.dbpedia.org/resource/\u041D\u0430\u0440\u043A\u043E\u0432\u043E\u0439\u043D\u0430_\u0432_\u041C\u0435\u043A\u0441\u0438\u043A\u0435>
-<http://pt.dbpedia.org/resource/Guerra_contra_o_narcotr\u00E1fico_no_M\u00E9xico>
-<http://pl.dbpedia.org/resource/Wojny_narkotykowe_w_Meksyku>
-<http://no.dbpedia.org/resource/Mexicos_narkotikakrig>
-<http://nl.dbpedia.org/resource/Mexicaanse_drugsoorlog>
-<http://ms.dbpedia.org/resource/Perang_Dadah_Mexico>
-<http://ko.dbpedia.org/resource/\uBA55\uC2DC\uCF54_\uB9C8\uC57D_\uC804\uC7C1>
-<http://ka.dbpedia.org/resource/\u10DC\u10D0\u10E0\u10D9\u10DD_\u10DD\u10DB\u10D8_\u10DB\u10D4\u10E5\u10E1\u10D8\u10D9\u10D0\u10E8\u10D8>
-<http://ja.dbpedia.org/resource/\u30E1\u30AD\u30B7\u30B3\u9EBB\u85AC\u6226\u4E89>
-<http://it.dbpedia.org/resource/Guerra_messicana_della_droga>
-<http://id.dbpedia.org/resource/Perang_Narkoba_Meksiko>
-<http://hu.dbpedia.org/resource/Mexik\u00F3i_drogh\u00E1bor\u00FA>
-<http://hr.dbpedia.org/resource/Meksi\u010Dki_drogera\u0161ki_rat>
-<http://he.dbpedia.org/resource/\u05D4\u05DE\u05DC\u05D7\u05DE\u05D4_\u05D1\u05E1\u05D7\u05E8_\u05D1\u05E1\u05DE\u05D9\u05DD_\u05D1\u05DE\u05E7\u05E1\u05D9\u05E7\u05D5>
-<http://fr.dbpedia.org/resource/Lutte_contre_les_narcotrafiquants_au_Mexique>
-<http://fi.dbpedia.org/resource/Meksikon_huumesota>
-<http://fa.dbpedia.org/resource/\u062C\u0646\u06AF_\u0645\u0648\u0627\u062F_\u0645\u062E\u062F\u0631_\u062F\u0631_\u0645\u06A9\u0632\u06CC\u06A9>
-<http://eu.dbpedia.org/resource/Narkotrafikoaren_aurkako_gerra_Mexikon>
-<http://es.dbpedia.org/resource/Guerra_contra_el_narcotr\u00E1fico_en_M\u00E9xico>
-<http://de.dbpedia.org/resource/Drogenkrieg_in_Mexiko>
-<http://da.dbpedia.org/resource/Narkotikakrigen_i_Mexico>
-<http://cy.dbpedia.org/resource/Rhyfel_Cyffuriau_Mecsico>
-<http://cs.dbpedia.org/resource/Mexick\u00E1_drogov\u00E1_v\u00E1lka>
-<http://ar.dbpedia.org/resource/\u062D\u0631\u0628_\u0627\u0644\u0645\u0643\u0633\u064A\u0643_\u0639\u0644\u0649_\u0627\u0644\u0645\u062E\u062F\u0631\u0627\u062A>
-<http://af.dbpedia.org/resource/Dwelm-oorlog_in_Meksiko>
-<http://wikidata.dbpedia.org/resource/Q475678>
-<http://wikidata.org/entity/Q475678>
-<http://dbpedia.org/resource/Judo_at_the_2008_Summer_Olympics_\u2013_Men's_66_kg>
-<http://rdf.freebase.com/ns/m.04gtv4f>
-<http://zh.dbpedia.org/resource/2008\u5E74\u590F\u5B63\u5967\u6797\u5339\u514B\u904B\u52D5\u6703\u67D4\u9053\u6BD4\u8CFD\uFF0D\u7537\u5B5066\u516C\u65A4\u7D1A>
-<http://sv.dbpedia.org/resource/Herrarnas_halv_l\u00E4ttvikt_i_judo_vid_olympiska_sommarspelen_2008>
-<http://ru.dbpedia.org/resource/\u0414\u0437\u044E\u0434\u043E_\u043D\u0430_\u043B\u0435\u0442\u043D\u0438\u0445_\u041E\u043B\u0438\u043C\u043F\u0438\u0439\u0441\u043A\u0438\u0445_\u0438\u0433\u0440\u0430\u0445_2008_\u2014_\u0434\u043E_66_\u043A\u0433_(\u043C\u0443\u0436\u0447\u0438\u043D\u044B)>
-<http://pt.dbpedia.org/resource/Jud\u00F4_nos_Jogos_Ol\u00EDmpicos_de_Ver\u00E3o_de_2008_-_At\u00E9_66_kg_masculino>
-<http://no.dbpedia.org/resource/Judo_under_Sommer-OL_2008_\u2013_66_kg_menn>
-<http://nl.dbpedia.org/resource/Judo_op_de_Olympische_Zomerspelen_2008_\u2013_Klasse_tot_66_kilogram_mannen>
-<http://lv.dbpedia.org/resource/D\u017Eudo_2008._gada_Vasaras_Olimpiskaj\u0101s_sp\u0113l\u0113s_\u2014_V\u012Brie\u0161i,_l\u012Bdz_66_kg>
-<http://it.dbpedia.org/resource/Judo_ai_Giochi_della_XXIX_Olimpiade_-_66_kg_maschile>
-<http://hu.dbpedia.org/resource/F\u00E9rfi_harmats\u00FAly\u00FA_cselg\u00E1ncs_a_2008._\u00E9vi_ny\u00E1ri_olimpiai_j\u00E1t\u00E9kokon>
-<http://bn.dbpedia.org/resource/\u09E8\u09E6\u09E6\u09EE_\u0997\u09CD\u09B0\u09C0\u09B7\u09CD\u09AE\u0995\u09BE\u09B2\u09C0\u09A8_\u0985\u09B2\u09BF\u09AE\u09CD\u09AA\u09BF\u0995\u09C7_\u099C\u09C1\u09A1\u09CB_\u2013_\u09AA\u09C1\u09B0\u09C1\u09B7\u09A6\u09C7\u09B0_\u09EC\u09EC_\u0995\u09C7\u099C\u09BF>
-<http://wikidata.dbpedia.org/resource/Q1005426>
-<http://wikidata.org/entity/Q1005426>
-<http://dbpedia.org/resource/Dacke_War>
-<http://yago-knowledge.org/resource/Dacke_War>
-<http://rdf.freebase.com/ns/m.05l6yy>
-<http://sv.dbpedia.org/resource/Dackefejden>
-<http://pl.dbpedia.org/resource/Powstanie_Nilsa_Dacke>
-<http://no.dbpedia.org/resource/Dackefeiden>
-<http://fi.dbpedia.org/resource/Dacken_sota>
-<http://et.dbpedia.org/resource/Dacke-vaenus>
-<http://es.dbpedia.org/resource/Guerra_de_Dacke>
-<http://de.dbpedia.org/resource/Dacke-Aufstand>
-<http://da.dbpedia.org/resource/Dackefejden>
-<http://wikidata.dbpedia.org/resource/Q1156907>
-<http://wikidata.org/entity/Q1156907>
-<http://dbpedia.org/resource/Edmond_Lapierre>
-<http://dbpedia.org/resource/Sebastian_Lange>
-<http://sws.geonames.org/2272446/>
-<http://dbpedia.org/resource/Abrigada>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/15306#id"
-"2011-05-05T04:19:20.324+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2012-05-06T01:56:24.944+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" court incur to patterns bidding audience terms country 12th than europe."
-" last attract ends click solely engine supported sent could negatively."
-<http://www.bbc.co.uk/thumbnail/1951782944>
-"Marie Neurath conscientious or normally have against conscientious representation petitions site's protocol."
-<http://www.bbc.co.uk/things/15306#id>
+@prefix bbcevent: <http://www.bbc.co.uk/ontologies/event/> .
+@prefix geo-pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix music-ont: <http://purl.org/ontology/mo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix cms: <http://www.bbc.co.uk/ontologies/cms/> .
+@prefix news: <http://www.bbc.co.uk/ontologies/news/> .
+@prefix cnews: <http://www.bbc.co.uk/ontologies/news/cnews/> .
+@prefix cconcepts: <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix dbp-prop: <http://dbpedia.org/property/> .
+@prefix geonames: <http://sws.geonames.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix geo-ont: <http://www.geonames.org/ontology#> .
+@prefix bbc-pont: <http://purl.org/ontology/po/> .
+@prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix skosCore: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbp-ont: <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix curric: <http://www.bbc.co.uk/ontologies/curriculum/> .
+@prefix cwork: <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix fb: <http://rdf.freebase.com/ns/> .
+@prefix ot: <http://www.ontotext.com/> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://www.bbc.co.uk/things/111799#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/200913#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111799#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-11-30T19:41:17.960+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-15T20:03:36.533+03:00"^^xsd:dateTime ;
+	cwork:description " defines correctly yield mishandled mu multifarious tactician regency youthfulness manicurist unseasonably grouse hamper equipped superconductivity untruest tonality mushier homes." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/2617289/> ;
+	cwork:primaryFormat cwork:TextualFormat , cwork:InteractiveFormat ;
+	cwork:shortTitle " transcribe mull mask crickets diapered voted mindlessly biassed populists initialise." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/1216252462> ;
+	cwork:title "Takaharu Nishino distantly sentimentalising firstly goofed appraises hod singling ghostlier fluctuated orate." .
+
+<http://www.bbc.co.uk/things/111802#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/200978#id> , <http://www.bbc.co.uk/document/200979#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111802#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-11-30T18:07:41.806+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-27T06:37:16.857+03:00"^^xsd:dateTime ;
+	cwork:description " shrouding shatterproof riffling straitening kindly brusque deathtraps extirpate uncultivated tracheotomies circumstance ickiest arrays queering frenzied steamrolling tamer stacks rosily duplicators pinkest imploding speculator." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/2760779/> ;
+	cwork:primaryFormat cwork:TextualFormat , cwork:InteractiveFormat ;
+	cwork:shortTitle " deviltry reprehends prognosticators appropriateness coruscates pricy awoken faxing waited finaglers." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/970383395> ;
+	cwork:title "Jürgen Grabowski shipping windscreens athlete referencing laptop whorl abash melodious jolted salesclerks." .
+
+<http://www.bbc.co.uk/things/111813#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/201163#id> , <http://www.bbc.co.uk/document/201164#id> , <http://www.bbc.co.uk/document/201165#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111813#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-11-30T17:52:13.410+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-10-01T04:46:08.623+03:00"^^xsd:dateTime ;
+	cwork:description " hermitage contains duchies gays mooch corporeal apoplectic filmed blinding legitimise cacao pertained sororities curbing hospitable." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/3200351/> ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	cwork:shortTitle " bedevil encroachment kindergartener moll upland pussyfoot rearms silks flypapers memberships." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/1303551394> ;
+	cwork:title "Alessandro Turini unsightliest widowers attrition telecommunication determining shove minnows saviour antiquarians grovelled." .
+
+<http://www.bbc.co.uk/things/111817#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/201250#id> , <http://www.bbc.co.uk/document/201251#id> , <http://www.bbc.co.uk/document/201252#id> , <http://www.bbc.co.uk/document/201253#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111817#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	cwork:dateCreated "2011-11-30T16:52:20.102+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-13T05:53:04.632+03:00"^^xsd:dateTime ;
+	cwork:description " dukedoms jackdaws muzzling putter interleukin cuffed ringside stylist invests bemoan livers swung calmest unemployment apprentice lowbrow jazzy assortments snoopiest." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/7284066/> ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	cwork:shortTitle " dressers sculls lopping pericardiums postmasters overload diving tidies lynch gazettes." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/82332223> ;
+	cwork:title "Seven Seas Entertainment driven promotes fashions ventriloquists smokiest cabanas celibates subcultures punctuation maltreat." .
+
+<http://www.bbc.co.uk/things/111823#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/201356#id> , <http://www.bbc.co.uk/document/201357#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111823#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-11-30T15:06:25.612+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-11-23T02:12:15.209+02:00"^^xsd:dateTime ;
+	cwork:description " promenading mapper auguries allegiances flack really upbeat tidies codex emulsification embargo submissive fascist obtuser magnetise moldings blips famish wilder evaporating simplifies keenest." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/2967297/> ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	cwork:shortTitle " probable restfulness garbage beatified foxed obscurity eviscerated distantly chrysanthemums culminates." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/413120676> ;
+	cwork:title "David S. H. Rosenthal paintbrush shoes negotiates absenting sweetly tummy detoxified manoeuvrable spend dally." .
+
+<http://www.bbc.co.uk/things/111805#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/201034#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111805#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-11-30T14:28:49.331+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2011-12-29T00:42:13.143+02:00"^^xsd:dateTime ;
+	cwork:description " loop overspreading propositional mismanaged warmest boil shoon disturbed." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/2927077/> ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	cwork:shortTitle " thieves confederacy stability recessive cricked fairer scuffling slightness's stoat gigglers." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/738442761> ;
+	cwork:title "Vito Plut incitements elector tempestuously renewed quartet gopher devotions dejectedly pedestrianised cervix." .
+
+<http://www.bbc.co.uk/things/111803#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/200990#id> , <http://www.bbc.co.uk/document/200991#id> , <http://www.bbc.co.uk/document/200992#id> , <http://www.bbc.co.uk/document/200993#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111803#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-11-30T14:21:58.198+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-01-09T09:56:51.102+02:00"^^xsd:dateTime ;
+	cwork:description " tabu trusteeship peptics immigrates incriminate decedents womanising doubter bibliophiles spike roll cage retinue hoodlums freshman knocks comradeship sassier." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/2928752/> ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	cwork:shortTitle " monikers shipyard reporting postmortem isolationism buildings submarine mouldings stink unsightliest." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/2129108182> ;
+	cwork:title "Jody Tini catching hullabaloos dickers amputees mandibles smolder laywomen vibraphone egalitarians crumbled." .
+
+<http://www.bbc.co.uk/things/111804#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/201022#id> , <http://www.bbc.co.uk/document/201023#id> , <http://www.bbc.co.uk/document/201024#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111804#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-11-30T05:50:11.313+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-01T16:05:42.659+03:00"^^xsd:dateTime ;
+	cwork:description " elucidation invincible signets overcharge urethra noteworthy frighteningly fondus." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/2975007/> ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	cwork:shortTitle " craft tourmaline regularised specifiers lavishing sympathetic mustache horridly grooms proudly." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/424070923> ;
+	cwork:title "Ricardo Peralta Ortega sanitised inquisition offhandedly serape yip uncoils ineptitude chucking quantities peers." .
+
+<http://www.bbc.co.uk/things/111808#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/201076#id> , <http://www.bbc.co.uk/document/201077#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111808#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-11-30T01:30:17.576+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2011-12-09T17:41:12.201+02:00"^^xsd:dateTime ;
+	cwork:description " salutations cramming bully compensates inseparably duplicates baubles standby be iffier advances drift articulates anarchism gain." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/2613632/> ;
+	cwork:primaryFormat cwork:TextualFormat , cwork:InteractiveFormat ;
+	cwork:shortTitle " industrially oysters agglomerate spiraeas trances barbered pilfering quiescent intellects wintriest." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/1342399725> ;
+	cwork:title "Randy Allen vestige crematoriums yodeller railways deprave insecticide salvaged hazarding latticework popularise." .
+
+<http://www.bbc.co.uk/things/111822#id> a owl:Thing , cwork:CreativeWork , cwork:BlogPost ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/201343#id> , <http://www.bbc.co.uk/document/201344#id> , <http://www.bbc.co.uk/document/201345#id> , <http://www.bbc.co.uk/document/201346#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/111822#id" ;
+	cwork:audience cwork:InternationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Event> ;
+	cwork:dateCreated "2011-11-30T01:07:41.637+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-06-30T21:38:56.023+03:00"^^xsd:dateTime ;
+	cwork:description " guilds harbored hypo flagellum moderators plenitude aloe fragrantly." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/2939357/> ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	cwork:shortTitle " manually toiled flouted rationed indulge handpick beryl squished tempera iron." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/1098575756> ;
+	cwork:title "Sino-Burmese War (1765–69) etymologies mustache rigidity biopsying farina kisser cetacean erase rollicks ultra." .

@@ -36,7 +36,6 @@ PREFIX ot:<http://www.ontotext.com/>
 #  Used to validate result of single insert query
 
 SELECT * 
-FROM ot:disable-sameAs
 {
   GRAPH {{{contextURI}}} {
     ?s ?p ?o

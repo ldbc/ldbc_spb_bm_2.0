@@ -1,22 +1,130 @@
 [SubstitutionParameters]
-<http://www.bbc.co.uk/things/30431#id>;<http://www.bbc.co.uk/things/30431#id>;<http://www.bbc.co.uk/things/30431#id>;<http://www.bbc.co.uk/things/30431#id>
+<http://www.bbc.co.uk/things/189485#id>;<http://www.bbc.co.uk/things/189485#id>;<http://www.bbc.co.uk/things/189485#id>;<http://www.bbc.co.uk/things/189485#id>;<http://www.bbc.co.uk/things/189485#id>
 
 [ExpectedResultsSize]
-7
+10
+
+[ResultsAcceptType]
+application/sparql-results+xml
 
 [Results]
-65
-<http://www.bbc.co.uk/things/26652#id>
-<http://www.bbc.co.uk/things/42639#id>
-<http://www.bbc.co.uk/things/614#id>
-<http://www.bbc.co.uk/things/29070#id>
-<http://www.bbc.co.uk/things/3159#id>
-<http://www.bbc.co.uk/things/30431#id>
-<http://www.bbc.co.uk/things/2569#id>
-2012-06-21T23:15:27.373+03:00
-2012-05-13T02:23:29.393+03:00
-2012-03-27T06:33:02.242+03:00
-2012-02-15T03:29:52.207+02:00
-2011-12-17T16:00:34.511+02:00
-2011-10-06T03:52:32.508+03:00
-2011-09-27T21:22:54.229+03:00
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='other_creativeWork'/>
+		<variable name='dt'/>
+		<variable name='score'/>
+	</head>
+	<results>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-16T08:29:22.384+02:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/17921#id</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-16T13:36:20.828+02:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/5861#id</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-30T01:39:15.020+02:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/67331#id</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-03T05:40:17.319+02:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/3853#id</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-20T15:46:16.648+03:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/5026#id</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-25T13:54:01.432+03:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/106405#id</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-24T20:45:57.665+03:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/5530#id</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-04T03:22:30.016+03:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/149567#id</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-24T14:31:32.113+03:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/189485#id</uri>
+			</binding>
+		</result>
+		<result>
+			<binding name='score'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#double'>40.5</literal>
+			</binding>
+			<binding name='dt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-04T06:36:09.653+03:00</literal>
+			</binding>
+			<binding name='other_creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102316#id</uri>
+			</binding>
+		</result>
+	</results>
+</sparql>

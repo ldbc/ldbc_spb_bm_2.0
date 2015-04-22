@@ -1,277 +1,226 @@
 [SubstitutionParameters]
-<http://it.dbpedia.org/resource/Herbalife>;<http://it.dbpedia.org/resource/Herbalife>
+<http://dbpedia.org/resource/Telcordia_Technologies>;<http://dbpedia.org/resource/Telcordia_Technologies>
 
 [ExpectedResultsSize]
-100
+12
+
+[ResultsAcceptType]
+application/sparql-results+xml
 
 [Results]
-<http://www.bbc.co.uk/things/1007490300#id>
-<http://www.bbc.co.uk/things/1032084290#id>
-<http://www.bbc.co.uk/things/1066382890#id>
-<http://www.bbc.co.uk/things/1072980788#id>
-<http://www.bbc.co.uk/things/1073660057#id>
-<http://www.bbc.co.uk/things/1154145086#id>
-<http://www.bbc.co.uk/things/1155232874#id>
-<http://www.bbc.co.uk/things/1158472897#id>
-<http://www.bbc.co.uk/things/1161473074#id>
-<http://www.bbc.co.uk/things/1162540767#id>
-<http://www.bbc.co.uk/things/1179801967#id>
-<http://www.bbc.co.uk/things/1195462985#id>
-<http://www.bbc.co.uk/things/1199213451#id>
-<http://www.bbc.co.uk/things/1211027461#id>
-<http://www.bbc.co.uk/things/1212989046#id>
-<http://www.bbc.co.uk/things/1214856674#id>
-<http://www.bbc.co.uk/things/1223626738#id>
-<http://www.bbc.co.uk/things/1233629821#id>
-<http://www.bbc.co.uk/things/1246591830#id>
-<http://www.bbc.co.uk/things/1322590289#id>
-<http://www.bbc.co.uk/things/1338574036#id>
-<http://www.bbc.co.uk/things/1356090134#id>
-<http://www.bbc.co.uk/things/1361995221#id>
-<http://www.bbc.co.uk/things/1371496490#id>
-<http://www.bbc.co.uk/things/1384416223#id>
-<http://www.bbc.co.uk/things/1392138563#id>
-<http://www.bbc.co.uk/things/1406121513#id>
-<http://www.bbc.co.uk/things/1428295146#id>
-<http://www.bbc.co.uk/things/1429657321#id>
-<http://www.bbc.co.uk/things/1440165433#id>
-<http://www.bbc.co.uk/things/1468247499#id>
-<http://www.bbc.co.uk/things/1510122586#id>
-<http://www.bbc.co.uk/things/1544035668#id>
-<http://www.bbc.co.uk/things/1576572765#id>
-<http://www.bbc.co.uk/things/1591199825#id>
-<http://www.bbc.co.uk/things/162141408#id>
-<http://www.bbc.co.uk/things/1623740900#id>
-<http://www.bbc.co.uk/things/1628836448#id>
-<http://www.bbc.co.uk/things/167401759#id>
-<http://www.bbc.co.uk/things/1682516718#id>
-<http://www.bbc.co.uk/things/1741142860#id>
-<http://www.bbc.co.uk/things/176441839#id>
-<http://www.bbc.co.uk/things/1818688032#id>
-<http://www.bbc.co.uk/things/1826260168#id>
-<http://www.bbc.co.uk/things/1857281484#id>
-<http://www.bbc.co.uk/things/1861774501#id>
-<http://www.bbc.co.uk/things/1893664555#id>
-<http://www.bbc.co.uk/things/1903539504#id>
-<http://www.bbc.co.uk/things/1907367309#id>
-<http://www.bbc.co.uk/things/1920672339#id>
-<http://www.bbc.co.uk/things/1947753949#id>
-<http://www.bbc.co.uk/things/1954094880#id>
-<http://www.bbc.co.uk/things/1962340051#id>
-<http://www.bbc.co.uk/things/2062299978#id>
-<http://www.bbc.co.uk/things/2078416598#id>
-<http://www.bbc.co.uk/things/2079229868#id>
-<http://www.bbc.co.uk/things/2096728114#id>
-<http://www.bbc.co.uk/things/2101416746#id>
-<http://www.bbc.co.uk/things/218433373#id>
-<http://www.bbc.co.uk/things/243691161#id>
-<http://www.bbc.co.uk/things/280209677#id>
-<http://www.bbc.co.uk/things/289938496#id>
-<http://www.bbc.co.uk/things/290580986#id>
-<http://www.bbc.co.uk/things/302729411#id>
-<http://www.bbc.co.uk/things/30846#id>
-<http://www.bbc.co.uk/things/318309260#id>
-<http://www.bbc.co.uk/things/373585270#id>
-<http://www.bbc.co.uk/things/378246145#id>
-<http://www.bbc.co.uk/things/388919474#id>
-<http://www.bbc.co.uk/things/412670090#id>
-<http://www.bbc.co.uk/things/443260470#id>
-<http://www.bbc.co.uk/things/492926442#id>
-<http://www.bbc.co.uk/things/50416996#id>
-<http://www.bbc.co.uk/things/512560373#id>
-<http://www.bbc.co.uk/things/521404232#id>
-<http://www.bbc.co.uk/things/526634178#id>
-<http://www.bbc.co.uk/things/540071621#id>
-<http://www.bbc.co.uk/things/545936808#id>
-<http://www.bbc.co.uk/things/564199225#id>
-<http://www.bbc.co.uk/things/608909296#id>
-<http://www.bbc.co.uk/things/627428161#id>
-<http://www.bbc.co.uk/things/63560573#id>
-<http://www.bbc.co.uk/things/717196092#id>
-<http://www.bbc.co.uk/things/719270138#id>
-<http://www.bbc.co.uk/things/726523634#id>
-<http://www.bbc.co.uk/things/731538308#id>
-<http://www.bbc.co.uk/things/748317663#id>
-<http://www.bbc.co.uk/things/755307712#id>
-<http://www.bbc.co.uk/things/784392734#id>
-<http://www.bbc.co.uk/things/788525610#id>
-<http://www.bbc.co.uk/things/793674423#id>
-<http://www.bbc.co.uk/things/819400679#id>
-<http://www.bbc.co.uk/things/835503393#id>
-<http://www.bbc.co.uk/things/8358#id>
-<http://www.bbc.co.uk/things/836923768#id>
-<http://www.bbc.co.uk/things/8464#id>
-<http://www.bbc.co.uk/things/8467#id>
-<http://www.bbc.co.uk/things/8576#id>
-<http://www.bbc.co.uk/things/8654#id>
-<http://www.bbc.co.uk/things/8757#id>
-<http://www.bbc.co.uk/things/8799#id>
-<http://www.bbc.co.uk/things/8803#id>
-<http://www.bbc.co.uk/things/8807#id>
-<http://www.bbc.co.uk/things/8815#id>
-<http://www.bbc.co.uk/things/8837#id>
-<http://www.bbc.co.uk/things/887348478#id>
-<http://www.bbc.co.uk/things/8884#id>
-<http://www.bbc.co.uk/things/898909630#id>
-<http://www.bbc.co.uk/things/9004#id>
-<http://www.bbc.co.uk/things/9005#id>
-<http://www.bbc.co.uk/things/9014#id>
-<http://www.bbc.co.uk/things/9020#id>
-<http://www.bbc.co.uk/things/907497385#id>
-<http://www.bbc.co.uk/things/9094#id>
-<http://www.bbc.co.uk/things/9105#id>
-<http://www.bbc.co.uk/things/9121#id>
-<http://www.bbc.co.uk/things/9129#id>
-<http://www.bbc.co.uk/things/9134#id>
-<http://www.bbc.co.uk/things/9174#id>
-<http://www.bbc.co.uk/things/9193#id>
-<http://www.bbc.co.uk/things/9222#id>
-<http://www.bbc.co.uk/things/9269#id>
-<http://www.bbc.co.uk/things/9306#id>
-<http://www.bbc.co.uk/things/9323#id>
-<http://www.bbc.co.uk/things/9327#id>
-<http://www.bbc.co.uk/things/9337#id>
-<http://www.bbc.co.uk/things/9377#id>
-<http://www.bbc.co.uk/things/9384#id>
-<http://www.bbc.co.uk/things/941323680#id>
-<http://www.bbc.co.uk/things/9416#id>
-<http://www.bbc.co.uk/things/9417#id>
-<http://www.bbc.co.uk/things/9420#id>
-<http://www.bbc.co.uk/things/9423#id>
-<http://www.bbc.co.uk/things/9437#id>
-<http://www.bbc.co.uk/things/9462#id>
-<http://www.bbc.co.uk/things/9465#id>
-<http://www.bbc.co.uk/things/9467#id>
-<http://www.bbc.co.uk/things/9492#id>
-<http://www.bbc.co.uk/things/9508#id>
-<http://www.bbc.co.uk/things/958530209#id>
-<http://www.bbc.co.uk/things/964363772#id>
-<http://www.bbc.co.uk/things/988626994#id>
-2012-08-25T05:32:41.396+03:00
-2012-08-25T12:11:09.139+03:00
-2012-08-25T22:42:23.316+03:00
-2012-08-26T13:00:51.916+03:00
-2012-08-26T16:03:24.909+03:00
-2012-08-26T21:47:40.444+03:00
-2012-08-27T05:40:25.692+03:00
-2012-08-27T11:53:57.532+03:00
-2012-08-28T13:13:53.862+03:00
-2012-08-29T02:39:43.254+03:00
-2012-08-29T11:12:45.118+03:00
-2012-08-29T22:59:24.910+03:00
-2012-08-30T03:42:28.511+03:00
-2012-08-30T14:33:33.181+03:00
-2012-08-30T19:10:47.942+03:00
-2012-08-31T00:50:22.441+03:00
-2012-09-01T17:08:16.432+03:00
-2012-09-02T01:51:52.061+03:00
-2012-09-02T03:09:26.871+03:00
-2012-09-02T15:55:53.409+03:00
-2012-09-02T21:45:27.821+03:00
-2012-09-03T03:25:35.065+03:00
-2012-09-03T08:13:51.696+03:00
-2012-09-03T21:42:40.491+03:00
-2012-09-04T01:20:52.901+03:00
-2012-09-04T04:05:43.224+03:00
-2012-09-04T08:45:10.880+03:00
-2012-09-04T17:17:50.795+03:00
-2012-09-05T11:31:37.723+03:00
-2012-09-05T12:59:48.231+03:00
-2012-09-08T18:48:55.665+03:00
-2012-09-09T11:35:53.682+03:00
-2012-09-10T04:42:09.877+03:00
-2012-09-11T14:11:15.519+03:00
-2012-09-11T17:05:14.404+03:00
-2012-09-12T18:21:01.026+03:00
-2012-09-13T13:10:23.021+03:00
-2012-09-13T23:47:29.435+03:00
-2012-09-14T09:19:28.589+03:00
-2012-09-14T16:11:43.468+03:00
-2012-09-15T18:32:25.176+03:00
-2012-11-22T07:12:44.717+02:00
-2012-11-22T07:12:44.717+02:00
- africa a around seat following appear administration negatively lies out responsible public notion least pay since an enjoyment sent power another democratic line entrance.
- all fortune affords 2006 number something rather seen enactment did large adopt 15th provides including relate.
- allowing problems purposes tensions purposes had computer of because preserve each information place vote we view referral including into all substantial.
- assertion improve bargaining both commerce search computer country out enjoyment seen use each medieval personally lead also achieve.
- attendance political attract 12th hobby court nobles sent purpose.
- automatically easier olympic substantial union broadcast uncommon within one movement computer adaptability pretension competitions piece effective through both.
- basic hundreds accept games same cases adopt money pages practiced show equality whenever sent one type.
- competed did state games mediums record-keeping turn bargaining however government cherished interesting opportunity on including serve existence place realm both mentality its by first.
- competitive practiced decided line drive conscientious tables partisan sent referring would war faster man incur been cannot.
- computer by sake gather assertion settings covers enforced national attracted.
- country well guaranteeing could computer however internal parliaments attendance servers gather royal members life accept.
- custom paid estimated participants apartheid show provide solely evident web internet place equality rival.
- democratic certain end linked pope all sometimes fundamental line.
- dogma power serve practiced three computer bargaining at so commentators effective pay-per-view head settings day.
- domestic granting saving their used affords pretty becoming elaborate come taxes customer holding country within estimated in origin and/or national cannot mentality compete a.
- electorate cookies pretension partisan realm fact compete player.
- enforced electorate necessarily million money give ticket installed hobby amounts.
- enjoyment system responsible automatically engine assembly trends flash effects browsers seen outlet computer like ethos cricket within lies information.
- exchange patterns court took cannot object contrary side software particularly celibacy have privilege cookies.
- faster paid attracted rule for achievement main players who left central against combined common asked applicable.
- governments central practiced pursuit player dogma global strongest enactment private primary 700 may same competed provide homogeneous.
- governments states preclude method cannot clergy preserve left provides an serve power ethos europe best majority site's candidates early.
- homogeneous used without your football state rule click mediums include eligible achievement usage turn fixtures beginning within browsing head logged out serve refusing did browsers.
- levels basis criticism states plead eventual whenever make a features should 2006 identifiable patterns fact local beginning ever one-fifth best an complete saving 700 two.
- levels ends problems practical million each provider pieces ceased petitions apartheid players problems privilege maintained custom into apartheid attendance participants name us on leading institutions legislation.
- origin retain you large prolonged retain when others whenever petitions computer fact cookies however player.
- others administration responsible website gather cherished 23 preserve personalize participants enactments does out.
- own who of competition worldwide originated orders members assertion retain line equality activity elaborate method one-fifth applicable.
- pieces achievement south rival about rule assertion reinforced 13th analyze reporting experience components if preferences whole lead public final beginning pay any browsers criticism.
- result provider search computer town private raise 13th holding political related broadcast.
- rival approach begins where other interesting majority achievement originally retain computer nobles created raise practical out bargaining log.
- sprang collect player equality fortune three can sake activity rather exchange educated they.
- started to craftsmen practical ioc need many countries our historically decided end competed following.
- supported cherished conscientious demographic leading revolves existence homogeneous adaptability have isolation.
- tensions were primitive number including its granting historical even data log very platform.
- uncommon enforced created while not petitions petitions pay-per-view practical reject domestic pretty services commerce nobles of problems achievement known against competition conscientious liability.
- users the charge already 2007 revolves such left cases government domestic eventual integrity state web candidates reason elaborate competitions number football contrary attract.
- war members worldwide did head reporting sums primitive by was.
- web-surfing finally layout so plead cut attracts attracted using cookies achievement granting weak main object would negatively appear serve power.
- who an display refused often incur party well historical saving normally users something africa paid spectators automatically.
- within 12th venue century fixtures because ads ends 12th linked referral components strongest basic apartheid like reason effective feel features site assigned until sometimes be they.
- worldwide confrontation games cannot place supported line without.
-1952 German Grand Prix although servers elections set however your 13th incur originally computer.
-1966 Inter-Cities Fairs Cup Final global violent royal protocol person popular collect territorial rapid occasion.
-1993 Italian Open (tennis) early left has see responsible commentators us visit billion combined.
-2RN (RTÉ Networks) record referral serve sprang commentators be we provides although towards.
-Aegon enactments represented governments would saving provider viewers three internal usage.
-Aflac although representation refusing central practical mentality relate customer pressure preferences.
-Agricultural Bank of China features taxation secular uncommon sprang created institution fixtures users trends.
-Akizuki Rebellion display contrary sprang others finally since rugby political attendance venue.
-Battle of Ciudad Juárez (1911) grassroots land internet following settings individual although rugby cut revolves.
-Benito Stefanelli competitive on times development referring competed has easier ip was.
-Billie Miller preferences pieces referral meant sport weak day charge liability paid.
-Cagiva content rules 2007 viewing power pope and/or little best purposes.
-Casterman fundamental effective some homogeneous incur boxing search pits easier rights.
-Charles W. Shields many millions becoming head following reporting improve parliament often its.
-DirecTV adopted this taxation competed set royal has flash our confrontation.
-Dornier Flugzeugwerke began official attract page state automatically may one-fifth 700 very.
-DSB (railway company) substantial mentality tensions becoming contribute your fixtures professional log make.
-Eni participants uncommon services provides grounds additionally including two rule web.
-Go!Express come although elaborate sporting sessions competition sake hundreds basis into.
-Great Locomotive Chase money another centuries always preferences entered contribution trends responsible only.
-Greco-Turkish War (1919–22) amateur asked realm realm ip considered layout customer revolves object.
-Herbalife rules web end bidding public origin contrary make broadcasters beginning.
-Hitachi they attract concerned they both king entered because click personally.
-Infosys diagnose created had provider fact petitions elaborate viewing one-fifth out.
-James FitzGerald been patterns page line refusing amounts custom higher all an.
-Kentucky gubernatorial election, 2003 enforced facts existence impact estimated name lies basic tables seen.
-Leonardo Castro million when additionally well society see candidates player television only.
-Manuel Sevillano substantial related elections mainly affords if drive a although because.
-Melvin L. Barnet show enactment first wrestling personally supported using that terms about.
-Microsoft Studios three higher attract than came games pits transfers reporting identify.
-Mobile Fun 700 saving royal athletes attracted refuse competition medieval meant information.
-News Corporation charge pursuit strongest preserve allowing global grounds three other and.
-Nicola Amoruso exchange paid always while player central components least diagnose christendom.
-Operation Linebacker II solely radio strongest existence sports rapid power result successful criticism.
-Peugeot educated institution mediums many been revolves criticism commerce commentators not.
-Robert Keate 15th homogeneous reason originally side contrary servers us weak content.
-Rourkela Steel Plant lies seen referral of worldwide asked originally use started came.
-Serhiy Kryvtsov site liability used site by finally political because million components.
-Shackelford Jr. Miller effects africa progress lower mainly life state exchange grounds began.
-The Aerospace Corporation through during refused seat enactment impact early known candidates fixtures.
-The Walt Disney Company improve revolves bidding sporting head practiced a cricket centuries nobles.
-Warner Bros. institution sometimes land majority as professional three enactment while so.
-
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='creativeWork'/>
+		<variable name='title'/>
+		<variable name='description'/>
+		<variable name='dateModified'/>
+		<variable name='primaryContent'/>
+	</head>
+	<results>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-28T13:08:46.822+03:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Regional Bell Operating Company bummed yawls inhalation ovaries reanimating sublimely imaged puffiness westbound fornicates.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/175958#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/440208#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> disappearing disagrees pegs substations permed waffling scraps jalopy kicking amidships dabbler.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-21T06:29:20.017+03:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Investor AB wigeons smocks biplane benchmarks maze mayflies lampooned sparest lidded daydreamt.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/159288#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/394144#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> woolliest decedents noontime swirl censoring hidden mostly exonerate stilted kingly pancake.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-21T06:29:20.017+03:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Investor AB wigeons smocks biplane benchmarks maze mayflies lampooned sparest lidded daydreamt.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/159288#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/394145#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> woolliest decedents noontime swirl censoring hidden mostly exonerate stilted kingly pancake.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-06T12:37:59.927+02:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Warburg Pincus crack crumpling addressees patenting underrated plushier preponderant tireless forefronts squiggles.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/188835#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/472342#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> atwitter redevelop suggestions pertness derailing manhandle monarchical dying bridge tinctures charts dislikes livid.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-06T12:37:59.927+02:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Warburg Pincus crack crumpling addressees patenting underrated plushier preponderant tireless forefronts squiggles.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/188835#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/472343#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> atwitter redevelop suggestions pertness derailing manhandle monarchical dying bridge tinctures charts dislikes livid.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-06T12:37:59.927+02:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Warburg Pincus crack crumpling addressees patenting underrated plushier preponderant tireless forefronts squiggles.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/188835#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/472344#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> atwitter redevelop suggestions pertness derailing manhandle monarchical dying bridge tinctures charts dislikes livid.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-06T12:37:59.927+02:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Warburg Pincus crack crumpling addressees patenting underrated plushier preponderant tireless forefronts squiggles.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/188835#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/472345#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> atwitter redevelop suggestions pertness derailing manhandle monarchical dying bridge tinctures charts dislikes livid.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-16T00:38:37.214+03:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Regional Bell Operating Company tenderfeet plumper riffs advance autopsy devoutness skylark inbreeding freckle flowery.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/186480#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/466449#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> fastidious saith doused overhung hillocks hello undergoing roomed whooshes predeceasing deploring incompetently infinitives.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-31T09:43:21.890+03:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Applied Communication Sciences postcard diversifying pecans justification illumines molest barracuda leaning ranker interacts.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/153670#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/356194#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> anoint screws democrat's ruptured enchantresses teabag profiteered drollery catching ogle zoologists.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-31T09:43:21.890+03:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Applied Communication Sciences postcard diversifying pecans justification illumines molest barracuda leaning ranker interacts.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/153670#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/356195#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> anoint screws democrat's ruptured enchantresses teabag profiteered drollery catching ogle zoologists.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-31T09:43:21.890+03:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Applied Communication Sciences postcard diversifying pecans justification illumines molest barracuda leaning ranker interacts.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/153670#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/356196#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> anoint screws democrat's ruptured enchantresses teabag profiteered drollery catching ogle zoologists.</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-31T09:43:21.890+03:00</literal>
+			</binding>
+			<binding name='title'>
+				<literal>Applied Communication Sciences postcard diversifying pecans justification illumines molest barracuda leaning ranker interacts.</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/153670#id</uri>
+			</binding>
+			<binding name='primaryContent'>
+				<uri>http://www.bbc.co.uk/document/356197#id</uri>
+			</binding>
+			<binding name='description'>
+				<literal> anoint screws democrat's ruptured enchantresses teabag profiteered drollery catching ogle zoologists.</literal>
+			</binding>
+		</result>
+	</results>
+</sparql>

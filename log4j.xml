@@ -9,6 +9,7 @@
     <param name="MaxBackupIndex" value="50000" />  
     <param name="bufferedIO" value="false" />
     <param name="MaxFileSize" value="250MB"/>
+    <param name="Encoding" value="UTF-8" />
     <layout class="org.apache.log4j.PatternLayout">  
       <param name="ConversionPattern" value="%r : %m\n" />  
     </layout>  
@@ -21,6 +22,7 @@
     <param name="MaxBackupIndex" value="50000" />  
     <param name="bufferedIO" value="false" />
     <param name="MaxFileSize" value="250MB"/>
+    <param name="Encoding" value="UTF-8" />
     <layout class="org.apache.log4j.PatternLayout">  
       <param name="ConversionPattern" value=">> %r [%c{1}:%t] : %m\n" />  
     </layout>  
@@ -33,6 +35,7 @@
     <param name="MaxBackupIndex" value="50000" />  
     <param name="bufferedIO" value="false" />
     <param name="MaxFileSize" value="250MB"/>
+    <param name="Encoding" value="UTF-8" />
     <layout class="org.apache.log4j.PatternLayout">  
       <param name="ConversionPattern" value="%r : %m\n" />  
     </layout>  

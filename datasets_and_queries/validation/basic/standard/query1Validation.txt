@@ -1,125 +1,709 @@
 [SubstitutionParameters]
-cwork:about;<http://pt.dbpedia.org/resource/Bridgestone>
+cwork:about;<http://dbpedia.org/resource/Siamak_Saleh-Farajzadeh>
 
 [ExpectedResultsSize]
-2707
+393
+
+[ResultsAcceptType]
+application/x-turtle
 
 [Results]
-<http://www.bbc.co.uk/things/33351#id>
-<http://www.bbc.co.uk/things/1164075140#id>
-<http://dbpedia.org/resource/Bridgestone>
-<http://www.bbc.co.uk/thumbnail/118696914>
-<http://www.bbc.co.uk/things/2142553584#id>
-<http://www.bbc.co.uk/things/1201503310#id>
-<http://www.bbc.co.uk/things/621630741#id>
-<http://openei.org/resources/Bridgestone_Corporation>
-<http://yago-knowledge.org/resource/Bridgestone>
-<http://rdf.freebase.com/ns/m.01sqx5>
-<http://zh.dbpedia.org/resource/\u666E\u5229\u53F8\u901A>
-<http://uk.dbpedia.org/resource/Bridgestone>
-<http://tr.dbpedia.org/resource/Bridgestone>
-<http://sv.dbpedia.org/resource/Bridgestone>
-<http://sr.dbpedia.org/resource/\u0411\u0440\u0438\u045F\u0441\u0442\u043E\u043D>
-<http://sq.dbpedia.org/resource/Bridgestone>
-<http://sl.dbpedia.org/resource/Bridgestone>
-<http://sk.dbpedia.org/resource/Burid\u017Eisuton>
-<http://simple.dbpedia.org/resource/Bridgestone>
-<http://ru.dbpedia.org/resource/Bridgestone>
-<http://ro.dbpedia.org/resource/Bridgestone>
-<http://pt.dbpedia.org/resource/Bridgestone>
-<http://pl.dbpedia.org/resource/Bridgestone>
-<http://no.dbpedia.org/resource/Bridgestone>
-<http://nl.dbpedia.org/resource/Bridgestone>
-<http://ms.dbpedia.org/resource/Bridgestone>
-<http://mn.dbpedia.org/resource/\u0411\u0440\u0438\u0434\u0436\u0441\u0442\u043E\u0443\u043D>
-<http://lv.dbpedia.org/resource/Bridgestone>
-<http://lt.dbpedia.org/resource/Bridgestone>
-<http://ko.dbpedia.org/resource/\uBE0C\uB9AC\uC9C0\uC2A4\uD1A4>
-<http://ja.dbpedia.org/resource/\u30D6\u30EA\u30C2\u30B9\u30C8\u30F3>
-<http://it.dbpedia.org/resource/Bridgestone>
-<http://id.dbpedia.org/resource/Bridgestone>
-<http://hu.dbpedia.org/resource/Bridgestone>
-<http://hr.dbpedia.org/resource/Bridgestone>
-<http://he.dbpedia.org/resource/\u05D1\u05E8\u05D9\u05D3\u05D2'\u05E1\u05D8\u05D5\u05DF>
-<http://fr.dbpedia.org/resource/Bridgestone>
-<http://fi.dbpedia.org/resource/Bridgestone>
-<http://fa.dbpedia.org/resource/\u0628\u0631\u06CC\u062C\u0633\u062A\u0648\u0646>
-<http://es.dbpedia.org/resource/Bridgestone_Corporation>
-<http://de.dbpedia.org/resource/Bridgestone>
-<http://da.dbpedia.org/resource/Bridgestone>
-<http://cs.dbpedia.org/resource/Bridgestone>
-<http://ca.dbpedia.org/resource/Bridgestone>
-<http://bs.dbpedia.org/resource/Bridgestone>
-<http://bg.dbpedia.org/resource/\u0411\u0440\u0438\u0434\u0436\u0441\u0442\u043E\u0443\u043D_(\u0433\u0443\u043C\u0438)>
-<http://az.dbpedia.org/resource/Bridgestone>
-<http://wikidata.dbpedia.org/resource/Q179433>
-<http://wikidata.org/entity/Q179433>
-<http://dbpedia.org/resource/Aanayoottu>
-<http://yago-knowledge.org/resource/Aanayoottu>
-<http://rdf.freebase.com/ns/m.0641fcz>
-<http://wikidata.dbpedia.org/resource/Q4661540>
-<http://wikidata.org/entity/Q4661540>
-<http://www.w3.org/2002/07/owl#Thing>
-"Bridgestone celibacy adopted our asked begins data war games central reject."
-" however and come certain if covers competed electorate lies unfair."
-<http://dbpedia.org/resource/Bridgestone>
-<http://sws.geonames.org/2664180/>
-"2011-04-27T05:00:15.297+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2011-08-20T17:33:06.593+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" higher record contribution as public preclude activity still very."
-<http://www.bbc.co.uk/things/1164075140#id>
-"Bridgestone"
-<http://www.bbc.co.uk/thumbnail/118696914>
-<http://www.bbc.co.uk/things/2142553584#id>
-<http://www.bbc.co.uk/things/1201503310#id>
-<http://www.bbc.co.uk/things/621630741#id>
-<http://openei.org/resources/Bridgestone_Corporation>
-<http://yago-knowledge.org/resource/Bridgestone>
-<http://rdf.freebase.com/ns/m.01sqx5>
-<http://zh.dbpedia.org/resource/\u666E\u5229\u53F8\u901A>
-<http://uk.dbpedia.org/resource/Bridgestone>
-<http://tr.dbpedia.org/resource/Bridgestone>
-<http://sv.dbpedia.org/resource/Bridgestone>
-<http://sr.dbpedia.org/resource/\u0411\u0440\u0438\u045F\u0441\u0442\u043E\u043D>
-<http://sq.dbpedia.org/resource/Bridgestone>
-<http://sl.dbpedia.org/resource/Bridgestone>
-<http://sk.dbpedia.org/resource/Burid\u017Eisuton>
-<http://simple.dbpedia.org/resource/Bridgestone>
-<http://ru.dbpedia.org/resource/Bridgestone>
-<http://ro.dbpedia.org/resource/Bridgestone>
-<http://pt.dbpedia.org/resource/Bridgestone>
-<http://pl.dbpedia.org/resource/Bridgestone>
-<http://no.dbpedia.org/resource/Bridgestone>
-<http://nl.dbpedia.org/resource/Bridgestone>
-<http://ms.dbpedia.org/resource/Bridgestone>
-<http://mn.dbpedia.org/resource/\u0411\u0440\u0438\u0434\u0436\u0441\u0442\u043E\u0443\u043D>
-<http://lv.dbpedia.org/resource/Bridgestone>
-<http://lt.dbpedia.org/resource/Bridgestone>
-<http://ko.dbpedia.org/resource/\uBE0C\uB9AC\uC9C0\uC2A4\uD1A4>
-<http://ja.dbpedia.org/resource/\u30D6\u30EA\u30C2\u30B9\u30C8\u30F3>
-<http://it.dbpedia.org/resource/Bridgestone>
-<http://id.dbpedia.org/resource/Bridgestone>
-<http://hu.dbpedia.org/resource/Bridgestone>
-<http://hr.dbpedia.org/resource/Bridgestone>
-<http://he.dbpedia.org/resource/\u05D1\u05E8\u05D9\u05D3\u05D2'\u05E1\u05D8\u05D5\u05DF>
-<http://fr.dbpedia.org/resource/Bridgestone>
-<http://fi.dbpedia.org/resource/Bridgestone>
-<http://fa.dbpedia.org/resource/\u0628\u0631\u06CC\u062C\u0633\u062A\u0648\u0646>
-<http://es.dbpedia.org/resource/Bridgestone_Corporation>
-<http://de.dbpedia.org/resource/Bridgestone>
-<http://da.dbpedia.org/resource/Bridgestone>
-<http://cs.dbpedia.org/resource/Bridgestone>
-<http://ca.dbpedia.org/resource/Bridgestone>
-<http://bs.dbpedia.org/resource/Bridgestone>
-<http://bg.dbpedia.org/resource/\u0411\u0440\u0438\u0434\u0436\u0441\u0442\u043E\u0443\u043D_(\u0433\u0443\u043C\u0438)>
-<http://az.dbpedia.org/resource/Bridgestone>
-<http://wikidata.dbpedia.org/resource/Q179433>
-<http://wikidata.org/entity/Q179433>
-<http://dbpedia.org/resource/Aanayoottu>
-"Aanayoottu"
-<http://yago-knowledge.org/resource/Aanayoottu>
-<http://rdf.freebase.com/ns/m.0641fcz>
-<http://wikidata.dbpedia.org/resource/Q4661540>
-<http://wikidata.org/entity/Q4661540>
-<http://dbpedia.org/resource/Benjamin_Tasker,_Jr.>
-<http://dbpedia.org/resource/Zealous_Bates_Tower>
+@prefix bbcevent: <http://www.bbc.co.uk/ontologies/event/> .
+@prefix geo-pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix music-ont: <http://purl.org/ontology/mo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix cms: <http://www.bbc.co.uk/ontologies/cms/> .
+@prefix news: <http://www.bbc.co.uk/ontologies/news/> .
+@prefix cnews: <http://www.bbc.co.uk/ontologies/news/cnews/> .
+@prefix cconcepts: <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix dbp-prop: <http://dbpedia.org/property/> .
+@prefix geonames: <http://sws.geonames.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix geo-ont: <http://www.geonames.org/ontology#> .
+@prefix bbc-pont: <http://purl.org/ontology/po/> .
+@prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix skosCore: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbp-ont: <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix curric: <http://www.bbc.co.uk/ontologies/curriculum/> .
+@prefix cwork: <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix fb: <http://rdf.freebase.com/ns/> .
+@prefix ot: <http://www.ontotext.com/> .
+@prefix ldbcspb: <http://www.ldbcouncil.org/spb#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://www.bbc.co.uk/things/168750#id> a cwork:CreativeWork , owl:Thing ;
+	cwork:title "Laurence Zwirn inquires prodding voids notions snowshoed viewings abalones intending crunched decipher." ;
+	cwork:shortTitle " jeeringly spiffier warhorses geldings raffish gutted sitcoms tared shopped outnumbers." ;
+	cwork:aboutPrefLabel "Margherita, , Archduchess Of Austria-Este"^^xsd:string ;
+	cwork:mentionsPrefLabel "Memaliaj-Fshat"^^xsd:string ;
+	cwork:dateCreated "2011-03-07T22:02:55.516+02:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-02-18T01:43:05.066+02:00"^^xsd:dateTime ;
+	cwork:description " runts prophecy flecked goodlier refrained scruffs naughty commiserates noncontagious haler ikon's valiantly pollsters arroyos worming puddling tortoiseshells superpowers." ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/422255#id> .
+
+<http://www.bbc.co.uk/document/422255#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/168750#id> cwork:thumbnail <http://www.bbc.co.uk/thumbnail/1476823113> .
+
+<http://www.bbc.co.uk/thumbnail/1476823113> a cwork:Thumbnail .
+
+<http://www.bbc.co.uk/things/168750#id> cwork:aboutPrefLabel "Patokh Chodiev"^^xsd:string , "Emily Rios"^^xsd:string , "Dale Fuller"^^xsd:string , "Laurence Zwirn"^^xsd:string , "Elena Guro"^^xsd:string , "Catherine S. Fowler"^^xsd:string , "Siamek Saleh-Farajzadeh"^^xsd:string ;
+	a cwork:CreativeWork ;
+	cwork:aboutPrefLabel "Margherita, , Archduchess Of Austria-Este"^^xsd:string , "Patokh Chodiev"^^xsd:string , "Emily Rios"^^xsd:string , "Dale Fuller"^^xsd:string , "Laurence Zwirn"^^xsd:string , "Elena Guro"^^xsd:string , "Catherine S. Fowler"^^xsd:string , "Siamek Saleh-Farajzadeh"^^xsd:string ;
+	a cwork:BlogPost ;
+	cwork:aboutPrefLabel "Margherita, , Archduchess Of Austria-Este"^^xsd:string , "Patokh Chodiev"^^xsd:string , "Emily Rios"^^xsd:string , "Dale Fuller"^^xsd:string , "Laurence Zwirn"^^xsd:string , "Elena Guro"^^xsd:string , "Catherine S. Fowler"^^xsd:string , "Siamek Saleh-Farajzadeh"^^xsd:string .
+
+<http://www.bbc.co.uk/things/154443#id> a cwork:CreativeWork , owl:Thing ;
+	cwork:title "Key Publishing heft tranquilest barrages sunrise bats bimbo mendicants bivouacked defecting vacant." ;
+	cwork:shortTitle " oats motor prurience urged tenacity snap croissant bulking chiffon's trapper." ;
+	cwork:aboutPrefLabel "Key Publishing"^^xsd:string ;
+	cwork:mentionsPrefLabel "Majadas"^^xsd:string ;
+	cwork:dateCreated "2011-06-13T22:58:01.411+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2011-09-28T21:41:02.712+03:00"^^xsd:dateTime ;
+	cwork:description " chipped contempt commentators indispensables unions legislating avails overemphasise." ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:thumbnail <http://www.bbc.co.uk/thumbnail/1185875502> .
+
+<http://www.bbc.co.uk/thumbnail/1185875502> a cwork:Thumbnail .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Wei-Xianbei war"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Alan Eugene Magee"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Robert Walsingham"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Baoheng Wei"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Siamek Saleh-Farajzadeh"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> a cwork:CreativeWork ;
+	cwork:aboutPrefLabel "Key Publishing"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Wei-Xianbei war"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Alan Eugene Magee"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Robert Walsingham"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Baoheng Wei"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Siamek Saleh-Farajzadeh"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> a cwork:BlogPost ;
+	cwork:aboutPrefLabel "Key Publishing"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Wei-Xianbei war"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Alan Eugene Magee"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Robert Walsingham"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Baoheng Wei"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:aboutPrefLabel "Siamek Saleh-Farajzadeh"^^xsd:string ;
+	cwork:primaryFormat cwork:TextualFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> cwork:primaryFormat cwork:InteractiveFormat ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/361207#id> .
+
+<http://www.bbc.co.uk/document/361207#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361208#id> .
+
+<http://www.bbc.co.uk/document/361208#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361209#id> .
+
+<http://www.bbc.co.uk/document/361209#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/154443#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/361210#id> .
+
+<http://www.bbc.co.uk/document/361210#id> bbc:webDocumentType bbc:Mobile .

@@ -1,310 +1,263 @@
 [SubstitutionParameters]
-cwork:BlogPost;FILTER(?dateModif >= "2011-04-01T00:00:00.000"^^<http://www.w3.org/2001/XMLSchema#dateTime> && ?dateModif < "2011-04-30T23:59:59.999"^^<http://www.w3.org/2001/XMLSchema#dateTime>) .;ORDER BY ?dateModif;100
+cwork:NewsItem;FILTER(?dateCreated >= "2011-02-08T21:01:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> && ?dateCreated < "2011-02-08T22:01:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>) . 
 
 [ExpectedResultsSize]
-100
+12
+
+[ResultsAcceptType]
+application/sparql-results+xml
 
 [Results]
-2011-04-01T19:54:13.156+03:00
-2011-04-01T22:13:11.782+03:00
-2011-04-02T00:33:17.523+03:00
-2011-04-02T03:49:24.697+03:00
-2011-04-02T03:56:46.396+03:00
-2011-04-02T05:26:32.526+03:00
-2011-04-02T05:56:07.528+03:00
-2011-04-02T06:55:13.502+03:00
-2011-04-02T07:36:26.567+03:00
-2011-04-02T08:08:08.236+03:00
-2011-04-02T08:19:14.349+03:00
-2011-04-02T11:17:25.172+03:00
-2011-04-02T11:53:12.383+03:00
-2011-04-02T12:48:51.155+03:00
-2011-04-02T14:59:16.602+03:00
-2011-04-02T15:12:00.998+03:00
-2011-04-02T16:52:14.671+03:00
-2011-04-02T17:39:53.294+03:00
-2011-04-02T17:57:14.189+03:00
-2011-04-02T18:17:18.855+03:00
-2011-04-02T19:39:23.236+03:00
-2011-04-02T20:08:12.918+03:00
-2011-04-02T21:11:36.345+03:00
-2011-04-02T21:51:24.912+03:00
-2011-04-03T03:43:21.323+03:00
-2011-04-03T05:25:55.657+03:00
-2011-04-03T07:27:31.167+03:00
-2011-04-03T07:47:03.137+03:00
-2011-04-03T10:10:17.251+03:00
-2011-04-03T11:11:54.750+03:00
-2011-04-03T13:20:52.424+03:00
-2011-04-03T14:16:29.449+03:00
-2011-04-03T15:16:02.223+03:00
-2011-04-03T16:16:46.394+03:00
-2011-04-03T17:12:42.218+03:00
-2011-04-03T19:23:14.882+03:00
-2011-04-03T20:38:54.697+03:00
-2011-04-03T22:03:04.447+03:00
-2011-04-04T02:22:02.123+03:00
-2011-04-04T04:20:55.898+03:00
-2011-04-04T07:39:10.195+03:00
-2011-04-04T09:40:39.249+03:00
-2011-04-04T11:45:49.012+03:00
-2011-04-04T14:29:33.603+03:00
-2011-04-04T15:42:31.151+03:00
-2011-04-04T17:43:42.572+03:00
-2011-04-04T18:36:20.356+03:00
-2011-04-04T18:42:16.303+03:00
-2011-04-04T18:48:00.463+03:00
-2011-04-04T18:54:14.901+03:00
-2011-04-04T18:59:14.850+03:00
-2011-04-04T23:06:40.453+03:00
-2011-04-04T23:10:39.247+03:00
-2011-04-05T00:24:21.624+03:00
-2011-04-05T01:31:08.529+03:00
-2011-04-05T02:40:09.990+03:00
-2011-04-05T08:34:10.266+03:00
-2011-04-05T08:35:02.543+03:00
-2011-04-05T08:51:25.585+03:00
-2011-04-05T08:51:38.866+03:00
-2011-04-05T09:22:39.818+03:00
-2011-04-05T09:34:31.376+03:00
-2011-04-05T10:32:20.751+03:00
-2011-04-05T11:36:34.027+03:00
-2011-04-05T13:44:38.645+03:00
-2011-04-05T14:24:13.598+03:00
-2011-04-05T15:54:28.731+03:00
-2011-04-05T17:59:38.055+03:00
-2011-04-05T19:40:35.878+03:00
-2011-04-05T19:58:45.356+03:00
-2011-04-05T21:16:09.362+03:00
-2011-04-05T21:46:19.685+03:00
-2011-04-06T03:31:46.417+03:00
-2011-04-06T03:41:49.033+03:00
-2011-04-06T07:58:44.215+03:00
-2011-04-06T08:10:42.705+03:00
-2011-04-06T09:30:30.655+03:00
-2011-04-06T13:14:04.649+03:00
-2011-04-06T13:18:56.895+03:00
-2011-04-06T14:26:01.606+03:00
-2011-04-06T14:46:06.330+03:00
-2011-04-06T14:55:09.055+03:00
-2011-04-06T14:57:23.794+03:00
-2011-04-06T15:05:26.120+03:00
-2011-04-06T16:31:55.762+03:00
-2011-04-06T17:17:10.351+03:00
-2011-04-06T17:21:29.563+03:00
-2011-04-06T18:03:52.047+03:00
-2011-04-07T00:04:56.741+03:00
-2011-04-07T00:08:42.389+03:00
-2011-04-07T00:09:14.360+03:00
-2011-04-07T02:05:03.096+03:00
-2011-04-07T02:47:14.924+03:00
-2011-04-07T05:01:47.061+03:00
-2011-04-07T05:38:50.336+03:00
-2011-04-07T09:38:12.009+03:00
-2011-04-07T10:09:04.083+03:00
-2011-04-07T11:44:13.624+03:00
-2011-04-07T14:28:54.169+03:00
-2011-04-07T15:16:42.356+03:00
-<http://www.bbc.co.uk/category/Company>
-<http://www.bbc.co.uk/category/Event>
-<http://www.bbc.co.uk/category/Persons>
-<http://www.bbc.co.uk/things/1060#id>
-<http://www.bbc.co.uk/things/129#id>
-<http://www.bbc.co.uk/things/142#id>
-<http://www.bbc.co.uk/things/1485#id>
-<http://www.bbc.co.uk/things/167#id>
-<http://www.bbc.co.uk/things/188#id>
-<http://www.bbc.co.uk/things/1992#id>
-<http://www.bbc.co.uk/things/1994#id>
-<http://www.bbc.co.uk/things/20297#id>
-<http://www.bbc.co.uk/things/20396#id>
-<http://www.bbc.co.uk/things/20401#id>
-<http://www.bbc.co.uk/things/20432#id>
-<http://www.bbc.co.uk/things/20574#id>
-<http://www.bbc.co.uk/things/20965#id>
-<http://www.bbc.co.uk/things/21157#id>
-<http://www.bbc.co.uk/things/21212#id>
-<http://www.bbc.co.uk/things/21276#id>
-<http://www.bbc.co.uk/things/21282#id>
-<http://www.bbc.co.uk/things/2135#id>
-<http://www.bbc.co.uk/things/21406#id>
-<http://www.bbc.co.uk/things/21463#id>
-<http://www.bbc.co.uk/things/21491#id>
-<http://www.bbc.co.uk/things/217#id>
-<http://www.bbc.co.uk/things/21883#id>
-<http://www.bbc.co.uk/things/2191#id>
-<http://www.bbc.co.uk/things/21917#id>
-<http://www.bbc.co.uk/things/2198#id>
-<http://www.bbc.co.uk/things/22088#id>
-<http://www.bbc.co.uk/things/22094#id>
-<http://www.bbc.co.uk/things/22113#id>
-<http://www.bbc.co.uk/things/22372#id>
-<http://www.bbc.co.uk/things/22443#id>
-<http://www.bbc.co.uk/things/22721#id>
-<http://www.bbc.co.uk/things/22910#id>
-<http://www.bbc.co.uk/things/23105#id>
-<http://www.bbc.co.uk/things/23133#id>
-<http://www.bbc.co.uk/things/23263#id>
-<http://www.bbc.co.uk/things/2343#id>
-<http://www.bbc.co.uk/things/23442#id>
-<http://www.bbc.co.uk/things/2366#id>
-<http://www.bbc.co.uk/things/2392#id>
-<http://www.bbc.co.uk/things/240#id>
-<http://www.bbc.co.uk/things/24002#id>
-<http://www.bbc.co.uk/things/24532#id>
-<http://www.bbc.co.uk/things/24834#id>
-<http://www.bbc.co.uk/things/25438#id>
-<http://www.bbc.co.uk/things/25518#id>
-<http://www.bbc.co.uk/things/25788#id>
-<http://www.bbc.co.uk/things/26265#id>
-<http://www.bbc.co.uk/things/26315#id>
-<http://www.bbc.co.uk/things/26599#id>
-<http://www.bbc.co.uk/things/27645#id>
-<http://www.bbc.co.uk/things/27757#id>
-<http://www.bbc.co.uk/things/27934#id>
-<http://www.bbc.co.uk/things/27969#id>
-<http://www.bbc.co.uk/things/28542#id>
-<http://www.bbc.co.uk/things/28864#id>
-<http://www.bbc.co.uk/things/29293#id>
-<http://www.bbc.co.uk/things/30917#id>
-<http://www.bbc.co.uk/things/31963#id>
-<http://www.bbc.co.uk/things/32484#id>
-<http://www.bbc.co.uk/things/33251#id>
-<http://www.bbc.co.uk/things/33552#id>
-<http://www.bbc.co.uk/things/33773#id>
-<http://www.bbc.co.uk/things/33834#id>
-<http://www.bbc.co.uk/things/34358#id>
-<http://www.bbc.co.uk/things/34627#id>
-<http://www.bbc.co.uk/things/35633#id>
-<http://www.bbc.co.uk/things/35680#id>
-<http://www.bbc.co.uk/things/36415#id>
-<http://www.bbc.co.uk/things/36670#id>
-<http://www.bbc.co.uk/things/369#id>
-<http://www.bbc.co.uk/things/37193#id>
-<http://www.bbc.co.uk/things/37473#id>
-<http://www.bbc.co.uk/things/37641#id>
-<http://www.bbc.co.uk/things/37784#id>
-<http://www.bbc.co.uk/things/37887#id>
-<http://www.bbc.co.uk/things/38325#id>
-<http://www.bbc.co.uk/things/39021#id>
-<http://www.bbc.co.uk/things/40079#id>
-<http://www.bbc.co.uk/things/40258#id>
-<http://www.bbc.co.uk/things/40464#id>
-<http://www.bbc.co.uk/things/40586#id>
-<http://www.bbc.co.uk/things/41140#id>
-<http://www.bbc.co.uk/things/41186#id>
-<http://www.bbc.co.uk/things/41211#id>
-<http://www.bbc.co.uk/things/41329#id>
-<http://www.bbc.co.uk/things/41509#id>
-<http://www.bbc.co.uk/things/41816#id>
-<http://www.bbc.co.uk/things/41988#id>
-<http://www.bbc.co.uk/things/42259#id>
-<http://www.bbc.co.uk/things/42444#id>
-<http://www.bbc.co.uk/things/42930#id>
-<http://www.bbc.co.uk/things/43039#id>
-<http://www.bbc.co.uk/things/43467#id>
-<http://www.bbc.co.uk/things/43885#id>
-<http://www.bbc.co.uk/things/551#id>
-<http://www.bbc.co.uk/things/586#id>
-<http://www.bbc.co.uk/things/724#id>
-<http://www.bbc.co.uk/things/90#id>
-2016 Summer Olympics over commentators candidates holding entrance own sums originally uncommon century.
-Abraham Shemtov drive help browsing century millions effects town merely basic society.
-Acura candidates television carry reporting or legislation rather installed homogeneous competition.
-AGV (helmet manufacturer) function considered begins basis weak accept crown cookie practical with.
-Air Luxor historically entrance web however eligible preferences two national million person.
-Anna Maria Canopi information modern proof lies one however side view normally representative.
-Apple Corps sport need least which identifiable on this meant proof related.
-Artemis by outlet us common drive users browser bargaining and carry.
-Axceler rival sport eventual political basic 1988 another request attract carry.
-Basmachi movement name system you remotely there laws carry official sent machinery.
-Battle of Buxar commentators assembly plead about installed usage guaranteeing request cases servers.
-Battle of Chuvash Cape exist as machinery ever ticket 2006 on always show gather.
-Battle of Omosu combined need sake often visit other around out time cricket.
-Bruce Yonemoto need is south conscientious adaptability including spectators christendom democratic fact.
-Bush, Jr., Bryan Edward about political flash over been cherished basis modern viewers certain.
-Catherine Whitney candidates following enable it central request record-keeping two through hard.
-Clamp (manga artists) leading relate man refused automatically radio within professional primary electorate.
-Credit Suisse beginning participation commerce help would relate provides mediums custom enforced.
-Cross-country skiing at the 2010 Winter Olympics – Women's 4 × 5 kilometre relay without facts should its venue lies any local sprang entrance.
-D. F. Cartwright need browser viewing commerce while entirely homogeneous provides within public.
-David Court used reporting enjoyment candidates to exchange achieve achieve concerned representative.
-Dekemvriana phrase whenever paid terms address confrontation origin applicable peasants bargaining.
-Detroit Copper Mining Company of Arizona enactment competed secular settings privilege lies individual early enjoyment successful.
-Drukpa Kunley information terms little hundreds football cannot your secular custom personally.
-Edward Bowles adoption log money 23 leading rights africa pay ip commerce.
-Erdene-Ochir Ochirsuren sport address customize pope origin competition complete cricket society referring.
-First Battle of Zrínyiújvár layout 700 mentality compete viewers celibacy enactment advantage any craftsmen.
-George Emmerson well others candidates enforced successful effects final normally violent games.
-Georgi Obretenov automatically responsible linked 23 attracts came transfers partisan web-surfing end.
-Glory (kickboxing) individual's set seen 23 rather had already grounds over effective.
-Graves Battery allowing amateur identify provider object can criticism private countries record.
-Hankook Tire number main ambition kinds bidding necessarily enjoyment with seat power.
-Horus levels piece maintained global common pay-per-view machinery person linked basis.
-1964 Italian Grand Prix personally serve preclude include usage 2006 internal originally concerned including.
-2009 PTT Pattaya Women's Open negatively method site final linked integrity movement could saving problems.
-Husaberg ambition left orders approach drive internet linked realm services paid.
-Hyundai Heavy Industries lead higher related where linked settings have data sake money.
-Incentive Software easier development both complete referral representative practiced through only unfair.
-Industrial and Commercial Bank of China people cookie solely applicable territorial search can provides linked linked.
-International Transportation Service movement games at ethos celibacy turn against incur its evident.
-IOSYS on early private contribute record sake piece competitive violent visit.
-Jack Gartside the eligible any mainly on known content ever representation domain.
-Jim Sanders government electorate kinds conscientious personalize petitions after both charge identifiable.
-Joe Clay are originally pay-per-view orders provider particularly hundreds uncommon users common.
-John Francis Collin make an on alone historical does this holding us cut.
-Juanita Craft purpose cannot decided ethos christendom being historically any occasion day.
-Kiwibank until accept common permitted adoption adopted a attract criticism administration.
-Konami pressure particularly ethos cup easier representative two global incur higher.
-Lincoln Motor Company on primitive rather internal tables data search majority unfair evident.
-LiveU members analyze parliaments system experience allowing player europe visit taxes.
-Lombard Odier & Cie name higher competed national unfair particularly click assembly decided around.
-Luis Martin decided local domestic life make and final pretension over known.
-Magen David Adom money seat institution covers granting until representation concerned installed around.
-Marisara Pont Marchese ends is trends so created make after request little log.
-Marvel Comics carried conscientious reporting worldwide automatically plead display sport soon radio.
-Mary Treglia servers principle crown pages 15th identify compete when necessarily users.
-Military history of Mexico address man representation competitive ioc 15th uncommon taxes audiences of.
-Miracle Mart (Canada) games pieces started protocol around which name can nobles least.
-Missouri gubernatorial election, 1932 liability begins domestic is finally around something even competitive the.
-Motown kinds servers notion rules any content platform solely same africa.
-MTM Records state cookies function set feel combined the cut paid concerned.
-Northwest Region Music Festival normally taxes only engine their amassed feel related national browsers.
-Oxford University Press eventual fundamental use mentality by conscientious logged television although its.
-Pacific War incur number origin pits administration set supported sessions notion war.
-Palm Beach Stakes orders the sessions because times or enforced mediums following fixtures.
-Patricia McGerr have strongest cricket you achievement server pressure laws violent often.
-Penny Market considered often states come related medieval would such easier show.
-Pentax last land your who at system viewers athletes reporting very.
-Pilz (record label) are site's rights like server seat large if demolition teams.
-Pitch Black Records phrase both reason competition representative one are equal particularly meant.
-Pony Canyon web-surfing lies practical town data left spectators permitted historically main.
-PowerGrid Corporation of India representation effective ends for originated craftsmen came king nobles practiced.
-Rafael Anchia delete cut cookie popular search had any provides man administer.
-Raid on Oyster River candidates incur country exchange permitted had pits adopted refusing best.
-Reuters log notion well pages estimated visit dogma engine adopt for.
-Rhine Campaign of 1796 adoption rather settings amassed participants after to flash components ads.
-Rob Pizzola eg linked representative institutions tables pursuit usage king common advantage.
-Rockstar North your one-fifth settings most whole modern very themselves olympics such.
-Rowing at the 1908 Summer Olympics – Men's coxless pair assertion amassed of equal educated partisan life privilege practical administer.
-Saab Automobile inform normally secular sporting impact common medieval 1988 method cricket.
-Sandy Arrisol against professionally service primary assembly first amassed help one-fifth within.
-Seabourn Cruise Line users pits terms using pressure vote reason request assembly three.
-Sheila Viard bargaining decided website show after present click origin violent interesting.
-Siege of Kamakura (1333) europe effective country eg leading life little analyze pretty athletes.
-Silvina Milstein cut provide soon linked begins feel see integrity by with.
-Simon Verbeek revolves amounts something object drive public substantial hobby our search.
-Svenska Cellulosa Aktiebolaget integrity first improve adoption institutions prolonged political plead town make.
-Swedish general election, 1985 billion considered use crown person many or view platform attracts.
-Taschen television installed other ioc others church pages installed rights took.
-Tesco europe members majority should until contribute consistent pretty purely peasants.
-Third Encirclement Campaign against Jiangxi Soviet related becoming criticism flash or can come advantage unfair custom.
-Tony Choy players saving realm whole parliament nobles primitive laws viewers eg.
-Turku Air privilege own activity members layout additionally in sums feel 13th.
-Valspar seen best referral individual's of because turn dogma referring eligible.
-Vincenzo Lauro gather billion preferences phrase grassroots beyond identify purposes partisan participation.
-Viru Keemia Grupp record-keeping inform individual's least considered preferences for apartheid substantial pope.
-Walt Disney Parks and Resorts rugby entered mainly refusing began opportunity method days combined beyond.
-Wendy Gunther-Canada represented although combined broadcast web-surfing services while institution their occasion.
-WWE centuries plead bargaining internal lies levels day lead vote accept.
-Zlatko Vitez to commerce supported ads successful mainly your seen 1988 took.
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='creativeWork'/>
+		<variable name='dateCreated'/>
+		<variable name='title'/>
+		<variable name='category'/>
+		<variable name='liveCoverage'/>
+		<variable name='audience'/>
+	</head>
+	<results>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:11:34.213+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/103037#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Theodore Samuel Williams chiefs magenta managing confab dauntlessness unwed dormice debuting pinkest worsens.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:20:16.801+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/103074#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Warner Jorgenson poulticing chambers ultrasonically sufficed unequivocally cupcake toothache tutu resilient attributes.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:22:25.017+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/103077#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Julia Guillamon dithers mulches stateside drawer investigating correctest paintbrush captious boatswain hell.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:26:41.908+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/103142#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Eddie Perkins tansy intensification customising deckhand nettlesome treasurer turboprop righteousness snorkelled gloating.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:28:35.066+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/170237#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Francesc Alio decorous catches darted wooed flanneled diffraction circumcise circumspect pile solicitude.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:30:59.622+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Company</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102929#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Boeing Commercial Airplanes tweaked brevity decontaminated trillions starts irritations unveils versification decent jackrabbit.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:37:53.427+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Company</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102840#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>OpusPoint Partners desensitised crawling headquarters helix confessedly milks bearing housecoats fantasies vulnerable.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:48:38.920+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/103118#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Peter Freuchen blackjacked proponent betrayers restrooms debarking formation moles tightest dairymaids pinfeather.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:50:47.536+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/62296#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Sonia Faleiro allocate clotted castoffs brakemen stinted angry minicomputers broadside skewing forsooth.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:52:53.902+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102980#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Felix Adler woodcarvings combatants duped bobolink expertise pastry foams shaker antedates colorless.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:54:00.102+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102874#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Eric Brown funicular agglomerate goofed frizzier question subversive disfavours gleamed eminences virtues.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateCreated'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-02-08T23:57:47.751+02:00</literal>
+			</binding>
+			<binding name='category'>
+				<uri>http://www.bbc.co.uk/category/Persons</uri>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102988#id</uri>
+			</binding>
+			<binding name='title'>
+				<literal>Hans Zikeli jumbo pat footballer javelin mainstreamed downwind nozzle concern breeding stashing.</literal>
+			</binding>
+			<binding name='audience'>
+				<uri>http://www.bbc.co.uk/ontologies/creativework/NationalAudience</uri>
+			</binding>
+			<binding name='liveCoverage'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#boolean'>false</literal>
+			</binding>
+		</result>
+	</results>
+</sparql>

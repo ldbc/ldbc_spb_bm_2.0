@@ -1,30 +1,83 @@
 [SubstitutionParameters]
-<http://www.bbc.co.uk/things/25783#id>
+<http://www.bbc.co.uk/things/156046#id>
 
 [ExpectedResultsSize]
-104
+25
+
+[ResultsAcceptType]
+application/x-turtle
 
 [Results]
-<http://www.bbc.co.uk/things/25783#id>
-<http://www.bbc.co.uk/things/760822512#id>
-<http://www.bbc.co.uk/things/1949934902#id>
-<http://www.bbc.co.uk/things/2072716784#id>
-<http://www.bbc.co.uk/things/1353889013#id>
-"Mahdia campaign sums site assembly result those click because piece although realm."
-"2011-09-19T19:25:26.635+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2012-03-11T04:23:37.718+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-<http://dbpedia.org/resource/Action_of_8_January_1780>
-<http://www.bbc.co.uk/things/760822512#id>
-<http://www.bbc.co.uk/things/1949934902#id>
-<http://www.bbc.co.uk/things/2072716784#id>
-<http://www.bbc.co.uk/things/1353889013#id>
-<http://rdf.freebase.com/ns/m.0bbz4yp>
-<http://ru.dbpedia.org/resource/\u0411\u043E\u0439_8_\u044F\u043D\u0432\u0430\u0440\u044F_1780>
-<http://wikidata.dbpedia.org/resource/Q4090282>
-<http://wikidata.org/entity/Q4090282>
-<http://dbpedia.org/resource/ILYA>
-<http://dbpedia.org/resource/Don_Flanagan>
-<http://dbpedia.org/resource/Samuel_Lisle>
-<http://dbpedia.org/resource/Bryn_Griffiths_(writer)>
-<http://dbpedia.org/resource/David_Otunga>
-http://pl.dbpedia.org/resource/Wyprawa_na_Mahdij\u0119_(1087)
+@prefix bbcevent: <http://www.bbc.co.uk/ontologies/event/> .
+@prefix geo-pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix music-ont: <http://purl.org/ontology/mo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix cms: <http://www.bbc.co.uk/ontologies/cms/> .
+@prefix news: <http://www.bbc.co.uk/ontologies/news/> .
+@prefix cnews: <http://www.bbc.co.uk/ontologies/news/cnews/> .
+@prefix cconcepts: <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix dbp-prop: <http://dbpedia.org/property/> .
+@prefix geonames: <http://sws.geonames.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix geo-ont: <http://www.geonames.org/ontology#> .
+@prefix bbc-pont: <http://purl.org/ontology/po/> .
+@prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix skosCore: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbp-ont: <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix curric: <http://www.bbc.co.uk/ontologies/curriculum/> .
+@prefix cwork: <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix fb: <http://rdf.freebase.com/ns/> .
+@prefix ot: <http://www.ontotext.com/> .
+@prefix ldbcspb: <http://www.ldbcouncil.org/spb#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://www.bbc.co.uk/things/156046#id> a cwork:CreativeWork , cwork:NewsItem ;
+	cwork:title "Johann Wilhelm Baier temperas rescues barefoot metabolise dribblers exhibitor preshrank incumbents packets outbacks." ;
+	cwork:dateCreated "2011-05-05T12:28:23.060+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2011-10-12T20:48:56.610+03:00"^^xsd:dateTime ;
+	cwork:aboutPrefLabel "Francis Scarfe"^^xsd:string ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/371903#id> .
+
+<http://www.bbc.co.uk/document/371903#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/156046#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/371904#id> .
+
+<http://www.bbc.co.uk/document/371904#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/156046#id> cwork:aboutPrefLabel "Johann Wilhelm Baier"^^xsd:string ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/371903#id> .
+
+<http://www.bbc.co.uk/document/371903#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/156046#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/371904#id> .
+
+<http://www.bbc.co.uk/document/371904#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/156046#id> cwork:aboutPrefLabel "James Cardno"^^xsd:string ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/371903#id> .
+
+<http://www.bbc.co.uk/document/371903#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/156046#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/371904#id> .
+
+<http://www.bbc.co.uk/document/371904#id> bbc:webDocumentType bbc:Mobile .
+
+<http://www.bbc.co.uk/things/156046#id> cwork:aboutPrefLabel "Henry E. ONeill"^^xsd:string ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/371903#id> .
+
+<http://www.bbc.co.uk/document/371903#id> bbc:webDocumentType bbc:HighWeb .
+
+<http://www.bbc.co.uk/things/156046#id> bbc:primaryContentOf <http://www.bbc.co.uk/document/371904#id> .
+
+<http://www.bbc.co.uk/document/371904#id> bbc:webDocumentType bbc:Mobile .

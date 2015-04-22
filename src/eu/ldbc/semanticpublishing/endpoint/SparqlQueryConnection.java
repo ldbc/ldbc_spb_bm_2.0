@@ -76,8 +76,8 @@ public class SparqlQueryConnection extends HttpConnectionBase {
 				httpUrlConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
 //				httpUrlConnection.setRequestProperty("Content-Type", "application/sparql-query");
 				if (graphQuery) {
-					httpUrlConnection.setRequestProperty("Accept", "application/rdf+xml");
-//					httpUrlConnection.setRequestProperty("Accept", "application/x-turtle");
+//					httpUrlConnection.setRequestProperty("Accept", "application/rdf+xml");
+					httpUrlConnection.setRequestProperty("Accept", "application/x-turtle");
 				} else {
 					httpUrlConnection.setRequestProperty("Accept", "application/sparql-results+xml");
 				}

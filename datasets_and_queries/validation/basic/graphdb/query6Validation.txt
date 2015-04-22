@@ -1,82 +1,4493 @@
 [SubstitutionParameters]
-51.99122361432938;-0.7158913332867156;0.2166609199738325;ORDER BY DESC(?dateModified);50
+41.41115553115836;-8.558856039402476;0.2273369878599233
 
 [ExpectedResultsSize]
-25
+263
+
+[ResultsAcceptType]
+application/sparql-results+xml
 
 [Results]
-<http://sws.geonames.org/7296471/>
-<http://sws.geonames.org/2653193/>
-<http://sws.geonames.org/2639371/>
-<http://sws.geonames.org/2633574/>
-<http://sws.geonames.org/7296588/>
-<http://sws.geonames.org/6946805/>
-<http://sws.geonames.org/7295591/>
-<http://sws.geonames.org/2645800/>
-<http://sws.geonames.org/2644826/>
-<http://sws.geonames.org/2652556/>
-<http://sws.geonames.org/2653280/>
-<http://sws.geonames.org/2640304/>
-<http://sws.geonames.org/2647388/>
-<http://sws.geonames.org/2649552/>
-<http://sws.geonames.org/2656856/>
-<http://sws.geonames.org/7292966/>
-<http://sws.geonames.org/6946715/>
-<http://sws.geonames.org/2641383/>
-<http://sws.geonames.org/7299213/>
-<http://sws.geonames.org/2635260/>
-<http://sws.geonames.org/6946887/>
-<http://sws.geonames.org/6946915/>
-<http://sws.geonames.org/7296592/>
-<http://sws.geonames.org/6946806/>
-<http://sws.geonames.org/2636149/>
-<http://www.bbc.co.uk/things/27058#id>
-<http://www.bbc.co.uk/things/15623#id>
-<http://www.bbc.co.uk/things/22049#id>
-<http://www.bbc.co.uk/things/17759#id>
-<http://www.bbc.co.uk/things/23212#id>
-<http://www.bbc.co.uk/things/2868#id>
-<http://www.bbc.co.uk/things/3044#id>
-<http://www.bbc.co.uk/things/19817#id>
-<http://www.bbc.co.uk/things/20242#id>
-<http://www.bbc.co.uk/things/4172#id>
-<http://www.bbc.co.uk/things/24650#id>
-<http://www.bbc.co.uk/things/24664#id>
-<http://www.bbc.co.uk/things/29199#id>
-<http://www.bbc.co.uk/things/30829#id>
-<http://www.bbc.co.uk/things/34211#id>
-<http://www.bbc.co.uk/things/5764#id>
-<http://www.bbc.co.uk/things/6414#id>
-<http://www.bbc.co.uk/things/7184#id>
-<http://www.bbc.co.uk/things/34377#id>
-<http://www.bbc.co.uk/things/36581#id>
-<http://www.bbc.co.uk/things/37129#id>
-<http://www.bbc.co.uk/things/38791#id>
-<http://www.bbc.co.uk/things/8082#id>
-<http://www.bbc.co.uk/things/39255#id>
-<http://www.bbc.co.uk/things/43689#id>
-2011-06-17T08:11:30.599+03:00
-2012-01-08T02:38:19.893+02:00
-2012-01-02T10:58:18.209+02:00
-2011-09-11T10:01:58.758+03:00
-2011-08-09T11:35:02.078+03:00
-2012-01-31T04:51:04.606+02:00
-2011-04-27T18:44:14.768+03:00
-2011-07-09T17:44:36.108+03:00
-2012-07-03T06:30:40.783+03:00
-2012-03-19T09:52:28.983+02:00
-2011-08-09T21:29:59.045+03:00
-2011-10-07T03:16:33.186+03:00
-2011-11-06T22:56:17.113+02:00
-2011-09-25T08:05:37.903+03:00
-2012-05-18T05:28:24.410+03:00
-2011-11-30T12:24:58.625+02:00
-2012-05-17T01:19:51.121+03:00
-2011-07-23T15:22:06.615+03:00
-2011-11-15T11:22:50.127+02:00
-2011-04-08T23:41:33.103+03:00
-2012-04-10T23:56:47.273+03:00
-2011-07-18T05:27:39.057+03:00
-2011-12-27T10:32:00.432+02:00
-2012-09-14T08:24:45.579+03:00
-2012-09-12T16:20:47.351+03:00
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='creativeWork'/>
+		<variable name='locationName'/>
+		<variable name='lat'/>
+		<variable name='long'/>
+		<variable name='dateModified'/>
+	</head>
+	<results>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-21T06:08:06.308+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/64626#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Distrito de Braga</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.41667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.58333</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-13T21:05:31.638+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/78564#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Santo Amaro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.78333</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.6</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-08T23:01:22.510+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/185643#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Santo Amaro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.78333</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.6</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-03T04:01:06.109+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/160707#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Junqueira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.73333</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.35</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-10-22T12:11:41.945+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/44558#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Louro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.53333</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.43333</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-29T07:09:22.318+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/140277#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Formiga</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.53333</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.2</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-05T11:26:04.492+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/156610#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Capa Rosa</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.55</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.46667</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-28T14:23:03.730+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/103040#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rua Nova</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.36667</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-09T17:44:19.866+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/109681#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rua Nova</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.36667</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-15T07:44:33.594+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/75693#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Infesta</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.6</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.2</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-01T00:02:23.897+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/184782#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>São Tiago de Custoias</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.63333</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.2</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-17T19:52:54.347+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/81004#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Paço</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.61667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.56667</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-04T10:34:23.345+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/53703#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Lagoa</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.33333</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-10T14:17:46.198+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/4093#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cerro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.4</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-07T23:12:55.365+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/147075#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cerro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.4</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-12T22:13:39.183+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/13345#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Praça</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.41667</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-06T16:08:29.007+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102267#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Seixo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.41667</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-11T11:24:24.503+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/170397#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Aguiar</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.2</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-29T20:25:33.524+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/9907#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vila Nova de Sande</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.35</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.46667</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-25T06:43:54.560+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/5459#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Chão de Bouças</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36667</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.4</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-17T13:47:18.352+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/149437#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vandoma</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40692</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.19173</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-06T02:17:59.856+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/29465#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Baltar</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.37344</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.18512</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-04-18T16:32:44.651+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/145870#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Moreira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.64788</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.24756</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-07T23:37:13.427+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/155380#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sardoal</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.69839</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.19674</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-09T07:11:46.125+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/106152#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Leça da Palmeira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.70027</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.191</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-11-21T05:32:08.456+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/167631#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Amorosa</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.69766</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.20446</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-22T06:56:46.505+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/85742#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Avilhoso</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7023</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.24896</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-28T16:37:28.989+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/41247#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Aveleda</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.69254</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.2653</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-08T13:02:53.171+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/64377#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Gondivinho</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.64424</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.21387</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-19T08:36:11.241+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/71897#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Espozade de Cima</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.65035</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.21364</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-30T06:47:03.763+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102400#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>São Gens</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.64775</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.1902</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-02T19:56:06.240+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/85500#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>São Gens</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.64775</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.1902</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-21T01:02:20.987+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/51634#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sendim</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66837</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.194</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-16T08:51:35.755+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/57058#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vila Nova de Telha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66587</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.25677</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-12T05:44:03.773+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/175848#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Prozela</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.67542</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.24654</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-02T11:22:07.350+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/112762#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rapadas</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.53778</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.222</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-22T05:12:37.319+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/95550#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ardegães</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56638</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.22633</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-23T19:16:48.646+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/58508#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Barca</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.61484</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.24668</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-10-29T23:05:36.614+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/75475#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Catasol</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.61637</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.22583</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-09T12:40:55.551+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/30171#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Monte das Cruzes</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.58497</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.21855</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-02T07:44:02.758+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/164942#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vila Cova de Carros</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36805</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.2082</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-26T13:57:50.145+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/145049#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Outeiro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.54044</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.19027</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-16T01:55:13.669+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/36040#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Valongo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.51027</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.19501</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-30T15:44:38.546+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/85344#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vila Nova</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.39167</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.18507</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-23T08:02:49.376+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102865#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Madalena</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.33451</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.21616</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-12T04:45:42.274+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/116612#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sambade</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.33803</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.19416</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-29T16:21:19.684+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/42405#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Serra de São Tiago</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.33573</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.25232</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-03T22:09:17.224+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/81966#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Água Longa</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.49285</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.24972</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-13T09:11:50.429+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/51231#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Baguim</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.53234</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.24135</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-04T11:57:16.706+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/113858#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Baguim</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.53234</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.24135</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-19T17:43:58.693+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/64645#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Lordelo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.38016</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.37411</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-02T05:30:07.635+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/136382#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Argivai</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.72987</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.37744</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-02T00:32:46.848+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/73569#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sequeiro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.45468</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.36613</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-11T22:34:40.251+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/81024#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Campo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36128</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.3617</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-10-14T12:01:42.579+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/111449#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Campo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36128</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.3617</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-20T19:52:58.330+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/157129#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Virais</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.38522</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.36205</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-27T05:36:54.307+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/103385#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ribeirão</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56774</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.36081</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-18T01:21:34.896+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/138207#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Caniços</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.43429</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.3655</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-07T11:09:47.664+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/149646#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Caldas da Saúde</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.4824</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.36716</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-14T05:48:52.456+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/56115#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Fradelos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.59887</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.36846</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-03T09:34:33.351+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/178435#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Caxinas</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.75918</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.36708</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-01T23:51:47.871+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/154137#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Outeiro Maior</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66271</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.37045</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-13T00:46:43.237+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/189104#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rebordões</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.42355</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.35509</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-25T04:06:22.336+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/18877#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ferreiro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.63243</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.35549</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-27T07:55:42.426+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/80615#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Negrelos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40145</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.34946</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-12T17:03:22.524+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/106797#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Negrelos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40145</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.34946</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-11-30T07:41:51.496+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/91406#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Azurara</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.73722</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.3484</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-30T22:14:31.269+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/11283#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Roriz</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.37966</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.34842</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-02T07:12:11.679+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/157405#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vairão</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66657</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.3329</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-24T18:14:16.958+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/52673#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Macieira da Maia</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66516</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.34161</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-08T09:14:04.789+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/130828#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vilarinho</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.67673</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.34041</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-10T16:36:24.159+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/129220#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Azevedo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.63638</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.3395</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-05T02:05:27.291+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/67246#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Bougado</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.5518</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.33979</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-13T17:11:17.447+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/159574#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Trofa</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.5596</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.33729</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-30T09:53:14.401+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/170187#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Maganha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.60355</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.33608</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-04T09:39:28.790+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/63054#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Arco</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.48338</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.33914</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-21T19:32:48.973+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/50074#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>São Tiago da Carreira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.46901</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.30039</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-20T18:27:19.704+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/109094#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Guimarei</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.48694</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.30344</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-27T06:10:59.387+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/38105#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Gafa</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.73637</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.31347</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-19T00:45:27.039+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/170867#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cidoi</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.61566</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.31779</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-26T05:17:08.283+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/136106#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mosteirô</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.5523</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.32604</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-24T07:05:31.294+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/81750#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cidai</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.5891</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.3273</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-12-01T11:11:26.066+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/135273#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Redundo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40363</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.31715</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-16T14:45:09.826+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/34638#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Eiriz</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.38121</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.30624</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-06T14:53:21.055+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/37416#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Santa Luzia</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.42238</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.31905</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-20T10:40:54.144+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/160441#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Freamunde</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.33533</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.28835</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-28T23:52:45.425+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/149337#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Meixomil</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.38531</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.28712</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-03-02T23:00:09.940+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/182416#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Meixomil</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.38531</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.28712</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-11T20:45:52.190+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/32785#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rio da Gândara</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.72476</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.30182</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-23T12:32:44.534+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/158701#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Fonte Leite</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.54285</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.27657</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-16T03:55:48.108+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/93128#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cidadelha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.58963</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.27314</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-11-26T07:56:45.408+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/110031#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cidadelha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.58963</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.27314</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-07T04:25:34.264+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/181283#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mosteiró</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66827</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.28073</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-04T01:46:13.949+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/69294#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vilar do Pinheiro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66886</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.26978</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-01T05:23:08.047+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/64607#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Penamaior</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.41487</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.29004</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-11T00:54:20.810+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/74371#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Igreja de Santa Eulália de Lamelas</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.47391</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.29019</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-03-10T16:18:21.424+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/184581#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cemitério de Lamelas</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.47497</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.28997</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-01T07:44:52.304+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/89136#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Arieira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.63976</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5905</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-12T12:13:31.991+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/137317#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Quintiães</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.64974</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.6183</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-19T22:53:46.720+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/139996#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Estrada</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.72158</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.61334</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-30T04:14:46.288+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/101585#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Belinho</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.78242</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.59021</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-04T04:32:48.572+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/142538#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Antas</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.76644</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.6022</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-26T22:10:46.219+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/135030#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Alheira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56402</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.61221</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-17T22:03:10.407+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/1189#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Madorra</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.72675</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.61341</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-28T13:33:54.786+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102066#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Monte Branco</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.73672</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.61659</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-29T05:35:33.330+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/44547#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Monte Branco</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.73672</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.61659</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-04-30T05:30:55.106+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/45977#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Espinho</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36194</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.54802</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-28T13:16:50.753+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/116924#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Nogueiro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.38573</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.55166</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-19T12:56:41.774+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/67102#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Bom Jesus do Monte</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.377</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.55468</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-13T14:57:31.774+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/180576#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mina dos Orphaons</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40299</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.56998</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-24T00:20:19.554+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/71328#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sete Fontes</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40403</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.56898</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-10T07:50:53.912+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/16365#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mina do Dr Alvim em cima</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40408</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.56924</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-16T23:20:24.077+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/93220#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mina Preta</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40406</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.56875</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-09-05T14:18:53.706+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/74290#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mina Preta</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40406</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.56875</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-16T22:49:17.716+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/102279#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Real</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.64734</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.56886</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-25T16:47:29.983+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/44208#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vila Chã</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.74768</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5744</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-21T21:03:10.034+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/156395#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vila Chã</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.74768</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5744</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-10T11:18:26.216+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/56500#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Prestar</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.71663</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48444</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-31T08:41:27.513+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/141119#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Prestar</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.71663</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48444</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-24T14:43:26.286+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/147028#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Braga</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.42005</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.55032</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-11T18:18:22.359+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/72379#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Areias</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.54084</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5638</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-26T11:51:39.720+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/23508#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Marinhas</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.78297</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.55906</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-22T01:37:35.764+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/29017#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rua</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.49396</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.567</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-23T06:51:27.598+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/66224#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Quintão</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.52304</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.57339</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-15T18:25:09.427+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/37228#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Quintão</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.52304</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.57339</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-22T15:15:48.636+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/95286#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Outeiro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.77481</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.55119</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-28T22:05:28.627+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/130452#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mouta</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.6073</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5704</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-24T22:24:00.916+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/42334#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Pousa</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.5199</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5503</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-21T18:28:24.621+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/190224#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cancela</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.45075</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.55426</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-15T04:52:49.048+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/76659#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Merelim</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.46516</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.58802</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-29T10:51:14.688+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/143965#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Fontainha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.46595</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.59948</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-11-22T19:00:56.940+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/91557#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Balbeira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.3889</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.59225</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-30T01:57:55.330+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/57685#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Carapeços</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.63277</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.58466</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-04T13:53:32.077+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/57275#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Lajes</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.34973</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.60699</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-04-03T21:58:13.237+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/61519#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ortigueira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40986</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.57985</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-13T05:21:06.540+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/26849#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Pousada</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.34242</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.60026</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-13T04:27:51.798+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/168632#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vasconcelos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.35141</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.62448</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-07T07:46:05.530+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/150233#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Navarra</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.38007</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.60735</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-21T03:38:20.921+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/25630#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Lago</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.41258</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.62148</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-28T09:15:49.808+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/17520#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Barreiros</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.39974</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.61753</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-11T01:23:54.863+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/112986#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Soutelo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.43956</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.61512</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-23T21:13:25.688+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/156391#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Soutelo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.43956</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.61512</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-16T04:01:51.654+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/106690#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Parada de Gatim</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.54424</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.6273</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-04T05:49:58.302+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/136990#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Igreja Nova</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.54377</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.62416</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-16T22:42:43.330+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/85618#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Febros</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.472</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.62226</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-16T16:36:03.385+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/126283#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ermida</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.52031</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.61165</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-25T15:00:16.044+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/133720#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Eido</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.5474</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.63666</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-08T08:06:54.370+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/19147#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cova</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.41373</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.63607</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-05T23:26:05.347+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/136493#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cova</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.41373</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.63607</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-23T17:31:20.909+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/72125#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Albagado</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.61563</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.63587</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-02T14:26:52.789+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/84265#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Figueiredo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.33708</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.63225</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-31T23:41:27.283+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/98636#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Lugar do Monte</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.52516</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.63516</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-12T08:57:54.537+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/148081#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ponte de Anhel</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56856</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.62831</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-10T05:54:31.058+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/173417#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ponte de Anhel</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56856</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.62831</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-01-15T01:39:39.496+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/156961#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Aguiar</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.65272</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.62899</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-04T23:58:34.064+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/39786#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Igreja</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7702</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48467</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-14T15:48:19.151+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/164703#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Silgueiros</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.63028</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48463</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-18T02:15:50.437+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/54806#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ribeira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.3577</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.4885</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-18T09:34:00.903+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/78515#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Costa</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.50182</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48886</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-10-04T17:24:03.974+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/12245#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sande</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.3658</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48444</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-06T05:17:42.142+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/21676#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Matelinho</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.73628</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49856</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-02T01:10:56.441+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/56676#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Matelinho</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.73628</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49856</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-10T00:46:56.401+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/82007#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cardal</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.66327</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49705</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-29T15:08:26.223+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/99345#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Outinho</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.38081</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.499</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-26T15:36:12.184+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/23365#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Balazar</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.62734</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.40942</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-07T04:04:22.136+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/29202#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Candoso</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.33214</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.42205</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-01T00:15:56.303+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/179501#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Espinhal</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.76453</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.4301</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-09T03:44:56.518+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/147998#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vale</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.48121</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.42674</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-26T16:19:41.505+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/11012#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cavalões</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56268</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.42661</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-20T22:37:19.799+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/176498#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Navais</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7631</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.43287</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-02T18:59:55.163+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/111699#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Poça do Monte</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.45069</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.41828</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-24T22:52:36.486+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/132259#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Souto</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.59092</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.42506</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-09-29T13:48:51.494+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/168697#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Abelheiros</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7134</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48268</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-04-11T16:09:51.566+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/65294#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Chorente</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.60813</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.45998</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-26T07:29:03.400+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/6943#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Chorente</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.60813</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.45998</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-05T13:43:28.392+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/97506#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Gueral</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.62946</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.45859</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-20T18:06:55.795+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/1222#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Paradela</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.68038</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.46216</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-24T11:28:35.182+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/52814#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Além</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.34655</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.46528</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-09T16:40:45.657+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/21901#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Oleiros</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.40073</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.46187</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-09T18:23:09.093+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/89929#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vale</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.4739</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.453</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-21T13:53:00.911+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/121595#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sezures</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.47463</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.46818</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-08-05T01:58:44.458+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/183536#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sezures</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.47463</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.46818</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-08T15:40:37.331+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/43973#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Monte de Luvar</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.55869</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.45713</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-11T10:08:01.254+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/40678#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Tebosa</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.48399</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48252</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-27T19:37:47.409+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/177587#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Fim de Vila</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.67644</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48199</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-20T18:17:29.285+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/35603#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rua Nova</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.63276</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.47569</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-07T01:38:25.455+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/11291#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Quintãis</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.39768</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.47157</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-03-14T22:37:22.568+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/15862#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mandim</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.75627</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.40837</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-24T04:24:49.255+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/53108#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Serzedelo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36888</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.40128</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-23T20:11:20.073+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/160343#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Bairro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.42479</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.37514</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-10T13:31:24.178+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/188466#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Bairro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.42479</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.37514</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-08T06:55:56.173+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/4996#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vilar de Matos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.68717</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.38596</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-25T04:50:04.725+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/50441#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Touguinha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.71608</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.3748</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-13T19:41:58.336+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/104077#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Junqueira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.67817</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.38318</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-23T23:53:43.899+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/48903#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Seide</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.47211</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.39884</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-17T08:57:44.823+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/9900#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Seide</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.47211</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.39884</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-11T03:41:46.374+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/35429#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vila Verde</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.71766</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.39023</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-04-21T05:24:11.538+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/65595#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Giesteira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.74461</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.3911</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-30T11:58:49.688+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/23463#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ribainho</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.52066</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.39346</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-15T18:00:58.384+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/81714#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Paredes</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7379</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.38887</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-20T23:22:34.186+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/5495#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Calves</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7296</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.38868</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-02T09:49:19.970+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/93604#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Bente</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.45235</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.388</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-12T14:26:39.154+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/114200#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Estela</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.75166</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.44944</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-05T05:01:21.895+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/123528#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Grimancelos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.58371</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.44524</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-03-11T23:11:04.357+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/144213#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cruz</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.4974</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.44246</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-10-22T13:01:22.621+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/43884#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Pego</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.51582</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.4383</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-24T15:43:07.470+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/104581#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Pousada</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.48735</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.43413</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-20T11:54:58.772+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/129163#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Freião</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.59113</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.54505</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-10T04:56:58.230+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/81660#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mouta</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.42936</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.53578</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-30T23:57:15.976+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/183910#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Barcelos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.61505</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.53876</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-09-22T18:16:39.219+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/163256#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Gondizalves</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.4557</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.54158</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-28T21:09:15.509+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/53198#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Agrelo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.41066</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52938</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-18T11:50:22.151+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/162754#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Riquinha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.5227</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.53224</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-10T21:31:50.813+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/32386#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Arranhadouro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.46888</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52857</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-20T01:38:41.921+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/22955#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Gandra</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.76078</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52487</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-27T19:56:48.608+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/103550#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mariz</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.67081</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52823</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-29T08:26:28.366+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/188353#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Mariz</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.67081</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52823</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-29T21:21:04.299+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/106955#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sequeira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.47205</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52696</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-23T19:05:25.424+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/59015#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sequeira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.47205</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52696</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-25T08:40:30.774+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/132609#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vila Frescainha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.6461</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52779</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-13T08:55:45.171+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/82440#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rio Covo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.59705</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52739</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-14T15:48:16.563+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/176058#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rio Covo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.59705</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52739</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-19T05:47:37.805+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/147236#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Barcelinhos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.62138</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52656</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-11T04:25:32.477+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/127756#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Adães</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.56142</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.52824</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-24T00:37:37.345+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/118249#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Caldas</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.4715</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5346</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-07-19T08:58:29.959+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/172217#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Caldas</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.4715</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5346</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-04-08T01:56:34.372+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/161158#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Esporões</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.41729</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.51006</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-14T03:16:38.092+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/91387#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Fornelos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.67708</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.51792</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-11-09T01:12:41.602+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/78100#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Monte</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.6878</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.51316</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-20T02:22:40.481+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/182765#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Vila Seca</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.68397</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.51304</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-23T12:26:33.570+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/143508#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Gilmonde</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.67456</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.51227</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-16T01:16:57.757+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/31282#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Fão</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7755</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.51412</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-12T13:39:44.630+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/118623#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Além</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.41968</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50789</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-06T08:34:00.335+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/101122#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Pedreiras</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7612</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50838</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-01-13T12:44:39.903+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/59987#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>São Miguel</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.43721</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50816</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-07-17T14:46:43.764+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/75650#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>São Miguel</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.43721</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50816</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-28T04:49:54.581+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/29523#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>São Miguel</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.43721</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50816</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-28T08:21:41.103+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/95874#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Justamonte</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.53366</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50578</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-30T17:06:32.321+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/36453#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Justamonte</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.53366</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50578</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-09T02:21:11.754+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/70502#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Justamonte</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.53366</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50578</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-10-12T03:17:37.628+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/87417#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Justamonte</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.53366</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50578</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-30T02:17:36.630+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/35118#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sande</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.3629</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50432</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-10-17T05:46:04.651+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/27916#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Sequeade</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.54427</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.50419</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-15T22:59:27.469+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/158941#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Rocha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36997</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49581</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-09-07T23:28:16.976+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/64030#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Torre</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.48242</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49587</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-17T19:35:46.848+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/109063#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Torre</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.48242</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49587</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-20T09:01:50.827+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/115085#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Varziela</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.62033</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49692</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-26T11:48:42.981+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/14382#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cunha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.5107</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49061</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-06T08:07:34.801+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/166048#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Cunha</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.5107</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49061</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-17T05:21:45.886+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/106545#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Remelhe</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.60444</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.4908</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-16T09:27:48.027+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/180106#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Boza</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.76481</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.48958</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-04T16:14:09.290+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/38432#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Malhadouro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.65495</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49563</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-10-24T09:47:27.432+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/131776#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Malhadouro</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.65495</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49563</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-05-16T13:00:52.629+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/80844#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Paredes</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7553</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49273</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-06-29T00:21:55.273+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/6206#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Paredes</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.7553</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49273</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-04-16T21:46:06.559+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/147556#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Pereira</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.62663</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.4946</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-15T11:27:31.307+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/127591#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Lordelo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.69038</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.49322</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-03-14T11:06:47.794+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/65621#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Longos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36385</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5202</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2011-12-14T04:59:23.277+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/90261#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Longos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36385</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5202</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-05-05T03:26:45.175+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/129916#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Longos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36385</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5202</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-08-21T08:44:01.215+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/172563#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Longos</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.36385</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.5202</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-06-01T21:11:20.477+03:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/180617#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Ponte Falcão</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.4357</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.54277</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='dateModified'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#dateTime'>2012-02-25T19:24:04.242+02:00</literal>
+			</binding>
+			<binding name='creativeWork'>
+				<uri>http://www.bbc.co.uk/things/117898#id</uri>
+			</binding>
+			<binding name='locationName'>
+				<literal>Samo</literal>
+			</binding>
+			<binding name='long'>
+				<literal>-8.71103</literal>
+			</binding>
+			<binding name='lat'>
+				<literal>41.54288</literal>
+			</binding>
+		</result>
+	</results>
+</sparql>

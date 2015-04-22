@@ -95,6 +95,7 @@ public class Query6Template extends MustacheTemplate implements SubstitutionPara
 	/**
 	 * A method for replacing mustache template : {{{orderBy}}}
 	 */			
+/*	 
 	public String orderBy() {
 		if (substitutionParameters != null) {
 			return substitutionParameters[parameterIndex++];
@@ -102,10 +103,12 @@ public class Query6Template extends MustacheTemplate implements SubstitutionPara
 		
 		return "";
 	}	
+*/	
 	
 	/**
 	 * A method for replacing mustache template : {{{randomLimit}}}
 	 */			
+/*	 
 	public String randomLimit() {
 		if (substitutionParameters != null) {
 			return substitutionParameters[parameterIndex++];
@@ -113,6 +116,7 @@ public class Query6Template extends MustacheTemplate implements SubstitutionPara
 		
 		return "100";
 	}	
+*/
 	
 	@Override
 	public String generateSubstitutionParameters(BufferedWriter bw, int amount) throws IOException {
@@ -125,10 +129,10 @@ public class Query6Template extends MustacheTemplate implements SubstitutionPara
 			sb.append(refLongtitude());
 			sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
 			sb.append(refDeviation());
-			sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
-			sb.append(orderBy());			
-			sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
-			sb.append(randomLimit());
+//			sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
+//			sb.append(orderBy());			
+//			sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
+//			sb.append(randomLimit());
 			sb.append("\n");
 			bw.write(sb.toString());
 		}

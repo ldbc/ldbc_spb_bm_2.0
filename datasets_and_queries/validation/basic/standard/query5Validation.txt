@@ -2,77 +2,2914 @@
 cwork:BlogPost;cwork:InternationalAudience;"2011-06-23T11:44:04Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;"2011-06-24T00:44:04Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>
 
 [ExpectedResultsSize]
-354
+362
+
+[ResultsAcceptType]
+application/sparql-results+xml
 
 [Results]
-4
-2
-1
-1936 Soviet Cup Final
-MBC Plus Media
-Herbalife
-ThinkFilm
-Eat'n Park
-Sacrifice (2014)
-Athletics at the 1920 Summer Olympics � Men's marathon
-2007 Recopa Sudamericana
-Erin Good
-Kent Kitzmann
-Kevin Mallon
-none
-Harman International Industries
-Battle of Fredericksburg
-2011 Guzzini Challenger
-Kohei Shimizu
-James Wellwood Johnston
-Robert Spencer
-Marcus Annius Verus
-Julie Goiorani
-Dongfeng Motor
-1HDTV
-Ittefaq Group
-Tamil Nadu Magnesite Limited
-Siege of Fort Zeelandia
-Feroze Gandhi
-Christopher Morse
-Marian Salzman
-Abdelkader Ouaraghli
-Battle of Port Moresby
-Kamel Ouejdide
-Rosario Silva de Lapuerta
-Qeshm Airlines
-Cowley Club
-Highland Capital Management
-Alberic Of Monte Cassino
-Mats Gren
-Steve Green
-Nestor Plasencia
-Charles Janssens
-Jacob Jansz. van Velsen
-LegalShield
-Supermono studios
-Alan Jerrard
-William Cochrane
-Joshua C. Stoddard
-Maarten Arens
-Olaf Hajek
-David Stewart
-Lionel Wendt
-Isfin (Islamic finance lawyers)
-Titanic Brewery
-Midtfyns Festival
-Battle of Placentia (271)
-Mark Keil
-Scott Neal
-Kid Lavigne
-Kathrin Entner
-WY Records
-Inside Edge
-Brazilian general election, 2006
-Freddie Starr
-Arlen Realty and Development Corporation
-Call4care
-NCB Group
-Ballaban's campaign of 1465
-Amir Attaran
-Curtis Wright
+<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	<head>
+		<variable name='topicLabel'/>
+		<variable name='cnt'/>
+	</head>
+	<results>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>8</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>BankUnited</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>6</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Newfund</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Israel Aerospace Industries</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>TW Steel</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>4</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Dropmysite</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Zeneca</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>3</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Pier Paolo Scarrone</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Seoul Metro</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Margaret Athy</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ty Burrell</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>2</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jarrod Mullen</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Manuela Maleeva</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ingrid Noll</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Randy Lerner</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alimansi Kadogo</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Eddie Sanchez</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Davey Armstrong</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Dianne Jackson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jimmy Haggerty</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Robert Henderson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Beat Okle</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Georg Seelmann</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Amar Mitra</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Dubovo-Staroye</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Mohammed Jamal Khalifa</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Arthur James Armstrong</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Francis Kenny</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alik Gunashian</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Harold Harding</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Aaron Doran</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Oliver Fiennes</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ahmad Mohamed Ibrahim</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Henry Evans</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Korenmolen Waardenburg</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alpha Video</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Adi Roche</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Samuel Strashun</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ezenwa Otorogu</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Abersfeld</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Harvey Slocum</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jean-Marie Defrance</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Falka</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Pakistan International Airlines</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ann Gloag</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Aslan Kitovich Tkhakushinov</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Myron Just</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Claude Reeds</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Joan Orie Melvin</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alan R. Price</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>John Dallas</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Holkko</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>John Connolly</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Bob Gillespie</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Arthur Schmidt</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Hans Wunderlich</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Keiji Oyama</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ensenada de Ceuta</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Metropolitan Handicap</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Paul N. Domke</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Janez Krstnik Dolar</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>(James) Richard Holt</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Vonleh</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Michael Kearns</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Vasile Aftenie</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Áno Potamiá</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Daniel Mannix</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Chynna Ortaleza</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Anne Hankford</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Daniel Greenstein</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Rich Szaro</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Phil Dyer</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Mikiko Claire Ponczeck</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Nashatar Singh Sidhu</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Eeuwhoek</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Tom Bower</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Franziska Stading</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Vivian M. Lewis</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ófærugil</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Larry Pina</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Larry Crane</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Samuel Ward</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Kostas Kotsaridis</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ysaora Thibus</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ákra Varkó</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Wych Kaosayananda</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Azri Iskandar</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Cheslé</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Sobótka</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Abraham Robertson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Orson Ferguson Whitney</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Dibang</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Palfinger</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Amir Abedzadeh</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ed Janiszewski</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Vranja Ljut</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>FirstEnergy</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Kirkbean</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Tom Allen</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jeff Hogg</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>William T. Dzurilla</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ian McAllister</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ronald Smith</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Henry Salt</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Paul Lindblad</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Louis</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Claude Raymond Welch</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Emmanuel Omoyinmi</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Bruce Greig</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Mohamad Bazzi</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>James Hughes</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Edwin E. Kintner</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ali Kiaei</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Langley Green</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Kousuke Atari</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>North, Roger North, 2nd Baron</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alex Cheatle</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Selaya</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Vilhelm Carlberg</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Rachel Whiteread</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Sulej</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Kamal Abdulsalam</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Robert D. Cherry</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Laguna de Negrillos</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Nordson Corporation</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Colin Starnes</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Antal Csengery</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Empress Xiaoxianchun</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Spencer U Pickering</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Marcos Gomes De Araujo</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Lyduvėnai</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Dodington</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Thomas Gibbs</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Fred Gardner</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Yumiko Ishiguro</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Edelweiler</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Henry Edward Manning Douglas</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ewen Whitaker</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Herbert Stanley Morris</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Franklin Burroughs</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Isabella Gordon</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Felipe Dionisio Bracamonte</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Opoczki</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Tracy Grimshaw</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Abraham Keteltas</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Charlie McNeil</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Thami Mdaghri</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Isaako Aaitui</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>John Schweder</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alavaara</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Bilyal Makhov</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Sandra Kanck</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Muhammad Rais</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Samuel Kaphuka</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Gilean McVean</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Charles Lepeintre</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ragnar Vold</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Lewis C. Laylin</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Hohenbostel</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Graeme McDowell</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Runkle</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Daniel Anderson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Christian Rudolph</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Reem Riyashi</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Roman Tuzovskiy</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Mario Mataja</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Gehad Grisha</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Hossein Tayyebi</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Radimovice</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Moo-Hyun Roh</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>David Liss</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Robert Illes</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Maarten van der Goes van Dirxland</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Samuel H Kellogg</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Igor Torgov</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jacques Martin</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Viladamat</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jane Wallace</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ian Reddington</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Al Charron</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Terry Roberts</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Chapman Freeman</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Mark Cox AKA Jade Arcade</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Koppelman</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Hank Bjorklund</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Bob Barnes</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ryan Allis</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Leo Quinteros</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>San Benedetto</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Washington State Senate elections, 2012</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Birgitta Ahlqvist</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Carolyn Anne Jakobsen</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Atle Bakken</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Henry Duncan Littlejohn</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Gregory Tony</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Steff White</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Tolkedyb</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Tour du Faso</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>1972 Suisse Open Gstaad</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Marian McKnight</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Theodore Wores</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>McJoe Arroyo</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Betty Azar</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Friedrich Holzer</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jack Weaver</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Peregrine Moncreiffe Of That Ilk</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Shukhrat Maqsudov</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Nagy-rét</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Facchini Group</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Tiefenbach</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Russell Trood</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Norman Young</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Palma Ruben</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Kathleen Merrigan</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Roses</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Mary Adela Blagg</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Hannah Ocuish</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>George Ducas</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Bram Som</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Reginald de Cornhill</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Robert Monell</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Kristian Halse</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Percy Jewson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Thomas Mayer</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Peter Eriksson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Anastasia Gromoglasova</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Maxey</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Geek Picnic</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Edwin Fish Gould III</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Yolande Gagnon</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Edward Nathaniel Bancroft</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Patu Tiavaasue Falefatu Sapolu</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Vrachelen</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Roger Berlind</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Brian Kallman</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Tom Salta</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Giovanni Francesco Commendone</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Aleksandr Uvarov</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alan Ford</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Yanshang Zhang</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>David Bey</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Aleksandr Nikolaenko</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Linnuse</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jay W. Johnson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Malekeh Jahan</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Dwarsdiep</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Robert Browne</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Frank C. Lynchstaunton</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Stephan Brenninkmeijer</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Danielle Winits</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Barry Ogrady</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Andrey Troshchinskiy</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Kalthäusern</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Francis Cabot</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Luis Carpio</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Daniel Vanderpool</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Declan Obrien</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Heath Welsey Francis</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Hamilton Anne Douglas-Hamilton</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Robert Forhan</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Bassam Al-Soukaria</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Gagužinė</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Bird Barrier America</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Duke Of Palatinate-Neuburg Philip</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Tony Mmoh</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Heinrich Dernburg</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Amy Macfarlane</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Julio Gotay</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Markus Zberg</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Andrea Meneghin</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Nancy Minshew</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Grzegorz Kaszak</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Larsen Marabe</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Dennis Horner</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ahmed Falah</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Castel</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alejandro Celestino Toledo Manrique</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Masaru Kato</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Wilhelm Peters</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Christopher Amott</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Brock Olivo</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Djamila Bouhired</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Zbigniew Czajkowski</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jackie Warner</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Lon Greenberg</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Aidi Francois</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ernest M. Henley</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Terry Kennedy</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Justin Kelly</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Angela Brady</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Encinasola de los Comendadores</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Hawker Siddeley Switchgear</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Colleen Doran</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Arthur Melvin Okun</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>George Wilson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Frank Oswald Thorne</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Raniere Silva dos Santos</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Rossbol</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>R. Prabhu</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>William Fryar</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>William Judson Jr. Holloway</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Karl Samuda</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Chuck Wilson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Pont de Pesada</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Electra Guitars</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Grădiştea</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jacob Bailey Moore</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Henry L. Kamphoefner</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alex Zelinsky</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Doneşti</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Deming Li</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Alf Sharp</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Basse-Bodeux</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Energiewacht Tour</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Karu Jayasuriya</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Joe Bennett</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>George Edwards</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Johan Raslan</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ray Brand</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jim Pavelec</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Barry Levinson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Aire</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Harry Garland</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>John McCallum</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Terry Beatty</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Susana Ferrari Billinghurst</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Richard Baluyut</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Griff Jenkins</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Grace Zia Chu</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Camilla Arfwedson</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Annenwalder Brand</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Lerrain</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Asger Hamerik</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Nikolay Ivanovich Merkushkin</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Georges Chastellain</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>John Hart</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jean-Baptiste Estoup</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Peter Patasi</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Budzisław</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Jacky Ickx</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Earl of Mar Domhnall I</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Tom Sands</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Siyabonga Siphika</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Kazuo Shimizu</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Andy Geddes</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Buče</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Iii Panembahan Kusuma Negara</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Reza Khaleghifar</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>William Alexander Graham</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Maria Capuana</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Liam Cary</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Bindersbach</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Michael Misick</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Paul Lingle</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Lindsay Michael Birt</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Fred Daniels</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Vidrà</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Mark Chilton</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>John Laing</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Zygmunt Steuermann</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ab Rogers</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Bernardino Lanzani</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name='cnt'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#integer'>1</literal>
+			</binding>
+			<binding name='topicLabel'>
+				<literal datatype='http://www.w3.org/2001/XMLSchema#string'>Ameixeda</literal>
+			</binding>
+		</result>
+	</results>
+</sparql>

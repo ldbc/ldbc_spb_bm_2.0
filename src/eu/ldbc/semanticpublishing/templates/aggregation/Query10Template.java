@@ -26,8 +26,8 @@ public class Query10Template extends MustacheTemplate implements SubstitutionPar
 	private int year;
 	private int month;
 	private int day;
-//	private int hour;
-//	private int minute;
+	private int hour;
+	private int minute;
 	
 
 	public Query10Template(RandomUtil ru, HashMap<String, String> queryTemplates, Definitions definitions, String[] substitutionParameters) {
@@ -45,8 +45,8 @@ public class Query10Template extends MustacheTemplate implements SubstitutionPar
 		month = ru.nextInt(1, 12 + 1);
 		calendar.set(year, month - 1, 1);		
 		day = ru.nextInt(1, calendar.getActualMaximum(Calendar.DAY_OF_MONTH) + 1);
-//		hour = ru.nextInt(0, 23 + 1);
-//		minute = ru.nextInt(0, 59 + 1);		
+		hour = ru.nextInt(0, 23 + 1);
+		minute = ru.nextInt(0, 59 + 1);		
 	}
 	
 	/**
@@ -69,16 +69,16 @@ public class Query10Template extends MustacheTemplate implements SubstitutionPar
 			return substitutionParameters[parameterIndex++];
 		}		
 		
-		return generateFilterDateString2("dateModified", year, month, day, 0);
+		return generateFilterDateString2("dateModified", year, month, day, hour, minute, Calendar.HOUR_OF_DAY, 1);
 	}
 
-	private String generateFilterDateString2(String variableName,int startYear, int startMonth, int startDay, int daysOffset) {
+	private String generateFilterDateString2(String variableName,int startYear, int startMonth, int startDay, int startHour, int startMinute, int calendarOffsetType, int offset) {
 		StringBuilder sb = new StringBuilder();
 		StringBuilder sbStartRange = new StringBuilder();
 		StringBuilder sbEndRange = new StringBuilder();
 
-		calendar.set(startYear, startMonth - 1, startDay, 0, 0, 0);
-		calendar.add(Calendar.DATE, daysOffset);
+		calendar.set(startYear, startMonth - 1, startDay, startHour, startMinute, 0);
+		calendar.add(calendarOffsetType, offset);
 		
 		sbStartRange.append("\"");
 		sbEndRange.append("\"");
@@ -96,25 +96,25 @@ public class Query10Template extends MustacheTemplate implements SubstitutionPar
 		sbEndRange.append("-");
 		
 		sbStartRange.append(String.format("%02d", startDay));
-		sbEndRange.append(String.format("%02d", calendar.get(Calendar.DATE)));
+		sbEndRange.append(String.format("%02d", calendar.get(Calendar.DAY_OF_MONTH)));
 		
 		sbStartRange.append("T");
 		sbEndRange.append("T");
 		
-		sbStartRange.append("00");
-		sbEndRange.append("23");
+		sbStartRange.append(String.format("%02d", startHour));
+		sbEndRange.append(String.format("%02d", calendar.get(Calendar.HOUR_OF_DAY)));
 		
 		sbStartRange.append(":");
 		sbEndRange.append(":");
-		
-		sbStartRange.append("00");
-		sbEndRange.append("59");
+
+		sbStartRange.append(String.format("%02d", startMinute));
+		sbEndRange.append(String.format("%02d", calendar.get(Calendar.MINUTE)));
 		
 		sbStartRange.append(":");
 		sbEndRange.append(":");		
 		
 		sbStartRange.append("00.000Z");
-		sbEndRange.append("59.999Z");
+		sbEndRange.append("00.000Z");
 		
 		sbStartRange.append("\"");
 		sbEndRange.append("\"");

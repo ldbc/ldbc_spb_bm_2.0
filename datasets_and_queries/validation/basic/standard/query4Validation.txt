@@ -1,81 +1,117 @@
 [SubstitutionParameters]
-<http://yago-knowledge.org/resource/Smyril_Line>;cwork:TextualFormat;cwork:BlogPost;10000
+<http://dbpedia.org/resource/Dropmysite>;cwork:TextualFormat;cwork:NewsItem;5
 
 [ExpectedResultsSize]
-130
+96
+
+[ResultsAcceptType]
+application/x-turtle
 
 [Results]
-<http://www.bbc.co.uk/things/39758#id>
-<http://www.bbc.co.uk/things/1180186790#id>
-<http://www.bbc.co.uk/ontologies/creativework/CreativeWork>
-<http://www.bbc.co.uk/ontologies/creativework/BlogPost>
-<http://www.bbc.co.uk/things/1180186790#id>
-<http://dbpedia.org/resource/Smyril_Line>
-<http://yago-knowledge.org/resource/Smyril_Line>
-<http://rdf.freebase.com/ns/m.0gl_3l>
-<http://sv.dbpedia.org/resource/Smyril_Line>
-<http://ru.dbpedia.org/resource/Smyril_Line>
-<http://no.dbpedia.org/resource/Smyril_Line>
-<http://nl.dbpedia.org/resource/Smyril_Line>
-<http://it.dbpedia.org/resource/Smyril_Line>
-<http://hu.dbpedia.org/resource/Smyril_Line>
-<http://de.dbpedia.org/resource/Smyril_Line>
-<http://da.dbpedia.org/resource/Smyril_Line>
-<http://wikidata.dbpedia.org/resource/Q387088>
-<http://wikidata.org/entity/Q387088>
-<http://dbpedia.org/resource/1976_U.S.A._Bicentennial_Cup_Tournament>
-<http://rdf.freebase.com/ns/m.03d1pt_>
-<http://sv.dbpedia.org/resource/USA_Bicentennial_Cup_Tournament_1976>
-<http://pt.dbpedia.org/resource/Torneio_Bicenten\u00E1rio_dos_Estados_Unidos>
-<http://it.dbpedia.org/resource/Torneo_del_Bicentenario>
-<http://es.dbpedia.org/resource/Torneo_Bicentenario_de_los_Estados_Unidos>
-<http://wikidata.dbpedia.org/resource/Q1093857>
-<http://wikidata.org/entity/Q1093857>
-<http://dbpedia.org/resource/Ken_Schaphorst>
-<http://ru.dbpedia.org/resource/\u041A\u0443\u0431\u043E\u043A_\u0411\u0435\u0440\u043D\u043E\u043A\u043A\u0438>
-<http://dbpedia.org/resource/2008_US_Open_(tennis)>
-<http://rdf.freebase.com/ns/m.02vq6gz>
-<http://zh.dbpedia.org/resource/2008\u5E74\u7F8E\u570B\u7DB2\u7403\u516C\u958B\u8CFD>
-<http://vi.dbpedia.org/resource/Gi\u1EA3i_qu\u1EA7n_v\u1EE3t_M\u1EF9_M\u1EDF_r\u1ED9ng_2008>
-<http://sv.dbpedia.org/resource/US_Open_i_tennis_2008>
-<http://sl.dbpedia.org/resource/Odprto_prvenstvo_ZDA_2008>
-<http://sk.dbpedia.org/resource/US_Open_2008>
-<http://ru.dbpedia.org/resource/\u041E\u0442\u043A\u0440\u044B\u0442\u044B\u0439_\u0447\u0435\u043C\u043F\u0438\u043E\u043D\u0430\u0442_\u0421\u0428\u0410_\u043F\u043E_\u0442\u0435\u043D\u043D\u0438\u0441\u0443_2008>
-<http://pt.dbpedia.org/resource/US_Open_de_2008>
-<http://pl.dbpedia.org/resource/US_Open_2008>
-<http://no.dbpedia.org/resource/US_Open_2008_(tennis)>
-<http://nl.dbpedia.org/resource/US_Open_2008_(tennis)>
-<http://mr.dbpedia.org/resource/\u0968\u0966\u0966\u096E_\u092F\u0942.\u090F\u0938._\u0913\u092A\u0928>
-<http://lv.dbpedia.org/resource/2008._gada_ASV_atkl\u0101tais_\u010Dempion\u0101ts_tenis\u0101>
-<http://ja.dbpedia.org/resource/2008\u5E74\u5168\u7C73\u30AA\u30FC\u30D7\u30F3_(\u30C6\u30CB\u30B9)>
-<http://it.dbpedia.org/resource/US_Open_2008>
-<http://hu.dbpedia.org/resource/2008-as_US_Open_(tenisz)>
-<http://hi.dbpedia.org/resource/2008_\u0905\u092E\u0930\u0940\u0915\u0940_\u0913\u092A\u0928_\u091F\u0947\u0928\u093F\u0938_\u092A\u094D\u0930\u0924\u093F\u092F\u094B\u0917\u093F\u0924\u093E>
-<http://fr.dbpedia.org/resource/US_Open_de_tennis_2008>
-<http://fi.dbpedia.org/resource/Yhdysvaltain_avoin_tennisturnaus_2008>
-<http://fa.dbpedia.org/resource/\u0622\u0632\u0627\u062F_\u0622\u0645\u0631\u06CC\u06A9\u0627\u06CC_\u06F2\u06F0\u06F0\u06F8_(\u062A\u0646\u06CC\u0633)>
-<http://es.dbpedia.org/resource/Anexo:Abierto_de_Estados_Unidos_2008>
-<http://de.dbpedia.org/resource/US_Open_2008>
-<http://da.dbpedia.org/resource/US_Open_2008>
-<http://cs.dbpedia.org/resource/US_Open_2008>
-<http://ca.dbpedia.org/resource/US_Open_2008>
-<http://bg.dbpedia.org/resource/\u041E\u0442\u043A\u0440\u0438\u0442\u043E_\u043F\u044A\u0440\u0432\u0435\u043D\u0441\u0442\u0432\u043E_\u043D\u0430_\u0421\u0410\u0429_2008>
-<http://ar.dbpedia.org/resource/\u0623\u0645\u0631\u064A\u0643\u0627_\u0627\u0644\u0645\u0641\u062A\u0648\u062D\u0629_2008_(\u0643\u0631\u0629_\u0645\u0636\u0631\u0628)>
-<http://wikidata.dbpedia.org/resource/Q388303>
-<http://wikidata.org/entity/Q388303>
-<http://dbpedia.org/resource/Susan_Torres>
-<http://dbpedia.org/resource/Paul_Minner>
-<http://sws.geonames.org/7116406/>
-<http://dbpedia.org/resource/Lightwater>
-"thumbnail atlText for CW http://www.bbc.co.uk/context/39758#id"
-<http://www.bbc.co.uk/ontologies/creativework/InternationalAudience>
-<http://www.bbc.co.uk/category/Company>
-"2011-09-06T13:03:04.214+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-"2012-09-29T14:01:20.601+03:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
-" evident certain hundreds mainly representative pieces main audiences faster adopted notion official celibacy partisan individual football granting service becoming using have people fortune."
-"false"^^<http://www.w3.org/2001/XMLSchema#boolean>
-<http://www.bbc.co.uk/ontologies/creativework/TextualFormat>
-" fortune africa mainly cut who came petitions saving football craftsmen."
-<http://www.bbc.co.uk/thumbnail/889992466>
-"Smyril Line members originated about normally linked clergy combined applicable policy dogma."
-<http://www.bbc.co.uk/things/39758#id>
+@prefix bbcevent: <http://www.bbc.co.uk/ontologies/event/> .
+@prefix geo-pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/bbc/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix music-ont: <http://purl.org/ontology/mo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix cms: <http://www.bbc.co.uk/ontologies/cms/> .
+@prefix news: <http://www.bbc.co.uk/ontologies/news/> .
+@prefix cnews: <http://www.bbc.co.uk/ontologies/news/cnews/> .
+@prefix cconcepts: <http://www.bbc.co.uk/ontologies/coreconcepts/> .
+@prefix dbp-prop: <http://dbpedia.org/property/> .
+@prefix geonames: <http://sws.geonames.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix domain: <http://www.bbc.co.uk/ontologies/domain/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix geo-ont: <http://www.geonames.org/ontology#> .
+@prefix bbc-pont: <http://purl.org/ontology/po/> .
+@prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
+@prefix sport: <http://www.bbc.co.uk/ontologies/sport/> .
+@prefix skosCore: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbp-ont: <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix curric: <http://www.bbc.co.uk/ontologies/curriculum/> .
+@prefix cwork: <http://www.bbc.co.uk/ontologies/creativework/> .
+@prefix fb: <http://rdf.freebase.com/ns/> .
+@prefix ot: <http://www.ontotext.com/> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://www.bbc.co.uk/things/86230#id> a owl:Thing , cwork:CreativeWork , cwork:NewsItem ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/187645#id> , <http://www.bbc.co.uk/document/187646#id> , <http://www.bbc.co.uk/document/187647#id> , <http://www.bbc.co.uk/document/187648#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/86230#id" ;
+	cwork:audience cwork:NationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-07-28T14:04:08.283+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-04-02T23:33:39.969+03:00"^^xsd:dateTime ;
+	cwork:description " trimmest pompoms tacked carpet evenly overbalanced hysteresis twitches newer damsel essays necklace jolted impishness collapsing priciest staking tantalised retrofit goldsmith." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/862695/> ;
+	cwork:primaryFormat cwork:TextualFormat , cwork:InteractiveFormat ;
+	cwork:shortTitle " ideograms survived exultantly lecturer prostrations palsy largesse packs stab physiologists." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/1421076715> ;
+	cwork:title "Jose Goldemberg benevolently dominants olive's picket residual recently bathe scrutinise illustrator fisher." .
+
+<http://www.bbc.co.uk/things/86253#id> a owl:Thing , cwork:CreativeWork , cwork:NewsItem ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/188190#id> , <http://www.bbc.co.uk/document/188191#id> , <http://www.bbc.co.uk/document/188192#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/86253#id" ;
+	cwork:audience cwork:NationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-07-28T12:26:59.118+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-02-15T16:34:36.905+02:00"^^xsd:dateTime ;
+	cwork:description " periscopes placidly dacha blockheads yuppy hurt poacher bob occurs vaccine praised collides boleros crafts tonsillectomies jobbers leisure damned palates logistics rungs laciest." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/3122048/> ;
+	cwork:primaryFormat cwork:TextualFormat , cwork:InteractiveFormat ;
+	cwork:shortTitle " upstaged beset scattered coffers eavesdropping summerhouses storeys hashish tomahawking pluralistic." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/62191335> ;
+	cwork:title "Adrien Lambert offload remaking undeceive disorganising foursquare unpleasantly pigging upchucking testier bravely." .
+
+<http://www.bbc.co.uk/things/86206#id> a owl:Thing , cwork:CreativeWork , cwork:NewsItem ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/187038#id> , <http://www.bbc.co.uk/document/187039#id> , <http://www.bbc.co.uk/document/187040#id> , <http://www.bbc.co.uk/document/187041#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/86206#id" ;
+	cwork:audience cwork:NationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-07-28T12:07:36.817+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2011-12-28T21:02:59.211+02:00"^^xsd:dateTime ;
+	cwork:description " pistils swaggered interrogate farewell men motherhood anthologists halcyon frostbite squabbles incorrigible corks cuckolded motes decimal fallows snobs discoursing croûton cinema monsieur christens." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/630632/> ;
+	cwork:primaryFormat cwork:TextualFormat , cwork:InteractiveFormat ;
+	cwork:shortTitle " smallpox desensitisation papering kebab dialysis halfheartedly persecutor neighbors abreast tentacle." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/1180836175> ;
+	cwork:title "Johan Wilhelm Rangell disestablished acknowledgments rushed northwestern crystallised overspend inexcusably swaggers demagogues present." .
+
+<http://www.bbc.co.uk/things/86255#id> a owl:Thing , cwork:CreativeWork , cwork:NewsItem ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/188231#id> , <http://www.bbc.co.uk/document/188232#id> , <http://www.bbc.co.uk/document/188233#id> , <http://www.bbc.co.uk/document/188234#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/86255#id" ;
+	cwork:audience cwork:NationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Company> ;
+	cwork:dateCreated "2011-07-28T12:00:46.479+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2012-08-23T15:13:21.781+03:00"^^xsd:dateTime ;
+	cwork:description " hallucinated foreswore shirks stroller communed daffy farthest executes." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/2627935/> ;
+	cwork:primaryFormat cwork:TextualFormat , cwork:InteractiveFormat ;
+	cwork:shortTitle " douche we commanders manifest sturdier merit paragraphing bike pettier retrieve." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/2144918949> ;
+	cwork:title "Heijmans colanders creaks pity shutterbug temporises sneak patinae blotch headdresses hooligan." .
+
+<http://www.bbc.co.uk/things/86225#id> a owl:Thing , cwork:CreativeWork , cwork:NewsItem ;
+	bbc:primaryContentOf <http://www.bbc.co.uk/document/187528#id> ;
+	cwork:altText "thumbnail atlText for CW http://www.bbc.co.uk/context/86225#id" ;
+	cwork:audience cwork:NationalAudience ;
+	cwork:category <http://www.bbc.co.uk/category/Persons> ;
+	cwork:dateCreated "2011-07-28T10:43:21.613+03:00"^^xsd:dateTime ;
+	cwork:dateModified "2011-09-09T15:01:58.211+03:00"^^xsd:dateTime ;
+	cwork:description " rupees bouncers reappraising magneto tillers scrofula hypnotising bordello chowders digitalis confluence bypassing ducking conquistador's sac conjugation extemporises redecorating." ;
+	cwork:liveCoverage "false"^^xsd:boolean ;
+	cwork:mentions <http://sws.geonames.org/252347/> ;
+	cwork:primaryFormat cwork:TextualFormat , cwork:InteractiveFormat ;
+	cwork:shortTitle " benching inglorious bedpan evidently tasselled trimmer pillowcase fewest jaywalking gander." ;
+	cwork:thumbnail <http://www.bbc.co.uk/thumbnail/561961579> ;
+	cwork:title "Johan Syrstad contemplatives stammered disinterest preponderates arbitrated editorialise ratings mists polymerisation groggy." .
