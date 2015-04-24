@@ -321,8 +321,8 @@
     <target name="build.release.version" description="Store git revision in ${revision.number}" if="git.present">
         <exec executable="git" outputproperty="git.revision" failifexecutionfails="false" errorproperty="">
             <arg value="describe"/>
-            <arg value="- -tags"/>
-            <arg value="- -always"/>
+            <arg value="--tags"/>
+            <arg value="--always"/>
             <arg value="HEAD"/>
         </exec>
         <condition property="revision.number" value="${git.revision}" else="unknown">
