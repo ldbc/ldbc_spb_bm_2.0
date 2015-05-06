@@ -43,16 +43,16 @@ SELECT DISTINCT ?creativeWork ?title ?description ?dateModified ?primaryContent
     SELECT DISTINCT ?e 
     {
       { 
-        {{{entitiyOfInterest}}} ?p ?e .
+        {{{entitiyOfInterest}}} dbp-ont:parentCompany* ?s . ?s ?p ?e .
       }
       UNION
       { 
-        ?e ?p {{{entitiyOfInterest}}} .
+        ?s dbp-ont:parentCompany* {{{entitiyOfInterest}}} . ?e ?p ?s .
       }
       ?e a core:Thing .    
     }
   }
-  ?creativeWork cwork:tag ?e ;
+  ?creativeWork cwork:tag ?e  option (same_as) ;
     cwork:title ?title ;
     cwork:description ?description ;
     cwork:dateModified ?dateModified ;

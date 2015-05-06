@@ -61,14 +61,14 @@ WHERE {
   {
     SELECT (COUNT(*) AS ?cnt_2) 
     WHERE { 
-      ?other_cw cwork:about ?oa . 
+      ?other_cw cwork:about ?oa option (same_as) . 
       {{{cwUri}}} cwork:about ?oa .
     }      
   } .
   {
      SELECT (COUNT(*) AS ?cnt_1_5) 
      WHERE {
-       ?other_cw cwork:about ?oa . 
+       ?other_cw cwork:about ?oa option (same_as) . 
        {{{cwUri}}} cwork:mentions ?oa .
      }      
   } .  
@@ -76,7 +76,7 @@ WHERE {
      SELECT (COUNT(*) AS ?cnt_1) 
      WHERE {
        ?other_cw cwork:mentions ?oa . 
-       {{{cwUri}}} cwork:about ?oa .
+       {{{cwUri}}} cwork:about ?oa option (same_as) .
      }      
   } .
   {
@@ -89,8 +89,8 @@ WHERE {
   { 
     SELECT DISTINCT ?other_creativeWork ?dt
     WHERE {
-      {{{cwUri}}} cwork:tag ?tag .
-      ?other_creativeWork cwork:tag ?tag .
+      {{{cwUri}}} cwork:tag ?tag option (same_as) .
+      ?other_creativeWork cwork:tag ?tag option (same_as) .
       ?other_creativeWork cwork:dateModified ?dt .
     }
   }

@@ -51,7 +51,7 @@ WHERE {
     SELECT DISTINCT ?creativeWork
     {
       ?creativeWork cwork:dateCreated ?created .
-      ?creativeWork cwork:tag {{{cwAboutUri}}} .
+      ?creativeWork cwork:tag {{{cwAboutUri}}}  option (same_as) .
       
       {
         { ?creativeWork cwork:primaryFormat cwork:TextualFormat . }

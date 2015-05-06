@@ -64,7 +64,7 @@ WHERE {
    ?type rdfs:subClassOf cwork:CreativeWork . 
    ?creativeWork cwork:dateModified ?dateModified . 
   OPTIONAL { ?creativeWork cwork:dateCreated ?dateCreated . }
-  OPTIONAL { ?creativeWork cwork:about ?about .}   
+  OPTIONAL { ?creativeWork cwork:about ?about option (same_as) .}   
   OPTIONAL { ?creativeWork cwork:category ?category . }  
   OPTIONAL { 
     ?creativeWork bbc:primaryContentOf ?pco . 

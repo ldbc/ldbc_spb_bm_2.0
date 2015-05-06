@@ -84,7 +84,7 @@ WHERE {
                     a ?type ;
                     cwork:title ?title ;
                     cwork:dateModified ?modified .
-      ?creativeWork cwork:about [ ldbcspb:prefLabel ?aboutPrefLabel ] . 
+      ?creativeWork cwork:about [ ldbcspb:prefLabel ?aboutPrefLabel ]  option (same_as) . 
       OPTIONAL { ?creativeWork cwork:shortTitle ?shortTitle . }
       OPTIONAL { ?creativeWork cwork:description ?description . }
 

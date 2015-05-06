@@ -1,5 +1,5 @@
 define input:inference "ldbc"
-define input:same-as "yes"
+
 PREFIX bbcevent:<http://www.bbc.co.uk/ontologies/event/> 
 PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#> 
 PREFIX bbc:<http://www.bbc.co.uk/ontologies/bbc/> 
@@ -47,9 +47,9 @@ PREFIX ldbc:<http://www.ldbc.eu/ontologies/sempub#>
 
 SELECT DISTINCT ?creativeWork ?locationName ?lat ?long ?dateModified 
 {
-    ?cwork a cwork:CreativeWork . 
-    ?cwork cwork:tag ?geonamesId . 
-    ?cwork cwork:dateModified ?dateModified .
+    ?creativeWork a cwork:CreativeWork . 
+    ?creativeWork cwork:tag ?geonamesId option (same_as) . 
+    ?creativeWork cwork:dateModified ?dateModified .
     ?geonamesId geo:lat ?lat . 
     ?geonamesId geo:long ?long . 
     ?geonamesId a geo-ont:Feature . 

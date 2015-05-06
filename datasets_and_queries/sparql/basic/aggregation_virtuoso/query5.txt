@@ -50,11 +50,11 @@ PREFIX ldbcspb:<http://www.ldbcouncil.org/spb#>
 SELECT DISTINCT ((MAX(?topicPrefLabel)) AS ?topicLabel) ((COUNT(*)) AS ?cnt)
 WHERE {
   ?creativeWork a {{{cwType}}} ;
-     cwork:tag ?topic ;
+     cwork:tag ?topic  option (same_as) ;
      cwork:dateModified ?dt ;
      cwork:audience {{{cwAudience}}} .
    FILTER (?dt > {{{cwStartDateTime}}} && ?dt < {{{cwEndDateTime}}}) .
-   ?topic ldbcspb:prefLabel ?topicPrefLabel .
+   ?topic ldbcspb:prefLabel ?topicPrefLabel  option (same_as) .
 }
 GROUP BY ?topic
 ORDER BY DESC(?cnt)

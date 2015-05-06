@@ -1,5 +1,4 @@
 define input:inference "ldbc"
-define input:same-as "yes"
 
 PREFIX bbcevent:<http://www.bbc.co.uk/ontologies/event/> 
 PREFIX geo-pos:<http://www.w3.org/2003/01/geo/wgs84_pos#> 
@@ -46,7 +45,7 @@ WHERE {
   {
     SELECT DISTINCT ?creativeWork ?cworkGraph
     WHERE {
-        ?creativeWork cwork:tag {{{creativeWorkTag}}} ; 
+        ?creativeWork cwork:tag {{{creativeWorkTag}}}  option (same_as) ; 
                       a cwork:CreativeWork .
         GRAPH ?cworkGraph { ?creativeWork cwork:dateModified ?modified . }
       }
