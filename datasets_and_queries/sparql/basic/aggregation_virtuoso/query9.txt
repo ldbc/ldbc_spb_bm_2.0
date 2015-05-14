@@ -93,7 +93,7 @@ WHERE {
       ?other_creativeWork cwork:tag ?tag option (same_as) .
       ?other_creativeWork cwork:dateModified ?dt .
     }
+    ORDER BY DESC(?dt)
+    LIMIT 10        
   }
 }
-ORDER BY DESC(?dt)
-LIMIT 10
