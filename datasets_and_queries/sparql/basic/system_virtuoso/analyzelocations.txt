@@ -38,6 +38,8 @@ PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/>
 
 SELECT DISTINCT ?locationId 
 {
-  ?locationId a geo-ont:Feature .
+  { ?locationId a geo-ont:Feature . }
+  union
+  { ?locationId owl:sameAs ?g . ?g a geo-ont:Feature . }
   FILTER(CONTAINS(STR(?locationId), "dbpedia")) . 
 }
