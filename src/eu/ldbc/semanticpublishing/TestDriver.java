@@ -509,7 +509,9 @@ public class TestDriver {
 			//validate reference data for consistency
 			System.out.println("Validating reference data...");
 			
-			DataManager.checkReferenceDataConsistency();
+			if (DataManager.checkReferenceDataConsistency()) {
+				System.out.println("\t0 errors");
+			}
 			
 			System.out.println("Validating operations...");
 			
