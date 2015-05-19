@@ -226,7 +226,7 @@ public class TestDriver {
 		for (String s : locationsIds) {
 			DataManager.locationsIdsList.add(s);
 		}
-			
+		
 		locationsIds.clear();
 		
 		//retrieve Geonames locations IDs from database
@@ -236,7 +236,7 @@ public class TestDriver {
 		for (String s : locationsIds) {
 			DataManager.geonamesIdsList.add(s);
 		}
-
+		
 		//initialize dataset info, required for query parameters
 		if (populateFromDatasetInfoFile) {
 			if ((DataManager.correlatedEntitiesList.size() + DataManager.exponentialDecayEntitiesMinorList.size() + DataManager.exponentialDecayEntitiesMajorList.size()) == 0) {
@@ -498,14 +498,21 @@ public class TestDriver {
 	
 	public void validateQueryResults(boolean enable) throws Exception {
 		if (enable) {
-			System.out.println("Validating operations...");
+
 			String validationPath = configuration.getString(Configuration.VALIDATION_PATH);
 			
 			if (DataManager.regularEntitiesList.size() == 0 || DataManager.correlatedEntitiesList.size() == 0) {				
-				populateRefDataEntitiesListsFromFiles(true, true, true, "\t", validationPath + File.separator + "entities.txt", validationPath + File.separator + "dbpediaLocations.txt", validationPath + File.separator + "geonamesIDs.txt");
+				populateRefDataEntitiesLists(true, false, true, "");
 			}
 			validationValuesManager.initValidationValues(configuration.getString(Configuration.VALIDATION_PATH), false);
 
+			//validate reference data for consistency
+			System.out.println("Validating reference data...");
+			
+			DataManager.checkReferenceDataConsistency();
+			
+			System.out.println("Validating operations...");
+			
 			EditorialOperationsValidator eov = new EditorialOperationsValidator(queryExecuteManager, randomGenerator, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.EDITORIAL), mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.VALIDATION), configuration, definitions);		
 			eov.validate();
 			

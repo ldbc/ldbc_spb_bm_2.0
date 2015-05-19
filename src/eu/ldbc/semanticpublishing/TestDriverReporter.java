@@ -165,8 +165,8 @@ public class TestDriverReporter extends Thread {
 			sb.append(String.format("\n\t\t%d total retrieval queries\n", totalAggregateOpsCount));
 		}
 		
-		//considering a time correction caused by result parsing for each aggregate query by each of aggregate agents, that time is subtracted when calculating the total average		
-		double averageQueriesPerSecond = (double)totalAggregateOpsCount / ((double)seconds - (double)(Statistics.timeCorrectionsMS.get() / 1000));
+		//considering an average time correction caused by result parsing for each aggregate query by each of aggregate agents, that time is subtracted when calculating the total average		
+		double averageQueriesPerSecond = (double)totalAggregateOpsCount / ((double)seconds - (double)(Statistics.timeCorrectionsMS.get() / aggregationAgentsCount / 1000/*ms*/));
 		
 		if (currentRateReportPeriodSeconds > 0 && seconds % currentRateReportPeriodSeconds == 0) {
 			double currentQueriesRate = (double)((totalAggregateOpsCount) - totalQueriesFromPrevReport) / currentRateReportPeriodSeconds;
@@ -177,7 +177,7 @@ public class TestDriverReporter extends Thread {
 		totalQueriesFromPrevReport = totalAggregateOpsCount;
 		
 		if ((double)(Statistics.timeCorrectionsMS.get() / 1000) >= (double)seconds) {
-			averageQueriesPerSecond = (double)(totalAggregateOpsCount / seconds) / currentRateReportPeriodSeconds;			
+			averageQueriesPerSecond = (double)(totalAggregateOpsCount / seconds) / (currentRateReportPeriodSeconds > 0 ? currentRateReportPeriodSeconds : 1);			
 		}
 		sb.append(String.format("\t\t%.4f average queries per second\n", averageQueriesPerSecond));		
 				

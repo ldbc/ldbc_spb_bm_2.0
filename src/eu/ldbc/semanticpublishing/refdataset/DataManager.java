@@ -49,18 +49,30 @@ public class DataManager {
 	public static final ArrayList<String> correlatedEntitiesList = new ArrayList<String>();
 	
 	//stores the ID of a Creative Work which is has the greatest value, used for further CRUD operations
-	public static AtomicLong creativeWorksNextId = new AtomicLong(0);
+	public static AtomicLong creativeWorksNextId = new AtomicLong(0); 
 	
 	//stores the ID of a Web Document
 	public static AtomicLong webDocumentNextId = new AtomicLong(0);
+	
+	//stores the number of entities found in reference reference data - see system query - analyzereferencedata.txt
+	public static long referenceDataEntitiesCount = 0;
+	
+	//stores the number of DBpedia locations in reference reference data - see system query - analyzelocations.txt
+	public static long dbpediaLocationsCount = 0;
+	
+	//stores the number of Geonames locations found in reference data - see system query - analyzegeonames.txt
+	public static long geonamesLocationsCount = 0;
 	
 	//Dataset info constants for persisting
 	private static final String CREATIVE_WORK_NEXT_ID_TEXT = "[CreativeWorkNextId]";
 	private static final String EXP_DECAY_ENTITIES_MAJOR_TEXT = "[ExponentialDecayEntitiesMajor]";
 	private static final String EXP_DECAY_ENTITIES_MINOR_TEXT = "[ExponentialDecayEntitiesMinor]";
 	private static final String CORRELATED_ENTITIES_TEXT = "[CorrelatedEntities]";
+	private static final String REFERENCE_DATA_ENTITIES_TEXT = "[ReferenceDataEntities]";
+	private static final String DBPEDIA_LOCATIONS_TEXT = "[DBpediaLocations]";
+	private static final String GEONAMES_LOCATIONS_TEXT = "[GeonamesLocations]";
 	
-	private enum actionsEnum {NONE, CREATIVE_WORK_NEXT_ID, EXP_DECAY_MAJOR_ENTITIES, EXP_DECAY_MINOR_ENTITIES, CORRELATED_ENTITIES};
+	private enum actionsEnum {NONE, CREATIVE_WORK_NEXT_ID, EXP_DECAY_MAJOR_ENTITIES, EXP_DECAY_MINOR_ENTITIES, CORRELATED_ENTITIES, REFERENCE_DATA_ENTITIES, DBPEDIA_LOCATIONS, GEONAMES_LOCATIONS};
 	
 	/**
 	 * The method will serialize entity URIs into a file which will help with identifying the important entities during the benchmark phase.
@@ -147,30 +159,54 @@ public class DataManager {
 					case CORRELATED_ENTITIES:
 						DataManager.correlatedEntitiesList.add(line);
 						break;
+					case REFERENCE_DATA_ENTITIES:
+						DataManager.referenceDataEntitiesCount = Long.parseLong(line);
+						break;
+					case DBPEDIA_LOCATIONS:
+						DataManager.dbpediaLocationsCount = Long.parseLong(line);
+						break;
+					case GEONAMES_LOCATIONS:
+						DataManager.geonamesLocationsCount = Long.parseLong(line);
+						break;
 					default:
 						break;
 					}
 				}
 				
-				if (line.contains("[CreativeWorkNextId]")) {
+				if (line.contains(CREATIVE_WORK_NEXT_ID_TEXT)) {
 					action = actionsEnum.CREATIVE_WORK_NEXT_ID;
 					canRead = true;
 				}
 
-				if (line.contains("[ExponentialDecayEntitiesMajor]")) {
+				if (line.contains(EXP_DECAY_ENTITIES_MAJOR_TEXT)) {
 					action = actionsEnum.EXP_DECAY_MAJOR_ENTITIES;
 					canRead = true;
 				}
 				
-				if (line.contains("[ExponentialDecayEntitiesMinor]")) {
+				if (line.contains(EXP_DECAY_ENTITIES_MINOR_TEXT)) {
 					action = actionsEnum.EXP_DECAY_MINOR_ENTITIES;
 					canRead = true;
 				}
 				
-				if (line.contains("[CorrelatedEntities]")) {
+				if (line.contains(CORRELATED_ENTITIES_TEXT)) {
 					action = actionsEnum.CORRELATED_ENTITIES;
 					canRead = true;
 				}			
+				
+				if (line.contains(REFERENCE_DATA_ENTITIES_TEXT)) {
+					action = actionsEnum.REFERENCE_DATA_ENTITIES;
+					canRead = true;
+				}
+				
+				if (line.contains(DBPEDIA_LOCATIONS_TEXT)) {
+					action = actionsEnum.DBPEDIA_LOCATIONS;
+					canRead = true;
+				}
+				
+				if (line.contains(GEONAMES_LOCATIONS_TEXT)) {
+					action = actionsEnum.GEONAMES_LOCATIONS;
+					canRead = true;
+				}
 				
 				line = br.readLine();
 			}
@@ -189,5 +225,26 @@ public class DataManager {
 			return String.format("%s%s%s", StringUtil.normalizePath(configuration.getString(Configuration.CREATIVE_WORKS_PATH)), File.separator, configuration.getString(Configuration.CREATIVE_WORKS_INFO));  
 		}		
 		return "";
+	}
+	
+	public static boolean checkReferenceDataConsistency() {
+		int errors = 0;
+		
+		if (popularEntitiesList.size() + regularEntitiesList.size() != referenceDataEntitiesCount) {
+			errors++;
+			System.out.println("\tWarning : Inconistent number of entities found in reference data! " + referenceDataEntitiesCount + " expected, " + (popularEntitiesList.size() + regularEntitiesList.size()) + " found!");
+		}
+		
+		if (locationsIdsList.size() != dbpediaLocationsCount) {
+			errors++;
+			System.out.println("\tWarning : Inconistent number of DBpedia locations found in reference data! " + dbpediaLocationsCount + " expected, " + locationsIdsList.size() + " found!");			
+		}
+		
+		if (geonamesIdsList.size() != geonamesLocationsCount) {
+			errors++;
+			System.out.println("\tWarning : Inconistent number of Geonames locations found in reference data! " + geonamesLocationsCount + " expected, " + geonamesIdsList.size() + " found!");			
+		}
+		
+		return errors == 0;
 	}
 }
