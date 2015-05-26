@@ -166,7 +166,11 @@ public class TestDriverReporter extends Thread {
 		}
 		
 		//considering an average time correction caused by result parsing for each aggregate query by each of aggregate agents, that time is subtracted when calculating the total average		
-		double averageQueriesPerSecond = (double)totalAggregateOpsCount / ((double)seconds - (double)(Statistics.timeCorrectionsMS.get() / aggregationAgentsCount / 1000/*ms*/));
+		double averageQueriesPerSecond = 0.0;
+		
+		if (aggregationAgentsCount > 0) {
+			averageQueriesPerSecond = (double)totalAggregateOpsCount / ((double)seconds - (double)(Statistics.timeCorrectionsMS.get() / aggregationAgentsCount / 1000/*ms*/));
+		}
 		
 		if (currentRateReportPeriodSeconds > 0 && seconds % currentRateReportPeriodSeconds == 0) {
 			double currentQueriesRate = (double)((totalAggregateOpsCount) - totalQueriesFromPrevReport) / currentRateReportPeriodSeconds;
