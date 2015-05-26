@@ -11,6 +11,7 @@
 	<property name="jar.file.name" value="semantic_publishing_benchmark"/>
 	<property name="ref.knowledge.and.queries.archive.name" value="${jar.file.name}_reference_knowledge_data"/>
 	<property name="validation.data.archive.name" value="validation_data"/>
+	<property name="validation.data.info.archive.name" value="validation_data_info"/>	
 	
 	<path id="classpath-lib">
     <fileset dir="${dir.lib}">
@@ -100,6 +101,7 @@
   			<fileset dir="datasets_and_queries/validation/${querymix}/${customization}"/>
 		</copy>
 		<unzip src="./datasets_and_queries/validation/data/${validation.data.archive.name}.zip" dest="./data-temp/validation/"/>
+		<unzip src="./datasets_and_queries/validation/data/${validation.data.info.archive.name}.zip" dest="./data-temp/validation/"/>		
   	
 		<mkdir dir="./data-temp/scripts/enterprise"/>
 		<copy todir="./data-temp/scripts/enterprise">

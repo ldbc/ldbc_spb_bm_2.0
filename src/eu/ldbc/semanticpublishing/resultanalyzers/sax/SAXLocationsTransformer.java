@@ -3,6 +3,8 @@ package eu.ldbc.semanticpublishing.resultanalyzers.sax;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -51,11 +53,13 @@ public class SAXLocationsTransformer extends DefaultHandler implements SAXResult
 	private String currentBindingName;
 	private StringBuilder uriSb;
 	
+	private Set<String> uniqueSet;
 	private ArrayList<String> locationsIdsList; 
 	
 	@Override
 	public void startDocument() throws SAXException {
 		locationsIdsList = new ArrayList<String>();
+		uniqueSet = new HashSet<String>();
 	}
 	
 	@Override
@@ -94,7 +98,10 @@ public class SAXLocationsTransformer extends DefaultHandler implements SAXResult
 			uriSb.insert(0, "<");
 			uriSb.append(">");
 						
-			locationsIdsList.add(uriSb.toString());
+			if (!uniqueSet.contains(uriSb.toString())) {
+				locationsIdsList.add(uriSb.toString());
+				uniqueSet.add(uriSb.toString());
+			}
 		}
 	}
 	

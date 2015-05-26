@@ -3,6 +3,8 @@ package eu.ldbc.semanticpublishing.resultanalyzers.sax;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -69,7 +71,8 @@ import eu.ldbc.semanticpublishing.refdataset.model.Entity;
  * SAX Parser for transforming an RDF-XML result stream into entities list
  */
 public class SAXReferenceDataEntityTransformer extends DefaultHandler implements SAXResultTransformer {
-	private ArrayList<Entity> entitiesList; 
+	private ArrayList<Entity> entitiesList;
+	private Set<String> uniqueSet;
 	
 	//<result>
 	private boolean resultElementBeginFlag = false;
@@ -108,6 +111,7 @@ public class SAXReferenceDataEntityTransformer extends DefaultHandler implements
 	@Override
 	public void startDocument() throws SAXException {
 		entitiesList = new ArrayList<Entity>();
+		uniqueSet = new HashSet<String>();
 	}
 
 	@Override
@@ -155,7 +159,11 @@ public class SAXReferenceDataEntityTransformer extends DefaultHandler implements
 			entity.setLabel(labelSb.toString());
 			entity.setCategory(categorySb.toString());
 			entity.setRank(rankSb.toString());
-			entitiesList.add(entity);
+			
+			if (!uniqueSet.contains(uriSb.toString())) {
+				entitiesList.add(entity);
+				uniqueSet.add(uriSb.toString());
+			}
 		}
 	}
 
