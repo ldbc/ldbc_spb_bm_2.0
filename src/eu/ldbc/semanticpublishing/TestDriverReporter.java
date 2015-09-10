@@ -1,11 +1,13 @@
 package eu.ldbc.semanticpublishing;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import eu.ldbc.semanticpublishing.agents.AbstractAsynchronousAgent;
 import eu.ldbc.semanticpublishing.statistics.Statistics;
 
 /**
@@ -21,6 +23,7 @@ public class TestDriverReporter extends Thread {
 	private final AtomicBoolean maxUpdateRateReached;
 	private final String queryPoolsDefinitions;
 	private final double maxUpdateRateThresholdOps;
+	private final List<AbstractAsynchronousAgent> aggregationAgents;
 	private double minUpdateRateThresholdOps;	
 	private double updateRateReachTimePercent;
 	private boolean verbose;
@@ -36,7 +39,12 @@ public class TestDriverReporter extends Thread {
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(TestDriverReporter.class.getName());
 	
-	public TestDriverReporter(AtomicLong totalQueryExecutions, AtomicLong totalCompletedQueryMixRuns, AtomicBoolean benchmarkState, AtomicBoolean keepAlive, AtomicBoolean benchmarkResultIsValid, double updateQueryRateFirstReachTimePercent, double minUpdateQueriesRateThresholdOps, double maxUpdateRateThresholdOps, AtomicBoolean maxUpdateRateReached, int editorialAgentsCount, int aggregationAgentsCount, long runPeriodSeconds, /*long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, */String queryPoolsDefinitons, int reportPeriodSeconds , boolean verbose) {
+	public TestDriverReporter(List<AbstractAsynchronousAgent> aggregationAgents, AtomicLong totalQueryExecutions,
+			AtomicLong totalCompletedQueryMixRuns, AtomicBoolean benchmarkState, AtomicBoolean keepAlive, AtomicBoolean benchmarkResultIsValid, double updateQueryRateFirstReachTimePercent,
+			double minUpdateQueriesRateThresholdOps, double maxUpdateRateThresholdOps, AtomicBoolean maxUpdateRateReached, int editorialAgentsCount, int aggregationAgentsCount,
+			long runPeriodSeconds, /*long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, */
+			String queryPoolsDefinitons, int reportPeriodSeconds, boolean verbose) {
+		this.aggregationAgents = aggregationAgents;
 		this.totalQueryExecutions = totalQueryExecutions;
 		this.totalCompletedQueryMixRuns = totalCompletedQueryMixRuns;
 		this.benchmarkState = benchmarkState;
@@ -145,7 +153,13 @@ public class TestDriverReporter extends Thread {
 
 		sb.append("\n");
 		sb.append("\tAggregation:\n");
-		sb.append(String.format("\t\t%s agents\n\n", aggregationAgentsCount));
+		int aliveCount = 0;
+		for (Thread agent : aggregationAgents) {
+			if (agent.isAlive()) {
+				aliveCount++;
+			}
+		}
+		sb.append(String.format("\t\t%s agents(%s)\"\n\n", aggregationAgentsCount, aliveCount));
 		if (verbose) {
 			for (int i = 0; i < Statistics.AGGREGATE_QUERIES_COUNT; i++) {
 				sb.append(String.format("\t\t%-5d Q%-2d  queries (avg : %-7d ms, min : %-7d ms, max : %-7d ms, %d errors)\n", Statistics.aggregateQueriesArray[i].getRunsCount(), 

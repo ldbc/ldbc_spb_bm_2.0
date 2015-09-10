@@ -16,13 +16,19 @@ public abstract class AbstractAsynchronousAgent extends Thread {
 
 	@Override
 	public void run() {
-		while(runFlag.get()) {
-			if(! executeLoop() ) {
-				break;
-			}
-		}
-		executeFinalize();
-	}
+        try {
+            while(runFlag.get()) {
+                if(! executeLoop() ) {
+                    break;
+                }
+            }
+            executeFinalize();
+        // this thread died, make sure that this is logged properly everywhere.
+        } catch (Throwable e) {
+            e.printStackTrace(System.out);
+            throw new RuntimeException(e);
+        }
+    }
 	
 	/**
 	 * This method will be called repeatedly until either runFlag is set to false
