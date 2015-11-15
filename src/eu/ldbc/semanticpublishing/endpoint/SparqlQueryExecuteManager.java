@@ -61,6 +61,23 @@ public class SparqlQueryExecuteManager {
 		return queryResult;		
 	}
 
+
+	public InputStream executeQueryStream(SparqlQueryConnection connection, String queryName, String queryString, QueryType queryType, boolean useInStatistics, boolean disconnect) throws IOException {
+
+		connection.setQueryString(queryString);
+		connection.setQueryType(queryType);
+		connection.prepareConnection(true);
+
+		InputStream is = connection.execute();
+
+		if (disconnect) {
+			connection.disconnect();
+		}
+
+		return is;
+	}
+
+
 	/**
 	 * A service method for executing queries not related to the benchmark run.
 	 * Always executed in a new connection, used for execution of queries during ontologies and reference datasets loading only.
