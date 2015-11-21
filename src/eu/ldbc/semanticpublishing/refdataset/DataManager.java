@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import eu.ldbc.semanticpublishing.properties.Configuration;
 import eu.ldbc.semanticpublishing.refdataset.model.Entity;
-import eu.ldbc.semanticpublishing.util.StringUtil;
+import eu.ldbc.semanticpublishing.util.FileUtils;
 
 /**
  * A class for storing important to the benchmark data e.g.
@@ -222,7 +222,7 @@ public class DataManager {
 	
 	public static String buildDataInfoFilePath(Configuration configuration) {
 		if (!configuration.getString(Configuration.CREATIVE_WORKS_INFO).isEmpty()) {
-			return String.format("%s%s%s", StringUtil.normalizePath(configuration.getString(Configuration.CREATIVE_WORKS_PATH)), File.separator, configuration.getString(Configuration.CREATIVE_WORKS_INFO));  
+			return String.format("%s%s%s", FileUtils.normalizePath(configuration.getString(Configuration.CREATIVE_WORKS_PATH)), File.separator, configuration.getString(Configuration.CREATIVE_WORKS_INFO));  
 		}		
 		return "";
 	}

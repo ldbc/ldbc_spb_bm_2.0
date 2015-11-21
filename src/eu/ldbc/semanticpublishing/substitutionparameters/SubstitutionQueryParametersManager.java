@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import eu.ldbc.semanticpublishing.statistics.Statistics;
-import eu.ldbc.semanticpublishing.util.StringUtil;
+import eu.ldbc.semanticpublishing.util.FileUtils;
 
 /**
  * A class which will manage initialization and consumption of generated
@@ -45,7 +45,7 @@ public class SubstitutionQueryParametersManager {
 
 	private String buildFilePath(String location, String queryName) {
 		StringBuilder sb = new StringBuilder();
-		sb.append(StringUtil.normalizePath(location));
+		sb.append(FileUtils.normalizePath(location));
 		sb.append(File.separator);
 		sb.append(queryName);
 		return sb.toString();

@@ -1,9 +1,7 @@
 package eu.ldbc.semanticpublishing.resultanalyzers.sesame;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintStream;
 
 import org.openrdf.model.Statement;
 import org.openrdf.rio.RDFFormat;
@@ -33,16 +31,16 @@ public class RDFXMLResultStatementsCounter {
 			statementsCounter.resetStatementsCount();
 			
 			//suppress warnings about not properly configured Log4J system caused by Sesame
-			PrintStream oldPrintStream = System.err;
-			PrintStream newPrintStream = new PrintStream(new ByteArrayOutputStream());
-			System.setErr(newPrintStream);
+//			PrintStream oldPrintStream = System.err;
+//			PrintStream newPrintStream = new PrintStream(new ByteArrayOutputStream());
+//			System.setErr(newPrintStream);
 
 			long currentTime = System.currentTimeMillis();
 			rdfParser.parse(is, BASE_URI_STRING);
 			parseTime = System.currentTimeMillis() - currentTime;
 			
 			//restore back initial std output
-			System.setErr(oldPrintStream);			
+//			System.setErr(oldPrintStream);			
 		} catch (RDFParseException rpe) {
 			rpe.printStackTrace();
 		} catch (RDFHandlerException rhe) {

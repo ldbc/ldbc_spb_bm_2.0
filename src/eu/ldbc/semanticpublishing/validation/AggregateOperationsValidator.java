@@ -88,7 +88,7 @@ public class AggregateOperationsValidator extends Validator {
 			queryName = queryTemplate.getTemplateFileName();
 			queryString = queryTemplate.compileMustacheTemplate();			
 			
-			queryResult = queryExecuteManager.executeQuery(connection, queryName, queryString, queryType, false, true);			
+			queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, true);			
 
 			long actualResultsSize = 0;
 			InputStream iStream = null;

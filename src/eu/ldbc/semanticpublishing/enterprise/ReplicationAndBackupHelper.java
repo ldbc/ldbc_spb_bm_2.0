@@ -81,7 +81,7 @@ public class ReplicationAndBackupHelper {
 		queryName = insertTemplate.getTemplateFileName();
 		queryString = insertTemplate.compileMustacheTemplate();		
 
-		queryResult = queryExecuteManager.executeQuery(connection, queryName, queryString, queryType, false, true);
+		queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, true);
 		
 		BRIEF_LOGGER.info(String.format("Milestone Query [%s] executed", queryName));
 		LOGGER.info("\n*** Milestone Query [" + queryName + "], \n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");

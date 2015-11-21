@@ -40,7 +40,6 @@ import eu.ldbc.semanticpublishing.util.FileUtils;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
 import eu.ldbc.semanticpublishing.util.RdfUtils;
 import eu.ldbc.semanticpublishing.util.ShellUtil;
-import eu.ldbc.semanticpublishing.util.StringUtil;
 import eu.ldbc.semanticpublishing.util.ThreadUtil;
 import eu.ldbc.semanticpublishing.validation.AggregateOperationsValidator;
 import eu.ldbc.semanticpublishing.validation.EditorialOperationsValidator;
@@ -75,6 +74,7 @@ public class TestDriver {
 		if( args.length < 1) {
 			throw new IllegalArgumentException("Missing parameter - the configuration file must be specified");
 		}
+		
 		configuration.loadFromFile(args[0]);
 		definitions.loadFromFile(configuration.getString(Configuration.DEFINITIONS_PATH), configuration.getBoolean(Configuration.VERBOSE));
 		mustacheTemplatesHolder.loadFrom(configuration.getString(Configuration.QUERIES_PATH));
@@ -111,7 +111,7 @@ public class TestDriver {
 	
 	private RandomUtil initializeRandomUtil(String datasetsPath, long seed, int yearSeed, int generorPeriodYears) {
 		//File WordsDictionary.txt is one level up
-		String ontPath = StringUtil.normalizePath(datasetsPath);
+		String ontPath = FileUtils.normalizePath(datasetsPath);
 		String oneLevelUp = ontPath.substring(0, ontPath.lastIndexOf(File.separator) + 1);		
 		String filePath = oneLevelUp + "dictionaries" + File.separator + "WordsDictionary.txt";		
 		
@@ -122,7 +122,7 @@ public class TestDriver {
 		if (enable) {
 			System.out.println("Loading ontologies...");
 			
-			String ontologiesPath = StringUtil.normalizePath(configuration.getString(Configuration.ONTOLOGIES_PATH));
+			String ontologiesPath = FileUtils.normalizePath(configuration.getString(Configuration.ONTOLOGIES_PATH));
 			String endpoint = configuration.getString(Configuration.ENDPOINT_UPDATE_URL);
 			
 			List<File> collectedFiles = new ArrayList<File>();
@@ -147,7 +147,7 @@ public class TestDriver {
 			int avgTriplesPerCw = 19;//average number of triples per Creative Work
 			String dpbediaPrefix = "dbpedia";
 			String personEntityTypeUri = "http://xmlns.com/foaf/0.1/Person"; // foaf:Person
-			String datasetsPath = StringUtil.normalizePath(configuration.getString(Configuration.REFERENCE_DATASETS_PATH));
+			String datasetsPath = FileUtils.normalizePath(configuration.getString(Configuration.REFERENCE_DATASETS_PATH));
 			
 			List<File> collectedFiles = new ArrayList<File>();
 			FileUtils.collectFilesList2(datasetsPath, collectedFiles, "adjustablettl", true);
@@ -169,7 +169,7 @@ public class TestDriver {
 		if (enable) {
 			System.out.println("Loading reference datasets...");
 			
-			String datasetsPath = StringUtil.normalizePath(configuration.getString(Configuration.REFERENCE_DATASETS_PATH));
+			String datasetsPath = FileUtils.normalizePath(configuration.getString(Configuration.REFERENCE_DATASETS_PATH));
 			String endpoint = configuration.getString(Configuration.ENDPOINT_UPDATE_URL);
 			
 			List<File> collectedFiles = new ArrayList<File>();
@@ -530,7 +530,7 @@ public class TestDriver {
 	
 	private void setupAsynchronousAgents() {
 		for(int i = 0; i < aggregationAgentsCount; ++i ) {
-			aggregationAgents.add(new AggregationAgent(inBenchmarkState, queryExecuteManager, randomGenerator, runFlag, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.AGGREGATION), definitions, substitutionQueryParamtersManager, configuration.getLong(Configuration.BENCHMARK_BY_QUERY_MIX_RUNS)));
+			aggregationAgents.add(new AggregationAgent(inBenchmarkState, queryExecuteManager, randomGenerator, runFlag, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.AGGREGATION), configuration, definitions, substitutionQueryParamtersManager, configuration.getLong(Configuration.BENCHMARK_BY_QUERY_MIX_RUNS)));
 		}
 
 		for(int i = 0; i < editorialAgentsCount; ++i ) {
@@ -637,8 +637,8 @@ public class TestDriver {
 													       configuration.getDouble(Configuration.MIN_UPDATE_RATE_THRESHOLD_OPS),
 														   configuration.getDouble(Configuration.MAX_UPDATE_RATE_THRESHOLD_OPS),
 													       maxUpdateRateReached, 
-													       configuration.getInt(Configuration.EDITORIAL_AGENTS_COUNT),																				
-														   configuration.getInt(Configuration.AGGREGATION_AGENTS_COUNT), 
+													       editorialAgents,																				
+														   aggregationAgents, 
 													       configuration.getLong(Configuration.BENCHMARK_RUN_PERIOD_SECONDS),
 														   definitions.getString(Definitions.QUERY_POOLS),
 														   configuration.getInt(Configuration.CURRENT_RATE_REPORT_PERIOD_SECONDS), 
@@ -760,8 +760,8 @@ public class TestDriver {
 													       0.0,		
 														   configuration.getDouble(Configuration.MAX_UPDATE_RATE_THRESHOLD_OPS),
 														   maxUpdateRateReached, 
-														   configuration.getInt(Configuration.EDITORIAL_AGENTS_COUNT),																				
-														   configuration.getInt(Configuration.AGGREGATION_AGENTS_COUNT), 
+													       editorialAgents,																				
+														   aggregationAgents, 
 														   configuration.getLong(Configuration.BENCHMARK_RUN_PERIOD_SECONDS),
 													       definitions.getString(Definitions.QUERY_POOLS), 
 													       configuration.getInt(Configuration.CURRENT_RATE_REPORT_PERIOD_SECONDS), 
@@ -789,7 +789,7 @@ public class TestDriver {
 						message = "Starting incremental backup (incremental_backup_start)...";
 						System.out.println(message);
 						LOGGER.info(message);							
-						ShellUtil.execute(StringUtil.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.INCREMENTAL_BACKUP_START + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
+						ShellUtil.execute(FileUtils.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.INCREMENTAL_BACKUP_START + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
 					}
 				}
 			} catch (IOException ioe) {
@@ -805,7 +805,7 @@ public class TestDriver {
 			message = "Shutting down the database (system_shutdown)...";
 			System.out.println(message);
 			LOGGER.info(message);
-			ShellUtil.execute(StringUtil.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_SHUTDOWN + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
+			ShellUtil.execute(FileUtils.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_SHUTDOWN + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
 			
 			//update query timeout value to allow longer timeouts for milestone validation queries. In cases when startup of the database requires extra time to recover.
 			replicationHelper.updateQueryExecutionTimeout(48*60*60*1000);
@@ -813,7 +813,7 @@ public class TestDriver {
 			message = "Starting up the database (system_startup)...";
 			System.out.println(message);
 			LOGGER.info(message);
-			ShellUtil.execute(StringUtil.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_START + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
+			ShellUtil.execute(FileUtils.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_START + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
 
 			message = "Verifying that milestone point exists";
 			System.out.println(message);
@@ -848,22 +848,22 @@ public class TestDriver {
 			message = "Verifying milestone points...\nShutting down the database (system_shutdown)...";
 			System.out.println(message);
 			LOGGER.info(message);
-			ShellUtil.execute(StringUtil.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_SHUTDOWN + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
+			ShellUtil.execute(FileUtils.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_SHUTDOWN + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
 						
 			message = "Starting up the database (system_startup)...";
 			System.out.println(message);
 			LOGGER.info(message);
-			ShellUtil.execute(StringUtil.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_START + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
+			ShellUtil.execute(FileUtils.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_START + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
 			
 			message = "Restoring state from full backup (before the warmup and benchmarking phases) (full_backup_restore)...";
 			System.out.println(message);
 			LOGGER.info(message);
-			ShellUtil.execute(StringUtil.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.FULL_BACKUP_RESTORE + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
+			ShellUtil.execute(FileUtils.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.FULL_BACKUP_RESTORE + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
 
 			message = "Starting up the database (system_startup)...";
 			System.out.println(message);
 			LOGGER.info(message);
-			ShellUtil.execute(StringUtil.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_START + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
+			ShellUtil.execute(FileUtils.normalizePath(configuration.getString(Configuration.SCRIPTS_PATH) + File.separator + "enterprise"), ReplicationAndBackupHelper.SYSTEM_START + (FileUtils.isWindowsOS() ? ".bat" : ".sh"), true);
 			
 			message = "Verifying that current state of the database doesn't contain the milestone point";
 			System.out.println(message);
@@ -949,12 +949,12 @@ public class TestDriver {
 				boolean constraintViolationCheckSucceeded = false;
 				try {
 					if (askQuery) {
-						String queryResult = queryExecuteManager.executeQuery(constraintTest, sb.toString(), QueryType.SELECT);
+						String queryResult = queryExecuteManager.executeQueryWithStringResult(constraintTest, sb.toString(), QueryType.SELECT);
 						if (queryResult.toLowerCase().contains("<boolean>true</boolean>")) {
 							constraintViolationCheckSucceeded = true;
 						}
 					} else {
-						queryExecuteManager.executeQuery(constraintTest, sb.toString(), QueryType.INSERT);
+						queryExecuteManager.executeQueryWithStringResult(constraintTest, sb.toString(), QueryType.INSERT);
 					}
 				} catch (IOException ioe) {
 					//deliberately catching IOException from queryExecuteManager as a sign of a successful constraint violation test
@@ -973,7 +973,7 @@ public class TestDriver {
 	public void clearDatabase(boolean enable) throws IOException {
 		if (enable) {	
 			System.out.println("Cleaning up database ...");
-			queryExecuteManager.executeQuery("SERVICE-DELETE", " CLEAR ALL ", QueryType.DELETE);
+			queryExecuteManager.executeQueryWithStringResult("SERVICE-DELETE", " CLEAR ALL ", QueryType.DELETE);
 		}
 	}
 
@@ -998,8 +998,21 @@ public class TestDriver {
 		System.out.println("END OF RUN, all agents shut down...");
 		System.exit(0);
 	}
+
+	public static void showHelp() {
+		String helpMsg = "\n\tLDBC Semantic Publishing Benchmark v.2.0";
+		helpMsg += "\n\tUsage:";
+		helpMsg += "\n\t\t- java -jar <semantic_publishing_benchmark.jar> test.properties - provide a set of configuration options which control the benchmark driver";
+		
+		System.out.println(helpMsg);
+	}
 	
 	public static void main(String[] args) throws Exception {
+		if (args.length != 1) {
+			showHelp();
+			System.exit(0);
+		}
+		
 		TestDriver testDriver = new TestDriver(args);
 		testDriver.executePhases();
 	}
