@@ -91,14 +91,14 @@ public class TestDriverReporter extends Thread {
 		StringBuilder sb = new StringBuilder();
 		
 		calendar = Calendar.getInstance();
-		sb.append("LDBC Semantic Publishing Benchmark");
+		sb.append("\nLDBC Semantic Publishing Benchmark");
 		sb.append("\nStarted: ");
 		sb.append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendar.getTime()));
 		sb.append("\n");
 		sb.append("Dataset Info: ");
-		sb.append(String.format("\tCreative Works\t: %,d\n", DataManager.creativeWorksNextId));
+		sb.append(String.format("\tCreative Works\t: %,d\n", DataManager.creativeWorksNextId.get()));
 		sb.append(String.format("\tReference Entities\t: %,d\n", DataManager.regularEntitiesList.size()));
-		sb.append(String.format("\tGeo Locations\t: %,d\n", DataManager.locationsIdsList.size() + DataManager.geonamesIdsList.size()));
+		sb.append(String.format("\tGeo Locations\t\t: %,d\n", DataManager.locationsIdsList.size() + DataManager.geonamesIdsList.size()));
 		sb.append("\n");
 		sb.append("Benchmark Results:\n");
 
