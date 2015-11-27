@@ -114,66 +114,33 @@ public class PerformanceChartTool extends ChartToolBase {
 		 
 		final XYSeriesCollection chartDataset = new XYSeriesCollection();
 		
-		int iteration = 0;
-		int samplesCounter = 0;
-
-		if (currentReads.size() > 0) {			 
-			currentReadsSeries = new XYSeries(CURRENT_READS_STRING);
-		
-			for (Double d : currentReads) {
-				if (iteration % sampleIntervalSeconds == 0) {
-					currentReadsSeries.add(d.doubleValue(), samplesCounter++);
-				}
-				iteration++;
-			}
-			
-			chartDataset.addSeries(currentReadsSeries);
+		if (currentReads.size() > 0) {	
+			currentReadsSeries = createSeries(currentReads, CURRENT_READS_STRING, sampleIntervalSeconds);
+			if (currentReadsSeries != null) {
+				chartDataset.addSeries(currentReadsSeries);
+			}			
 		}
 		 
 		 
 		if (currentWrites.size() > 0) {
-			iteration = 0;
-			samplesCounter = 0;
-			currentWritesSeries = new XYSeries(CURRENT_WRITES_STRING);
-			 
-			for (Double d : currentWrites) {
-				if (iteration % sampleIntervalSeconds == 0) {
-					currentWritesSeries.add(d.doubleValue(), samplesCounter++);
-				}
-				iteration++;
-			}
-			 
-			chartDataset.addSeries(currentWritesSeries);
+			currentWritesSeries = createSeries(currentWrites, CURRENT_WRITES_STRING, sampleIntervalSeconds);
+			if (currentWritesSeries != null) {
+				chartDataset.addSeries(currentWritesSeries);
+			}	
 		}
 		 
 		if (averageReads.size() > 0) {
-			iteration = 0;
-			samplesCounter = 0;
-			averageReadsSeries = new XYSeries(AVERAGE_READS_STRING);
-			 
-			for (Double d : averageReads) {
-				if (iteration % sampleIntervalSeconds == 0) {
-					averageReadsSeries.add(d.doubleValue(), samplesCounter++);
-				}
-				iteration++;
-			}
-			 
-			chartDataset.addSeries(averageReadsSeries);
+			averageReadsSeries = createSeries(averageReads, AVERAGE_READS_STRING, sampleIntervalSeconds);
+			if (averageReadsSeries != null) {
+				chartDataset.addSeries(averageReadsSeries);
+			}	
 		}
 		
 		if (averageWrites.size() > 0) {
-			iteration = 0;
-			samplesCounter = 0;
-			averageWritesSeries = new XYSeries(AVERAGE_WRITES_STRING);
-			 
-			for (Double d : averageWrites) {
-				if (iteration % sampleIntervalSeconds == 0) {
-					averageWritesSeries.add(d.doubleValue(), samplesCounter++);
-				}
-				iteration++;
-			}
-			 
-			chartDataset.addSeries(averageWritesSeries);
+			averageWritesSeries = createSeries(averageWrites, AVERAGE_WRITES_STRING, sampleIntervalSeconds);
+			if (averageWritesSeries != null) {
+				chartDataset.addSeries(averageWritesSeries);
+			}	
 		}
 		
 		return chartDataset;

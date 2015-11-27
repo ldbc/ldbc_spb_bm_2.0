@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.ldbc.semanticpublishing.agents.AbstractAsynchronousAgent;
+import eu.ldbc.semanticpublishing.refdataset.DataManager;
 import eu.ldbc.semanticpublishing.statistics.Statistics;
 
 /**
@@ -74,6 +75,7 @@ public class TestDriverReporter extends Thread {
 		try {
 			long timeCorreciton = 0;
 			long startTime = System.currentTimeMillis();
+			showDatasetInfoHeader();
 			while (benchmarkState.get() || keepAlive.get()) {
 				Thread.sleep(Math.abs(1000 - timeCorreciton));
 				seconds = (long) ((System.currentTimeMillis() - startTime) / 1000);
@@ -83,6 +85,24 @@ public class TestDriverReporter extends Thread {
 			System.out.println("BenchmarkProcessObserver :: encountered a problem : " + t.getMessage());
 			t.printStackTrace();
 		}
+	}
+	
+	private void showDatasetInfoHeader() {
+		StringBuilder sb = new StringBuilder();
+		
+		calendar = Calendar.getInstance();
+		sb.append("LDBC Semantic Publishing Benchmark");
+		sb.append("\nStarted: ");
+		sb.append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendar.getTime()));
+		sb.append("\n");
+		sb.append("Dataset Info: ");
+		sb.append(String.format("\tCreative Works\t: %,d\n", DataManager.creativeWorksNextId));
+		sb.append(String.format("\tReference Entities\t: %,d\n", DataManager.regularEntitiesList.size()));
+		sb.append(String.format("\tGeo Locations\t: %,d\n", DataManager.locationsIdsList.size() + DataManager.geonamesIdsList.size()));
+		sb.append("\n");
+		sb.append("Benchmark Results:\n");
+
+		LOGGER.info(sb.toString());
 	}
 	
 	/**
