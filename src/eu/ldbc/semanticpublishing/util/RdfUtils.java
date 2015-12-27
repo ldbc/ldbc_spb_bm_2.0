@@ -22,11 +22,11 @@ public class RdfUtils {
 	
 	private static final int READ_BUFFER_SIZE_BYTES = 128 * 1024;
 	
+	public static final String CONTENT_TYPE_RDFXML = "application/rdf+xml";
 	public static final String CONTENT_TYPE_NQUADS = "application/n-quads";
 	public static final String CONTENT_TYPE_SESAME_NQUADS = "text/x-nquads";
 	public static final String CONTENT_TYPE_TRIG = "application/x-trig";
 	public static final String CONTENT_TYPE_TURTLE = "application/x-turtle";
-	
 	
 	private static String[] NAMESPACES = {"cwork:", "<http://www.bbc.co.uk/ontologies/creativework/>",
 										  "bbc:"  , "<http://www.bbc.co.uk/ontologies/bbc/>"};
