@@ -20,20 +20,20 @@ public class SparqlQueryConnection extends HttpConnectionBase {
 	private QueryType queryType;
 
 	/**
-	 * Constructs a SparqlQueryConnection using a new HttpUrlConnection
+	 * Constructs a SparqlQueryConnection and writes query string to out stream
 	 */
-	public SparqlQueryConnection(String endpointUrl, String endpointUpdateUrl, String queryString, QueryType queryType, int timeoutMilliseconds, boolean verbose) {
-		super(endpointUrl, endpointUpdateUrl, timeoutMilliseconds, verbose);
+	public SparqlQueryConnection(String endpointUrl, String endpointUpdateUrl, String contentTypeForGraphQuery, String queryString, QueryType queryType, int timeoutMilliseconds, boolean verbose) {
+		super(endpointUrl, endpointUpdateUrl, contentTypeForGraphQuery, timeoutMilliseconds, verbose);
 		this.queryString = queryString;
 		this.queryType = queryType;
 		prepareConnection(true);
 	}
 	
 	/**
-	 * Constructs a SparqlQueryConnection which allows to be re-used.
+	 * Constructs a SparqlQueryConnection without writing query to out stream 
 	*/
-	public SparqlQueryConnection(String endpointUrl, String endpointUpdateUrl, int timeoutMilliseconds, boolean verbose) {
-		super(endpointUrl, endpointUpdateUrl, timeoutMilliseconds, verbose);
+	public SparqlQueryConnection(String endpointUrl, String endpointUpdateUrl, String contentTypeForGraphQuery, int timeoutMilliseconds, boolean verbose) {
+		super(endpointUrl, endpointUpdateUrl, contentTypeForGraphQuery, timeoutMilliseconds, verbose);
 		this.queryString = "";
 		this.queryType = QueryType.CONSTRUCT;
 		prepareConnection(false);
@@ -52,7 +52,7 @@ public class SparqlQueryConnection extends HttpConnectionBase {
 	}	
 
 	@Override
-	public void prepareConnection(boolean flushQueryContentsToStream) {
+	public void prepareConnection(boolean setQueryToStream) {
 
 		try {
 			URL url = new URL(prepareEncodedUrlQueryString());
@@ -75,14 +75,15 @@ public class SparqlQueryConnection extends HttpConnectionBase {
 				httpUrlConnection.setRequestMethod("POST");
 				httpUrlConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
 //				httpUrlConnection.setRequestProperty("Content-Type", "application/sparql-query");
-				if (graphQuery) {
-					httpUrlConnection.setRequestProperty("Accept", "application/rdf+xml");
+				if (graphQuery) {					
+					httpUrlConnection.setRequestProperty("Accept", contentTypeForGraphQuery);
+//					httpUrlConnection.setRequestProperty("Accept", "application/rdf+xml");
 //					httpUrlConnection.setRequestProperty("Accept", "application/x-turtle");
 				} else {
 					httpUrlConnection.setRequestProperty("Accept", "application/sparql-results+xml");
 				}
 			}
-			if (flushQueryContentsToStream && !queryString.isEmpty()) {
+			if (setQueryToStream && !queryString.isEmpty()) {
 				setOutputStream();
 			}
 		} catch (UnsupportedEncodingException uee) {

@@ -26,6 +26,7 @@ import eu.ldbc.semanticpublishing.templates.validation.ValidateInsertTemplate;
 import eu.ldbc.semanticpublishing.templates.validation.ValidateUpdateTemplate;
 import eu.ldbc.semanticpublishing.util.FileUtils;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
+import eu.ldbc.semanticpublishing.util.RdfUtils;
 
 public class EditorialOperationsValidator extends Validator {
 	private SparqlQueryExecuteManager queryExecuteManager;
@@ -46,7 +47,7 @@ public class EditorialOperationsValidator extends Validator {
 	
 	public EditorialOperationsValidator(SparqlQueryExecuteManager queryExecuteManager, RandomUtil ru, HashMap<String, String> editorialQueryTemplates, HashMap<String, String> validationQueryTemplates, Configuration configuration, Definitions definitions) {
 		this.queryExecuteManager = queryExecuteManager;
-		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_TURTLE, queryExecuteManager.getTimeoutMilliseconds(), true);
 		this.ru = ru;
 		this.editorialQueryTemplates = editorialQueryTemplates;
 		this.validationQueryTemplates = validationQueryTemplates;

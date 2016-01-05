@@ -6,6 +6,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection.QueryType;
 import eu.ldbc.semanticpublishing.resultanalyzers.sax.SAXResultTransformer;
+import eu.ldbc.semanticpublishing.util.RdfUtils;
 import eu.ldbc.semanticpublishing.util.StringUtil;
 
 /**
@@ -33,8 +34,8 @@ public class SparqlQueryExecuteManager {
 	 * @return count of bytes from the returned result 
 	 * @throws IOException
 	 */
-	public String executeQueryWithStringResult(String queryName, String queryString, QueryType queryType) throws IOException {
-		return executeQueryWithStringResult(new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, queryTimeoutMilliseconds, verbose), queryName, queryString, queryType, false, true);
+	public String executeQueryWithStringResult(String queryName, String queryString, QueryType queryType, String contentTypeForGraphQuery) throws IOException {
+		return executeQueryWithStringResult(new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, contentTypeForGraphQuery, queryTimeoutMilliseconds, verbose), queryName, queryString, queryType, false, true);
 	}
 	
 	/**
@@ -60,8 +61,8 @@ public class SparqlQueryExecuteManager {
 		return queryResult;		
 	}
 	
-	public String executeQueryWithInputStreamResult(String queryName, String queryString, QueryType queryType) throws IOException {
-		return executeQueryWithStringResult(new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, queryTimeoutMilliseconds, verbose), queryName, queryString, queryType, false, true);
+	public String executeQueryWithInputStreamResult(String queryName, String queryString, QueryType queryType, String contentTypeForGraphQuery) throws IOException {
+		return executeQueryWithStringResult(new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, contentTypeForGraphQuery, queryTimeoutMilliseconds, verbose), queryName, queryString, queryType, false, true);
 	}		
 	
 	public InputStream executeQueryWithInputStreamResult(SparqlQueryConnection connection, String queryName, String queryString, QueryType queryType, boolean useInStatistics, boolean disconnect) throws IOException {
@@ -90,7 +91,7 @@ public class SparqlQueryExecuteManager {
 	 */
 	public void executeSystemQuery(SAXResultTransformer transformer, String queryString, QueryType queryType) throws IOException {
 		
-		SparqlQueryConnection sparqlQuery = new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, queryString, queryType, systemQueryTimeoutMilliseconds, verbose);		
+		SparqlQueryConnection sparqlQuery = new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, RdfUtils.CONTENT_TYPE_RDFXML, queryString, queryType, systemQueryTimeoutMilliseconds, verbose);		
 		InputStream is = sparqlQuery.execute();
 		if (is == null) {
 			System.out.println("Unable to execute query : \n" + queryString);

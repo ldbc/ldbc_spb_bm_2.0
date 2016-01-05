@@ -25,6 +25,7 @@ import eu.ldbc.semanticpublishing.statistics.querypool.Pool;
 import eu.ldbc.semanticpublishing.templates.MustacheTemplate;
 import eu.ldbc.semanticpublishing.templates.aggregation.*;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
+import eu.ldbc.semanticpublishing.util.RdfUtils;
 import eu.ldbc.semanticpublishing.util.StringUtil;
 
 /**
@@ -59,7 +60,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		this.ru = ru;
 		this.benchmarkingState = benchmarkingState;
 		this.queryTemplates = queryTamplates;
-		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
 		this.definitions = definitions;
 		this.substitutionQueryParametersMngr = substitutionQueryParametersMngr;
 //		this.turtleResultStatementsCounter = new TurtleResultStatementsCounter();
@@ -184,7 +185,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 			}
 			
 			connection.disconnect();
-			connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+			connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
 		}
 
 		if (startedDuringBenchmarkPhase) {

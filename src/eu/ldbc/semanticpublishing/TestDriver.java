@@ -949,12 +949,12 @@ public class TestDriver {
 				boolean constraintViolationCheckSucceeded = false;
 				try {
 					if (askQuery) {
-						String queryResult = queryExecuteManager.executeQueryWithStringResult(constraintTest, sb.toString(), QueryType.SELECT);
+						String queryResult = queryExecuteManager.executeQueryWithStringResult(constraintTest, sb.toString(), QueryType.SELECT, RdfUtils.CONTENT_TYPE_RDFXML);
 						if (queryResult.toLowerCase().contains("<boolean>true</boolean>")) {
 							constraintViolationCheckSucceeded = true;
 						}
 					} else {
-						queryExecuteManager.executeQueryWithStringResult(constraintTest, sb.toString(), QueryType.INSERT);
+						queryExecuteManager.executeQueryWithStringResult(constraintTest, sb.toString(), QueryType.INSERT, RdfUtils.CONTENT_TYPE_RDFXML);
 					}
 				} catch (IOException ioe) {
 					//deliberately catching IOException from queryExecuteManager as a sign of a successful constraint violation test
@@ -973,7 +973,7 @@ public class TestDriver {
 	public void clearDatabase(boolean enable) throws IOException {
 		if (enable) {	
 			System.out.println("Cleaning up database ...");
-			queryExecuteManager.executeQueryWithStringResult("SERVICE-DELETE", " CLEAR ALL ", QueryType.DELETE);
+			queryExecuteManager.executeQueryWithStringResult("SERVICE-DELETE", " CLEAR ALL ", QueryType.DELETE, RdfUtils.CONTENT_TYPE_RDFXML);
 		}
 	}
 

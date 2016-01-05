@@ -19,6 +19,7 @@ import eu.ldbc.semanticpublishing.templates.editorial.DeleteTemplate;
 import eu.ldbc.semanticpublishing.templates.editorial.InsertTemplate;
 import eu.ldbc.semanticpublishing.templates.editorial.UpdateTemplate;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
+import eu.ldbc.semanticpublishing.util.RdfUtils;
 import eu.ldbc.semanticpublishing.validation.EditorialOperationsValidator;
 import eu.ldbc.semanticpublishing.validation.EditorialOperationsValidator.EditorialOperation;
 
@@ -49,7 +50,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 		this.ru = ru;
 		this.benchmarkingState = benchmarkingState;
 		this.queryTemplates = queryTemplates;
-		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
 		this.definitions = definitions;
 		this.maxUpdateOperationsReached = maxUpdateOperationsReached;
 		this.enableValidation = configuration.getBoolean(Configuration.ENABLE_EDITORIAL_OPS_VALIDATION);
@@ -146,7 +147,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 			updateQueryStatistics(false, queryType, queryName, queryString, queryResult ,queryId, 0);
 			
 			connection.disconnect();
-			connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+			connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
 		}
 		
 		return true;
