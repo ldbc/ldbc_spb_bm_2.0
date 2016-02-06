@@ -53,6 +53,7 @@ public class TestDriver {
 	private int editorialAgentsCount;
 	private int warmupPeriodSeconds;
 	private int benchmarkRunPeriodSeconds;
+	private final String propertiesFile;
 	private SparqlQueryExecuteManager queryExecuteManager;
 	private final AtomicBoolean inBenchmarkState = new AtomicBoolean(false);
 	private final AtomicBoolean keepReporterAlive = new AtomicBoolean(false);
@@ -75,7 +76,8 @@ public class TestDriver {
 			throw new IllegalArgumentException("Missing parameter - the configuration file must be specified");
 		}
 		
-		configuration.loadFromFile(args[0]);
+		propertiesFile = args[0];
+		configuration.loadFromFile(propertiesFile);
 		definitions.loadFromFile(configuration.getString(Configuration.DEFINITIONS_PATH), configuration.getBoolean(Configuration.VERBOSE));
 		mustacheTemplatesHolder.loadFrom(configuration.getString(Configuration.QUERIES_PATH));
 		
@@ -363,8 +365,8 @@ public class TestDriver {
 				}
 			
 				for( File file : scriptFiles ) {
-					System.out.println("\texecuting " + scriptsSubFolder + " script: " + file.getName());
-					ShellUtil.execute(sciptsPath, file.getName(), true);
+					System.out.println("\texecuting " + scriptsSubFolder + " script: " + file.getName() + " parameters: " + propertiesFile);
+					ShellUtil.execute(sciptsPath + " " + propertiesFile, file.getName(), true);
 				}
 			} catch (NullPointerException npe) {
 				System.out.println("Warning : Possible wrong configuration for property 'scriptsPath' (test.properties)...");
