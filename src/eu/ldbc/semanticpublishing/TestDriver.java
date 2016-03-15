@@ -643,7 +643,8 @@ public class TestDriver {
 														   aggregationAgents, 
 													       configuration.getLong(Configuration.BENCHMARK_RUN_PERIOD_SECONDS),
 														   definitions.getString(Definitions.QUERY_POOLS),
-														   configuration.getInt(Configuration.CURRENT_RATE_REPORT_PERIOD_SECONDS), 
+														   configuration.getInt(Configuration.CURRENT_RATE_REPORT_PERIOD_SECONDS),
+														   configuration.getInt(Configuration.REPORT_INTERVAL_SECONDS),
 														   configuration.getBoolean(Configuration.VERBOSE));
 			reporterThread.setDaemon(true);
 			reporterThread.start();
@@ -767,6 +768,7 @@ public class TestDriver {
 														   configuration.getLong(Configuration.BENCHMARK_RUN_PERIOD_SECONDS),
 													       definitions.getString(Definitions.QUERY_POOLS), 
 													       configuration.getInt(Configuration.CURRENT_RATE_REPORT_PERIOD_SECONDS), 
+													       configuration.getInt(Configuration.REPORT_INTERVAL_SECONDS), 
 														   configuration.getBoolean(Configuration.VERBOSE));
 			reporterThread.setDaemon(true);
 			reporterThread.start();

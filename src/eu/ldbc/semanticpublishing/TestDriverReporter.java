@@ -39,10 +39,11 @@ public class TestDriverReporter extends Thread {
 	private long totalOperationsFromPrevReport;
 	private long totalQueriesFromPrevReport;
 	private Calendar calendar;
+	private int reportIntervalSeconds;
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(TestDriverReporter.class.getName());
 	
-	public TestDriverReporter(AtomicLong totalQueryExecutions, AtomicLong totalCompletedQueryMixRuns, AtomicBoolean benchmarkState, AtomicBoolean keepAlive, AtomicBoolean benchmarkResultIsValid, double updateQueryRateFirstReachTimePercent, double minUpdateQueriesRateThresholdOps, double maxUpdateRateThresholdOps, AtomicBoolean maxUpdateRateReached, List<AbstractAsynchronousAgent> editorialAgentsList, List<AbstractAsynchronousAgent> aggregationAgentsList, long runPeriodSeconds, /*long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, */String queryPoolsDefinitons, int reportPeriodSeconds , boolean verbose) {
+	public TestDriverReporter(AtomicLong totalQueryExecutions, AtomicLong totalCompletedQueryMixRuns, AtomicBoolean benchmarkState, AtomicBoolean keepAlive, AtomicBoolean benchmarkResultIsValid, double updateQueryRateFirstReachTimePercent, double minUpdateQueriesRateThresholdOps, double maxUpdateRateThresholdOps, AtomicBoolean maxUpdateRateReached, List<AbstractAsynchronousAgent> editorialAgentsList, List<AbstractAsynchronousAgent> aggregationAgentsList, long runPeriodSeconds, /*long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, */String queryPoolsDefinitons, int reportPeriodSeconds, int reportIntervalSeconds, boolean verbose) {
 		this.totalQueryExecutions = totalQueryExecutions;
 		this.totalCompletedQueryMixRuns = totalCompletedQueryMixRuns;
 		this.benchmarkState = benchmarkState;
@@ -63,6 +64,7 @@ public class TestDriverReporter extends Thread {
 		this.totalOperationsFromPrevReport = 0;
 		this.totalQueriesFromPrevReport = 0;
 		this.currentRateReportPeriodSeconds = reportPeriodSeconds;
+		this.reportIntervalSeconds = reportIntervalSeconds;
 	}
 	
 	/* (non-Javadoc)
@@ -77,7 +79,7 @@ public class TestDriverReporter extends Thread {
 			long startTime = System.currentTimeMillis();
 			showDatasetInfoHeader();
 			while (benchmarkState.get() || keepAlive.get()) {
-				Thread.sleep(Math.abs(1000 - timeCorreciton));
+				Thread.sleep(Math.abs(reportIntervalSeconds * 1000 - timeCorreciton));
 				seconds = (long) ((System.currentTimeMillis() - startTime) / 1000);
 				timeCorreciton = collectAndShowResults(/*(benchmarkByQueryRuns == 0) && (benchmarkByQueryMixRuns == 0)*/);
 			}
