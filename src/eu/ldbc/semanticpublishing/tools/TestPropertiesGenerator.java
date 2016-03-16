@@ -34,7 +34,7 @@ public class TestPropertiesGenerator {
 				continue;
 			}
 			
-			LinkedList<String> parametersList = new LinkedList<>();
+			LinkedList<String> parametersList = new LinkedList<String>();
 			for (int i = 0; i < tokens.length; i++) {
 				parametersList.add(tokens[i]);
 			}
