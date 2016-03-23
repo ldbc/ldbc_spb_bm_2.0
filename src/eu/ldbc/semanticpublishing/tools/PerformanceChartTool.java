@@ -277,7 +277,7 @@ plot.setRangeGridlinePaint(new Color(0xff, 0x00, 0x00));
 	}
 	
 	public static void showHelp() {
-		System.out.println("\n\tUsage: java -jar semantic_publishing_benchmark_chart_tool.jar [-exportPNG] <path_to_spb_results.log> <sampleIntervalSeconds>");
+		System.out.println("\n\tUsage: java -jar semantic_publishing_benchmark_chart_tool.jar <path_to_spb_results.log> <sampleIntervalSeconds> [-exportPNG] ");
 		System.out.println("\t\t<path_to_spb_results.log> \t- full path to SPB's benchmark result file");
 		System.out.println("\t\t<sampleIntervalSeconds> \t- extract samples of results for each 'sampleIntervalSeconds' second. Allowed values: [1, MAX_INT]");
 	}
