@@ -2,12 +2,21 @@ package eu.ldbc.semanticpublishing.tools;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
+
+import javax.imageio.ImageIO;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -28,6 +37,7 @@ public class PerformanceChartTool extends ChartToolBase {
 	private List<Double> averageWrites = new LinkedList<Double>();
 	private int editorialAgentsCount = -1;
 	private int aggregationAgentsCount = -1;
+	private String spbResultFilePath;
 	
 	private static final String CHART_TITLE = "LDBC SPB Performance";
 	
@@ -38,6 +48,12 @@ public class PerformanceChartTool extends ChartToolBase {
 	private static final String AVERAGE_WRITES_STRING = "Average Operations";
 	private static final String EDITORIAL_AGENTS = "Editorial:";
 	private static final String AGGREGATION_AGENTS = "Aggregation:";
+	
+	private static final String PARAMETER_EXPORT_PNG = "exportPNG";
+	
+	public PerformanceChartTool(String spbResultsFilePath) {
+		this.spbResultFilePath = spbResultsFilePath;
+	}
 	
 	private int initializeValues(String spbResultFilePath) throws IOException {
 		long time = System.currentTimeMillis();
@@ -155,7 +171,7 @@ public class PerformanceChartTool extends ChartToolBase {
 		String runTimeString = String.format("%d hours %d minutes %s seconds", hours, minutes, seconds);
 		
         final JFreeChart chart = ChartFactory.createXYLineChart(
-       		CHART_TITLE + " (" + aggregationAgentsCount + " reading, " + editorialAgentsCount + " writing threads)" + "\n(duration: " + runTimeString + ")",			      													// Chart Title
+       		CHART_TITLE + String.format(" [%s]", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime())) + "\n(" + aggregationAgentsCount + " reading, " + editorialAgentsCount + " writing threads, duration: " + runTimeString + ")",			      													// Chart Title
             "Queries/s",      																									// Y axis label
             "Time (samples at: " + timeSampleIntervalSeconds + (timeSampleIntervalSeconds > 1 ? " seconds" : " second") + ")",	// X axis label
             dataset,       																										// Data
@@ -189,29 +205,79 @@ public class PerformanceChartTool extends ChartToolBase {
         final NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
         rangeAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());        
         
+        /*
+XYDataset dataset1 = createXYVoltageDataset();
+XYDataset dataset2 = createXYCurrentDataset();
+
+XYLineAndShapeRenderer r1 = new XYLineAndShapeRenderer();
+r1.setSeriesPaint(0, new Color(0xff, 0xff, 0x00)); 
+r1.setSeriesPaint(1, new Color(0x00, 0xff, 0xff)); 
+r1.setSeriesShapesVisible(0,  false);
+r1.setSeriesShapesVisible(1,  false);
+
+XYLineAndShapeRenderer r2 = new XYLineAndShapeRenderer();
+r2.setSeriesPaint(0, new Color(0xff, 0x00, 0x00)); 
+r2.setSeriesPaint(1, new Color(0x00, 0xff, 0x00)); 
+r2.setSeriesShapesVisible(0,  false);
+r2.setSeriesShapesVisible(1,  false);
+
+JFreeChart chart = ChartFactory.createXYLineChart("Profile", "Set Current", "Voltage", null);
+XYPlot plot = (XYPlot) chart.getPlot(); 
+
+plot.setDataset(0, dataset1);
+plot.setRenderer(0, r1);
+
+plot.setDataset(1, dataset2);
+plot.setRenderer(1, r2);
+
+plot.setRangeAxis(1, new NumberAxis("Actual Current")); 
+plot.mapDatasetToRangeAxis(1, 1); //2nd dataset to 2nd y-axi
+
+plot.setBackgroundPaint(new Color(0xFF, 0xFF, 0xFF));
+plot.setDomainGridlinePaint(new Color(0x00, 0x00, 0xff));
+plot.setRangeGridlinePaint(new Color(0xff, 0x00, 0x00));         
+         */
+        
         return chart;
 	}	
 	
-	public void showChart(int totalRunPeriodSeconds, int sampleIntervalSeconds) {
-		long time = System.currentTimeMillis();
-		System.out.println("Rendering chart...");
+	public void exportAsPNG(String outputFile, JFreeChart chart, int width, int height ) throws FileNotFoundException 
+	{
+		File f = new File(outputFile);
+		OutputStream out = new FileOutputStream(f);
+		try { 
+			BufferedImage chartImage = chart.createBufferedImage(width, height, null); 
+			ImageIO.write(chartImage, "png", out); 
+			out.close();
+			System.out.println("Chart exported as .png at: " + f.getAbsolutePath());
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	} 
+	
+	public void showChart(int totalRunPeriodSeconds, int sampleIntervalSeconds, boolean exportAsPng) throws FileNotFoundException {
+		long time = System.currentTimeMillis();		
 		
+		System.out.println("Rendering chart...");
 		final XYDataset dataset = createChartDataset(currentReads, currentWrites, averageReads, averageWrites, sampleIntervalSeconds);
         final JFreeChart chart = createChart(dataset, totalRunPeriodSeconds, sampleIntervalSeconds);
         final ChartPanel chartPanel = new ChartPanel(chart);
         chartPanel.setPreferredSize(new Dimension(1024, 768));
         
-        final ApplicationFrame applicationFrame = new ApplicationFrame(CHART_TITLE);        
-        applicationFrame.setContentPane(chartPanel);
-        applicationFrame.setAlwaysOnTop(true);
-        applicationFrame.pack();
-        applicationFrame.setVisible(true);
-        
+        if (exportAsPng) {
+        	exportAsPNG(spbResultFilePath + ".png", chart, 1024, 768);
+        } else { 
+	        final ApplicationFrame applicationFrame = new ApplicationFrame(CHART_TITLE);        
+	        applicationFrame.setContentPane(chartPanel);
+	        applicationFrame.setAlwaysOnTop(true);
+	        applicationFrame.pack();
+	        applicationFrame.setVisible(true);	        
+        }
         System.out.println("Done in: " + (System.currentTimeMillis() - time) + " ms.");
 	}
 	
 	public static void showHelp() {
-		System.out.println("\n\tUsage: java -jar semantic_publishing_benchmark_chart_tool.jar <path_to_spb_results.log> <sampleIntervalSeconds>");
+		System.out.println("\n\tUsage: java -jar semantic_publishing_benchmark_chart_tool.jar [-exportPNG] <path_to_spb_results.log> <sampleIntervalSeconds>");
 		System.out.println("\t\t<path_to_spb_results.log> \t- full path to SPB's benchmark result file");
 		System.out.println("\t\t<sampleIntervalSeconds> \t- extract samples of results for each 'sampleIntervalSeconds' second. Allowed values: [1, MAX_INT]");
 	}
@@ -224,16 +290,24 @@ public class PerformanceChartTool extends ChartToolBase {
 		String fileName = args[0];
 		int sampleIntervalSeconds = Integer.parseInt(args[1]);
 		
-		System.out.println("Source result file : " + fileName);
-		System.out.println("Samples interval   : " + sampleIntervalSeconds + " s");
+		boolean exportAsPng = false;
+		for (int i = 0; i < args.length; i++) {
+			if (args[i].contains(PARAMETER_EXPORT_PNG)) {
+				exportAsPng = true;
+			}
+		}
+						
+		System.out.println("Source result file 	: " + fileName);
+		System.out.println("Samples interval   	: " + sampleIntervalSeconds + " s");
+		System.out.println("Export to PNG		: " + exportAsPng);
 		
 		if (sampleIntervalSeconds < 1) {
 			System.out.println("ERROR: Allowed samples Interval is: [1, MAX_INT]");
 			return;
 		}
 		
-		PerformanceChartTool pct = new PerformanceChartTool();
+		PerformanceChartTool pct = new PerformanceChartTool(fileName);
 		int scannedRunPeriodSeconds = pct.initializeValues(fileName);
-		pct.showChart(scannedRunPeriodSeconds, sampleIntervalSeconds);
+		pct.showChart(scannedRunPeriodSeconds, sampleIntervalSeconds, exportAsPng);
 	}
 }
