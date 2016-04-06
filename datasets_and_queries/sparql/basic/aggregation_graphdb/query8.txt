@@ -74,6 +74,7 @@ PREFIX ot:<http://www.ontotext.com/>
 #        "http://www.bbc.co.uk/ontologies/creativework/dateModified"
 #      ],
 #      "stored": false,
+#      "multivalued": false,
 #      "facet": false
 #    }
 #  ]
