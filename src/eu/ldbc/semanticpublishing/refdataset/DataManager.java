@@ -122,6 +122,15 @@ public class DataManager {
 				writer.write("\n");							
 			}
 			
+			writer.write(String.format("%s\n%d\n", REFERENCE_DATA_ENTITIES_TEXT, referenceDataEntitiesCount));		
+			writer.write("\n");							
+
+			writer.write(String.format("%s\n%d\n", DBPEDIA_LOCATIONS_TEXT, dbpediaLocationsCount));		
+			writer.write("\n");							
+
+			writer.write(String.format("%s\n%d\n", GEONAMES_LOCATIONS_TEXT, geonamesLocationsCount));		
+			writer.write("\n");					
+			
 		} finally {
 			try {
 				writer.close(); 
@@ -130,7 +139,7 @@ public class DataManager {
 		}
 	}
 	
-	public static void initDatasetInfo(String filePath, boolean suppressWarnings) {
+	public static boolean initDatasetInfo(String filePath, boolean suppressWarnings) {
 		BufferedReader br = null;
 		boolean canRead = false;
 		actionsEnum action = actionsEnum.NONE;
@@ -147,8 +156,7 @@ public class DataManager {
 				if (canRead) {
 					switch (action) {
 					case CREATIVE_WORK_NEXT_ID :
-						//skip for now
-//						DataManager.creativeWorksNexId.set(Long.parseLong(line));
+						DataManager.creativeWorksNextId.set(Long.parseLong(line));
 						break;
 					case EXP_DECAY_MAJOR_ENTITIES:
 						DataManager.exponentialDecayEntitiesMajorList.add(line);
@@ -215,9 +223,11 @@ public class DataManager {
 			if (!suppressWarnings) {
 				System.out.println("\nWarning : Details about generated dataset were not found at location : " + filePath + " - generate new data to fix that, continuing with default settings.");
 			}
+			return false;
 		} finally {
 			try { br.close(); } catch(Exception e) {}
 		}
+		return true;
 	}
 	
 	public static String buildDataInfoFilePath(Configuration configuration) {
@@ -232,17 +242,17 @@ public class DataManager {
 		
 		if (popularEntitiesList.size() + regularEntitiesList.size() != referenceDataEntitiesCount) {
 			errors++;
-			System.out.println("\tWarning : Inconistent number of entities found in reference data! " + referenceDataEntitiesCount + " expected, " + (popularEntitiesList.size() + regularEntitiesList.size()) + " found!");
+			System.out.println("\tWarning : Inconistent number of entities found! " + referenceDataEntitiesCount + " expected, " + (popularEntitiesList.size() + regularEntitiesList.size()) + " found!");
 		}
 		
 		if (locationsIdsList.size() != dbpediaLocationsCount) {
 			errors++;
-			System.out.println("\tWarning : Inconistent number of DBpedia locations found in reference data! " + dbpediaLocationsCount + " expected, " + locationsIdsList.size() + " found!");			
+			System.out.println("\tWarning : Inconistent number of DBpedia locations found! " + dbpediaLocationsCount + " expected, " + locationsIdsList.size() + " found!");			
 		}
 		
 		if (geonamesIdsList.size() != geonamesLocationsCount) {
 			errors++;
-			System.out.println("\tWarning : Inconistent number of Geonames locations found in reference data! " + geonamesLocationsCount + " expected, " + geonamesIdsList.size() + " found!");			
+			System.out.println("\tWarning : Inconistent number of Geonames locations found! " + geonamesLocationsCount + " expected, " + geonamesIdsList.size() + " found!");			
 		}
 		
 		return errors == 0;

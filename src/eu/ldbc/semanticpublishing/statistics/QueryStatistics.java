@@ -60,7 +60,7 @@ public class QueryStatistics {
 		return avgExecutionTimeMs / runsCount.get();
 	}
 	
-	public long getNewQueryId() {
+	public long getNextId() {
 		return queryId.getAndIncrement();
 	}
 	

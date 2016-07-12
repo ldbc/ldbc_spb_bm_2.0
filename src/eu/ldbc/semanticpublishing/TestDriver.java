@@ -15,6 +15,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import javax.management.MalformedObjectNameException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -70,7 +72,7 @@ public class TestDriver {
 	private final static Logger LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
 	private final static Logger RLOGGER = LoggerFactory.getLogger(TestDriverReporter.class.getName());
 	
-	public TestDriver(String[] args) throws IOException {
+	public TestDriver(String[] args) throws IOException, MalformedObjectNameException, InterruptedException {
 		
 		if( args.length < 1) {
 			throw new IllegalArgumentException("Missing parameter - the configuration file must be specified");
@@ -94,7 +96,6 @@ public class TestDriver {
 		editorialAgentsCount = configuration.getInt(Configuration.EDITORIAL_AGENTS_COUNT);
 		warmupPeriodSeconds = configuration.getInt(Configuration.WARMUP_PERIOD_SECONDS);
 		benchmarkRunPeriodSeconds = configuration.getInt(Configuration.BENCHMARK_RUN_PERIOD_SECONDS);
-
 
 		queryExecuteManager = new SparqlQueryExecuteManager(inBenchmarkState,
 				configuration.getString(Configuration.ENDPOINT_URL),
@@ -166,7 +167,7 @@ public class TestDriver {
 			}
 		}
 	}
-	 
+	
 	private void loadDatasets(boolean enable) throws IOException {
 		if (enable) {
 			System.out.println("Loading reference datasets...");
@@ -192,13 +193,31 @@ public class TestDriver {
 	public void populateRefDataEntitiesLists(boolean showDetails, boolean populateFromDatasetInfoFile, boolean suppressDatasetInfoWarnings, String messagePrefix) throws IOException {
 		
 		if (showDetails) {
-			System.out.println(messagePrefix + "Analyzing existing reference knowledge in database, it may take a while...");
+			System.out.println(messagePrefix + "Analyzing reference knowledge in database...");
+		}
+				
+		//initialize dataset info, required for query parameters
+		boolean datasetInfoInitialized = false;
+		if (populateFromDatasetInfoFile) {
+			String datasetInfoFile = DataManager.buildDataInfoFilePath(configuration);
+			if (!datasetInfoFile.isEmpty()) {			
+				datasetInfoInitialized = DataManager.initDatasetInfo(datasetInfoFile, suppressDatasetInfoWarnings);
+			}
 		}
 		
-		//retrieve entity URIs from database
+		//retrieve entities
 		ReferenceDataAnalyzer refDataAnalyzer = new ReferenceDataAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
-		ArrayList<Entity> entitiesList = refDataAnalyzer.analyzeEntities();
-	
+				
+		String entitiesFilePath = configuration.getString(Configuration.CREATIVE_WORKS_PATH) + File.separator + "entities.txt";
+		ArrayList<Entity> entitiesList = refDataAnalyzer.initFromFile(entitiesFilePath);
+		if (entitiesList.size() == 0) {
+			System.out.println("\t\tretrieving entities from database");
+			entitiesList = refDataAnalyzer.initFromDatabase();
+			if (entitiesList.size() > 0) {
+				refDataAnalyzer.persistToFile(entitiesList, entitiesFilePath);
+			}
+		}
+
 		long popularEntitiesCount = (int)(entitiesList.size() * Definitions.entityPopularity.getAllocationsArray()[0]);
 		
 		for (int i = 0; i < entitiesList.size(); i++) {
@@ -210,47 +229,65 @@ public class TestDriver {
 			}
 		}
 
-		//retrieve the greatest id of creative works from database if not set explicitly in test.properties
+		//retrieve max value of Creative Work ID test.properties or dataset.info
 		long creativeWorksCount = configuration.getLong(Configuration.CREATIVE_WORK_NEXT_ID);
 		if (creativeWorksCount > 0) {
 			DataManager.creativeWorksNextId.set(creativeWorksCount);
-			System.out.println("\tNext id for Creative Works : " + creativeWorksCount);
-		} else {		
-			CreativeWorksAnalyzer cwk = new CreativeWorksAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
-			creativeWorksCount = cwk.getResult();		
-			DataManager.creativeWorksNextId.set(creativeWorksCount);
+			System.out.println("\tcreativeWorkNextId (test.properties): " + DataManager.creativeWorksNextId.get() + ", using its value");
+		} else {
+			if (DataManager.creativeWorksNextId.get() > 0) {
+				System.out.println("\tCreativeWorkId (dataset.info): " + DataManager.creativeWorksNextId.get());
+				creativeWorksCount = DataManager.creativeWorksNextId.get();
+			} else {
+				System.out.println("\t\tretrieving Creative Works count from database");
+				CreativeWorksAnalyzer cwk = new CreativeWorksAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
+				creativeWorksCount = cwk.getResult();		
+				DataManager.creativeWorksNextId.set(creativeWorksCount);
+			}
 		}
 
 		//retrieve DBpedia locations IDs from database
-		LocationsAnalyzer gna = new LocationsAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
-		ArrayList<String> locationsIds = gna.collectLocationsIds("analyzelocations.txt");
+		String locationsFilePath = configuration.getString(Configuration.CREATIVE_WORKS_PATH) + File.separator + "dbpediaLocations.txt";
+		LocationsAnalyzer locationsAnalyzer = new LocationsAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
+		ArrayList<String> locationsIds = locationsAnalyzer.initFromFile(locationsFilePath);
+		if (locationsIds.size() == 0) {
+			System.out.println("\t\tretrieving dbpedia locations from database");
+			locationsIds = locationsAnalyzer.collectLocationsIds("analyzelocations.txt");
+			if (locationsIds.size() > 0) {
+				locationsAnalyzer.persistToFile(locationsIds, locationsFilePath);
+			}
+		}
 
 		for (String s : locationsIds) {
 			DataManager.locationsIdsList.add(s);
 		}
-		
+
 		locationsIds.clear();
 		
 		//retrieve Geonames locations IDs from database
-		gna = new LocationsAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
-		locationsIds = gna.collectLocationsIds("analyzegeonames.txt");
+		locationsFilePath = configuration.getString(Configuration.CREATIVE_WORKS_PATH) + File.separator + "geonamesLocations.txt";
+		locationsAnalyzer = new LocationsAnalyzer(queryExecuteManager, mustacheTemplatesHolder);
+		locationsIds = locationsAnalyzer.initFromFile(locationsFilePath);
+		if (locationsIds.size() == 0) {
+			System.out.println("\t\tretrieving geonames locations from database");
+			locationsIds = locationsAnalyzer.collectLocationsIds("analyzegeonames.txt");
+			if (locationsIds.size() > 0) {
+				locationsAnalyzer.persistToFile(locationsIds, locationsFilePath);
+			}
+		}
 
 		for (String s : locationsIds) {
 			DataManager.geonamesIdsList.add(s);
 		}
 		
-		//initialize dataset info, required for query parameters
-		if (populateFromDatasetInfoFile) {
-			if ((DataManager.correlatedEntitiesList.size() + DataManager.exponentialDecayEntitiesMinorList.size() + DataManager.exponentialDecayEntitiesMajorList.size()) == 0) {
-				String datasetInfoFile = DataManager.buildDataInfoFilePath(configuration);
-				if (!datasetInfoFile.isEmpty()) {			
-					DataManager.initDatasetInfo(datasetInfoFile, suppressDatasetInfoWarnings);
-				}
+		if (populateFromDatasetInfoFile && datasetInfoInitialized) {
+			if (!DataManager.checkReferenceDataConsistency()) {
+				System.out.println("Warning: inconsistent number of expected and stored entities/locations");
 			}
 		}
 		
 		if (configuration.getBoolean(Configuration.VERBOSE) && showDetails) {
-			System.out.println(messagePrefix + "\t(reference data entities size : " + entitiesList.size() + ", greatest Creative Work id : " + creativeWorksCount + ", dbpedia locations : " + DataManager.locationsIdsList.size() + ", geonames locations : " + DataManager.geonamesIdsList.size() + ")");
+			System.out.println(messagePrefix + "\t(reference data entities found: " + entitiesList.size() + ", Creative Works: " + creativeWorksCount + ", dbpedia locations: " + DataManager.locationsIdsList.size() + ", geonames locations: " + DataManager.geonamesIdsList.size() + ")");
 		}
 	}
 	
@@ -315,7 +352,7 @@ public class TestDriver {
 		}
 		
 		if (configuration.getBoolean(Configuration.VERBOSE) && showDetails) {
-			System.out.println(messagePrefix + "\t(reference data entities size : " + entitiesList.size() + ", greatest Creative Work id : " + creativeWorksCount + ", dbpedia locations : " + DataManager.locationsIdsList.size() + ", geonames locations : " + DataManager.geonamesIdsList.size() + ")");
+			System.out.println(messagePrefix + "\t(Creative Works: " + creativeWorksCount + ", Entities: " + entitiesList.size() + ", Locations (DBpedia) : " + DataManager.locationsIdsList.size() + ", Locations (Geonames): " + DataManager.geonamesIdsList.size() + ")");
 		}
 	}
 	

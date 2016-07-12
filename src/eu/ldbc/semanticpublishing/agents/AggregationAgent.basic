@@ -100,7 +100,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 //			boolean drillDownQuery = false;
 			
 			//important : queryDistribution is zero-based, while QueryNTemplate is not!
-			queryId = Statistics.aggregateQueriesArray[aggregateQueryIndex].getNewQueryId();
+			queryId = Statistics.aggregateQueriesArray[aggregateQueryIndex].getNextId();
 			
 			String[] querySubstParameters;
 			switch (aggregateQueryIndex) {
@@ -166,8 +166,6 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 			String msg = "WARNING : AggregationAgent [" + Thread.currentThread().getName() +"] reports: " + t.getMessage() + "\n" + "\tfor query : \n" + queryString + "\n...closing current connection and creating a new one..." + "\n----------------------------------------------------------------------------------------------\n";
 			
 			System.out.println(msg);
-			
-			DETAILED_LOGGER.warn(msg);
 			
 			try {
                 
@@ -238,22 +236,116 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 					Statistics.aggregateQueriesArray[queryNumber - 1].reportSuccess(queryExecutionTimeMs);
 					Statistics.totalAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
 					logBrief(timeStamp, queryNameId, queryType, "", queryExecutionTimeMs, resultsCount);
+					
+                    DETAILED_LOGGER.info(String.format(
+                           "\t\"agent\" : \"%s\","
+                         + "\n\t\"thread\" : \"%s\","
+                         + "\n\t\"queryName\" : \"%s\","
+                         + "\n\t\"id\" : %d,"
+                         + "\n\t\"timeStamp\" : \"%s\","
+                         + "\n\t\"executionTimeMs\" : %d,"
+                         + "\n\t\"results\" : %d,"
+                         + "\n\t\"resultStrLength\" : %d,"
+                         + "\n\t\"query\" : \"%s\","
+                         + "\n\t\"queryResult\" : \"%s\","
+                         + "\n\t\"status\" : \"%s\"",	
+                            this.getClass().getName(),
+                            Thread.currentThread().getName(),
+                            queryName,
+                            id,
+                            timeStamp,
+                            queryExecutionTimeMs,
+                            resultsCount,
+                            queryResultString.length(),
+                            queryString,
+                            (queryResultString.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : queryResultString),
+                            "OK"));					
 				} else {				
 					Statistics.aggregateQueriesArray[queryNumber - 1].reportFailure();
 					Statistics.totalAggregateQueryStatistics.reportFailure();
 					logBrief(timeStamp, queryNameId, queryType, ", query error!", queryExecutionTimeMs, resultsCount);
-				}        
+					
+                    DETAILED_LOGGER.info(String.format(
+                           "\t\"agent\" : \"%s\","
+                         + "\n\t\"thread\" : \"%s\","
+                         + "\n\t\"queryName\" : \"%s\","
+                         + "\n\t\"id\" : %d,"
+                         + "\n\t\"timeStamp\" : \"%s\","
+                         + "\n\t\"executionTimeMs\" : %d,"
+                         + "\n\t\"results\" : %d,"
+                         + "\n\t\"resultStrLength\" : %d,"
+                         + "\n\t\"query\" : \"%s\","
+                         + "\n\t\"queryResult\" : \"%s\","
+                         + "\n\t\"status\" : \"%s\"",	
+                            this.getClass().getName(),
+                            Thread.currentThread().getName(),
+                            queryName,
+                            id,
+                            timeStamp,
+                            queryExecutionTimeMs,
+                            resultsCount,
+                            queryResultString.length(),
+                            queryString,
+                            (queryResultString.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : queryResultString),
+                            "FAILED"));
+				}
 			} else {
-				if (queryExecutionTimeMs > 0) {
-					DETAILED_LOGGER.info("\tQuery : " + queryName + ", time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), " + "queryResult.length : " + queryResultString.length() + ", results : " + resultsCount + ", has been started during the warmup phase, it will be ignored in the benchmark result!");
+				if (reportSuccess) {
+					//DETAILED_LOGGER.info("\tQuery : " + queryName + ", time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), " + "queryResult.length : " + queryResultString.length() + ", results : " + resultsCount + ", has been started during the warmup phase, it will be ignored in the benchmark result!");
+                    DETAILED_LOGGER.info(String.format(
+                           "\t\"agent\" : \"%s\","
+                         + "\n\t\"thread\" : \"%s\","
+                         + "\n\t\"queryName\" : \"%s\","
+                         + "\n\t\"id\" : %d,"
+                         + "\n\t\"timeStamp\" : \"%s\","
+                         + "\n\t\"executionTimeMs\" : %d,"
+                         + "\n\t\"results\" : %d,"
+                         + "\n\t\"resultStrLength\" : %d,"
+                         + "\n\t\"query\" : \"%s\","
+                         + "\n\t\"queryResult\" : \"%s\","
+                         + "\n\t\"status\" : \"%s\"",					
+                            this.getClass().getName(),
+                            Thread.currentThread().getName(),
+                            queryName,
+                            id,
+                            timeStamp,
+                            queryExecutionTimeMs,
+                            resultsCount,
+                            queryResultString.length(),
+                            queryString,
+                            (queryResultString.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : queryResultString),
+                            "OK, (started during warmup, will not participate in benchmark result)"));					
 					logBrief(timeStamp, queryNameId, queryType, ", has been started during the warmup phase, it will be ignored in the benchmark result!", queryExecutionTimeMs, resultsCount);
 				} else {
-					DETAILED_LOGGER.warn("\tQuery : " + queryName + ", time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), " + "queryResult.length : " + queryResultString.length() + ", results : " + resultsCount + ", has failed to execute... possibly query timeout has been reached!");
+					//DETAILED_LOGGER.warn("\tQuery : " + queryName + ", time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), " + "queryResult.length : " + queryResultString.length() + ", results : " + resultsCount + ", has failed to execute... possibly query timeout has been reached!");
+		   			DETAILED_LOGGER.warn(String.format(
+                               "\t\"agent\" : \"%s\","
+                             + "\n\t\"thread\" : \"%s\","
+                             + "\n\t\"queryName\" : \"%s\","
+							 + "\n\t\"id\" : %d,"
+							 + "\n\t\"timeStamp\" : \"%s\","
+							 + "\n\t\"executionTimeMs\" : %d,"
+							 + "\n\t\"results\" : %d,"
+							 + "\n\t\"resultStrLength\" : %d,"
+							 + "\n\t\"query\" : \"%s\","
+							 + "\n\t\"queryResult\" : \"%s\","
+							 + "\n\t\"status\" : \"%s\"",
+                                this.getClass().getName(),
+                                Thread.currentThread().getName(),
+							 	queryName,
+							 	id,
+							 	timeStamp,
+							 	queryExecutionTimeMs,
+							 	resultsCount,
+							 	queryResultString.length(),
+							 	queryString,
+							 	(queryResultString.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : queryResultString),
+							 	"FAILED, (started during warmup, still failure is abnormal)"));
 					logBrief(timeStamp, queryNameId, queryType, ", has failed to execute... possibly query timeout has been reached!", queryExecutionTimeMs, resultsCount);
 				}
 			}
 			
-			DETAILED_LOGGER.info("\n*** Query [" + queryNameId + "], execution time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), results : " + resultsCount + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + (queryResultString.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : ("Length : " + queryResultString.length() + "\n" + queryResultString)) + "\n\n");
+			//DETAILED_LOGGER.info("\n*** Query [" + queryNameId + "], execution time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), results : " + resultsCount + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + (queryResultString.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : ("Length : " + queryResultString.length() + "\n" + queryResultString)) + "\n\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

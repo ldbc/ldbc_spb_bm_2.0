@@ -1,5 +1,7 @@
 package eu.ldbc.semanticpublishing.agents;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -65,7 +67,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 		long queryId = 0;
 		String queryName = "";
 		String queryString = "";
-		String queryResult = "";
+		String queryResult = "";		
 		QueryType queryType = QueryType.INSERT;
 		int validationErrors = 0;
 		String[] validationParameters = null;
@@ -73,7 +75,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 		try {
 			
 			if (maxUpdateOperationsReached.get()) {
-				DETAILED_LOGGER.info(Thread.currentThread().getName() + " : Max update operations per seconds has been reached, skipping current update until update rate drops below configured maximum.");
+				System.out.println(Thread.currentThread().getName() + " : Max update operations per seconds has been reached, skipping current update until update rate drops below configured maximum.");
 				Thread.sleep(SLEEP_TIME_MS);
 				return true;
 			}
@@ -86,7 +88,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 					queryName = insertQuery.getTemplateFileName();
 					queryString = insertQuery.compileMustacheTemplate();
 					
-					queryId = Statistics.insertCreativeWorksQueryStatistics.getNewQueryId();
+					queryId = Statistics.insertCreativeWorksQueryStatistics.getNextId();
 					
 					if ((queryId > 0) && (queryId % editorialOpsValidationInterval == 0) && enableValidation) {						
 						validationParameters = insertQuery.generateSubstitutionParameters(null, 1).split(SubstitutionParametersGenerator.PARAMS_DELIMITER);
@@ -107,7 +109,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 					queryName = updateQuery.getTemplateFileName();
 					queryString = updateQuery.compileMustacheTemplate();
 					
-					queryId = Statistics.updateCreativeWorksQueryStatistics.getNewQueryId();
+					queryId = Statistics.updateCreativeWorksQueryStatistics.getNextId();
 					
 					break;
 				case 2 :
@@ -117,7 +119,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 					queryName = deleteQuery.getTemplateFileName();
 					queryString = deleteQuery.compileMustacheTemplate();
 					
-					queryId = Statistics.deleteCreativeWorksQueryStatistics.getNewQueryId();
+					queryId = Statistics.deleteCreativeWorksQueryStatistics.getNextId();
 
 					if ((queryId > 0) && (queryId % editorialOpsValidationInterval == 0) && enableValidation) {						
 						validationParameters = deleteQuery.generateSubstitutionParameters(null, 1).split(SubstitutionParametersGenerator.PARAMS_DELIMITER);
@@ -136,14 +138,13 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 			
 			updateQueryStatistics(true, queryType, queryName, queryString, queryResult, queryId, System.currentTimeMillis() - executionTimeMs);			
 		} catch (InterruptedException ie) {
-			DETAILED_LOGGER.warn("InterruptedException : " + ie.getMessage());
+			System.out.println(ie.getMessage());
+			BRIEF_LOGGER.warn(ie.getMessage());
 		} catch (Throwable t) {
 			String msg = "Warning : EditorialAgent [" + Thread.currentThread().getName() +"] reports: " + t.getMessage() + ", attempting a new connection" + "\n" + "\tfor query : \n" + connection.getQueryString();
 			
-			System.out.println(msg);
-			
-			DETAILED_LOGGER.warn(msg);
-			
+			System.out.println(msg);			
+   			
 			updateQueryStatistics(false, queryType, queryName, queryString, queryResult ,queryId, 0);
 			
 			connection.disconnect();
@@ -160,6 +161,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 	
 	private void updateQueryStatistics(boolean reportSuccess, QueryType queryType, String queryName, String queryString, String queryResult, long id, long queryExecutionTimeMs) {
 
+		String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
 		String queryNameId = constructQueryNameId(queryName, queryType, id);
 		
 		//report success
@@ -177,7 +179,30 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 					Statistics.deleteCreativeWorksQueryStatistics.reportSuccess(queryExecutionTimeMs);
 				}	
 			}
-
+			
+			DETAILED_LOGGER.warn(String.format(
+ 					   "\t\"agent\" : \"%s\","
+ 					 + "\n\t\"thread\" : \"%s\","
+					 + "\n\t\"queryName\" : \"%s\","
+					 + "\n\t\"id\" : %d,"
+					 + "\n\t\"timeStamp\" : \"%s\","
+					 + "\n\t\"executionTimeMs\" : %d,"
+					 + "\n\t\"results\" : %d,"
+					 + "\n\t\"resultStrLength\" : %d,"
+					 + "\n\t\"query\" : \"%s\","
+					 + "\n\t\"queryResult\" : \"%s\","
+					 + "\n\t\"status\" : \"%s\"",	
+					 	this.getClass().getName(),
+					 	Thread.currentThread().getName(),
+					 	queryName,
+					 	id,
+					 	timeStamp,
+					 	queryExecutionTimeMs,
+					 	0,
+					 	queryResult.length(),
+					 	queryString,
+					 	"",
+					 	"OK"));			
 			logBrief(queryNameId, queryType, "", queryExecutionTimeMs);
 
 		//report failure			
@@ -189,9 +214,33 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 			} else if (queryType == QueryType.DELETE) {
 				Statistics.deleteCreativeWorksQueryStatistics.reportFailure();
 			}
+			
+			DETAILED_LOGGER.warn(String.format(
+ 					   "\t\"agent\" : \"%s\","
+ 					 + "\n\t\"thread\" : \"%s\","
+ 					 + "\n\t\"queryName\" : \"%s\","
+					 + "\n\t\"id\" : %d,"
+					 + "\n\t\"timeStamp\" : \"%s\","
+					 + "\n\t\"executionTimeMs\" : %d,"
+					 + "\n\t\"results\" : %d,"
+					 + "\n\t\"resultStrLength\" : %d,"
+					 + "\n\t\"query\" : \"%s\","
+					 + "\n\t\"queryResult\" : \"%s\","
+					 + "\n\t\"status\" : \"%s\"",		
+					 	this.getClass().getName(),
+					 	Thread.currentThread().getName(), 
+					 	queryName,
+					 	id,
+					 	timeStamp,
+					 	queryExecutionTimeMs,
+					 	0,
+					 	queryResult.length(),
+					 	queryString,
+					 	"",
+					 	"FAILED"));			
 			logBrief(queryNameId, queryType, ", query error!", queryExecutionTimeMs);
 		}
-		DETAILED_LOGGER.info("\n*** Query [" + queryNameId  + "], execution time : " + queryExecutionTimeMs + " ms\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");		
+//		DETAILED_LOGGER.info("\n*** Query [" + queryNameId  + "], execution time : " + queryExecutionTimeMs + " ms\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
 	}
 	
 	private void logBrief(String queryNameId, QueryType queryType, String appendString, long queryExecutionTimeMs) {

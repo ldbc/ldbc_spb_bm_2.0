@@ -39,6 +39,19 @@ public class StringUtil {
 		return new ByteArrayInputStream(str.getBytes("UTF-8"));
 	}
 	
+	public static String toOneLine(String input) {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < input.length(); i++) {
+			char ch = input.charAt(i);
+			if (ch == '\n') {
+				sb.append(" ");
+			} else {
+				sb.append(ch);
+			}
+		}
+		return sb.toString();
+	}
+	
 	/*	
 	//Non UTF-8 compatible !!!
 	private String readResultString(InputStream is) throws IOException {

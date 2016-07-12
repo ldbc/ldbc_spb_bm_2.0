@@ -1,9 +1,12 @@
 package eu.ldbc.semanticpublishing.resultanalyzers;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryExecuteManager;
@@ -36,15 +39,32 @@ public class LocationsAnalyzer {
 	public ArrayList<String> initFromFile(String fullPathName) throws IOException {
 		String s;
 		ArrayList<String> entitiesList = new ArrayList<String>();
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fullPathName), "UTF-8"));
+		BufferedReader in;
 		
 		try {
+			in = new BufferedReader(new InputStreamReader(new FileInputStream(fullPathName), "UTF-8"));
 			while((s = in.readLine()) != null) {
 				entitiesList.add(s);
 			}
-		} finally {
-		    in.close();
-		}		
+			in.close();
+		} catch (IOException e) {
+			System.out.println("\t" + e.getMessage());
+		}	
+		
 		return entitiesList;		
+	}
+	
+	public void persistToFile(ArrayList<String> list, String fullPathName) throws IOException {
+		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fullPathName), "UTF-8"));
+		
+		try {
+			for (String s : list) {
+				out.write(s);
+				out.write(String.format("%n"));
+			}
+		} finally {
+			out.flush();
+			out.close();
+		}
 	}
 }

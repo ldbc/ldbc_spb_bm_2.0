@@ -2,10 +2,13 @@ package eu.ldbc.semanticpublishing.refdataset.model;
 
 import java.util.ArrayList;
 
+import eu.ldbc.semanticpublishing.util.StringUtil;
+
 /**
  * A class for storing entities from different dataset's. Used to initialize the database and build insert queries.
  */
 public class Entity {
+	public static final String SEPARATOR = "|||";
 	public static final String ENTITY_RDFS_LABEL = "rdfs:label";
 	public static final String ENTITY_ABOUT = "entity:about";
 	public static final String ENTITY_CATEGORY = "entity:category";
@@ -38,7 +41,7 @@ public class Entity {
 	}
 	
 	public String getLabel() {
-		return getObjectFromTriple(ENTITY_RDFS_LABEL);
+		return StringUtil.toOneLine(getObjectFromTriple(ENTITY_RDFS_LABEL));
 	}
 	
 	public void setLabel(String label) { 
@@ -104,6 +107,6 @@ public class Entity {
 	
 	@Override
 	public String toString() {
-		return aboutURI + ";" + getLabel() + ";" + getCategory() + ";" + getRank();		
+		return aboutURI + SEPARATOR + getLabel() + SEPARATOR + getCategory() + SEPARATOR + getRank();		
 	}
 }
