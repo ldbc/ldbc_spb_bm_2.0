@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Purpose of this class will be to generate test.properties file from a given template.
  * Templated parameters start with {1}, {2}...{N}
- * Source of parameters is another file with semi-column (;) separated values - one line per template.
+ * Source of parameters is another file with comma (,) separated values - one line per template.
  * Amount of generated templates will be equal to the number of lines in the 'source of paramters' file
  */
 public class TestPropertiesGenerator {
