@@ -22,28 +22,29 @@ public class CompareResults {
 	ResultsCollection queryModelCollection2;
 
 	public void initialize(String sourceDir1, String sourceDir2, String scanMask) throws IOException {
-		List<File> filesList1 = new LinkedList<File>();		
-		FileUtils.collectFilesList2(sourceDir1, filesList1, "*", false);
+		List<File> filesList = new LinkedList<File>();		
 		
 		queryModelCollection1 = new ResultsCollection(sourceDir1);
 		queryModelCollection2 = new ResultsCollection(sourceDir2);
+
+		FileUtils.collectFilesList2(sourceDir1, filesList, "*", false);
 		
 		System.out.println("Analyzing source #1: " + queryModelCollection1.getName());
 		
-		for (File f : filesList1) {
+		for (File f : filesList) {
 			if (f.getCanonicalFile().getName().toLowerCase().contains(scanMask)) {
 				System.out.println("\tprocessing file: " + f.getCanonicalFile().getName());
 				long start = System.currentTimeMillis();
 				long processed = processPseudoJson(f, queryModelCollection1);
 				System.out.println(String.format("\t\t%,d queries processed in %d ms", processed, System.currentTimeMillis() - start));
 			}
-		}		
+		}
 		
-		filesList1.clear();
-		FileUtils.collectFilesList2(sourceDir2, filesList1, "*", false);
-		
+		filesList.clear();
+		FileUtils.collectFilesList2(sourceDir2, filesList, "*", false);
+	
 		System.out.println("Analyzing source #2: " + queryModelCollection2.getName());
-		for (File f : filesList1) {
+		for (File f : filesList) {
 			if (f.getCanonicalFile().getName().toLowerCase().contains(scanMask)) {
 				System.out.println("\tprocessing file: " + f.getCanonicalFile().getName());
 				long start = System.currentTimeMillis();
