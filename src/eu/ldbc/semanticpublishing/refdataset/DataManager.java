@@ -221,7 +221,7 @@ public class DataManager {
 		} catch (IOException e) {
 			//sink the exception if file doesn't exist
 			if (!suppressWarnings) {
-				System.out.println("\nWarning : Details about generated dataset were not found at location : " + filePath + " - generate new data to fix that, continuing with default settings.");
+				System.out.println("\nWARNING : Details about generated dataset were not found at location : " + filePath + " - generate new data to fix that, continuing with default settings.");
 			}
 			return false;
 		} finally {
@@ -242,17 +242,17 @@ public class DataManager {
 		
 		if (popularEntitiesList.size() + regularEntitiesList.size() != referenceDataEntitiesCount) {
 			errors++;
-			System.out.println("\tWarning : Inconistent number of entities found! " + referenceDataEntitiesCount + " expected, " + (popularEntitiesList.size() + regularEntitiesList.size()) + " found!");
+			System.out.println("\tWARNING : Inconistent number of entities found! " + referenceDataEntitiesCount + " expected, " + (popularEntitiesList.size() + regularEntitiesList.size()) + " found!");
 		}
 		
 		if (locationsIdsList.size() != dbpediaLocationsCount) {
 			errors++;
-			System.out.println("\tWarning : Inconistent number of DBpedia locations found! " + dbpediaLocationsCount + " expected, " + locationsIdsList.size() + " found!");			
+			System.out.println("\tWARNING : Inconistent number of DBpedia locations found! " + dbpediaLocationsCount + " expected, " + locationsIdsList.size() + " found!");			
 		}
 		
 		if (geonamesIdsList.size() != geonamesLocationsCount) {
 			errors++;
-			System.out.println("\tWarning : Inconistent number of Geonames locations found! " + geonamesLocationsCount + " expected, " + geonamesIdsList.size() + " found!");			
+			System.out.println("\tWARNING : Inconistent number of Geonames locations found! " + geonamesLocationsCount + " expected, " + geonamesIdsList.size() + " found!");			
 		}
 		
 		return errors == 0;

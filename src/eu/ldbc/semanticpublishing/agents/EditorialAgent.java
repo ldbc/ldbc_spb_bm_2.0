@@ -94,7 +94,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 						validationParameters = insertQuery.generateSubstitutionParameters(null, 1).split(SubstitutionParametersGenerator.PARAMS_DELIMITER);
 						validationErrors = editorialOperationsValidator.validateAction(EditorialOperation.INSERT, 0, validationParameters, false);
 						if (validationErrors > 0) {
-							updateQueryStatistics(false, queryType, queryName, "validate insert " + queryId, "", 0, System.currentTimeMillis());				
+							updateQueryStatistics(false, queryType, queryName, "validate insert " + queryId, "", 0, -1);				
 						}						
 					}
 					
@@ -125,7 +125,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 						validationParameters = deleteQuery.generateSubstitutionParameters(null, 1).split(SubstitutionParametersGenerator.PARAMS_DELIMITER);
 						validationErrors = editorialOperationsValidator.validateAction(EditorialOperation.DELETE, 0, validationParameters, false);
 						if (validationErrors > 0) {
-							updateQueryStatistics(false, queryType, queryName, "validate delete " + queryId, "", 0, System.currentTimeMillis());				
+							updateQueryStatistics(false, queryType, queryName, "validate delete " + queryId, "", 0, -3);				
 						}										
 					}										
 					
@@ -141,9 +141,10 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 			System.out.println(ie.getMessage());
 			BRIEF_LOGGER.warn(ie.getMessage());
 		} catch (Throwable t) {
-			String msg = "Warning : EditorialAgent [" + Thread.currentThread().getName() +"] reports: " + t.getMessage() + ", attempting a new connection" + "\n" + "\tfor query : \n" + connection.getQueryString();
+			String msg = "WARNING : EditorialAgent [" + Thread.currentThread().getName() +"] reports: " + t.getMessage() + ", attempting a new connection" + "\n" + "\tfor query : \n" + connection.getQueryString();
 			
-			System.out.println(msg);			
+			System.out.println(msg);
+			BRIEF_LOGGER.warn(msg);
    			
 			updateQueryStatistics(false, queryType, queryName, queryString, queryResult ,queryId, 0);
 			
@@ -240,7 +241,6 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 					 	"FAILED"));			
 			logBrief(queryNameId, queryType, ", query error!", queryExecutionTimeMs);
 		}
-//		DETAILED_LOGGER.info("\n*** Query [" + queryNameId  + "], execution time : " + queryExecutionTimeMs + " ms\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
 	}
 	
 	private void logBrief(String queryNameId, QueryType queryType, String appendString, long queryExecutionTimeMs) {

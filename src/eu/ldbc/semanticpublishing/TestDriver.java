@@ -282,7 +282,7 @@ public class TestDriver {
 		
 		if (populateFromDatasetInfoFile && datasetInfoInitialized) {
 			if (!DataManager.checkReferenceDataConsistency()) {
-				System.out.println("Warning: inconsistent number of expected and stored entities/locations");
+				System.out.println("WARNING: inconsistent number of expected and stored entities/locations");
 			}
 		}
 		
@@ -406,7 +406,7 @@ public class TestDriver {
 					ShellUtil.execute(sciptsPath + " " + propertiesFile, file.getName(), true);
 				}
 			} catch (NullPointerException npe) {
-				System.out.println("Warning : Possible wrong configuration for property 'scriptsPath' (test.properties)...");
+				System.out.println("WARNING : Possible wrong configuration for property 'scriptsPath' (test.properties)...");
 //				npe.printStackTrace();
 			} catch (IOException ioe) {			
 				ioe.printStackTrace();
@@ -588,7 +588,7 @@ public class TestDriver {
 			if (DataManager.regularEntitiesList.size() == 0) {
 				populateRefDataEntitiesLists(true, true, false, "");
 				if (DataManager.creativeWorksNextId.get() == 0) {
-					System.err.println("Warning : no Creative Works were found stored in the database, initialize it with ontologies and reference and generated data first! Exiting.");
+					System.err.println("WARNING : no Creative Works were found stored in the database, initialize it with ontologies and reference and generated data first! Exiting.");
 					System.exit(-1);
 				}
 			}
@@ -629,7 +629,7 @@ public class TestDriver {
 			if (DataManager.regularEntitiesList.size() == 0 || DataManager.correlatedEntitiesList.size() == 0) {
 				populateRefDataEntitiesLists(true, true, false, "");
 				if (DataManager.creativeWorksNextId.get() == 0) {
-					System.err.println("Warning : no Creative Works were found stored in the database, initialize it with ontologies and reference and generated data first! Exiting.");
+					System.err.println("WARNING : no Creative Works were found stored in the database, initialize it with ontologies and reference and generated data first! Exiting.");
 					System.exit(-1);
 				}
 			}
@@ -704,7 +704,7 @@ public class TestDriver {
 			
 			if (configuration.getDouble(Configuration.MIN_UPDATE_RATE_THRESHOLD_OPS) > 0.0) {
 				if (!benchmarkResultIsValid.get()) {
-					message = String.format("Warning : Benchmark results are not valid! Required query rate has not been reached, or has dropped below threshold (%.1f ops) during the benchmark run.", configuration.getDouble(Configuration.MIN_UPDATE_RATE_THRESHOLD_OPS));
+					message = String.format("WARNING : Benchmark results are not valid! Required query rate has not been reached, or has dropped below threshold (%.1f ops) during the benchmark run.", configuration.getDouble(Configuration.MIN_UPDATE_RATE_THRESHOLD_OPS));
 				} else {
 					message = "Benchmark result is valid!";
 				}
@@ -752,7 +752,7 @@ public class TestDriver {
 			if (DataManager.regularEntitiesList.size() == 0 || DataManager.correlatedEntitiesList.size() == 0) {
 				populateRefDataEntitiesLists(true, true, false, "");
 				if (DataManager.creativeWorksNextId.get() == 0) {
-					System.err.println("Warning : no Creative Works were found stored in the database, initialize it with ontologies and reference and generated data first! Exiting.");
+					System.err.println("WARNING : no Creative Works were found stored in the database, initialize it with ontologies and reference and generated data first! Exiting.");
 					System.exit(-1);
 				}
 			}			
@@ -764,7 +764,7 @@ public class TestDriver {
 				System.out.println(message);
 				LOGGER.info(message);				
 			} else {				
-				message = "Warning : The benchmark driver is not configured properly, set a positive value to property 'benchmarkByQueryRuns'. Exiting.";
+				message = "WARNING : The benchmark driver is not configured properly, set a positive value to property 'benchmarkByQueryRuns'. Exiting.";
 				System.out.println(message);
 				LOGGER.info(message);								
 				System.exit(-1);				
@@ -835,7 +835,7 @@ public class TestDriver {
 				}
 			} catch (IOException ioe) {
 				inBenchmarkState.set(false);
-				message = "Warning : Stopping the benchmark : IOExcetion : " + ioe.getMessage();
+				message = "WARNING : Stopping the benchmark : IOExcetion : " + ioe.getMessage();
 				System.out.println(message);
 				throw new IOException(ioe);
 			}
@@ -878,7 +878,7 @@ public class TestDriver {
 			
 			if (configuration.getDouble(Configuration.MIN_UPDATE_RATE_THRESHOLD_OPS) > 0.0) {
 				if (!benchmarkResultIsValid.get()) {
-					message = String.format("Warning : Benchmark results are not valid! Required query rate has not been reached, or has dropped below threshold (%.1f ops) during the benchmark run.", configuration.getDouble(Configuration.MIN_UPDATE_RATE_THRESHOLD_OPS));
+					message = String.format("WARNING : Benchmark results are not valid! Required query rate has not been reached, or has dropped below threshold (%.1f ops) during the benchmark run.", configuration.getDouble(Configuration.MIN_UPDATE_RATE_THRESHOLD_OPS));
 				} else {
 					message = "Benchmark result is valid!";
 				}

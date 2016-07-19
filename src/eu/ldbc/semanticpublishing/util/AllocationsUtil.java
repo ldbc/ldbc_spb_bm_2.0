@@ -37,7 +37,7 @@ public class AllocationsUtil {
 		}
 		if (Math.abs(1.0 - allocationsSum) > 0.001) {
 			throw new IllegalArgumentException(
-					String.format("Warning : Sum of all allocation probabilities is not equal to 1.0, but equals: %.2f, check file definitions.properties", allocationsSum));
+					String.format("WARNING : Sum of all allocation probabilities is not equal to 1.0, but equals: %.2f, check file definitions.properties", allocationsSum));
 		}
 	}
 

@@ -248,7 +248,7 @@ public class TestDriverReporter extends Thread {
 					LOGGER.info(message);
 					System.out.println(message);
 				} else {
-					message = String.format("Warning : Update operations rate has not reached or has dropped below minimum threshold of %.1f ops, benchmark results are not valid!", minUpdateRateThresholdOps);
+					message = String.format("WARNING : Update operations rate has not reached or has dropped below minimum threshold of %.1f ops, benchmark results are not valid!", minUpdateRateThresholdOps);
 					LOGGER.warn(message);
 					System.out.println(message);
 					System.exit(0);
@@ -301,7 +301,7 @@ public class TestDriverReporter extends Thread {
 			
 			//averageOperationsPerSecond are dropping below the threshold - in which case the benchmark result is considered invalid
 			if ((averageOperationsPerSecond < minUpdateRateThresholdOps) && (minUpdateRatePassesCount == 1)) {
-				message = String.format("Warning : Current update operations rate : %.1f ops has dropped below minimum threshold %.1f at second : %d", averageOperationsPerSecond, minUpdateRateThresholdOps, seconds);
+				message = String.format("WARNING : Current update operations rate : %.1f ops has dropped below minimum threshold %.1f at second : %d", averageOperationsPerSecond, minUpdateRateThresholdOps, seconds);
 				minUpdateRatePassesCount++;
 				benchmarkResultIsValid.set(false);
 				LOGGER.warn(message);

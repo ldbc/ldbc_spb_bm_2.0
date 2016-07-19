@@ -112,21 +112,21 @@ public class RandomUtil {
 	 */
 	public int nextInt(int min, int max) {
 		if (min >= max) {
-			System.out.println("Warning : RandomUtil : wrong parameter value of : min (" + min + ") >= value of max (" + max + ")! Inconsistent behaviour expected!");
+			System.out.println("WARNING : RandomUtil : wrong parameter value of : min (" + min + ") >= value of max (" + max + ")! Inconsistent behaviour expected!");
 		}
 		return randomGenerator.nextInt(max - min) + min;
 	}
 
 	public int nextInt(int max) {
 		if (max <= 0) {
-			System.out.println("Warning : RandomUtil : wrong int parameter value (" + max + ")! Inconsistent behaviour expected!");			
+			System.out.println("WARNING : RandomUtil : wrong int parameter value (" + max + ")! Inconsistent behaviour expected!");			
 		}
 		return randomGenerator.nextInt(max);
 	}
 
 	public long nextLong(long max) {
 		if (max <= 0) {
-			System.out.println("Warning : RandomUtil : wrong long parameter value (" + max + ")! Inconsistent behaviour expected!");			
+			System.out.println("WARNING : RandomUtil : wrong long parameter value (" + max + ")! Inconsistent behaviour expected!");			
 		}
 		long value = randomGenerator.nextLong();
 		if( value < 0 ) {

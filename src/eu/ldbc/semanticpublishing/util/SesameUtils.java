@@ -29,7 +29,7 @@ public class SesameUtils {
 		} else if (serializationFormat.equalsIgnoreCase("Turtle")) {
 			rdfFormat = RDFFormat.TURTLE;
 		} else {
-			throw new IllegalArgumentException("Warning : unknown serialization format : " + serializationFormat + ", defaulting to N-Quads");
+			throw new IllegalArgumentException("WARNING : unknown serialization format : " + serializationFormat + ", defaulting to N-Quads");
 		}		
 		
 		return rdfFormat;

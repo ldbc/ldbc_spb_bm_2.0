@@ -1,6 +1,8 @@
 package eu.ldbc.semanticpublishing.enterprise;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -82,10 +84,34 @@ public class ReplicationAndBackupHelper {
 		queryName = insertTemplate.getTemplateFileName();
 		queryString = insertTemplate.compileMustacheTemplate();		
 
+		String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		
 		queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, true);
 		
 		BRIEF_LOGGER.info(String.format("Milestone Query [%s] executed", queryName));
-		LOGGER.info("\n*** Milestone Query [" + queryName + "], \n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
+		LOGGER.info(String.format(
+                "\t\"agent\" : \"%s\","
+              + "\n\t\"thread\" : \"%s\","
+              + "\n\t\"queryName\" : \"%s\","
+              + "\n\t\"id\" : %d,"
+              + "\n\t\"timeStamp\" : \"%s\","
+              + "\n\t\"executionTimeMs\" : %d,"
+              + "\n\t\"results\" : %d,"
+              + "\n\t\"resultStrLength\" : %d,"
+              + "\n\t\"query\" : \"%s\","
+              + "\n\t\"queryResult\" : \"%s\","
+              + "\n\t\"status\" : \"%s\"",					
+                 this.getClass().getName(),
+                 Thread.currentThread().getName(),
+                 queryName,
+                 -1,
+                 timeStamp,
+                 -4,
+                 0,
+                 queryResult.length(),
+                 queryString,
+                 (queryResult.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : queryResult),
+                 "OK, (started during warmup, will not participate in benchmark result)"));				
 		
 		return queryParameters;
 	}

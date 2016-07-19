@@ -6,7 +6,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Constructor;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.HashMap;
 
 import org.slf4j.Logger;
@@ -88,6 +90,8 @@ public class AggregateOperationsValidator extends Validator {
 			queryName = queryTemplate.getTemplateFileName();
 			queryString = queryTemplate.compileMustacheTemplate();			
 			
+			String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+			
 			queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, true);			
 
 			long actualResultsSize = 0;
@@ -104,7 +108,29 @@ public class AggregateOperationsValidator extends Validator {
 			}
 		
 			BRIEF_LOGGER.info(String.format("Query [%s] executed, iteration %d, results %d", queryName, (i + 1), actualResultsSize));
-			LOGGER.info("\n*** Query [" + queryName + "], iteration " + (i + 1) + ", results " + actualResultsSize + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
+            LOGGER.info(String.format(
+                    "\t\"agent\" : \"%s\","
+                  + "\n\t\"thread\" : \"%s\","
+                  + "\n\t\"queryName\" : \"%s\","
+                  + "\n\t\"id\" : %d,"
+                  + "\n\t\"timeStamp\" : \"%s\","
+                  + "\n\t\"executionTimeMs\" : %d,"
+                  + "\n\t\"results\" : %d,"
+                  + "\n\t\"resultStrLength\" : %d,"
+                  + "\n\t\"query\" : \"%s\","
+                  + "\n\t\"queryResult\" : \"%s\","
+                  + "\n\t\"status\" : \"%s\"",	
+                     this.getClass().getName(),
+                     Thread.currentThread().getName(),
+                     queryName,
+                     -5,
+                     timeStamp,
+                     0,
+                     -1,
+                     queryResult.length(),
+                     queryString,
+                     (queryResult.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : queryResult),
+                     "OK"));				
 	
 			System.out.println(String.format("\tQuery %-1d : ", (i + 1)));
 			int errorsForQuery = 0;

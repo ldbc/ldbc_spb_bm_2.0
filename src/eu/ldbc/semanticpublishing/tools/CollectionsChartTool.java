@@ -70,7 +70,7 @@ public class CollectionsChartTool extends ChartToolBase {
 			String[] tokens = line.split(SPLIT_DELIMITER);
 			
 			if (tokens.length != 7) {
-				System.out.println("Warning: unexpected number of tokens after the split: " + tokens.length);
+				System.out.println("WARNING: unexpected number of tokens after the split: " + tokens.length);
 				continue;
 			}
 			

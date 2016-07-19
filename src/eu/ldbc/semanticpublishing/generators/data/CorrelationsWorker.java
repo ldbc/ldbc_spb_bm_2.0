@@ -160,7 +160,7 @@ public class CorrelationsWorker extends RandomWorker {
 						} else {
 							sesameModel = buildCreativeWorkModel(entityA, entityC, null, firstCwId++, true, calendar.getTime(), 0);
 							if (!silent) {
-								System.out.println(Thread.currentThread().getName() + " :: Warning : Unexpected stage in data generation reached, defaulting");
+								System.out.println(Thread.currentThread().getName() + " :: WARNING : Unexpected stage in data generation reached, defaulting");
 							}
 						}
 					}

@@ -603,9 +603,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 							 	"FAILED, (started during warmup, still failure is abnormal)"));
 					logBrief(timeStamp, queryNameId, queryType, ", has failed to execute... possibly query timeout has been reached!", queryExecutionTimeMs, resultsCount);
 				}
-			}
-			
-			//DETAILED_LOGGER.info("\n*** Query [" + queryNameId + "], execution time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), results : " + resultsCount + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + (queryResultString.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : ("Length : " + queryResultString.length() + "\n" + queryResultString)) + "\n\n");			
+			}			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
