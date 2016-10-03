@@ -56,6 +56,14 @@ public class ReferenceDataAnalyzer {
 					continue;
 				}
 				String[] tokens = s.split(SEPARATOR);
+				if (tokens == null) {
+					System.out.println("WARNING: initFromFile: unexpected value found (value: " + s + ", file: " + fullPathName + ", line: " + lines + ")");
+					continue;
+				}
+				if (tokens.length != 4) {
+					System.out.println("WARNING: initFromFile: can not tokenize value (value: " + s + ",file: " + fullPathName + ", line: " + lines + ")");
+					continue;
+				}				
 				entity.setURI(tokens[0]);
 				entity.setLabel(tokens[1]);
 				entity.setCategory(tokens[2]);

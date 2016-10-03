@@ -205,7 +205,7 @@ public class DataGenerator {
 			DataManager.persistDatasetInfo(persistFilePath, correlatedEntitiesList, expDecayingMajorEntitiesList, expDecayingMinorEntitiesList);
 		}
 		
-		System.out.println("\tcompleted! Total Creative Works created : " + String.format("%,d", (DataManager.creativeWorksNextId.get() - creativeWorksInDatabase)) + ". Time : " + (System.currentTimeMillis() - currentTime) + " ms");		
+		System.out.println(String.format("\tcompleted! Total of %,d Creative Works have been generated in %,d ms ", (DataManager.creativeWorksNextId.get() - creativeWorksInDatabase), (System.currentTimeMillis() - currentTime)));
 	}
 	
 	private synchronized ArrayList<Entity> buildCorrelationsList(int correlationsAmount) {

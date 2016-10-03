@@ -133,13 +133,17 @@ public class TestDriver {
 			
 			Collections.sort(collectedFiles);
 			
+			long batchStart = System.currentTimeMillis();
 			for( File file : collectedFiles ) {
 				System.out.print("\tloading " + file.getName());
 				InputStream input = new FileInputStream(file);
 				
+				long startTime = System.currentTimeMillis();
 				RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_TURTLE, input);
+				System.out.print(String.format(" [%,d ms]", (System.currentTimeMillis() - startTime)));
 				System.out.println();
 			}			
+			System.out.println(String.format("\ttotal time: %,d ms", (System.currentTimeMillis() - batchStart)));
 		}
 	}
 	
@@ -180,13 +184,17 @@ public class TestDriver {
 			
 			Collections.sort(collectedFiles);
 			
+			long batchStart = System.currentTimeMillis();
 			for( File file : collectedFiles ) {
 				System.out.print("\tloading " + file.getName());
 				InputStream input = new FileInputStream(file);
 				
+				long startTime = System.currentTimeMillis();
 				RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_TURTLE, input);
+				System.out.print(String.format(" [%,d ms]", (System.currentTimeMillis() - startTime)));
 				System.out.println();
-			}				
+			}
+			System.out.println(String.format("\ttotal time: %,d ms", (System.currentTimeMillis() - batchStart)));
 		}
 	}
 	
@@ -368,24 +376,35 @@ public class TestDriver {
 			int size=0;
 			long startTime = System.currentTimeMillis();
 			for( File file : files ) {
-				size++;
-				if( file.getName().endsWith(".nq")) {
-					System.out.print("\tloading " + file.getName());
-					InputStream input = new FileInputStream(file);
-					
-					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_SESAME_NQUADS, input);
-					System.out.println();
+				size++;				
+				
+				if (file.getName().endsWith(".info") || file.getName().endsWith(".txt")) {
+					continue;
 				}
-				if( file.getName().endsWith(".ttl")) {
-					System.out.print("\tloading " + file.getName());
-					InputStream input = new FileInputStream(file);
-					
+				
+				System.out.print("\tloading " + file.getName());
+				long start = System.currentTimeMillis();
+				
+				InputStream input = new FileInputStream(file);
+				
+				if(file.getName().endsWith(".nq")) {										
+					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_SESAME_NQUADS, input);
+				} else if (file.getName().endsWith(".trig")) {
+					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_TRIG, input);
+				} else if(file.getName().endsWith(".ttl")) {					
 					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_TURTLE, input);
+				} else if(file.getName().endsWith(".rdfxml")) {
+					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_RDFXML, input);
+				} else {
 					System.out.println();
-				}		
+					System.out.println("WARNING: unsupported serialization type for file: " + file.getName() + ", supported are: [.nq .trig .ttl .rdfxml]");
+				}
+				
+				System.out.print(String.format(" [%,d ms]", (System.currentTimeMillis() - start)));
+				System.out.println();
 			}
 			long endTime = System.currentTimeMillis();
-			System.out.println("Loaded "+size+" files with Creative Works in "+ (endTime - startTime) + " milliseconds");
+			System.out.println(String.format("Loaded %,d files with Creative Works in %,d ms", size, (endTime - startTime)));
 		}
 	}
 	
