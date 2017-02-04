@@ -25,31 +25,23 @@ public class Pool {
 	
 	public void initialize(String s) throws IllegalArgumentException, NumberFormatException {
 		if (s.trim().isEmpty()) {
-//			System.out.println("No query pools have been detected, continuing with default behavior...");
+			System.out.println("No query pools have been detected, continuing with default behavior...");
 			return;
 		}
 		
 		if (!validateInitString(s)) {
 			throw new IllegalArgumentException(s + ", check definitions.properties parameter : queryPools...");
 		}
-		
-		String[] tokens = s.split("\\}");
-				
-		for (int i = 0; i < tokens.length; i++) {
-			String token = tokens[i].trim();
-			
-			if (token.length() == 0) {
-				continue;
-			}
-				
-			token = token.replace("{", "");
 
-			String[] tokens2 = token.split(",");
-			for (int j = 0; j < tokens2.length; j++) {
-				int itemId = Integer.parseInt(tokens2[j].trim());
-				addItem(new PoolItem(itemId));
+		s = s.replace("{", "").replace("}", "");
+		if (s.contains(",")) {
+			String[] tokens = s.split(",");
+			for (int j = 0; j < tokens.length; j++) {
+				addItem(new PoolItem(Integer.parseInt(tokens[j].trim())));
 			}
-		}	
+		} else {
+			addItem(new PoolItem(Integer.parseInt(s.trim())));			
+		}
 	}
 	
 	private boolean validateInitString(String s) {
