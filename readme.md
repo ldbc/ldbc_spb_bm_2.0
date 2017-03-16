@@ -2,7 +2,7 @@
 Semantic Publishing Benchmark v2.0
 ----------------------------------
 
-###Introduction
+### Introduction
 
 The Semantic Publishing Benchmark is an LDBC benchmark which measures the performance of RDF databases. Creation of that benchmark has been inspired 
 by the Media/Publishing industry where requirements like: constant update of content or various requests for data extraction and aggregation are present.
@@ -14,7 +14,7 @@ Aggregation operations consist of a wide range of queries, e.g. _search, aggrega
 * Provides validation of results
 * Tests the conformance of the RDF Database to various rules inside the OWL2-RL rule-set.
 
-###Build
+### Build
 
 Apache Ant build tool is required.
 
@@ -45,11 +45,11 @@ Result of build process is saved to a distribution folder: _'dist/'_ :
 * ***definitions.properties*** - a configuration file with pre-allocated values used by the benchmark. Not to be modified by the regular benchmark user.
 * ***readme.txt***
 
-###Install
+### Install
 
 All necessary files required to run the benchmark are saved to folder: 'dist/'. The benchmark can be started from there or can be moved to a new location.
 
-###Configure
+### Configure
 
 Various properties are used to configure the behaviour of the SPB Test Driver or Data Generator. All properties are saved in files: _test.properties_ and _definitions.properties_. Properties saved to file: _definitions.proeprties_ are not to be modified by a regular user of the benchmark, their default values have been set.
 
@@ -67,14 +67,15 @@ Descriptions of the essential becnhmark actions can be found here: https://githu
 * ***Definition properties:*** https://github.com/ldbc/ldbc_spb_bm/wiki/Definitions-Properties
 
  
-###Run
+### Run
 
 ```sh
 java -jar semantic_publishing_benchmark-*.jar test.properties
 ```
 *Note: appropriate value for java maximum heap size may be required, e.g. -Xmx8G*
 
-###Benchmark Results
+### Benchmark Results
+
 Logging details can be controlled by a configuration file: log4j.xml saved in the distributed benchmark driver (semantic_publishing_benchmark.jar). After modifying log4j.xml, benchmark driver must be updated with contents of the new xml file.
 Results of the benchmark are saved to three types of log files :
 
