@@ -9,6 +9,8 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 person:
       rdf:type owl:Ontology ;
       rdfs:comment "The generic BBC ontology for people"^^xsd:string ;
@@ -52,4 +54,3 @@ person:role
       rdfs:label "role"^^xsd:string ;
       rdfs:range person:Role .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

@@ -10,6 +10,7 @@
 @prefix tagging: <http://www.bbc.co.uk/ontologies/tagging/> .
 @prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
 
 curric:
       rdf:type owl:Ontology ;
@@ -293,4 +294,3 @@ curric:depictionPID
       rdfs:isDefinedBy curric: ;
       vs:term_status "stable" .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

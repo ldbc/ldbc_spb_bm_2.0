@@ -11,6 +11,8 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 bbc:  rdf:type owl:Ontology ;
       rdfs:comment "This ontology codifies BBC specific logic such as products, web documents and their association with creative works and tag concepts."^^xsd:string ;
       owl:imports core: , cwork: ;
@@ -102,4 +104,3 @@ bbc:product
       rdfs:isDefinedBy bbc: ;
       rdfs:range bbc:Product .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

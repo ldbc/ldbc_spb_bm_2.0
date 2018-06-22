@@ -8,6 +8,8 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 cwork:
       rdf:type owl:Ontology ;
       rdfs:comment "This is a continuously evolving model which supports functionality that is bound to change (fixedSizeThumbnails, category) but also supports the new APIs."^^xsd:string ;
@@ -288,4 +290,3 @@ cwork:mentionsPrefLabel
       rdfs:label "mentionsPrefLabel"^^xsd:string ;
       rdfs:range xsd:string .            
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
