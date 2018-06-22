@@ -12,6 +12,8 @@
 @prefix dbp-ont: <http://dbpedia.org/ontology/> .
 @prefix geo-ont: <http://www.geonames.org/ontology#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 core:
       rdf:type owl:Ontology ;
       rdfs:comment "The generic BBC ontology for people, places,events, organisations, themes which represent things that make sense across the BBC. This model is meant to be generic enough, and allow clients (domain experts) link their own concepts e.g., athletes or politicians using rdfs:sublClassOf the particular concept. Please note that not all the domain specific concepts (e.g.,Curriculum Stage or Sport Competition) are linked to this model simply because they make sense in the particular domain concept."^^xsd:string ;
@@ -148,4 +150,3 @@ foaf:Person rdfs:subClassOf core:Thing .
 dbp-ont:Event rdfs:subClassOf core:Thing .
 geo-ont:Feature rdfs:subClassOf core:Thing .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

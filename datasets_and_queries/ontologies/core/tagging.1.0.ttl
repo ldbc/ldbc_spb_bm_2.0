@@ -8,6 +8,8 @@
 @prefix tagging:  <http://www.bbc.co.uk/ontologies/tagging/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 tagging:
       rdf:type owl:Ontology ;
       rdfs:comment "This ontology is used to represent the class of tag concepts. All things subclassed (typed by a subclass of it) or typed by the class TagConcept will appear in tagging clients."^^xsd:string ;
@@ -37,4 +39,3 @@ tagging:tagSet
       rdfs:label "tagSet"^^xsd:string ;
       rdfs:range tagging:TagSet .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

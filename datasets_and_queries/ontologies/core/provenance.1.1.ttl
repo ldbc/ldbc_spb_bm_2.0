@@ -9,6 +9,8 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 provenance:
       rdf:type owl:Ontology ;
       rdfs:comment "An ontology to capture the classes and relationships of systems and applications. Data from this ontology is not intended to be exposed outside the BBC and it's used mainly data management and by the associated APIs"^^xsd:string ;
@@ -117,4 +119,3 @@ provenance:version
       rdfs:label "version"^^xsd:string ;
       rdfs:range xsd:int .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
