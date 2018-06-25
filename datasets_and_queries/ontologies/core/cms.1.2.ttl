@@ -8,6 +8,8 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 cms:  rdf:type owl:Ontology ;
       rdfs:comment "An ontology to represent the content management systems and their interation with the triplestore. For instance, how should an entity in the triplestore (the URI for Manchester United) be linked to an external CMS that provides more information on the thing, e.g., sports statistics, or how should a creative work URI in the triplestore refer to another CMS (e.g., content store) so that more information that the triplestore doesn't store (e.g., the full text body of the creative work) can be retrieved."^^xsd:string ;
       rdfs:label "ContentManagementSystem"^^xsd:string ;
@@ -55,4 +57,3 @@ cms:locator
       rdfs:isDefinedBy cms: ;
       rdfs:range cms:Locator .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
