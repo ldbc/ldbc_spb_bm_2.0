@@ -2,6 +2,8 @@
 Semantic Publishing Benchmark v2.0
 ----------------------------------
 
+[![Build Status](https://travis-ci.org/ldbc/ldbc_spb_bm_2.0.svg?branch=master)](https://travis-ci.org/ldbc/ldbc_spb_bm_2.0)
+
 ### Introduction
 
 The Semantic Publishing Benchmark is an LDBC benchmark which measures the performance of RDF databases. Creation of that benchmark has been inspired 
