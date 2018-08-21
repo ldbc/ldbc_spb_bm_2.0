@@ -15,6 +15,8 @@
 @prefix time:    <http://purl.org/NET/c4dm/timeline.owl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 news:
       rdf:type owl:Ontology ;
       rdfs:comment "The Core News Ontology describes the basic concepts that journalists can associate with a Creative Work."^^xsd:string ;
@@ -107,4 +109,3 @@ news:time
       rdfs:label "took place on"^^xsd:string ;
       rdfs:range time:Interval .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
