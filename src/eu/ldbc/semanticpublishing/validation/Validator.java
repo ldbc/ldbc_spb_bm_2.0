@@ -1,18 +1,17 @@
 package eu.ldbc.semanticpublishing.validation;
 
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.SparqlResultValidator;
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.TurtleResultValidator;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.eclipse.rdf4j.query.QueryEvaluationException;
+import org.eclipse.rdf4j.query.TupleQueryResultHandlerException;
+import org.eclipse.rdf4j.query.resultio.QueryResultParseException;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFParseException;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
-
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.openrdf.query.QueryEvaluationException;
-import org.openrdf.query.TupleQueryResultHandlerException;
-import org.openrdf.query.resultio.QueryResultParseException;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
-
-import eu.ldbc.semanticpublishing.resultanalyzers.sesame.SparqlResultValidator;
-import eu.ldbc.semanticpublishing.resultanalyzers.sesame.TurtleResultValidator;
 
 public class Validator {
 	

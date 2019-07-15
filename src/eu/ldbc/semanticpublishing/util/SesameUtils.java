@@ -1,6 +1,6 @@
 package eu.ldbc.semanticpublishing.util;
 
-import org.openrdf.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
  * Utility class for providing functionality specific to the Sesame RDF Framework

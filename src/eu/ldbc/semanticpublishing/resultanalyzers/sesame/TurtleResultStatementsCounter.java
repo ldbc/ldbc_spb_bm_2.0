@@ -1,17 +1,12 @@
 package eu.ldbc.semanticpublishing.resultanalyzers.sesame;
 
+import eu.ldbc.semanticpublishing.util.StringUtil;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.rio.*;
+import org.eclipse.rdf4j.rio.helpers.AbstractRDFHandler;
+
 import java.io.IOException;
 import java.io.InputStream;
-
-import org.openrdf.model.Statement;
-import org.openrdf.rio.RDFFormat;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
-import org.openrdf.rio.RDFParser;
-import org.openrdf.rio.Rio;
-import org.openrdf.rio.helpers.RDFHandlerBase;
-
-import eu.ldbc.semanticpublishing.util.StringUtil;
 
 public class TurtleResultStatementsCounter {
 	private final RDFParser rdfParser;
@@ -69,7 +64,7 @@ public class TurtleResultStatementsCounter {
 		return parseTime;
 	}
 	
-	static class StatementsCounter extends RDFHandlerBase {
+	static class StatementsCounter extends AbstractRDFHandler {
 		private int countedStatements = 0;
 		  		  
 		@Override

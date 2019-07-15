@@ -229,7 +229,7 @@ application/sparql-results+xml
 		</result>
 		<result>
 			<binding name='o'>
-				<uri>http://dbpedia.org/resource/Nicol\u00E1s_Urquiza</uri>
+				<uri>http://dbpedia.org/resource/Nicolás_Urquiza</uri>
 			</binding>
 			<binding name='cworkGraph'>
 				<uri>http://www.bbc.co.uk/context/122185#id</uri>

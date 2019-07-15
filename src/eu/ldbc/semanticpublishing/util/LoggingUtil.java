@@ -89,6 +89,6 @@ public class LoggingUtil {
 		sesameConsoleAppender.setLayout(new PatternLayout(LAYOUT_SIMPLE));
 		sesameConsoleAppender.setThreshold(Level.INFO);
 		
-		Logger.getLogger("org.openrdf").addAppender(sesameConsoleAppender);
+		Logger.getLogger("org.eclipse.rdf4j").addAppender(sesameConsoleAppender);
 	}
 }
