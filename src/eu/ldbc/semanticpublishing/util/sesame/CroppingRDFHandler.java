@@ -1,43 +1,43 @@
 package eu.ldbc.semanticpublishing.util.sesame;
 
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.model.URI;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFWriter;
+import org.eclipse.rdf4j.rio.Rio;
+import org.eclipse.rdf4j.rio.helpers.AbstractRDFHandler;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openrdf.model.Resource;
-import org.openrdf.model.Statement;
-import org.openrdf.model.URI;
-import org.openrdf.model.ValueFactory;
-import org.openrdf.model.impl.ValueFactoryImpl;
-import org.openrdf.rio.RDFFormat;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFWriter;
-import org.openrdf.rio.Rio;
-import org.openrdf.rio.helpers.RDFHandlerBase;
-
 /**
  * Custom implementation of the RDFHandlerBase class, used to crop and serialize TURTLE files limited by number of entities of certain rdf:type 
  */
-public class CroppingRDFHandler extends RDFHandlerBase {
+public class CroppingRDFHandler extends AbstractRDFHandler {
 	private long entitiesCount = 0;
 	private long maxEntityLimit = 0;
 	private String outputFileName;
 	private List<Statement> entityStatements = new ArrayList<Statement>();
 	
-	private final ValueFactory factory = ValueFactoryImpl.getInstance();
+	private final ValueFactory factory = SimpleValueFactory.getInstance();
 	private FileOutputStream outputStream;
 	private RDFWriter rdfWriter;
 	private Resource lastSubject = null;
 	private Resource foafPersonResource = null;
-	private final URI rdfTypeUri = factory.createURI(RDF_TYPE_URI);
+	private final URI rdfTypeUri = factory.createIRI(RDF_TYPE_URI);
 	
 	protected static final String RDF_TYPE_URI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"; 
 	
 	public CroppingRDFHandler(String outputFileName, long maxEntityLimit, String filterURI) {
 		this.outputFileName = outputFileName;
 		this.maxEntityLimit = maxEntityLimit;
-		this.foafPersonResource = factory.createURI(filterURI);
+		this.foafPersonResource = factory.createIRI(filterURI);
 	}
 	
 	private void initializeRdfWriter(String outputFileName) {

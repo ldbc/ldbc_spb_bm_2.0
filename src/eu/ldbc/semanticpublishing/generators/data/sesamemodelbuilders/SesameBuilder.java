@@ -1,8 +1,8 @@
 package eu.ldbc.semanticpublishing.generators.data.sesamemodelbuilders;
 
-import org.openrdf.model.Model;
-import org.openrdf.model.ValueFactory;
-import org.openrdf.model.impl.ValueFactoryImpl;
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.ValueFactoryImpl;
 
 public interface SesameBuilder {
 	

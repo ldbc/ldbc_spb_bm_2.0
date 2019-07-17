@@ -3,13 +3,13 @@ package eu.ldbc.semanticpublishing.resultanalyzers.sesame;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.openrdf.model.Statement;
-import org.openrdf.rio.RDFFormat;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
-import org.openrdf.rio.RDFParser;
-import org.openrdf.rio.Rio;
-import org.openrdf.rio.helpers.RDFHandlerBase;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFParseException;
+import org.eclipse.rdf4j.rio.RDFParser;
+import org.eclipse.rdf4j.rio.Rio;
+import org.eclipse.rdf4j.rio.helpers.AbstractRDFHandler;
 
 public class RDFXMLResultStatementsCounter {
 	private final RDFParser rdfParser;
@@ -60,7 +60,7 @@ public class RDFXMLResultStatementsCounter {
 		return parseTime;
 	}
 	
-	static class StatementsCounter extends RDFHandlerBase {
+	static class StatementsCounter extends AbstractRDFHandler {
 		private int countedStatements = 0;
 		  		  
 		@Override
