@@ -423,8 +423,10 @@ public class RandomUtil {
 		}
 		
 		if (surroundWithQuotes) {
-			sb.insert(0, '"');
-			sb.append("\"");
+			// In order to handle cases where we have new line in data we should add ''' instead of quotes
+			char[] quotesArr = {39, 39, 39};
+			sb.insert(0, quotesArr);
+			sb.append("'''");
 		}
 
 		if (appendDataType) {

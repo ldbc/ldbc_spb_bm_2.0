@@ -143,14 +143,22 @@ public class Validator {
 			if (result.startsWith("<")) {
 				result = result.substring(1);
 			}
-			if (result.endsWith(">")) {
-				result = result.substring(0, result.length()-1);
-			}				
+			// Should be called before next because ^^<http://www.w3.org/2001/XMLSchema#string>
 			if (result.contains("^^")) {
 				result = result.substring(0, result.indexOf("^^"));
 			}
-			
-			result = result.replace("\"", "");
+			if (result.endsWith(">")) {
+				result = result.substring(0, result.length()-1);
+			}				
+
+			// Since we're adding ''' for literals with new line in them should remove them also
+			result = result.replace("'''", "");
+
+			// Remove only first and last quote
+			result = result.replaceFirst("\"", "");
+			if (result.endsWith("\"")) {
+				result = result.substring(0, result.lastIndexOf("\""));
+			}
 		}
 		
 		//escapeJava() returns UTF-8 escaped chars with double "\\"
