@@ -160,9 +160,8 @@ public class SAXReferenceDataEntityTransformer extends DefaultHandler implements
 			entity.setCategory(categorySb.toString());
 			entity.setRank(rankSb.toString());
 			
-			if (!uniqueSet.contains(uriSb.toString())) {
+			if (uniqueSet.add(uriSb.toString())) {
 				entitiesList.add(entity);
-				uniqueSet.add(uriSb.toString());
 			}
 		}
 	}
