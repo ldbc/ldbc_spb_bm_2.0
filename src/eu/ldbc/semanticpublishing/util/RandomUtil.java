@@ -401,6 +401,7 @@ public class RandomUtil {
 		StringBuilder sb = new StringBuilder();
 
 		if (!StringUtils.isEmpty(firstString)) {
+			// Some entities' object have ''' in them
 			sb.append(firstString.replace("'''", ""));
 			sb.append(" ");
 		}

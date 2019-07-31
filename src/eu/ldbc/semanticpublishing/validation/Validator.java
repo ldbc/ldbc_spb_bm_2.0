@@ -155,7 +155,9 @@ public class Validator {
 			result = result.replace("'''", "");
 
 			// Remove only first and last quote
-			result = result.replaceFirst("\"", "");
+			if (result.startsWith("\"")) {
+				result = result.replaceFirst("\"", "");
+			}
 			if (result.endsWith("\"")) {
 				result = result.substring(0, result.lastIndexOf("\""));
 			}
