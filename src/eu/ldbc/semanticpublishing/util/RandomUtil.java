@@ -1,5 +1,6 @@
 package eu.ldbc.semanticpublishing.util;
 
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedReader;
@@ -422,7 +423,8 @@ public class RandomUtil {
 				escapeSb.append("\\");
 			}
 			escapeSb.append("\"");
-			replacement = sb.toString().replaceAll("\"", escapeSb.toString());			
+			replacement = sb.toString().replaceAll("\"", escapeSb.toString());
+			replacement = StringEscapeUtils.escapeJava(replacement).replace("\\", "\\");
 			sb.setLength(0);
 			sb.append(replacement);			
 		}
