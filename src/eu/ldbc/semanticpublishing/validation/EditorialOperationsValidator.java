@@ -210,9 +210,10 @@ public class EditorialOperationsValidator extends Validator {
 	
 	private String buildModifiedString(String inputString, int iteration) {
 		StringBuilder sb = new StringBuilder();
-		//insert first quote 
-		String firstPart = inputString.substring(0, 1);
-		String secondPart = inputString.substring(1);
+		// New implementation of method randomWordFromDictionary of RandomUtil class
+		// literals of type <http://www.w3.org/2001/XMLSchema#string> are in ''' instead of quotes.
+		String firstPart = inputString.substring(0, 3);
+		String secondPart = inputString.substring(3);
 		sb.append(firstPart);
 		sb.append("_updated_" + iteration);
 		sb.append(secondPart);
