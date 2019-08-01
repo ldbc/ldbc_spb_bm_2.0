@@ -424,7 +424,6 @@ public class RandomUtil {
 			}
 			escapeSb.append("\"");
 			replacement = sb.toString().replaceAll("\"", escapeSb.toString());
-			replacement = StringEscapeUtils.escapeJava(replacement).replace("\\", "\\");
 			sb.setLength(0);
 			sb.append(replacement);			
 		}
