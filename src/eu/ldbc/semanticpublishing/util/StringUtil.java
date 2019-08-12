@@ -6,26 +6,35 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * A utility class for performing various operations on strings. 
  */
 public class StringUtil {
-	
+
+	private static String lineSeparator = System.getProperty("line.separator");
 	/**
-	 * Prepares a string from an input strem, used when needed to log a detailed query result
+	 * Prepares a string from an input stream, used when needed to log a detailed query result
 	 * @param is
 	 * @return
 	 * @throws IOException
 	 */
 	public static String iostreamToString(InputStream is) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+		BufferedReader br = null;
 		StringBuilder sb = new StringBuilder();
 	    String str;
-	    while (null != (str = br.readLine())) {
-	        sb.append(str).append("\r\n"); 
-	    }
-	    br.close();	    
+	    try {
+			br = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+			while (null != (str = br.readLine())) {
+				sb.append(str).append(lineSeparator);
+			}
+		} finally {
+	    	if (br != null) {
+				br.close();
+			}
+		}
+
 	    return sb.toString();
 	}	
 	
