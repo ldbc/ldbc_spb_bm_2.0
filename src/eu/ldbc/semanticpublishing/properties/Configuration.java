@@ -70,6 +70,7 @@ public class Configuration {
 	public static final String CURRENT_RATE_REPORT_PERIOD_SECONDS = "currentRateReportPeriodSeconds";
 	public static final String SAVE_DETAILED_QUERY_LOGS = "saveDetailedQueryLogs";
 	public static final String REPORT_INTERVAL_SECONDS = "reportIntervalSeconds";
+	public static final String VALIDATE_HISTORY_PLUGIN = "validateHistoryPlugin";
 	
 	/**
 	 * Initialise and set default values for parameters that make sense.
@@ -127,6 +128,7 @@ public class Configuration {
 		properties.setProperty(SAVE_DETAILED_QUERY_LOGS, "true");
 		
 		properties.setProperty(REPORT_INTERVAL_SECONDS, "1");
+		properties.setProperty(VALIDATE_HISTORY_PLUGIN, "false");
 	}
 	
 	/**

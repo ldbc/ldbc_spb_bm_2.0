@@ -2,11 +2,25 @@ package eu.ldbc.semanticpublishing.agents;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.ParseException;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.List;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import eu.ldbc.semanticpublishing.resultanalyzers.history.OriginalQueryData;
+import eu.ldbc.semanticpublishing.resultanalyzers.history.QueryResultsConverterUtil;
+import eu.ldbc.semanticpublishing.resultanalyzers.history.SavedAsBindingSetListOriginalResults;
+import eu.ldbc.semanticpublishing.resultanalyzers.history.SavedAsModelOriginalResults;
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.query.BindingSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,6 +63,8 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	private RDFXMLResultStatementsCounter rdfXmlResultStatementsCounter;
 	private SPARQLResultStatementsCounter sparqlResultStatementsCounter;
 	private final boolean saveDetailedQueryLogs;
+	private BlockingQueue<OriginalQueryData> playedQueriesQueue;
+	private final boolean validateHistoryPlugin;
 	
 	private final static Logger DETAILED_LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
 	private final static Logger BRIEF_LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
@@ -69,6 +85,10 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		this.queryMixPool = new Pool(definitions.getString(Definitions.QUERY_POOLS), Statistics.totalStartedQueryMixRuns, Statistics.totalCompletedQueryMixRuns);
 		this.benchmarkByQueryMixRuns = benchmarkByQueryMixRuns;
 		this.saveDetailedQueryLogs = configuration.getBoolean(Configuration.SAVE_DETAILED_QUERY_LOGS);
+		this.validateHistoryPlugin = configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN);
+		if (validateHistoryPlugin) {
+			playedQueriesQueue = new LinkedBlockingDeque<>();
+		}
 	}
 	
 	@Override
@@ -93,105 +113,110 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		long queryId = 0;
 		MustacheTemplate aggregateQuery = null;
 		String queryString = "";
-		String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String timeStamp = format.format(Calendar.getInstance().getTime());
 		InputStream inputStreamResult = null;
 
 		try {
-//			boolean drillDownQuery = false;
-			
-			//important : queryDistribution is zero-based, while QueryNTemplate is not!
-			queryId = Statistics.aggregateQueriesArray[aggregateQueryIndex].getNewQueryId();
-			
-			String[] querySubstParameters;
-			switch (aggregateQueryIndex) {
-				case 0 :
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query1Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;
-				case 1 :
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query2Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;
-				case 2 : 
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query3Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;
-				case 3 :
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query4Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;
-				case 4 :
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query5Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;
-				case 5 : 
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query6Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;
-				case 6 :
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query7Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;			
-				case 7 :
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query8Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;	
-				case 8 :
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query9Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;
-				case 9 :
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query10Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;		
-				case 10 :
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query11Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;		
-				case 11 : 
-					querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
-					aggregateQuery = new Query12Template(ru, queryTemplates, definitions, querySubstParameters);
-					break;	
-			}
-			
-			queryString = aggregateQuery.compileMustacheTemplate();
-			
-			long executionTimeMs = System.currentTimeMillis();
-			
-			inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(connection, aggregateQuery.getTemplateFileName(), queryString, aggregateQuery.getTemplateQueryType(), true, false);			
-			
-			updateQueryStatistics(true, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, inputStreamResult, saveDetailedQueryLogs, queryId, System.currentTimeMillis() - executionTimeMs, timeStamp);
 
+//			if (validateHistoryPlugin && playedQueriesQueue.remainingCapacity() < 1) {
+//				validateHistoryPlugin(format);
+//			} else {
+//			boolean drillDownQuery = false;
+
+				//important : queryDistribution is zero-based, while QueryNTemplate is not!
+				queryId = Statistics.aggregateQueriesArray[aggregateQueryIndex].getNewQueryId();
+
+				String[] querySubstParameters;
+				switch (aggregateQueryIndex) {
+					case 0:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query1Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 1:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query2Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 2:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query3Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 3:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query4Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 4:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query5Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 5:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query6Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 6:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query7Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 7:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query8Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 8:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query9Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 9:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query10Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 10:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query11Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+					case 11:
+						querySubstParameters = substitutionQueryParametersMngr.getSubstitutionParametersFor(SubstitutionQueryParametersManager.QueryType.AGGREGATE, aggregateQueryIndex).get(queryId);
+						aggregateQuery = new Query12Template(ru, queryTemplates, definitions, querySubstParameters);
+						break;
+				}
+
+				queryString = aggregateQuery.compileMustacheTemplate();
+
+				long executionTimeMs = System.currentTimeMillis();
+
+				inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(connection, aggregateQuery.getTemplateFileName(), queryString, aggregateQuery.getTemplateQueryType(), true, false);
+
+				updateQueryStatistics(true, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, inputStreamResult, saveDetailedQueryLogs, queryId, System.currentTimeMillis() - executionTimeMs, timeStamp);
+//			}
 		} catch (Throwable t) {
-			String msg = "WARNING : AggregationAgent [" + Thread.currentThread().getName() +"] reports: " + t.getMessage() + "\n" + "\tfor query : \n" + queryString + "\n...closing current connection and creating a new one..." + "\n----------------------------------------------------------------------------------------------\n";
-			
+			String msg = "WARNING : AggregationAgent [" + Thread.currentThread().getName() + "] reports: " + t.getMessage() + "\n" + "\tfor query : \n" + queryString + "\n...closing current connection and creating a new one..." + "\n----------------------------------------------------------------------------------------------\n";
+
 			System.out.println(msg);
-			
+
 			DETAILED_LOGGER.warn(msg);
-			
+
 			try {
-                
-                updateQueryStatistics(false, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, inputStreamResult, saveDetailedQueryLogs, queryId, 0, timeStamp);
+
+				updateQueryStatistics(false, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, inputStreamResult, saveDetailedQueryLogs, queryId, 0, timeStamp);
 
 				msg = StringUtil.iostreamToString(inputStreamResult);
-                               
-                System.out.println("===============================");
-                System.out.println("Dump of InputStream:");
-                System.out.println(msg);
-                System.out.println("===============================");					
+
+				System.out.println("===============================");
+				System.out.println("Dump of InputStream:");
+				System.out.println(msg);
+				System.out.println("===============================");
 
 			} catch (Throwable t1) {
 				t1.printStackTrace();
 			}
-			
+
 			connection.disconnect();
 			connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
 		}
 
 		if (startedDuringBenchmarkPhase) {
-        	queryMixPool.releaseUnavailableItem(aggregateQueryIndex + 1);
-        }
-		
+			queryMixPool.releaseUnavailableItem(aggregateQueryIndex + 1);
+		}
+
 		return true;
 	}
 
@@ -221,17 +246,43 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 				
 				//reconvert the queryStringResult to an InputStream again, as the first one will be exhausted and not usable any more
 				inputStreamQueryResult = StringUtil.stringToIostream(queryResultString);				
-			}		
-            
-            if (reportSuccess) {
-                if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
-                  resultsCount = rdfXmlResultStatementsCounter.getStatementsCount(inputStreamQueryResult);
-                  Statistics.timeCorrectionsMS.addAndGet(rdfXmlResultStatementsCounter.getParseTime());
-                } else {
-                  resultsCount = sparqlResultStatementsCounter.getStatementsCount(inputStreamQueryResult);
-                  Statistics.timeCorrectionsMS.addAndGet(sparqlResultStatementsCounter.getParseTime());
-                }	
-            }
+			}
+
+			if (reportSuccess) {
+				OriginalQueryData dataHolder;
+				long queryParseTime;
+				long startOfValidating = System.currentTimeMillis();
+				boolean addQueryForValidation = /*playedQueriesQueue.remainingCapacity() > 1 && */queryNumber != 6 && queryNumber != 8
+						&& queryNumber != 10 && queryNumber != 5  && queryNumber != 9;
+				if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
+					if (validateHistoryPlugin) {
+						Model resultAsModel = QueryResultsConverterUtil.getReturnedResultAsModel(inputStreamQueryResult);
+						queryParseTime = System.currentTimeMillis() - startOfValidating;
+						if (addQueryForValidation) {
+							dataHolder = new SavedAsModelOriginalResults(timeStamp, queryString, resultAsModel, queryType, queryName);
+							playedQueriesQueue.offer(dataHolder);
+						}
+						resultsCount = resultAsModel.size();
+					} else {
+						resultsCount = rdfXmlResultStatementsCounter.getStatementsCount(inputStreamQueryResult);
+						queryParseTime = rdfXmlResultStatementsCounter.getParseTime();
+					}
+				} else {
+					if (validateHistoryPlugin) {
+						List<BindingSet> bindings = QueryResultsConverterUtil.getBindingSetsList(inputStreamQueryResult);
+						queryParseTime = System.currentTimeMillis() - startOfValidating;
+						if (addQueryForValidation) {
+							dataHolder = new SavedAsBindingSetListOriginalResults(timeStamp, queryString, bindings, queryType, queryName);
+							playedQueriesQueue.offer(dataHolder);
+						}
+						resultsCount = bindings.size();
+					} else {
+						resultsCount = sparqlResultStatementsCounter.getStatementsCount(inputStreamQueryResult);
+						queryParseTime = sparqlResultStatementsCounter.getParseTime();
+					}
+				}
+				Statistics.timeCorrectionsMS.addAndGet(queryParseTime);
+			}
 	        
 			if (startedDuringBenchmarkPhase) {
 				if (reportSuccess) {
@@ -276,5 +327,56 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		queryId.append(", id:");
 		queryId.append("" + id);
 		return queryId.toString();
+	}
+
+//	private void validateHistoryPlugin(SimpleDateFormat format) {
+//		OriginalQueryData headQuery = playedQueriesQueue.poll();
+//		if (headQuery != null) {
+//			try {
+//				long timeStamp = format.parse(headQuery.getTimeStamp()).getTime();
+//				String result = applyHistoryGraphToQuery(headQuery.getOriginalQueryString(), timeStamp);
+//				long start = System.currentTimeMillis();
+//				InputStream inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(connection, headQuery.getOriginalQueryName(),
+//						result, headQuery.getOriginalQueryType(), false, false);
+//				if (headQuery.getOriginalQueryType() == SparqlQueryConnection.QueryType.SELECT) {
+//					if (!((SavedAsBindingSetListOriginalResults) headQuery).getSavedBindingSets()
+//							.equals(QueryResultsConverterUtil.getBindingSetsList(inputStreamResult))) {
+//						System.err.println(generateErrorMsg(headQuery));
+//					}
+//				} else {
+//					if (!((SavedAsModelOriginalResults) headQuery).getSavedModel()
+//							.equals(QueryResultsConverterUtil.getReturnedResultAsModel(inputStreamResult))) {
+//						System.err.println(generateErrorMsg(headQuery));
+//					}
+//				}
+//			} catch (IOException e) {
+//				System.err.println("Exception occurred during query execution\n" + e.getMessage());
+//			} catch (ParseException e) {
+//				System.err.println("Couldn't parse properly timestamp");;
+//			}
+//		}
+//	}
+//
+//	private String applyHistoryGraphToQuery(String queryString, long timestampAsLong) {
+//		String dis = "ot:disable-sameAs";
+//		int index = queryString.indexOf(dis) + dis.length();
+//		StringBuilder sb = new StringBuilder(queryString);
+//		sb.insert(index, " FROM <http://www.ontotext.com/at/" + convertTimestamp(timestampAsLong) + ">");
+//		return sb.toString();
+//	}
+//
+//	private String convertTimestamp(long timeStamp) {
+//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+//		return ZonedDateTime.ofInstant(Instant.ofEpochMilli(timeStamp), ZoneId.systemDefault()).format(dtf);
+//	}
+//
+//	private String generateErrorMsg(OriginalQueryData headQuery) {
+//		return "Found difference in returned results from history plugin for " +
+//				headQuery.getOriginalQueryName() + " queryType " + headQuery.getOriginalQueryType().toString();
+//	}
+
+
+	public BlockingQueue<OriginalQueryData> getPlayedQueriesQueue() {
+		return playedQueriesQueue;
 	}
 }

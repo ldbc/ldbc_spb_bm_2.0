@@ -125,13 +125,13 @@ public class TestDriverReporter extends Thread {
 		long failedDeleteOpsCount = Statistics.deleteCreativeWorksQueryStatistics.getFailuresCount();
 		long failedTotalAggregateOpsCount = Statistics.totalAggregateQueryStatistics.getFailuresCount();
 		
-		sb.append("\n");
-		
-		sb.append("\nSeconds : " + seconds);
+		sb.append("\n")
+				.append("\nSeconds : ")
+				.append(seconds);
 		
 		calendar = Calendar.getInstance();
-		sb.append("\n");
-		sb.append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendar.getTime())); 
+		sb.append("\n")
+				.append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendar.getTime()));
 		
 		if (!queryPoolsDefinitions.isEmpty()) {
 			sb.append(" (completed query mixes : " + totalCompletedQueryMixRuns.get() + ")");
@@ -145,25 +145,25 @@ public class TestDriverReporter extends Thread {
 			if (a.getState() != Thread.State.TERMINATED) {
 				editorialAgentsCount++;
 			}
-		}		
-		sb.append("\n");
-		sb.append("\tEditorial:\n");
-		sb.append(String.format("\t\t%s agents\n\n", editorialAgentsCount));
+		}
+		sb.append("\n")
+				.append("\tEditorial:\n")
+				.append(String.format("\t\t%s agents\n\n", editorialAgentsCount));
 		if (verbose) {
-			
-			sb.append(String.format("\t\t%-5d inserts (avg : %-7d ms, min : %-7d ms, max : %-7d ms)\n", insertOpsCount ,Statistics.insertCreativeWorksQueryStatistics.getAvgExecutionTimeMs(), Statistics.insertCreativeWorksQueryStatistics.getMinExecutionTimeMs(), Statistics.insertCreativeWorksQueryStatistics.getMaxExecutionTimeMs()));
-			sb.append(String.format("\t\t%-5d updates (avg : %-7d ms, min : %-7d ms, max : %-7d ms)\n", updateOpsCount ,Statistics.updateCreativeWorksQueryStatistics.getAvgExecutionTimeMs(), Statistics.updateCreativeWorksQueryStatistics.getMinExecutionTimeMs(), Statistics.updateCreativeWorksQueryStatistics.getMaxExecutionTimeMs()));
-			sb.append(String.format("\t\t%-5d deletes (avg : %-7d ms, min : %-7d ms, max : %-7d ms)\n", deleteOpsCount ,Statistics.deleteCreativeWorksQueryStatistics.getAvgExecutionTimeMs(), Statistics.deleteCreativeWorksQueryStatistics.getMinExecutionTimeMs(), Statistics.deleteCreativeWorksQueryStatistics.getMaxExecutionTimeMs()));
-			sb.append("\n");
-			sb.append(String.format("\t\t%d operations (%d CW Inserts (%d errors), %d CW Updates (%d errors), %d CW Deletions (%d errors))\n", ( insertOpsCount + updateOpsCount + deleteOpsCount ),
-																	  																			 insertOpsCount, failedInsertOpsCount,
-																	  																			 updateOpsCount, failedUpdateOpsCount,
-																	  																			 deleteOpsCount, failedDeleteOpsCount) );
+
+			sb.append(String.format("\t\t%-5d inserts (avg : %-7d ms, min : %-7d ms, max : %-7d ms)\n", insertOpsCount, Statistics.insertCreativeWorksQueryStatistics.getAvgExecutionTimeMs(), Statistics.insertCreativeWorksQueryStatistics.getMinExecutionTimeMs(), Statistics.insertCreativeWorksQueryStatistics.getMaxExecutionTimeMs()))
+					.append(String.format("\t\t%-5d updates (avg : %-7d ms, min : %-7d ms, max : %-7d ms)\n", updateOpsCount, Statistics.updateCreativeWorksQueryStatistics.getAvgExecutionTimeMs(), Statistics.updateCreativeWorksQueryStatistics.getMinExecutionTimeMs(), Statistics.updateCreativeWorksQueryStatistics.getMaxExecutionTimeMs()))
+					.append(String.format("\t\t%-5d deletes (avg : %-7d ms, min : %-7d ms, max : %-7d ms)\n", deleteOpsCount, Statistics.deleteCreativeWorksQueryStatistics.getAvgExecutionTimeMs(), Statistics.deleteCreativeWorksQueryStatistics.getMinExecutionTimeMs(), Statistics.deleteCreativeWorksQueryStatistics.getMaxExecutionTimeMs()))
+					.append("\n")
+					.append(String.format("\t\t%d operations (%d CW Inserts (%d errors), %d CW Updates (%d errors), %d CW Deletions (%d errors))\n", (insertOpsCount + updateOpsCount + deleteOpsCount),
+							insertOpsCount, failedInsertOpsCount,
+							updateOpsCount, failedUpdateOpsCount,
+							deleteOpsCount, failedDeleteOpsCount));
 		} else {
-			sb.append(String.format("\t\t%d operations (%d CW Inserts, %d CW Updates, %d CW Deletions)\n", ( insertOpsCount + updateOpsCount + deleteOpsCount ),
-																											 insertOpsCount, 
-																											 updateOpsCount,
-																											 deleteOpsCount) );
+			sb.append(String.format("\t\t%d operations (%d CW Inserts, %d CW Updates, %d CW Deletions)\n", (insertOpsCount + updateOpsCount + deleteOpsCount),
+					insertOpsCount,
+					updateOpsCount,
+					deleteOpsCount));
 		}
 
 		//time correction is not needed for update operations, as they are performed by separate agents and are not counting/parsing results
@@ -188,10 +188,10 @@ public class TestDriverReporter extends Thread {
 			if (a.getState() != Thread.State.TERMINATED) {
 				aggregationAgentsCount++;
 			}
-		}		
-		sb.append("\n");
-		sb.append("\tAggregation:\n");
-		sb.append(String.format("\t\t%s agents\n\n", aggregationAgentsCount));
+		}
+		sb.append("\n")
+				.append("\tAggregation:\n")
+				.append(String.format("\t\t%s agents\n\n", aggregationAgentsCount));
 		if (verbose) {
 			for (int i = 0; i < Statistics.AGGREGATE_QUERIES_COUNT; i++) {
 				sb.append(String.format("\t\t%-5d Q%-2d  queries (avg : %-7d ms, min : %-7d ms, max : %-7d ms, %d errors)\n", Statistics.aggregateQueriesArray[i].getRunsCount(), 

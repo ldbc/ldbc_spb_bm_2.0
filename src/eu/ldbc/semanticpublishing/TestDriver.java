@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import eu.ldbc.semanticpublishing.agents.HistoryAgent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -532,7 +533,11 @@ public class TestDriver {
 	
 	private void setupAsynchronousAgents() {
 		for(int i = 0; i < aggregationAgentsCount; ++i ) {
-			aggregationAgents.add(new AggregationAgent(inBenchmarkState, queryExecuteManager, randomGenerator, runFlag, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.AGGREGATION), configuration, definitions, substitutionQueryParamtersManager, configuration.getLong(Configuration.BENCHMARK_BY_QUERY_MIX_RUNS)));
+			AggregationAgent aggregationAgent = new AggregationAgent(inBenchmarkState, queryExecuteManager, randomGenerator, runFlag, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.AGGREGATION), configuration, definitions, substitutionQueryParamtersManager, configuration.getLong(Configuration.BENCHMARK_BY_QUERY_MIX_RUNS));
+			aggregationAgents.add(aggregationAgent);
+			if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
+				historyAgents.add(new HistoryAgent(runFlag, aggregationAgent.getPlayedQueriesQueue(), queryExecuteManager));
+			}
 		}
 
 		for(int i = 0; i < editorialAgentsCount; ++i ) {
@@ -541,6 +546,7 @@ public class TestDriver {
 	}
 	
 	private final List<AbstractAsynchronousAgent> aggregationAgents = new ArrayList<AbstractAsynchronousAgent>();
+	private final List<AbstractAsynchronousAgent> historyAgents = new ArrayList<AbstractAsynchronousAgent>();
 	private final List<AbstractAsynchronousAgent> editorialAgents = new ArrayList<AbstractAsynchronousAgent>();
 	private boolean aggregationAgentsStarted = false;
 	private boolean editorialAgentsStarted = false;
@@ -565,6 +571,9 @@ public class TestDriver {
 
 			for(int i = 0; i < aggregationAgentsCount; ++i ) {
 				aggregationAgents.get(i).start();
+				if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
+					historyAgents.get(i).start();
+				}
 			}
 
 			ThreadUtil.sleepSeconds(warmupPeriodSeconds);
@@ -617,6 +626,13 @@ public class TestDriver {
 				for(AbstractAsynchronousAgent agent : aggregationAgents ) {
 					if( ! agent.isAlive()) {
 						agent.start();
+					}
+				}
+				if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
+					for (AbstractAsynchronousAgent history : historyAgents) {
+						if (!history.isAlive()) {
+							history.start();
+						}
 					}
 				}
 			}
@@ -688,7 +704,7 @@ public class TestDriver {
 	 * @param enable 				 - enable the phase
 	 * @param benchmarkByQueryRuns   - if zero, then time interval set by parameter 'benchmarkRunPeriodSeconds' will be used for completing the phase.
 	 * 								   if greater than zero, then its value the amount of aggregate queries that will be executed for completing the phase.
-	 * @param mileStonePosition - defines after the position of execution of a 'mileStone' query ( the query that will verify that certain milestone has been reached). 
+	 * @param milestonePosition - defines after the position of execution of a 'mileStone' query ( the query that will verify that certain milestone has been reached).
 	 * 								   This parameter is considered only if benchmarkByQueryRuns > 0. 
 	 * 								   e.g. if mileStoneQueryPosition = 0.2 in terms of percents, then after 20% of executed queries a mileStone query is started.
 	 * @throws IOException
@@ -741,6 +757,13 @@ public class TestDriver {
 				for(AbstractAsynchronousAgent agent : aggregationAgents ) {
 					if( ! agent.isAlive()) {
 						agent.start();
+					}
+					if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
+						for (AbstractAsynchronousAgent history : historyAgents) {
+							if (!history.isAlive()) {
+								history.start();
+							}
+						}
 					}
 				}
 			}
@@ -896,7 +919,13 @@ public class TestDriver {
 			for(AbstractAsynchronousAgent agent : editorialAgents ) {
 				ThreadUtil.join(agent);
 			}
-		}		
+		}
+
+		if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
+			for (AbstractAsynchronousAgent history : historyAgents) {
+				ThreadUtil.join(history);
+			}
+		}
 	}
 	
 	private void checkConformance(boolean enable) throws IOException {

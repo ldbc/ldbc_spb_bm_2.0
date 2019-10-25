@@ -7,6 +7,7 @@ public class Statistics {
 	private static final String UPDATE_QUERIES_STATISTICS = "UPDATE";
 	private static final String DELETE_QUERIES_STATISTICS = "DELETE";
 	private static final String AGGREGATE_QUERIES_STATISTICS = "AGGREGATE";
+	private static final String HISTORY_QUERIES_STATISTICS = "HISTORY";
 	
 	public static final int AGGREGATE_QUERIES_COUNT = 12;
 	public static final int EDITORIAL_QUERIES_COUNT = 3;
@@ -31,4 +32,5 @@ public class Statistics {
 	public static final QueryStatistics updateCreativeWorksQueryStatistics = new QueryStatistics(UPDATE_QUERIES_STATISTICS);
 	public static final QueryStatistics deleteCreativeWorksQueryStatistics = new QueryStatistics(DELETE_QUERIES_STATISTICS);
 	public static final QueryStatistics totalAggregateQueryStatistics = new QueryStatistics(AGGREGATE_QUERIES_STATISTICS);
+	public static final QueryStatistics historyAggregateQueryStatistics = new QueryStatistics(HISTORY_QUERIES_STATISTICS);
 }
