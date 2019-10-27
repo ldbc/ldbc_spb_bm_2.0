@@ -1,11 +1,13 @@
 package eu.ldbc.semanticpublishing.agents;
 
+import eu.ldbc.semanticpublishing.TestDriver;
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection;
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryExecuteManager;
 import eu.ldbc.semanticpublishing.resultanalyzers.history.OriginalQueryData;
 import eu.ldbc.semanticpublishing.resultanalyzers.history.QueryResultsConverterUtil;
 import eu.ldbc.semanticpublishing.resultanalyzers.history.SavedAsBindingSetListOriginalResults;
 import eu.ldbc.semanticpublishing.resultanalyzers.history.SavedAsModelOriginalResults;
+import eu.ldbc.semanticpublishing.statistics.Statistics;
 import eu.ldbc.semanticpublishing.util.RdfUtils;
 
 import java.io.IOException;
@@ -16,14 +18,24 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.query.BindingSet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HistoryAgent extends AbstractAsynchronousAgent {
 
 	private BlockingQueue<OriginalQueryData> playedQueriesQueue;
 	private SparqlQueryExecuteManager queryExecuteManager;
 	private SparqlQueryConnection connection;
+
+	private final static Logger DETAILED_LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
+	private final static Logger BRIEF_LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
 
 	public HistoryAgent(AtomicBoolean runFlag, BlockingQueue<OriginalQueryData> playedQueriesQueue,
 						SparqlQueryExecuteManager queryExecuteManager) {
@@ -49,31 +61,43 @@ public class HistoryAgent extends AbstractAsynchronousAgent {
 			OriginalQueryData headQuery = playedQueriesQueue.poll();
 			if (headQuery != null) {
 				try {
-					long timeStamp = format.parse(headQuery.getTimeStamp()).getTime();
-					String result = applyHistoryGraphToQuery(headQuery.getOriginalQueryString(), timeStamp);
+					long resultsCount = 0;
+					String timeStamp = format.format(Calendar.getInstance().getTime());
+					String historyQuery = applyHistoryGraphToQuery(headQuery.getOriginalQueryString(), format.parse(headQuery.getTimeStamp()).getTime());
 					long start = System.currentTimeMillis();
 					InputStream inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(connection, headQuery.getOriginalQueryName(),
-							result, headQuery.getOriginalQueryType(), false, false);
-					long executionTime = System.currentTimeMillis() - start;
+							historyQuery, headQuery.getOriginalQueryType(), false, false);
+					long queryExecutionTimeMs = System.currentTimeMillis() - start;
 					if (headQuery.getOriginalQueryType() == SparqlQueryConnection.QueryType.SELECT) {
+						List<BindingSet> bindingSetList = QueryResultsConverterUtil.getBindingSetsList(inputStreamResult);
 						if (!((SavedAsBindingSetListOriginalResults) headQuery).getSavedBindingSets()
-								.equals(QueryResultsConverterUtil.getBindingSetsList(inputStreamResult))) {
-							System.err.println(generateErrorMsg(headQuery));
+								.equals(bindingSetList)) {
+							BRIEF_LOGGER.error(generateErrorMsg(headQuery));
+							DETAILED_LOGGER.error(generateErrorMsg(headQuery));
 						} else {
-							System.out.println("Executed query " + headQuery.getOriginalQueryName() + " for " + executionTime + "ms");
+							resultsCount = bindingSetList.size();
 						}
 					} else {
+						Model resultAsModel = QueryResultsConverterUtil.getReturnedResultAsModel(inputStreamResult);
 						if (!((SavedAsModelOriginalResults) headQuery).getSavedModel()
-								.equals(QueryResultsConverterUtil.getReturnedResultAsModel(inputStreamResult))) {
-							System.err.println(generateErrorMsg(headQuery));
+								.equals(resultAsModel)) {
+							BRIEF_LOGGER.error(generateErrorMsg(headQuery));
+							DETAILED_LOGGER.error(generateErrorMsg(headQuery));
 						} else {
-							System.out.println("Executed query " + headQuery.getOriginalQueryName() + " for " + executionTime + "ms");
+							resultsCount = resultAsModel.size();
 						}
 					}
+					BRIEF_LOGGER.info(String.format("\t%s:\t[%s, %s] Query executed, execution time : %d ms, results : %d",
+							timeStamp, AggregationAgent.getQueryNumber(headQuery.getOriginalQueryName()), Thread.currentThread().getName(), queryExecutionTimeMs, resultsCount));
+					DETAILED_LOGGER.info("\n*** Query [" + headQuery.getOriginalQueryName() + "], execution time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), results : " + resultsCount + "\n" + historyQuery + "\n");
+					Statistics.aggregateQueriesArray[AggregationAgent.getQueryNumber(headQuery.getOriginalQueryName()) - 1].reportSuccess(queryExecutionTimeMs);
+					Statistics.historyAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
 				} catch (IOException e) {
-					System.err.println("Exception occurred during query execution\n" + e.getMessage());
+					BRIEF_LOGGER.error("Exception occurred during query execution\n" + e.getMessage());
+					DETAILED_LOGGER.error("Exception occurred during query execution\n" + e.getMessage());
 				} catch (ParseException e) {
-					System.err.println("Couldn't parse properly timestamp");
+					BRIEF_LOGGER.error("Couldn't parse properly timestamp");
+					DETAILED_LOGGER.error("Couldn't parse properly timestamp");
 				}
 			}
 		}

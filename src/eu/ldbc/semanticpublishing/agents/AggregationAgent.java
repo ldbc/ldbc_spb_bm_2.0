@@ -2,11 +2,6 @@ package eu.ldbc.semanticpublishing.agents;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.ParseException;
-import java.time.Instant;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
@@ -118,10 +113,6 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		InputStream inputStreamResult = null;
 
 		try {
-
-//			if (validateHistoryPlugin && playedQueriesQueue.remainingCapacity() < 1) {
-//				validateHistoryPlugin(format);
-//			} else {
 //			boolean drillDownQuery = false;
 
 				//important : queryDistribution is zero-based, while QueryNTemplate is not!
@@ -186,7 +177,6 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 				inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(connection, aggregateQuery.getTemplateFileName(), queryString, aggregateQuery.getTemplateQueryType(), true, false);
 
 				updateQueryStatistics(true, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, inputStreamResult, saveDetailedQueryLogs, queryId, System.currentTimeMillis() - executionTimeMs, timeStamp);
-//			}
 		} catch (Throwable t) {
 			String msg = "WARNING : AggregationAgent [" + Thread.currentThread().getName() + "] reports: " + t.getMessage() + "\n" + "\tfor query : \n" + queryString + "\n...closing current connection and creating a new one..." + "\n----------------------------------------------------------------------------------------------\n";
 
@@ -252,7 +242,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 				OriginalQueryData dataHolder;
 				long queryParseTime;
 				long startOfValidating = System.currentTimeMillis();
-				boolean addQueryForValidation = /*playedQueriesQueue.remainingCapacity() > 1 && */queryNumber != 6 && queryNumber != 8
+				boolean addQueryForValidation = queryNumber != 6 && queryNumber != 8
 						&& queryNumber != 10 && queryNumber != 5  && queryNumber != 9;
 				if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
 					if (validateHistoryPlugin) {
@@ -317,7 +307,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		BRIEF_LOGGER.info(reportSb.toString());		
 	}
 	
-	private int getQueryNumber(String queryName) {
+	public static int getQueryNumber(String queryName) {
 		return Integer.parseInt(queryName.substring(queryName.indexOf(Statistics.AGGREGATE_QUERY_NAME) + Statistics.AGGREGATE_QUERY_NAME.length(), queryName.indexOf(".")));
 	}
 	
@@ -328,53 +318,6 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		queryId.append("" + id);
 		return queryId.toString();
 	}
-
-//	private void validateHistoryPlugin(SimpleDateFormat format) {
-//		OriginalQueryData headQuery = playedQueriesQueue.poll();
-//		if (headQuery != null) {
-//			try {
-//				long timeStamp = format.parse(headQuery.getTimeStamp()).getTime();
-//				String result = applyHistoryGraphToQuery(headQuery.getOriginalQueryString(), timeStamp);
-//				long start = System.currentTimeMillis();
-//				InputStream inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(connection, headQuery.getOriginalQueryName(),
-//						result, headQuery.getOriginalQueryType(), false, false);
-//				if (headQuery.getOriginalQueryType() == SparqlQueryConnection.QueryType.SELECT) {
-//					if (!((SavedAsBindingSetListOriginalResults) headQuery).getSavedBindingSets()
-//							.equals(QueryResultsConverterUtil.getBindingSetsList(inputStreamResult))) {
-//						System.err.println(generateErrorMsg(headQuery));
-//					}
-//				} else {
-//					if (!((SavedAsModelOriginalResults) headQuery).getSavedModel()
-//							.equals(QueryResultsConverterUtil.getReturnedResultAsModel(inputStreamResult))) {
-//						System.err.println(generateErrorMsg(headQuery));
-//					}
-//				}
-//			} catch (IOException e) {
-//				System.err.println("Exception occurred during query execution\n" + e.getMessage());
-//			} catch (ParseException e) {
-//				System.err.println("Couldn't parse properly timestamp");;
-//			}
-//		}
-//	}
-//
-//	private String applyHistoryGraphToQuery(String queryString, long timestampAsLong) {
-//		String dis = "ot:disable-sameAs";
-//		int index = queryString.indexOf(dis) + dis.length();
-//		StringBuilder sb = new StringBuilder(queryString);
-//		sb.insert(index, " FROM <http://www.ontotext.com/at/" + convertTimestamp(timestampAsLong) + ">");
-//		return sb.toString();
-//	}
-//
-//	private String convertTimestamp(long timeStamp) {
-//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-//		return ZonedDateTime.ofInstant(Instant.ofEpochMilli(timeStamp), ZoneId.systemDefault()).format(dtf);
-//	}
-//
-//	private String generateErrorMsg(OriginalQueryData headQuery) {
-//		return "Found difference in returned results from history plugin for " +
-//				headQuery.getOriginalQueryName() + " queryType " + headQuery.getOriginalQueryType().toString();
-//	}
-
 
 	public BlockingQueue<OriginalQueryData> getPlayedQueriesQueue() {
 		return playedQueriesQueue;

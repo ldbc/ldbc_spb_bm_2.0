@@ -11,9 +11,11 @@ public class Statistics {
 	
 	public static final int AGGREGATE_QUERIES_COUNT = 12;
 	public static final int EDITORIAL_QUERIES_COUNT = 3;
+	public static final int HISTORY_QUERIES_COUNT = 7;
 	
 	public static final String AGGREGATE_QUERY_NAME = "query";
 	public static final QueryStatistics[] aggregateQueriesArray;
+	public static final QueryStatistics[] historyQueriesArray;
 	
 	public static final AtomicLong timeCorrectionsMS = new AtomicLong(0);
 	public static final AtomicLong totalStartedQueryMixRuns = new AtomicLong(0);
@@ -21,10 +23,18 @@ public class Statistics {
 	
 	static {
 		aggregateQueriesArray = new QueryStatistics[AGGREGATE_QUERIES_COUNT];
-		
+		historyQueriesArray = new QueryStatistics[HISTORY_QUERIES_COUNT];
+
 		for (int i = 0; i < AGGREGATE_QUERIES_COUNT; i++) {
 			aggregateQueriesArray[i] = new QueryStatistics(AGGREGATE_QUERIES_STATISTICS + "_" + (i + 1));
 		}
+		for (int i = 0; i < HISTORY_QUERIES_COUNT - 3; i++) {
+			historyQueriesArray[i] = new QueryStatistics(HISTORY_QUERIES_STATISTICS + "_" + (i + 1));
+		}
+		// Not all queries could be executed against history plugin
+		historyQueriesArray[4] = new QueryStatistics(HISTORY_QUERIES_STATISTICS + "_" + 7);
+		historyQueriesArray[5] = new QueryStatistics(HISTORY_QUERIES_STATISTICS + "_" + 11);
+		historyQueriesArray[6] = new QueryStatistics(HISTORY_QUERIES_STATISTICS + "_" + 12);
 	}
 	
 	//section for keeping statistics for each executed query type
