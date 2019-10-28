@@ -68,30 +68,37 @@ public class HistoryAgent extends AbstractAsynchronousAgent {
 					InputStream inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(connection, headQuery.getOriginalQueryName(),
 							historyQuery, headQuery.getOriginalQueryType(), false, false);
 					long queryExecutionTimeMs = System.currentTimeMillis() - start;
+					boolean reportSuccess = false;
 					if (headQuery.getOriginalQueryType() == SparqlQueryConnection.QueryType.SELECT) {
 						List<BindingSet> bindingSetList = QueryResultsConverterUtil.getBindingSetsList(inputStreamResult);
-						if (!((SavedAsBindingSetListOriginalResults) headQuery).getSavedBindingSets()
+						if (((SavedAsBindingSetListOriginalResults) headQuery).getSavedBindingSets()
 								.equals(bindingSetList)) {
-							BRIEF_LOGGER.error(generateErrorMsg(headQuery));
-							DETAILED_LOGGER.error(generateErrorMsg(headQuery));
-						} else {
 							resultsCount = bindingSetList.size();
+							reportSuccess = true;
 						}
 					} else {
 						Model resultAsModel = QueryResultsConverterUtil.getReturnedResultAsModel(inputStreamResult);
-						if (!((SavedAsModelOriginalResults) headQuery).getSavedModel()
+						if (((SavedAsModelOriginalResults) headQuery).getSavedModel()
 								.equals(resultAsModel)) {
-							BRIEF_LOGGER.error(generateErrorMsg(headQuery));
-							DETAILED_LOGGER.error(generateErrorMsg(headQuery));
-						} else {
 							resultsCount = resultAsModel.size();
+							reportSuccess = true;
 						}
 					}
-					BRIEF_LOGGER.info(String.format("\t%s:\t[%s, %s] Query executed, execution time : %d ms, results : %d",
-							timeStamp, AggregationAgent.getQueryNumber(headQuery.getOriginalQueryName()), Thread.currentThread().getName(), queryExecutionTimeMs, resultsCount));
-					DETAILED_LOGGER.info("\n*** Query [" + headQuery.getOriginalQueryName() + "], execution time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), results : " + resultsCount + "\n" + historyQuery + "\n");
-					Statistics.aggregateQueriesArray[AggregationAgent.getQueryNumber(headQuery.getOriginalQueryName()) - 1].reportSuccess(queryExecutionTimeMs);
-					Statistics.historyAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
+
+					int queryNumber = AggregationAgent.getQueryNumber(headQuery.getOriginalQueryName());
+					if (reportSuccess) {
+						Statistics.timeCorrectionsMS.addAndGet(queryExecutionTimeMs);
+						BRIEF_LOGGER.info(String.format("\t%s:\t[%s, %s] Query executed, execution time : %d ms, results : %d",
+								timeStamp, queryNumber, Thread.currentThread().getName(), queryExecutionTimeMs, resultsCount));
+						DETAILED_LOGGER.info("\n*** Query [" + headQuery.getOriginalQueryName() + "], execution time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), results : " + resultsCount + "\n" + historyQuery + "\n");
+						Statistics.aggregateQueriesArray[ - 1].reportSuccess(queryExecutionTimeMs);
+						Statistics.historyAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
+					} else {
+						Statistics.aggregateQueriesArray[queryNumber - 1].reportFailure();
+						Statistics.totalAggregateQueryStatistics.reportFailure();
+						BRIEF_LOGGER.info(timeStamp, queryNumber, headQuery.getOriginalQueryType(), ", query error!", queryExecutionTimeMs, resultsCount);
+						BRIEF_LOGGER.info("\t%s:\t[%s, %s] Query executed, execution time : %d ms, results : %d %s", timeStamp, queryNumber, Thread.currentThread().getName(), queryExecutionTimeMs, resultsCount, ", query error!");
+					}
 				} catch (IOException e) {
 					BRIEF_LOGGER.error("Exception occurred during query execution\n" + e.getMessage());
 					DETAILED_LOGGER.error("Exception occurred during query execution\n" + e.getMessage());
@@ -116,10 +123,5 @@ public class HistoryAgent extends AbstractAsynchronousAgent {
 	private String convertTimestamp(long timeStamp) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
 		return ZonedDateTime.ofInstant(Instant.ofEpochMilli(timeStamp), ZoneId.systemDefault()).format(dtf);
-	}
-
-	private String generateErrorMsg(OriginalQueryData headQuery) {
-		return "Found difference in returned results from history plugin for " +
-				headQuery.getOriginalQueryName() + " queryType " + headQuery.getOriginalQueryType().toString();
 	}
 }

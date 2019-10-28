@@ -656,12 +656,14 @@ public class TestDriver {
 														   configuration.getDouble(Configuration.MAX_UPDATE_RATE_THRESHOLD_OPS),
 													       maxUpdateRateReached, 
 													       editorialAgents,																				
-														   aggregationAgents, 
+														   aggregationAgents,
+														   historyAgents,
 													       configuration.getLong(Configuration.BENCHMARK_RUN_PERIOD_SECONDS),
 														   definitions.getString(Definitions.QUERY_POOLS),
 														   configuration.getInt(Configuration.CURRENT_RATE_REPORT_PERIOD_SECONDS),
 														   configuration.getInt(Configuration.REPORT_INTERVAL_SECONDS),
-														   configuration.getBoolean(Configuration.VERBOSE));
+														   configuration.getBoolean(Configuration.VERBOSE),
+														   configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN));
 			reporterThread.setDaemon(true);
 			reporterThread.start();
 			
@@ -787,12 +789,14 @@ public class TestDriver {
 														   configuration.getDouble(Configuration.MAX_UPDATE_RATE_THRESHOLD_OPS),
 														   maxUpdateRateReached, 
 													       editorialAgents,																				
-														   aggregationAgents, 
+														   aggregationAgents,
+														   historyAgents,
 														   configuration.getLong(Configuration.BENCHMARK_RUN_PERIOD_SECONDS),
 													       definitions.getString(Definitions.QUERY_POOLS), 
 													       configuration.getInt(Configuration.CURRENT_RATE_REPORT_PERIOD_SECONDS), 
 													       configuration.getInt(Configuration.REPORT_INTERVAL_SECONDS), 
-														   configuration.getBoolean(Configuration.VERBOSE));
+														   configuration.getBoolean(Configuration.VERBOSE),
+														   configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN));
 			reporterThread.setDaemon(true);
 			reporterThread.start();
 			

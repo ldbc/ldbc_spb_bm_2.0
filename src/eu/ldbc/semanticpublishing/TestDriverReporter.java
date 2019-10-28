@@ -35,15 +35,23 @@ public class TestDriverReporter extends Thread {
 	private int minUpdateRatePassesCount;
 	private final List<AbstractAsynchronousAgent> aggregationAgentsList;
 	private final List<AbstractAsynchronousAgent> editorialAgentsList;
+	private final List<AbstractAsynchronousAgent> historyAgentsList;
 	private int initializedCount;
 	private long totalOperationsFromPrevReport;
 	private long totalQueriesFromPrevReport;
+	private long totalHistoryQueriesFromPrevReport;
 	private Calendar calendar;
 	private int reportIntervalSeconds;
+	private boolean reportHistoryPluginStatistics;
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(TestDriverReporter.class.getName());
 	
-	public TestDriverReporter(AtomicLong totalQueryExecutions, AtomicLong totalCompletedQueryMixRuns, AtomicBoolean benchmarkState, AtomicBoolean keepAlive, AtomicBoolean benchmarkResultIsValid, double updateQueryRateFirstReachTimePercent, double minUpdateQueriesRateThresholdOps, double maxUpdateRateThresholdOps, AtomicBoolean maxUpdateRateReached, List<AbstractAsynchronousAgent> editorialAgentsList, List<AbstractAsynchronousAgent> aggregationAgentsList, long runPeriodSeconds, /*long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, */String queryPoolsDefinitons, int reportPeriodSeconds, int reportIntervalSeconds, boolean verbose) {
+	public TestDriverReporter(AtomicLong totalQueryExecutions, AtomicLong totalCompletedQueryMixRuns, AtomicBoolean benchmarkState,
+							  AtomicBoolean keepAlive, AtomicBoolean benchmarkResultIsValid, double updateQueryRateFirstReachTimePercent,
+							  double minUpdateQueriesRateThresholdOps, double maxUpdateRateThresholdOps, AtomicBoolean maxUpdateRateReached,
+							  List<AbstractAsynchronousAgent> editorialAgentsList, List<AbstractAsynchronousAgent> aggregationAgentsList, List<AbstractAsynchronousAgent> historyAgentsList,
+							  long runPeriodSeconds, /*long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, */String queryPoolsDefinitons,
+							  int reportPeriodSeconds, int reportIntervalSeconds, boolean verbose, boolean reportHistoryPluginStatistics) {
 		this.totalQueryExecutions = totalQueryExecutions;
 		this.totalCompletedQueryMixRuns = totalCompletedQueryMixRuns;
 		this.benchmarkState = benchmarkState;
@@ -55,6 +63,7 @@ public class TestDriverReporter extends Thread {
 		this.verbose = verbose;
 		this.editorialAgentsList = editorialAgentsList;
 		this.aggregationAgentsList = aggregationAgentsList;
+		this.historyAgentsList = historyAgentsList;
 		this.minUpdateRateThresholdOps = minUpdateQueriesRateThresholdOps;
 		this.minUpdateRatePassesCount = 0;
 		this.maxUpdateRateThresholdOps = maxUpdateRateThresholdOps;
@@ -63,8 +72,10 @@ public class TestDriverReporter extends Thread {
 		this.queryPoolsDefinitions = queryPoolsDefinitons;
 		this.totalOperationsFromPrevReport = 0;
 		this.totalQueriesFromPrevReport = 0;
+		this.totalHistoryQueriesFromPrevReport = 0;
 		this.currentRateReportPeriodSeconds = reportPeriodSeconds;
 		this.reportIntervalSeconds = reportIntervalSeconds;
+		this.reportHistoryPluginStatistics = reportHistoryPluginStatistics;
 	}
 	
 	/* (non-Javadoc)
@@ -119,11 +130,13 @@ public class TestDriverReporter extends Thread {
 		long updateOpsCount = Statistics.updateCreativeWorksQueryStatistics.getRunsCount();
 		long deleteOpsCount = Statistics.deleteCreativeWorksQueryStatistics.getRunsCount();
 		long totalAggregateOpsCount = Statistics.totalAggregateQueryStatistics.getRunsCount();
+		long totalHistoryOpsCount = Statistics.historyAggregateQueryStatistics.getRunsCount();
 		
 		long failedInsertOpsCount = Statistics.insertCreativeWorksQueryStatistics.getFailuresCount();
 		long failedUpdateOpsCount = Statistics.updateCreativeWorksQueryStatistics.getFailuresCount();
 		long failedDeleteOpsCount = Statistics.deleteCreativeWorksQueryStatistics.getFailuresCount();
 		long failedTotalAggregateOpsCount = Statistics.totalAggregateQueryStatistics.getFailuresCount();
+		long failedHistoryOpsCount = Statistics.historyAggregateQueryStatistics.getFailuresCount();
 		
 		sb.append("\n")
 				.append("\nSeconds : ")
@@ -231,7 +244,60 @@ public class TestDriverReporter extends Thread {
 			}			
 		}
 		
-		sb.append(String.format("\t\t%.4f average queries per second\n", averageQueriesPerSecond));		
+		sb.append(String.format("\t\t%.4f average queries per second\n", averageQueriesPerSecond));
+
+		if (reportHistoryPluginStatistics) {
+			//report each alive thread
+			int historyAgentsCount = 0;
+			for (AbstractAsynchronousAgent a : historyAgentsList) {
+				if (a.getState() != Thread.State.TERMINATED) {
+					historyAgentsCount++;
+				}
+			}
+			sb.append("\n")
+					.append("\tHistory aggregation:\n")
+					.append(String.format("\t\t%s agents\n\n", historyAgentsCount));
+			if (verbose) {
+				for (int i = 0; i < Statistics.HISTORY_QUERIES_COUNT; i++) {
+					sb.append(String.format("\t\t%-5d Q%-2d  queries (avg : %-7d ms, min : %-7d ms, max : %-7d ms, %d errors)\n", Statistics.historyQueriesArray[i].getRunsCount(),
+							(i + 1),
+							Statistics.historyQueriesArray[i].getAvgExecutionTimeMs(),
+							Statistics.historyQueriesArray[i].getMinExecutionTimeMs(),
+							Statistics.historyQueriesArray[i].getMaxExecutionTimeMs(),
+							Statistics.historyQueriesArray[i].getFailuresCount()));
+				}
+
+				sb.append(String.format("\n\t\t%d total retrieval history queries (%d errors)\n", totalHistoryOpsCount, failedHistoryOpsCount));
+			} else {
+				for (int i = 0; i < Statistics.HISTORY_QUERIES_COUNT; i++) {
+					sb.append(String.format("\t\t%-5d Q%-2d history  queries\n", Statistics.historyQueriesArray[i].getRunsCount(), (i + 1)));
+				}
+
+				sb.append(String.format("\n\t\t%d total retrieval history queries\n", totalHistoryOpsCount));
+			}
+
+			if (currentRateReportPeriodSeconds > 0 && seconds % currentRateReportPeriodSeconds == 0) {
+				double currentQueriesRate = (double) ((totalHistoryOpsCount) - totalHistoryQueriesFromPrevReport) / (double) currentRateReportPeriodSeconds;
+				sb.append(String.format("\t\t%.4f current history queries per %d second\n", currentQueriesRate, currentRateReportPeriodSeconds));
+			}
+
+			//remember stats for previous second
+			totalHistoryQueriesFromPrevReport = totalHistoryOpsCount;
+
+			//considering an average time correction caused by result parsing for each aggregate query by each of aggregate agents, that time is subtracted when calculating the total average
+			double averageHistoryQueriesPerSecond = 0.0;
+
+			if (aggregationAgentsCount > 0) {
+				averageHistoryQueriesPerSecond = (double) totalHistoryOpsCount / ((double) seconds - (double) (Statistics.timeCorrectionsMS.get() / (double) historyAgentsCount / 1000.0 /*ms*/));
+
+				if ((double) (Statistics.timeCorrectionsMS.get() / 1000) >= (double) seconds) {
+					LOGGER.warn("Time correction interval exceeds total run-time: " + seconds);
+					averageHistoryQueriesPerSecond = (double) (totalHistoryOpsCount / (double) seconds) / (currentRateReportPeriodSeconds > 0 ? (double) currentRateReportPeriodSeconds : 1.0);
+				}
+			}
+
+			sb.append(String.format("\t\t%.4f average history queries per second\n", averageHistoryQueriesPerSecond));
+		}
 
 		//in case using minUpdateRateThresholdOps option, display a message that benchmark is not 
 		if (minUpdateRateThresholdOps > 0.0) {
