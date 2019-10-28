@@ -536,7 +536,7 @@ public class TestDriver {
 			AggregationAgent aggregationAgent = new AggregationAgent(inBenchmarkState, queryExecuteManager, randomGenerator, runFlag, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.AGGREGATION), configuration, definitions, substitutionQueryParamtersManager, configuration.getLong(Configuration.BENCHMARK_BY_QUERY_MIX_RUNS));
 			aggregationAgents.add(aggregationAgent);
 			if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
-				historyAgents.add(new HistoryAgent(runFlag, aggregationAgent.getPlayedQueriesQueue(), queryExecuteManager));
+				historyAgents.add(new HistoryAgent(runFlag, aggregationAgent.getPlayedQueries(), queryExecuteManager));
 			}
 		}
 

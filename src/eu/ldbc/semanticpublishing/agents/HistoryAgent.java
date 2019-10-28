@@ -20,8 +20,8 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.List;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.query.BindingSet;
@@ -30,19 +30,21 @@ import org.slf4j.LoggerFactory;
 
 public class HistoryAgent extends AbstractAsynchronousAgent {
 
-	private BlockingQueue<OriginalQueryData> playedQueriesQueue;
+	private List<OriginalQueryData> playedQueriesCopy;
 	private SparqlQueryExecuteManager queryExecuteManager;
 	private SparqlQueryConnection connection;
+	private AtomicInteger currentQueryIndex = new AtomicInteger(0);
+	public static boolean historyValidationStarted;
 
 	private final static Logger DETAILED_LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
 	private final static Logger BRIEF_LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
 
-	public HistoryAgent(AtomicBoolean runFlag, BlockingQueue<OriginalQueryData> playedQueriesQueue,
+	public HistoryAgent(AtomicBoolean runFlag, List<OriginalQueryData> playedQueriesQueue,
 						SparqlQueryExecuteManager queryExecuteManager) {
 		super(runFlag);
-		this.playedQueriesQueue = playedQueriesQueue;
+		this.playedQueriesCopy = playedQueriesQueue;
 		this.queryExecuteManager = queryExecuteManager;
-		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, 1500 * 1000, true);
 	}
 
 	@Override
@@ -56,9 +58,10 @@ public class HistoryAgent extends AbstractAsynchronousAgent {
 	}
 
 	private boolean validateHistoryPlugin() {
-		if (playedQueriesQueue.size() > 1000) {
+		if (playedQueriesCopy.size() > 1000) {
+			historyValidationStarted = true;
 			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			OriginalQueryData headQuery = playedQueriesQueue.poll();
+			OriginalQueryData headQuery = playedQueriesCopy.get(currentQueryIndex.getAndIncrement());
 			if (headQuery != null) {
 				try {
 					long resultsCount = 0;
@@ -68,6 +71,7 @@ public class HistoryAgent extends AbstractAsynchronousAgent {
 					InputStream inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(connection, headQuery.getOriginalQueryName(),
 							historyQuery, headQuery.getOriginalQueryType(), false, false);
 					long queryExecutionTimeMs = System.currentTimeMillis() - start;
+					Statistics.historyTimeCorrectionsMS.addAndGet(queryExecutionTimeMs);
 					boolean reportSuccess = false;
 					if (headQuery.getOriginalQueryType() == SparqlQueryConnection.QueryType.SELECT) {
 						List<BindingSet> bindingSetList = QueryResultsConverterUtil.getBindingSetsList(inputStreamResult);
@@ -85,19 +89,17 @@ public class HistoryAgent extends AbstractAsynchronousAgent {
 						}
 					}
 
-					int queryNumber = AggregationAgent.getQueryNumber(headQuery.getOriginalQueryName());
+					int queryNumber = getQueryNumber(headQuery.getOriginalQueryName());
 					if (reportSuccess) {
-						Statistics.timeCorrectionsMS.addAndGet(queryExecutionTimeMs);
-						BRIEF_LOGGER.info(String.format("\t%s:\t[%s, %s] Query executed, execution time : %d ms, results : %d",
+						Statistics.historyQueriesArray[mapQueryNumber(queryNumber)].reportSuccess(queryExecutionTimeMs);
+						Statistics.historyAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
+						BRIEF_LOGGER.info(String.format("\t%s:\t[%s, %s] Query executed from history plugin, execution time : %d ms, results : %d",
 								timeStamp, queryNumber, Thread.currentThread().getName(), queryExecutionTimeMs, resultsCount));
 						DETAILED_LOGGER.info("\n*** Query [" + headQuery.getOriginalQueryName() + "], execution time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), results : " + resultsCount + "\n" + historyQuery + "\n");
-						Statistics.aggregateQueriesArray[ - 1].reportSuccess(queryExecutionTimeMs);
-						Statistics.historyAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
 					} else {
-						Statistics.aggregateQueriesArray[queryNumber - 1].reportFailure();
-						Statistics.totalAggregateQueryStatistics.reportFailure();
-						BRIEF_LOGGER.info(timeStamp, queryNumber, headQuery.getOriginalQueryType(), ", query error!", queryExecutionTimeMs, resultsCount);
-						BRIEF_LOGGER.info("\t%s:\t[%s, %s] Query executed, execution time : %d ms, results : %d %s", timeStamp, queryNumber, Thread.currentThread().getName(), queryExecutionTimeMs, resultsCount, ", query error!");
+						Statistics.historyQueriesArray[mapQueryNumber(queryNumber)].reportFailure();
+						Statistics.historyAggregateQueryStatistics.reportFailure();
+						BRIEF_LOGGER.info(String.format("\t%s:\t[%s, %s] Query executed from history plugin, execution time : %d ms, results : %d %s", timeStamp, queryNumber, Thread.currentThread().getName(), queryExecutionTimeMs, resultsCount, ", query error!"));
 					}
 				} catch (IOException e) {
 					BRIEF_LOGGER.error("Exception occurred during query execution\n" + e.getMessage());
@@ -123,5 +125,28 @@ public class HistoryAgent extends AbstractAsynchronousAgent {
 	private String convertTimestamp(long timeStamp) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
 		return ZonedDateTime.ofInstant(Instant.ofEpochMilli(timeStamp), ZoneId.systemDefault()).format(dtf);
+	}
+
+	private int getQueryNumber(String queryName) {
+		return Integer.parseInt(queryName.substring(queryName.indexOf(Statistics.AGGREGATE_QUERY_NAME) + Statistics.AGGREGATE_QUERY_NAME.length(), queryName.indexOf(".")));
+	}
+
+	private int mapQueryNumber(int queryNumber) {
+		switch (queryNumber) {
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+				return queryNumber - 1;
+			case 7:
+				return 5;
+			case 9:
+				return 6;
+			case 11:
+				return 7;
+				default:
+					throw new IllegalArgumentException("Query with " + queryNumber + " should not be added for history validation");
+		}
 	}
 }

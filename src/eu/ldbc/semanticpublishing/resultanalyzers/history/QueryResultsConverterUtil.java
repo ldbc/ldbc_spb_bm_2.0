@@ -1,6 +1,9 @@
 package eu.ldbc.semanticpublishing.resultanalyzers.history;
 
-import eu.ldbc.semanticpublishing.util.StringUtil;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.resultio.TupleQueryResultParser;
@@ -12,10 +15,6 @@ import org.eclipse.rdf4j.rio.RDFParseException;
 import org.eclipse.rdf4j.rio.Rio;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
 
 public class QueryResultsConverterUtil {
 

@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.ldbc.semanticpublishing.agents.AbstractAsynchronousAgent;
+import eu.ldbc.semanticpublishing.agents.HistoryAgent;
 import eu.ldbc.semanticpublishing.refdataset.DataManager;
 import eu.ldbc.semanticpublishing.statistics.Statistics;
 
@@ -246,7 +247,7 @@ public class TestDriverReporter extends Thread {
 		
 		sb.append(String.format("\t\t%.4f average queries per second\n", averageQueriesPerSecond));
 
-		if (reportHistoryPluginStatistics) {
+		if (HistoryAgent.historyValidationStarted && reportHistoryPluginStatistics) {
 			//report each alive thread
 			int historyAgentsCount = 0;
 			for (AbstractAsynchronousAgent a : historyAgentsList) {
@@ -260,7 +261,7 @@ public class TestDriverReporter extends Thread {
 			if (verbose) {
 				for (int i = 0; i < Statistics.HISTORY_QUERIES_COUNT; i++) {
 					sb.append(String.format("\t\t%-5d Q%-2d  queries (avg : %-7d ms, min : %-7d ms, max : %-7d ms, %d errors)\n", Statistics.historyQueriesArray[i].getRunsCount(),
-							(i + 1),
+							queryIndexToNum(i),
 							Statistics.historyQueriesArray[i].getAvgExecutionTimeMs(),
 							Statistics.historyQueriesArray[i].getMinExecutionTimeMs(),
 							Statistics.historyQueriesArray[i].getMaxExecutionTimeMs(),
@@ -270,7 +271,7 @@ public class TestDriverReporter extends Thread {
 				sb.append(String.format("\n\t\t%d total retrieval history queries (%d errors)\n", totalHistoryOpsCount, failedHistoryOpsCount));
 			} else {
 				for (int i = 0; i < Statistics.HISTORY_QUERIES_COUNT; i++) {
-					sb.append(String.format("\t\t%-5d Q%-2d history  queries\n", Statistics.historyQueriesArray[i].getRunsCount(), (i + 1)));
+					sb.append(String.format("\t\t%-5d Q%-2d history  queries\n", Statistics.historyQueriesArray[i].getRunsCount(), queryIndexToNum(i)));
 				}
 
 				sb.append(String.format("\n\t\t%d total retrieval history queries\n", totalHistoryOpsCount));
@@ -287,10 +288,10 @@ public class TestDriverReporter extends Thread {
 			//considering an average time correction caused by result parsing for each aggregate query by each of aggregate agents, that time is subtracted when calculating the total average
 			double averageHistoryQueriesPerSecond = 0.0;
 
-			if (aggregationAgentsCount > 0) {
-				averageHistoryQueriesPerSecond = (double) totalHistoryOpsCount / ((double) seconds - (double) (Statistics.timeCorrectionsMS.get() / (double) historyAgentsCount / 1000.0 /*ms*/));
+			if (historyAgentsCount > 0) {
+				averageHistoryQueriesPerSecond = (double) totalHistoryOpsCount / ((double) seconds - (double) (Statistics.historyTimeCorrectionsMS.get() / (double) historyAgentsCount / 1000.0 /*ms*/));
 
-				if ((double) (Statistics.timeCorrectionsMS.get() / 1000) >= (double) seconds) {
+				if ((double) (Statistics.historyTimeCorrectionsMS.get() / 1000) >= (double) seconds) {
 					LOGGER.warn("Time correction interval exceeds total run-time: " + seconds);
 					averageHistoryQueriesPerSecond = (double) (totalHistoryOpsCount / (double) seconds) / (currentRateReportPeriodSeconds > 0 ? (double) currentRateReportPeriodSeconds : 1.0);
 				}
@@ -378,6 +379,25 @@ public class TestDriverReporter extends Thread {
 			if (averageOperationsPerSecond < minUpdateRateThresholdOps) {
 				benchmarkResultIsValid.set(false);
 			}
+		}
+	}
+
+	private int queryIndexToNum(int index) {
+		switch (index) {
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+				return index + 1;
+			case 5:
+				return 7;
+			case 6:
+				return 9;
+			case 7:
+				return 11;
+			default:
+				throw new IllegalArgumentException("Query with " + index + " index should not be added for history validation");
 		}
 	}
 }
