@@ -5,8 +5,6 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -39,11 +37,11 @@ import eu.ldbc.semanticpublishing.util.RdfUtils;
 import eu.ldbc.semanticpublishing.util.StringUtil;
 
 /**
- * A class that represents an aggregation agent. It executes aggregation queries 
+ * A class that represents an aggregation agent. It executes aggregation queries
  * in a loop, updates query execution statistics.
  *
- * WARNING : after making changes to this class, make sure you've made a copy of it with corresponding .basic / .advanced extension before building, 
- *           otherwise you will lose your changes! 
+ * WARNING : after making changes to this class, make sure you've made a copy of it with corresponding .basic / .advanced extension before building,
+ *           otherwise you will lose your changes!
  */
 public class AggregationAgent extends AbstractAsynchronousAgent {
 	private final SparqlQueryExecuteManager queryExecuteManager;
@@ -54,18 +52,18 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	private final long benchmarkByQueryMixRuns;
 	private SparqlQueryConnection connection;
 	private Definitions definitions;
-	private SubstitutionQueryParametersManager substitutionQueryParametersMngr;	
+	private SubstitutionQueryParametersManager substitutionQueryParametersMngr;
 //	private TurtleResultStatementsCounter turtleResultStatementsCounter;
 	private RDFXMLResultStatementsCounter rdfXmlResultStatementsCounter;
 	private SPARQLResultStatementsCounter sparqlResultStatementsCounter;
 	private final boolean saveDetailedQueryLogs;
 	private List<OriginalQueryData> playedQueries;
 	private final boolean validateHistoryPlugin;
-	
+
 	private final static Logger DETAILED_LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
 	private final static Logger BRIEF_LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
 //	private final static int MAX_DRILL_DOWN_ITERATIONS = 5;
-	
+
 	public AggregationAgent(AtomicBoolean benchmarkingState, SparqlQueryExecuteManager queryExecuteManager, RandomUtil ru, AtomicBoolean runFlag, HashMap<String, String> queryTamplates, Configuration configuration, Definitions definitions, SubstitutionQueryParametersManager substitutionQueryParametersMngr, long benchmarkByQueryMixRuns) {
 		super(runFlag);
 		this.queryExecuteManager = queryExecuteManager;
@@ -86,7 +84,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 			playedQueries = new LinkedList<>();
 		}
 	}
-	
+
 	@Override
 	public boolean executeLoop() {
 		//remember if query was executed before benchmark phase start to skip it later when updating query statistics. No need to do that for Editorial Agents.
@@ -94,18 +92,18 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 
 		//retrieve next query to be executed from the aggregation query mix
 		int aggregateQueryIndex = Definitions.aggregationOperationsAllocation.getAllocation();
-		
+
 		if (startedDuringBenchmarkPhase && queryMixPool.getItemsCount() > 0) {
 		    if (benchmarkByQueryMixRuns > 0 && !queryMixPool.getInProgress() && Statistics.totalStartedQueryMixRuns.get() >= benchmarkByQueryMixRuns) {
 		        return true;
 		    }
-		
+
 		    //aggregateQueryIndex is ZERO based, while query ids in definitions.properties (parameter queryPools) are not
 		    if (!queryMixPool.checkAndSetItemUnavailable(aggregateQueryIndex + 1)) {
 		        return true;
-		    }		
+		    }
 		}
-		
+
 		long queryId = 0;
 		MustacheTemplate aggregateQuery = null;
 		String queryString = "";
@@ -212,31 +210,31 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	}
 
 	@Override
-	public void executeFinalize() {				
+	public void executeFinalize() {
 		connection.disconnect();
 	}
-	
+
 	private void updateQueryStatistics(boolean reportSuccess, boolean startedDuringBenchmarkPhase, QueryType queryType, String queryName, String queryString, InputStream inputStreamQueryResult, boolean useStringQueryResultOrInputStreamResult, long id, long queryExecutionTimeMs, String timeStamp) {
 		//skip update of statistics for conformance queries
 		if (queryName.startsWith("#")) {
 			return;
 		}
-		
+
 		int queryNumber = getQueryNumber(queryName);
 		String queryNameId = constructQueryNameId(queryName, id);
-		
+
 		//count results (statements)
 		long resultsCount = 0;
-		
+
 		String queryResultString = "";
-		
+
 		try {
 			if (useStringQueryResultOrInputStreamResult) {
 				//might increase memory footprint of the driver, as each query result will be stored into a String
 				queryResultString = StringUtil.iostreamToString(inputStreamQueryResult);
-				
+
 				//reconvert the queryStringResult to an InputStream again, as the first one will be exhausted and not usable any more
-				inputStreamQueryResult = StringUtil.stringToIostream(queryResultString);				
+				inputStreamQueryResult = StringUtil.stringToIostream(queryResultString);
 			}
 
 			if (reportSuccess) {
@@ -274,17 +272,17 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 				}
 				Statistics.timeCorrectionsMS.addAndGet(queryParseTime);
 			}
-	        
+
 			if (startedDuringBenchmarkPhase) {
 				if (reportSuccess) {
 					Statistics.aggregateQueriesArray[queryNumber - 1].reportSuccess(queryExecutionTimeMs);
 					Statistics.totalAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
 					logBrief(timeStamp, queryNameId, queryType, "", queryExecutionTimeMs, resultsCount);
-				} else {				
+				} else {
 					Statistics.aggregateQueriesArray[queryNumber - 1].reportFailure();
 					Statistics.totalAggregateQueryStatistics.reportFailure();
 					logBrief(timeStamp, queryNameId, queryType, ", query error!", queryExecutionTimeMs, resultsCount);
-				}        
+				}
 			} else {
 				if (queryExecutionTimeMs > 0) {
 					DETAILED_LOGGER.info("\tQuery : " + queryName + ", time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), " + "queryResult.length : " + queryResultString.length() + ", results : " + resultsCount + ", has been started during the warmup phase, it will be ignored in the benchmark result!");
@@ -294,24 +292,24 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 					logBrief(timeStamp, queryNameId, queryType, ", has failed to execute... possibly query timeout has been reached!", queryExecutionTimeMs, resultsCount);
 				}
 			}
-			
+
 			DETAILED_LOGGER.info("\n*** Query [" + queryNameId + "], execution time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), results : " + resultsCount + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + (queryResultString.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : ("Length : " + queryResultString.length() + "\n" + queryResultString)) + "\n\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void logBrief(String timeStamp, String queryId, QueryType queryType, String appendString, long queryExecutionTimeMs, long resultStatementsCount) {
 		StringBuilder reportSb = new StringBuilder();
 		reportSb.append(String.format("\t%s:\t[%s, %s] Query executed, execution time : %d ms, results : %d %s", timeStamp, queryId, Thread.currentThread().getName(), queryExecutionTimeMs, resultStatementsCount, appendString));
-		
-		BRIEF_LOGGER.info(reportSb.toString());		
+
+		BRIEF_LOGGER.info(reportSb.toString());
 	}
 
 	private int getQueryNumber(String queryName) {
 		return Integer.parseInt(queryName.substring(queryName.indexOf(Statistics.AGGREGATE_QUERY_NAME) + Statistics.AGGREGATE_QUERY_NAME.length(), queryName.indexOf(".")));
 	}
-	
+
 	private String constructQueryNameId(String queryName, long id) {
 		StringBuilder queryId = new StringBuilder();
 		queryId.append(queryName);

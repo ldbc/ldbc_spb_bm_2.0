@@ -38,8 +38,8 @@
 		<javac srcdir="${dir.src}" 
 			   destdir="${dir.bin}"
 			   debug="off"
-			   source="1.6"
-			   target="1.6"
+			   source="1.8"
+			   target="1.8"
 			   includeantruntime="false">
 			<classpath refid="classpath-lib"/>
 			<classpath refid="classpath-jfreechart-lib"/>			
@@ -82,6 +82,9 @@
     <target name="setup-querymix">
 		<delete file="${dir.src}/eu/ldbc/semanticpublishing/agents/AggregationAgent.java"/>
 		<copy file="${dir.src}/eu/ldbc/semanticpublishing/agents/AggregationAgent.${querymix}" tofile="${dir.src}/eu/ldbc/semanticpublishing/agents/AggregationAgent.java"/>
+
+		<delete file="${dir.src}/eu/ldbc/semanticpublishing/agents/HistoryAgent.java"/>
+		<copy file="${dir.src}/eu/ldbc/semanticpublishing/agents/HistoryAgent.basic" tofile="${dir.src}/eu/ldbc/semanticpublishing/agents/HistoryAgent.java"/>
 		
 		<delete file="${dir.src}/eu/ldbc/semanticpublishing/statistics/Statistics.java"/>
 		<copy file="${dir.src}/eu/ldbc/semanticpublishing/statistics/Statistics.${querymix}" tofile="${dir.src}/eu/ldbc/semanticpublishing/statistics/Statistics.java"/>
