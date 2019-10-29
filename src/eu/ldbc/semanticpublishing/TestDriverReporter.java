@@ -260,7 +260,8 @@ public class TestDriverReporter extends Thread {
 					.append(String.format("\t\t%s agents\n\n", historyAgentsCount));
 			if (verbose) {
 				for (int i = 0; i < Statistics.HISTORY_QUERIES_COUNT; i++) {
-					sb.append(String.format("\t\t%-5d Q%-2d  queries (avg : %-7d ms, min : %-7d ms, max : %-7d ms, %d errors)\n", Statistics.historyQueriesArray[i].getRunsCount(),
+					sb.append(String.format("\t\t%-5d Q%-2d  queries (avg : %-7d ms, min : %-7d ms, max : %-7d ms, %d errors)\n",
+							Statistics.historyQueriesArray[i].getRunsCount(),
 							queryIndexToNum(i),
 							Statistics.historyQueriesArray[i].getAvgExecutionTimeMs(),
 							Statistics.historyQueriesArray[i].getMinExecutionTimeMs(),

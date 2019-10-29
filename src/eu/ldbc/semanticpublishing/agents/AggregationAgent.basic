@@ -2,12 +2,9 @@ package eu.ldbc.semanticpublishing.agents;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 import eu.ldbc.semanticpublishing.resultanalyzers.history.OriginalQueryData;
 import eu.ldbc.semanticpublishing.resultanalyzers.history.QueryResultsConverterUtil;
@@ -58,7 +55,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	private SPARQLResultStatementsCounter sparqlResultStatementsCounter;
 	private final boolean saveDetailedQueryLogs;
 	private List<OriginalQueryData> playedQueries;
-	private final boolean validateHistoryPlugin;
+	private AtomicBoolean validateHistoryPlugin = new AtomicBoolean(false);
 
 	private final static Logger DETAILED_LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
 	private final static Logger BRIEF_LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
@@ -79,10 +76,6 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		this.queryMixPool = new Pool(definitions.getString(Definitions.QUERY_POOLS), Statistics.totalStartedQueryMixRuns, Statistics.totalCompletedQueryMixRuns);
 		this.benchmarkByQueryMixRuns = benchmarkByQueryMixRuns;
 		this.saveDetailedQueryLogs = configuration.getBoolean(Configuration.SAVE_DETAILED_QUERY_LOGS);
-		this.validateHistoryPlugin = configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN);
-		if (validateHistoryPlugin) {
-			playedQueries = new LinkedList<>();
-		}
 	}
 
 	@Override
@@ -241,10 +234,10 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 				OriginalQueryData dataHolder;
 				long queryParseTime;
 				long startOfValidating = System.currentTimeMillis();
-				boolean addQueryForValidation = queryNumber != 6 && queryNumber != 8
-						&& queryNumber != 10 && queryNumber != 12;
+				boolean addQueryForValidation = queryNumber != 6 && queryNumber != 8 &&
+												queryNumber != 10 && queryNumber != 12;
 				if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
-					if (validateHistoryPlugin) {
+					if (validateHistoryPlugin.get()) {
 						Model resultAsModel = QueryResultsConverterUtil.getReturnedResultAsModel(inputStreamQueryResult);
 						queryParseTime = System.currentTimeMillis() - startOfValidating;
 						if (addQueryForValidation) {
@@ -257,7 +250,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 						queryParseTime = rdfXmlResultStatementsCounter.getParseTime();
 					}
 				} else {
-					if (validateHistoryPlugin) {
+					if (validateHistoryPlugin.get()) {
 						List<BindingSet> bindings = QueryResultsConverterUtil.getBindingSetsList(inputStreamQueryResult);
 						queryParseTime = System.currentTimeMillis() - startOfValidating;
 						if (addQueryForValidation) {
@@ -316,6 +309,11 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		queryId.append(", id:");
 		queryId.append("" + id);
 		return queryId.toString();
+	}
+
+	public void startHistoryValidation() {
+		this.playedQueries = Collections.synchronizedList(new LinkedList<>());
+		this.validateHistoryPlugin.set(true);
 	}
 
 	public List<OriginalQueryData> getPlayedQueries() {

@@ -533,11 +533,7 @@ public class TestDriver {
 	
 	private void setupAsynchronousAgents() {
 		for(int i = 0; i < aggregationAgentsCount; ++i ) {
-			AggregationAgent aggregationAgent = new AggregationAgent(inBenchmarkState, queryExecuteManager, randomGenerator, runFlag, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.AGGREGATION), configuration, definitions, substitutionQueryParamtersManager, configuration.getLong(Configuration.BENCHMARK_BY_QUERY_MIX_RUNS));
-			aggregationAgents.add(aggregationAgent);
-			if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
-				historyAgents.add(new HistoryAgent(runFlag, aggregationAgent.getPlayedQueries(), queryExecuteManager));
-			}
+			aggregationAgents.add(new AggregationAgent(inBenchmarkState, queryExecuteManager, randomGenerator, runFlag, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.AGGREGATION), configuration, definitions, substitutionQueryParamtersManager, configuration.getLong(Configuration.BENCHMARK_BY_QUERY_MIX_RUNS)));
 		}
 
 		for(int i = 0; i < editorialAgentsCount; ++i ) {
@@ -571,9 +567,6 @@ public class TestDriver {
 
 			for(int i = 0; i < aggregationAgentsCount; ++i ) {
 				aggregationAgents.get(i).start();
-				if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
-					historyAgents.get(i).start();
-				}
 			}
 
 			ThreadUtil.sleepSeconds(warmupPeriodSeconds);
@@ -628,18 +621,15 @@ public class TestDriver {
 						agent.start();
 					}
 				}
-				if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
-					for (AbstractAsynchronousAgent history : historyAgents) {
-						if (!history.isAlive()) {
-							history.start();
-						}
-					}
-				}
 			}
 			
 			editorialAgentsStarted = true;
 			for(AbstractAsynchronousAgent agent : editorialAgents ) {
 				agent.start();
+			}
+
+			if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
+				createAndStartHistoryAgents();
 			}
 
 			Thread interrupterThread = new TestDriverInterrupter(Thread.currentThread(), inBenchmarkState, configuration.getString(Configuration.INTERRUPT_SIGNAL_LOCATION));
@@ -760,19 +750,16 @@ public class TestDriver {
 					if( ! agent.isAlive()) {
 						agent.start();
 					}
-					if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
-						for (AbstractAsynchronousAgent history : historyAgents) {
-							if (!history.isAlive()) {
-								history.start();
-							}
-						}
-					}
 				}
 			}
 			
 			editorialAgentsStarted = true;
 			for(AbstractAsynchronousAgent agent : editorialAgents ) {
 				agent.start();
+			}
+
+			if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
+				createAndStartHistoryAgents();
 			}
 			
 			Thread interrupterThread = new TestDriverInterrupter(Thread.currentThread(), inBenchmarkState, configuration.getString(Configuration.INTERRUPT_SIGNAL_LOCATION));
@@ -1034,6 +1021,18 @@ public class TestDriver {
 		
 		System.out.println("END OF RUN, all agents shut down...");
 		System.exit(0);
+	}
+
+	private void createAndStartHistoryAgents() {
+		for (int i = 0; i < aggregationAgentsCount; ++i) {
+			AggregationAgent aggregationAgent = (AggregationAgent) aggregationAgents.get(i);
+			aggregationAgent.startHistoryValidation();
+			HistoryAgent historyAgent = new HistoryAgent(runFlag, aggregationAgent.getPlayedQueries(), queryExecuteManager);
+			historyAgents.add(historyAgent);
+			if (!historyAgent.isAlive()) {
+				historyAgent.start();
+			}
+		}
 	}
 
 	public static void showHelp() {
