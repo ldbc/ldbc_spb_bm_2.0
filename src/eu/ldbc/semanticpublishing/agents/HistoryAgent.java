@@ -44,7 +44,7 @@ public class HistoryAgent extends AbstractAsynchronousAgent {
 		super(runFlag);
 		this.playedQueriesCopy = playedQueriesQueue;
 		this.queryExecuteManager = queryExecuteManager;
-		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, 1500 * 1000, true);
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
 	}
 
 	@Override

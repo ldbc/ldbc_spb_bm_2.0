@@ -16,6 +16,9 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import eu.ldbc.semanticpublishing.agents.HistoryAgent;
+import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection;
+import eu.ldbc.semanticpublishing.resultanalyzers.history.QueryResultsConverterUtil;
+import org.eclipse.rdf4j.query.BindingSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -67,6 +70,8 @@ public class TestDriver {
 	private final RandomUtil randomGenerator;
 	private final SubstitutionQueryParametersManager substitutionQueryParamtersManager = new SubstitutionQueryParametersManager();
 	private final ValidationValuesManager validationValuesManager = new ValidationValuesManager();
+	private static final String CHECK_HISTORY_PLUGIN_ENABLED_QUERY = "select ?enabled { [] <http://www.ontotext.com/at/enabled> ?enabled }";
+	private static final String ENABLE_HISTORY_PLUGIN_QUERY = "insert data { [] <http://www.ontotext.com/at/enabled> true }";
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
 	private final static Logger RLOGGER = LoggerFactory.getLogger(TestDriverReporter.class.getName());
@@ -575,6 +580,9 @@ public class TestDriver {
 	
 	private void benchmark(boolean enable, long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, double mileStonePosition) throws IOException {
 		if (enable) {
+			if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
+				createAndStartHistoryAgents();
+			}
 			if (configuration.getBoolean(Configuration.RUN_BENCHMARK_ONLINE_REPlICATION_AND_BACKUP)) {
 				System.out.println("Error : runBenchmark and runBenchmarkWithOnlineReplication phases are both enabled, disable one first!");
 				System.exit(-1);
@@ -1023,7 +1031,38 @@ public class TestDriver {
 		System.exit(0);
 	}
 
+	private void checkIfHistoryPluginIsEnabled() {
+		SparqlQueryConnection conn = null;
+		try {
+			conn = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
+
+			if ("false".equalsIgnoreCase(executeHistoryPluginQuery(conn, QueryType.SELECT))) {
+				System.out.println("Enabling History plugin.....");
+				executeHistoryPluginQuery(conn, QueryType.INSERT);
+			}
+			if ("true".equalsIgnoreCase(executeHistoryPluginQuery(conn, QueryType.SELECT))) {
+				System.out.println("History plugin enabled!");
+			}
+		} catch (IOException e) {
+			System.err.println("Couldn't start History plugin");
+		} finally {
+			if (conn != null) {
+				conn.disconnect();
+			}
+		}
+	}
+
+	private String executeHistoryPluginQuery(SparqlQueryConnection conn, QueryType queryType) throws IOException {
+		boolean selectQuery = queryType == QueryType.SELECT;
+		InputStream inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(conn, "",
+				selectQuery ? CHECK_HISTORY_PLUGIN_ENABLED_QUERY : ENABLE_HISTORY_PLUGIN_QUERY,
+				queryType, false, false);
+
+		return selectQuery ? QueryResultsConverterUtil.getBindingSetsList(inputStreamResult).get(0).getValue("enabled").stringValue() : "";
+	}
+
 	private void createAndStartHistoryAgents() {
+		checkIfHistoryPluginIsEnabled();
 		for (int i = 0; i < aggregationAgentsCount; ++i) {
 			AggregationAgent aggregationAgent = (AggregationAgent) aggregationAgents.get(i);
 			aggregationAgent.startHistoryValidation();
