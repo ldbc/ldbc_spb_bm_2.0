@@ -18,7 +18,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import eu.ldbc.semanticpublishing.agents.HistoryAgent;
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection;
 import eu.ldbc.semanticpublishing.resultanalyzers.history.QueryResultsConverterUtil;
-import org.eclipse.rdf4j.query.BindingSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -580,9 +579,6 @@ public class TestDriver {
 	
 	private void benchmark(boolean enable, long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, double mileStonePosition) throws IOException {
 		if (enable) {
-			if (configuration.getBoolean(Configuration.VALIDATE_HISTORY_PLUGIN)) {
-				createAndStartHistoryAgents();
-			}
 			if (configuration.getBoolean(Configuration.RUN_BENCHMARK_ONLINE_REPlICATION_AND_BACKUP)) {
 				System.out.println("Error : runBenchmark and runBenchmarkWithOnlineReplication phases are both enabled, disable one first!");
 				System.exit(-1);
