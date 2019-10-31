@@ -9,6 +9,10 @@ import eu.ldbc.semanticpublishing.resultanalyzers.history.SavedAsBindingSetListO
 import eu.ldbc.semanticpublishing.resultanalyzers.history.SavedAsModelOriginalResults;
 import eu.ldbc.semanticpublishing.statistics.Statistics;
 import eu.ldbc.semanticpublishing.util.RdfUtils;
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.query.BindingSet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,26 +24,20 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.query.BindingSet;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class HistoryAgent extends AbstractAsynchronousAgent {
 
-	private List<OriginalQueryData> playedQueriesCopy;
+	private BlockingQueue<OriginalQueryData> playedQueriesCopy;
 	private SparqlQueryExecuteManager queryExecuteManager;
 	private SparqlQueryConnection connection;
-	private AtomicInteger currentQueryIndex = new AtomicInteger(0);
 	public static boolean historyValidationStarted;
 
 	private final static Logger DETAILED_LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
 	private final static Logger BRIEF_LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
 
-	public HistoryAgent(AtomicBoolean runFlag, List<OriginalQueryData> playedQueriesQueue,
+	public HistoryAgent(AtomicBoolean runFlag, BlockingQueue<OriginalQueryData> playedQueriesQueue,
 						SparqlQueryExecuteManager queryExecuteManager) {
 		super(runFlag);
 		this.playedQueriesCopy = playedQueriesQueue;
@@ -61,7 +59,7 @@ public class HistoryAgent extends AbstractAsynchronousAgent {
 		if (playedQueriesCopy.size() > 1000) {
 			historyValidationStarted = true;
 			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			OriginalQueryData headQuery = playedQueriesCopy.get(currentQueryIndex.getAndIncrement());
+			OriginalQueryData headQuery = playedQueriesCopy.poll();
 			if (headQuery != null) {
 				try {
 					long resultsCount = 0;

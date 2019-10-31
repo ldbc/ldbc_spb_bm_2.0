@@ -3,6 +3,8 @@ package eu.ldbc.semanticpublishing.agents;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.text.SimpleDateFormat;
 
@@ -54,7 +56,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	private RDFXMLResultStatementsCounter rdfXmlResultStatementsCounter;
 	private SPARQLResultStatementsCounter sparqlResultStatementsCounter;
 	private final boolean saveDetailedQueryLogs;
-	private List<OriginalQueryData> playedQueries;
+	private BlockingQueue<OriginalQueryData> playedQueries;
 	private AtomicBoolean validateHistoryPlugin = new AtomicBoolean(false);
 
 	private final static Logger DETAILED_LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
@@ -312,11 +314,11 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	}
 
 	public void startHistoryValidation() {
-		this.playedQueries = Collections.synchronizedList(new LinkedList<>());
+		this.playedQueries = new LinkedBlockingQueue<>();
 		this.validateHistoryPlugin.set(true);
 	}
 
-	public List<OriginalQueryData> getPlayedQueries() {
+	public BlockingQueue<OriginalQueryData> getPlayedQueries() {
 		return playedQueries;
 	}
 }
