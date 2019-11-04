@@ -389,13 +389,12 @@ public class TestDriverReporter extends Thread {
 			case 1:
 			case 2:
 			case 3:
-			case 4:
 				return index + 1;
-			case 5:
+			case 4:
 				return 7;
-			case 6:
+			case 5:
 				return 9;
-			case 7:
+			case 6:
 				return 11;
 			default:
 				throw new IllegalArgumentException("Query with " + index + " index should not be added for history validation");

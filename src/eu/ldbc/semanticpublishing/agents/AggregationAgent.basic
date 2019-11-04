@@ -236,13 +236,11 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 				OriginalQueryData dataHolder;
 				long queryParseTime;
 				long startOfValidating = System.currentTimeMillis();
-				boolean addQueryForValidation = queryNumber != 6 && queryNumber != 8 &&
-												queryNumber != 10 && queryNumber != 12;
 				if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
 					if (validateHistoryPlugin.get()) {
 						Model resultAsModel = QueryResultsConverterUtil.getReturnedResultAsModel(inputStreamQueryResult);
 						queryParseTime = System.currentTimeMillis() - startOfValidating;
-						if (addQueryForValidation) {
+						if (addQueryForHistoryValidation(queryNumber)) {
 							dataHolder = new SavedAsModelOriginalResults(timeStamp, queryString, resultAsModel, queryType, queryName);
 							playedQueries.add(dataHolder);
 						}
@@ -255,7 +253,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 					if (validateHistoryPlugin.get()) {
 						List<BindingSet> bindings = QueryResultsConverterUtil.getBindingSetsList(inputStreamQueryResult);
 						queryParseTime = System.currentTimeMillis() - startOfValidating;
-						if (addQueryForValidation) {
+						if (addQueryForHistoryValidation(queryNumber)) {
 							dataHolder = new SavedAsBindingSetListOriginalResults(timeStamp, queryString, bindings, queryType, queryName);
 							playedQueries.add(dataHolder);
 						}
@@ -316,6 +314,23 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	public void startHistoryValidation() {
 		this.playedQueries = new LinkedBlockingQueue<>();
 		this.validateHistoryPlugin.set(true);
+	}
+
+	/**
+	 *  Since not all queries are applicable for validation
+	 *  of GraphDB History plugin and because of the increased
+	 *  memory footprint of playedQueries collection only 1000
+	 *  queries are added for validation until they are exhausted
+	 *  from HistoryAgent and queries against other plugins and
+	 *  connectors are not added for validation
+	 * @param queryNumber
+	 * @return
+	 */
+	private boolean addQueryForHistoryValidation(int queryNumber) {
+		return playedQueries != null
+				&& playedQueries.size() < HistoryAgent.MAX_NUMBER_OF_STORED_HISTORY_QUERIES
+				&& queryNumber != 5 && queryNumber != 6 && queryNumber != 8
+				&& queryNumber != 10 && queryNumber != 12;
 	}
 
 	public BlockingQueue<OriginalQueryData> getPlayedQueries() {
