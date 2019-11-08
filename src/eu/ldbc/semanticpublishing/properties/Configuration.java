@@ -71,6 +71,8 @@ public class Configuration {
 	public static final String SAVE_DETAILED_QUERY_LOGS = "saveDetailedQueryLogs";
 	public static final String REPORT_INTERVAL_SECONDS = "reportIntervalSeconds";
 	public static final String VALIDATE_HISTORY_PLUGIN = "validateHistoryPlugin";
+	public static final String HISTORY_QUERIES = "historyQueries";
+	public static final String LOG_FAILED_HISTORY_QUERIES = "logFailedQueries";
 	
 	/**
 	 * Initialise and set default values for parameters that make sense.
@@ -129,6 +131,8 @@ public class Configuration {
 		
 		properties.setProperty(REPORT_INTERVAL_SECONDS, "1");
 		properties.setProperty(VALIDATE_HISTORY_PLUGIN, "false");
+		properties.setProperty(HISTORY_QUERIES, "");
+		properties.setProperty(LOG_FAILED_HISTORY_QUERIES, "false");
 	}
 	
 	/**

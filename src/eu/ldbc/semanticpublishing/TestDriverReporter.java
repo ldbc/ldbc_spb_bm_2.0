@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
+import eu.ldbc.semanticpublishing.resultanalyzers.history.HistoryQueriesUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -262,7 +263,7 @@ public class TestDriverReporter extends Thread {
 				for (int i = 0; i < Statistics.HISTORY_QUERIES_COUNT; i++) {
 					sb.append(String.format("\t\t%-5d Q%-2d  queries (avg : %-7d ms, min : %-7d ms, max : %-7d ms, %d errors)\n",
 							Statistics.historyQueriesArray[i].getRunsCount(),
-							queryIndexToNum(i),
+							HistoryQueriesUtils.getHistoryQueriesList().get(i),
 							Statistics.historyQueriesArray[i].getAvgExecutionTimeMs(),
 							Statistics.historyQueriesArray[i].getMinExecutionTimeMs(),
 							Statistics.historyQueriesArray[i].getMaxExecutionTimeMs(),
@@ -272,7 +273,8 @@ public class TestDriverReporter extends Thread {
 				sb.append(String.format("\n\t\t%d total retrieval history queries (%d errors)\n", totalHistoryOpsCount, failedHistoryOpsCount));
 			} else {
 				for (int i = 0; i < Statistics.HISTORY_QUERIES_COUNT; i++) {
-					sb.append(String.format("\t\t%-5d Q%-2d history  queries\n", Statistics.historyQueriesArray[i].getRunsCount(), queryIndexToNum(i)));
+					sb.append(String.format("\t\t%-5d Q%-2d history  queries\n", Statistics.historyQueriesArray[i].getRunsCount(),
+							HistoryQueriesUtils.getHistoryQueriesList().get(i)));
 				}
 
 				sb.append(String.format("\n\t\t%d total retrieval history queries\n", totalHistoryOpsCount));
@@ -380,24 +382,6 @@ public class TestDriverReporter extends Thread {
 			if (averageOperationsPerSecond < minUpdateRateThresholdOps) {
 				benchmarkResultIsValid.set(false);
 			}
-		}
-	}
-
-	private int queryIndexToNum(int index) {
-		switch (index) {
-			case 0:
-			case 1:
-			case 2:
-			case 3:
-				return index + 1;
-			case 4:
-				return 7;
-			case 5:
-				return 9;
-			case 6:
-				return 11;
-			default:
-				throw new IllegalArgumentException("Query with " + index + " index should not be added for history validation");
 		}
 	}
 }

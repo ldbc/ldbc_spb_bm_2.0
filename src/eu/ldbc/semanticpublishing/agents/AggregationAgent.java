@@ -8,10 +8,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.text.SimpleDateFormat;
 
-import eu.ldbc.semanticpublishing.resultanalyzers.history.OriginalQueryData;
-import eu.ldbc.semanticpublishing.resultanalyzers.history.QueryResultsConverterUtil;
-import eu.ldbc.semanticpublishing.resultanalyzers.history.SavedAsBindingSetListOriginalResults;
-import eu.ldbc.semanticpublishing.resultanalyzers.history.SavedAsModelOriginalResults;
+import eu.ldbc.semanticpublishing.resultanalyzers.history.*;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.query.BindingSet;
 import org.slf4j.Logger;
@@ -329,8 +326,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	private boolean addQueryForHistoryValidation(int queryNumber) {
 		return playedQueries != null
 				&& playedQueries.size() < HistoryAgent.MAX_NUMBER_OF_STORED_HISTORY_QUERIES
-				&& queryNumber != 5 && queryNumber != 6 && queryNumber != 8
-				&& queryNumber != 10 && queryNumber != 12;
+				&& HistoryQueriesUtils.getHistoryQueriesList().contains(queryNumber);
 	}
 
 	public BlockingQueue<OriginalQueryData> getPlayedQueries() {

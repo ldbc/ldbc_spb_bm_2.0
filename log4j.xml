@@ -41,6 +41,19 @@
     </layout>  
   </appender> 
 
+  <!-- FAILED HISTORY QUERIES LOG -->
+  <appender name="history.queries.file.appender" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="logs/failed_history_queries_detailed.log"/>
+    <param name="append" value="false" />
+    <param name="MaxBackupIndex" value="50000" />
+    <param name="bufferedIO" value="false" />
+    <param name="MaxFileSize" value="250MB"/>
+    <param name="Encoding" value="UTF-8" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value=">> %r [%c{1}:%t] : %m\n" />
+    </layout>
+  </appender>
+
   <!-- CONSOLE -->
   <appender name="sesame.console.appender" class="org.apache.log4j.ConsoleAppender">  
     <layout class="org.apache.log4j.PatternLayout">  
@@ -70,7 +83,13 @@
   <logger name="eu.ldbc.semanticpublishing.TestDriverReporter" additivity="false">  
     <param name="level" value="INFO"/>  
     <appender-ref ref="results.file.appender"/>
-  </logger>  
+  </logger>
+
+  <!-- LOGGERS HISTORY -->
+  <logger name="eu.ldbc.semanticpublishing.agents.HistoryAgent" additivity="false">
+    <param name="level" value="INFO"/>
+    <appender-ref ref="history.queries.file.appender"/>
+  </logger>
 
   <!-- LOGGERS CONSOLE -->
   <logger name="org.eclipse.rdf4j" additivity="false">

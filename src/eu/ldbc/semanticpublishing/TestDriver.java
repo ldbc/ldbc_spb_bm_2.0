@@ -17,6 +17,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import eu.ldbc.semanticpublishing.agents.HistoryAgent;
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection;
+import eu.ldbc.semanticpublishing.resultanalyzers.history.HistoryQueriesUtils;
 import eu.ldbc.semanticpublishing.resultanalyzers.history.QueryResultsConverterUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -1058,11 +1059,13 @@ public class TestDriver {
 	}
 
 	private void createAndStartHistoryAgents() {
+		HistoryQueriesUtils.setHistoryQueriesList(configuration.getString(Configuration.HISTORY_QUERIES));
 		checkIfHistoryPluginIsEnabled();
 		for (int i = 0; i < aggregationAgentsCount; ++i) {
 			AggregationAgent aggregationAgent = (AggregationAgent) aggregationAgents.get(i);
 			aggregationAgent.startHistoryValidation();
-			HistoryAgent historyAgent = new HistoryAgent(runFlag, aggregationAgent.getPlayedQueries(), queryExecuteManager);
+			HistoryAgent historyAgent = new HistoryAgent(runFlag, aggregationAgent.getPlayedQueries(),
+					queryExecuteManager, configuration.getBoolean(Configuration.LOG_FAILED_HISTORY_QUERIES));
 			historyAgents.add(historyAgent);
 			if (!historyAgent.isAlive()) {
 				historyAgent.start();
