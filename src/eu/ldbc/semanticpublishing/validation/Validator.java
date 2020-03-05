@@ -27,7 +27,7 @@ public class Validator {
 		String escapedString = StringEscapeUtils.escapeJava(result).replace("\\\\", "\\");
 		
 		if (resultIsFromAskQuery) {
-			if (!result.toLowerCase().contains(">false<") && !result.toLowerCase().contains(">no<")) {			
+			if (!result.toLowerCase().contains("false") && !result.toLowerCase().contains("no")) {
 				totalErrors++;
 			}
 		} else {		
@@ -143,11 +143,11 @@ public class Validator {
 			if (result.startsWith("<")) {
 				result = result.substring(1);
 			}
-			if (result.endsWith(">")) {
-				result = result.substring(0, result.length()-1);
-			}				
 			if (result.contains("^^")) {
 				result = result.substring(0, result.indexOf("^^"));
+			}
+			if (result.endsWith(">")) {
+				result = result.substring(0, result.length()-1);
 			}
 			
 			result = result.replace("\"", "");

@@ -130,11 +130,11 @@ public class CorrelationsWorker extends RandomWorker {
 					synchronized(lock) {
 						if (dayIncrement < 365 * dataGenerationPeriodYears * (correlationEntityLifespanPercent - correlationDurationPercent)) {
 							if ((thirdEntityOutsideCorrelationCountdown <= 0) && (thirdEntityOutsideCorrelationOccurences > 0) && !thirdEntityForCurrentDaySet) {
-								sesameModel = buildCreativeWorkModel(entityA, entityC, null, firstCwId++, true, calendar.getTime(), 0);
+								sesameModel = buildCreativeWorkModel(entityA, entityC, null, firstCwId++, true, calendar.getTime(), 0, rdfFormat);
 								thirdEntityForCurrentDaySet = true;
 								thirdEntityOutsideCorrelationOccurences--;
 							} else {
-								sesameModel = buildCreativeWorkModel(entityA, null, null, firstCwId++, true, calendar.getTime(), 0);
+								sesameModel = buildCreativeWorkModel(entityA, null, null, firstCwId++, true, calendar.getTime(), 0, rdfFormat);
 							}
 						} else if ((dayIncrement >= 365 * dataGenerationPeriodYears * (correlationEntityLifespanPercent - correlationDurationPercent)) && dayIncrement < (365 * dataGenerationPeriodYears * (correlationEntityLifespanPercent))) {
 							//reset for the last third of correlation period
@@ -142,23 +142,23 @@ public class CorrelationsWorker extends RandomWorker {
 							
 							if ((thirdEntityCountdown <= 0) && (thirdEntityInCorrelationOccurences > 0) && !thirdEntityForCurrentDaySet) {
 								//introduce a third entity correlation in a tiny amount of all correlations
-								sesameModel = buildCreativeWorkModel(entityA, entityB, entityC, firstCwId++, true, calendar.getTime(), 0);
+								sesameModel = buildCreativeWorkModel(entityA, entityB, entityC, firstCwId++, true, calendar.getTime(), 0, rdfFormat);
 								thirdEntityForCurrentDaySet = true;
 								thirdEntityInCorrelationOccurences--;
 								thirdEntityCountdown = ru.nextInt((int)(THRID_ENTITY_CORRELATION_DISTANCE * 0.6), THRID_ENTITY_CORRELATION_DISTANCE + 1);
 							} else {
-								sesameModel = buildCreativeWorkModel(entityA, entityB, null, firstCwId++, true, calendar.getTime(), 0);
+								sesameModel = buildCreativeWorkModel(entityA, entityB, null, firstCwId++, true, calendar.getTime(), 0, rdfFormat);
 							}
 						} else if (dayIncrement >= 365 * dataGenerationPeriodYears * correlationEntityLifespanPercent) {
 							if ((thirdEntityOutsideCorrelationCountdown <= 0) && (thirdEntityOutsideCorrelationOccurences > 0) && !thirdEntityForCurrentDaySet) {
-								sesameModel = buildCreativeWorkModel(entityB, entityC, null, firstCwId++, true, calendar.getTime(), 0);
+								sesameModel = buildCreativeWorkModel(entityB, entityC, null, firstCwId++, true, calendar.getTime(), 0, rdfFormat);
 								thirdEntityForCurrentDaySet = true;
 								thirdEntityOutsideCorrelationOccurences--;
 							} else {
-								sesameModel = buildCreativeWorkModel(entityB, null, null, firstCwId++, true, calendar.getTime(), 0);
+								sesameModel = buildCreativeWorkModel(entityB, null, null, firstCwId++, true, calendar.getTime(), 0, rdfFormat);
 							}
 						} else {
-							sesameModel = buildCreativeWorkModel(entityA, entityC, null, firstCwId++, true, calendar.getTime(), 0);
+							sesameModel = buildCreativeWorkModel(entityA, entityC, null, firstCwId++, true, calendar.getTime(), 0, rdfFormat);
 							if (!silent) {
 								System.out.println(Thread.currentThread().getName() + " :: Warning : Unexpected stage in data generation reached, defaulting");
 							}
@@ -191,7 +191,8 @@ public class CorrelationsWorker extends RandomWorker {
 		}
 	}
 	
-	private Model buildCreativeWorkModel(Entity a, Entity b, Entity c, long firstCwId, boolean aboutOrMentionsB, Date startDate, int dayIncrement) {
+	private Model buildCreativeWorkModel(Entity a, Entity b, Entity c, long firstCwId, boolean aboutOrMentionsB,
+										 Date startDate, int dayIncrement, RDFFormat rdfFormat) {
 		CreativeWorkBuilder creativeWorkBuilder = new CreativeWorkBuilder(firstCwId, ru);
 		creativeWorkBuilder.setDateIncrement(startDate, dayIncrement);
 		creativeWorkBuilder.setAboutPresetUri(a.getURI());
@@ -206,6 +207,6 @@ public class CorrelationsWorker extends RandomWorker {
 			creativeWorkBuilder.setOptionalMentionsPresetUri(c.getURI());
 		}
 		creativeWorkBuilder.setUsePresetData(true);
-		return creativeWorkBuilder.buildSesameModel();
+		return creativeWorkBuilder.buildSesameModel(rdfFormat);
 	}
 }

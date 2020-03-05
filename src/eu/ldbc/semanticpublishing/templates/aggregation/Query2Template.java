@@ -10,6 +10,7 @@ import eu.ldbc.semanticpublishing.properties.Definitions;
 import eu.ldbc.semanticpublishing.refdataset.DataManager;
 import eu.ldbc.semanticpublishing.templates.MustacheTemplate;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
+import eu.ldbc.semanticpublishing.util.StringUtil;
 
 /**
  * A class extending the MustacheTemplate, used to generate a query string
@@ -36,7 +37,7 @@ public class Query2Template extends MustacheTemplate implements SubstitutionPara
 		}
 
 		long cwNextId = ru.nextInt((int)DataManager.creativeWorksNextId.get());
-		return ru.numberURI("things", cwNextId, true, true);		
+		return StringUtil.generateEmbeddedTripleFromURI(ru.numberURI(RandomUtil.THINGS_STRING, cwNextId, true, true));
 	}
 
 	@Override

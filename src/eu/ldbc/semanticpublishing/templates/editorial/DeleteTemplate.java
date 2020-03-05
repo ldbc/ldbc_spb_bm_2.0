@@ -40,7 +40,7 @@ public class DeleteTemplate extends MustacheTemplate implements SubstitutionPara
 		}
 		
 		long cwNextId = ru.nextInt((int)DataManager.creativeWorksNextId.get());
-		return ru.numberURI("context", cwNextId, true, true);
+		return ru.numberURI(RandomUtil.CONTEXT_STRING, cwNextId, true, true);
 	}
 	
 	@Override

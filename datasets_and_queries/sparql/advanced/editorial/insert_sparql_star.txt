@@ -29,42 +29,34 @@ PREFIX curric:<http://www.bbc.co.uk/ontologies/curriculum/>
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
 PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/> 
 PREFIX fb:<http://rdf.freebase.com/ns/>
-PREFIX ot:<http://www.ontotext.com/>
 
-#  Query name : query2
 #  Query Description : 
-#  Retrieve creative works that are about or mention things that have specific properties
-#  reasoning rdfs:subClassOf, rdf:type
-#  join ordering: cwork:dateModified rdf:type owl:FunctionalProperty
-#  join ordering: cwork:dateCreated rdf:type owl:FunctionalProperty
+#  Inserts a Creative Work in its own graph
 
-#  optimization: ?cWork a ?type . ?type rdfs:subClassOf cwork:CreativeWork 
-#  should be eliminated since ?cWork a cwork:CreativeWork 
-
-CONSTRUCT { 
-  ?cWork a cwork:CreativeWork ; 
-    a ?type ; 
-    cwork:title ?title ; 
-    cwork:dateCreated ?dateCreated ;
-    cwork:dateModified ?dateModified ;
-    cwork:about ?about ; 
-    bbc:primaryContentOf ?pco . 
-  ?pco bbc:webDocumentType ?webDocType . 
-} 
-FROM ot:disable-sameAs
-WHERE { 
-  ?cWork a cwork:CreativeWork ; 
-    a ?type ; 
-    cwork:title ?title .  
-  ?type rdfs:subClassOf cwork:CreativeWork . 
-  OPTIONAL { ?cWork cwork:dateCreated ?dateCreated . }
-  OPTIONAL { ?cWork cwork:dateModified ?dateModified . }
-  OPTIONAL { ?cWork cwork:about ?about .} 
-  OPTIONAL { 
-    ?cWork bbc:primaryContentOf ?pco . 
-    ?pco bbc:webDocumentType ?webDocType . 
-  }
-
-  VALUES ?matchValue { {{{cwUri}}} }
-  FILTER (?creativeWork = ?matchValue)
-}
+INSERT DATA {   
+  GRAPH {{{cwGraphUri}}} {   
+    {{{cwUri}}} a {{{cwType}}} ; 
+      cwork:title {{{cwTitle}}} ;
+      cwork:shortTitle {{{cwShortTitle}}} ; 
+      cwork:category {{{cwCategory}}} ; 
+      cwork:description {{{cwDescription}}} ; 
+      {{#cwAboutsList}}
+      cwork:about {{{cwAboutUri}}} ; 
+      {{/cwAboutsList}}
+      {{#cwMentionsList}}
+      cwork:mentions {{{cwMentionsUri}}} ;
+      {{/cwMentionsList}}
+      cwork:audience {{{cwAudienceType}}} ; 
+      cwork:liveCoverage {{{cwLiveCoverage}}} ;
+      {{#cwPrimaryFormatList}}
+      cwork:primaryFormat {{{cwPrimaryFormat}}} ; 
+      {{/cwPrimaryFormatList}}
+      cwork:dateCreated {{{cwDateCreated}}} ; 
+      cwork:dateModified {{{cwDateModified}}} ; 
+      cwork:thumbnail {{{cwThumbnailUri}}} .
+    {{#cwPrimaryContentList}}
+    {{{cwUri}}} bbc:primaryContentOf {{{cwPrimaryContentUriAsTriple}}} .
+    {{{cwPrimaryContentUri}}} bbc:webDocumentType {{{cwWebDocumentType}}} .
+    {{/cwPrimaryContentList}} 
+  }  
+}  
