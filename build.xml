@@ -32,6 +32,7 @@
 	<target name="clean">
 		<delete dir="${dir.bin}" />
 		<delete dir="${dir.dist}" />
+		<delete dir="out/services" />
 	</target>
 
 	<target name="compile" depends="clean">
