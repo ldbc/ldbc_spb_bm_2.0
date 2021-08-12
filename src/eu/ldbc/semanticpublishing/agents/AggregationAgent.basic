@@ -85,7 +85,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		long queryId = 0;
 		MustacheTemplate aggregateQuery = null;
 		String queryString = "";
-		InputStream queryResult = null;
+		String queryResult = "";
 
 		try {
 //			boolean drillDownQuery = false;
@@ -149,7 +149,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 			
 			long executionTimeMs = System.currentTimeMillis();
 			
-			queryResult = queryExecuteManager.executeQueryStream(connection, aggregateQuery.getTemplateFileName(), queryString, aggregateQuery.getTemplateQueryType(), true, false);
+			queryResult = queryExecuteManager.executeQuery(connection, aggregateQuery.getTemplateFileName(), queryString, aggregateQuery.getTemplateQueryType(), true, false);			
 			
 			updateQueryStatistics(true, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, queryResult, queryId, System.currentTimeMillis() - executionTimeMs);
 
@@ -178,7 +178,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		connection.disconnect();
 	}
 	
-	private void updateQueryStatistics(boolean reportSuccess, boolean startedDuringBenchmarkPhase, QueryType queryType, String queryName, String queryString, InputStream queryResult, long id, long queryExecutionTimeMs) {
+	private void updateQueryStatistics(boolean reportSuccess, boolean startedDuringBenchmarkPhase, QueryType queryType, String queryName, String queryString, String queryResult, long id, long queryExecutionTimeMs) {
 		//skip update of statistics for conformance queries
 		if (queryName.startsWith("#")) {
 			return;
@@ -189,18 +189,21 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		
 		//count results (statements)
 		long resultsCount = 0;
-
-			if (hasAvailable(queryResult)) {
+		InputStream iStream = null;
+				
+		try {			
+			if ((!queryResult.trim().isEmpty())) {			
+            iStream = new ByteArrayInputStream(queryResult.getBytes("UTF-8"));
 		        if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
-		          resultsCount = turtleResultStatementsCounter.getStatementsCount(queryResult);
+		          resultsCount = turtleResultStatementsCounter.getStatementsCount(iStream);
 		          Statistics.timeCorrectionsMS.addAndGet(turtleResultStatementsCounter.getParseTime());
 		        } else {
-		          resultsCount = sparqlResultStatementsCounter.getStatementsCount(queryResult);
+		          resultsCount = sparqlResultStatementsCounter.getStatementsCount(iStream);
 		          Statistics.timeCorrectionsMS.addAndGet(sparqlResultStatementsCounter.getParseTime());
 		        }
 			}
 			
-			if (resultsCount >= 0 && benchmarkingState.get()) {
+			if (queryResult.length() >= 0 && benchmarkingState.get()) {
 				if (startedDuringBenchmarkPhase) {
 					if (reportSuccess) {
 						Statistics.aggregateQueriesArray[queryNumber - 1].reportSuccess(queryExecutionTimeMs);
@@ -213,29 +216,22 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 					}
 				} else {
 					if (queryExecutionTimeMs > 0) {
-						LOGGER.info("\tQuery : " + queryName + ", time : " + queryExecutionTimeMs + " ms, results : " + resultsCount + ", has been started during the warmup phase, it will be ignored in the benchmark result!");
+						LOGGER.info("\tQuery : " + queryName + ", time : " + queryExecutionTimeMs + " ms, queryResult.length : " + queryResult.length() + ", results : " + resultsCount + ", has been started during the warmup phase, it will be ignored in the benchmark result!");
 						logBrief(queryNameId, queryType, queryResult, ", has been started during the warmup phase, it will be ignored in the benchmark result!", queryExecutionTimeMs, resultsCount);
 					} else {
-						LOGGER.warn("\tQuery : " + queryName + ", time : " + queryExecutionTimeMs + " ms, results : " + resultsCount + ", has failed to execute... possibly query timeout has been reached!");
+						LOGGER.warn("\tQuery : " + queryName + ", time : " + queryExecutionTimeMs + " ms, queryResult.length : " + queryResult.length() + ", results : " + resultsCount + ", has failed to execute... possibly query timeout has been reached!");					
 						logBrief(queryNameId, queryType, queryResult, ", has failed to execute... possibly query timeout has been reached!", queryExecutionTimeMs, resultsCount);
 					}
 				}
 			}
 			
-			LOGGER.info("\n*** Query [" + queryNameId + "], execution time : " + queryExecutionTimeMs + " ms, results : " + resultsCount + "\n" + queryString + "\n---------------------------------------------\n\n***");
+			LOGGER.info("\n*** Query [" + queryNameId + "], execution time : " + queryExecutionTimeMs + " ms, results : " + resultsCount + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 	}
-
-	private boolean hasAvailable(InputStream queryResult) {
-    	try {
-    		return queryResult.available() > 0;
-    	} catch (IOException ex) {
-    		ex.printStackTrace();
-    	}
-    	return false;
-    }
-
 	
-	private void logBrief(String queryId, QueryType queryType, InputStream queryResult, String appendString, long queryExecutionTimeMs, long resultStatementsCount) {
+	private void logBrief(String queryId, QueryType queryType, String queryResult, String appendString, long queryExecutionTimeMs, long resultStatementsCount) {
 		StringBuilder reportSb = new StringBuilder();
 		reportSb.append(String.format("\t[%s, %s] Query executed, execution time : %d ms, results : %d %s", queryId, Thread.currentThread().getName(), queryExecutionTimeMs, resultStatementsCount, appendString));
 //		if (queryType == QueryType.SELECT || queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {

@@ -628,7 +628,7 @@ public class TestDriver {
 			interrupterThread.setDaemon(true);
 			interrupterThread.start();
 			
-			Thread reporterThread = new TestDriverReporter(aggregationAgents, Statistics.totalAggregateQueryStatistics.getRunsCountAtomicLong(),
+			Thread reporterThread = new TestDriverReporter(Statistics.totalAggregateQueryStatistics.getRunsCountAtomicLong(),
 														   Statistics.totalCompletedQueryMixRuns,
 													       inBenchmarkState, 
 													       keepReporterAlive,
@@ -751,7 +751,7 @@ public class TestDriver {
 			interrupterThread.setDaemon(true);
 			interrupterThread.start();
 			
-			Thread reporterThread = new TestDriverReporter(aggregationAgents, Statistics.totalAggregateQueryStatistics.getRunsCountAtomicLong(),
+			Thread reporterThread = new TestDriverReporter(Statistics.totalAggregateQueryStatistics.getRunsCountAtomicLong(), 
 														   Statistics.totalCompletedQueryMixRuns,
 													       inBenchmarkState,
 													       keepReporterAlive, 
