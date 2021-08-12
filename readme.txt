@@ -102,6 +102,7 @@ How to run the benchmark :
     - loadCreativeWorks                 (load generated files with Creative Works into repository, optional, tested for N-Quads)
     - warmUp                            (runs the aggregation queries for a configured period of time)
     - runBenchmark                      (runs the benchmark - all aggregation and editorial agents run simultaneously)
+    - validateHistoryPlugin				(start as many validating history agent threads as the number of aggregation agents)
     - runBenchmarkOnlineReplicationAndBackup (benchmark is measuring performance under currently ongoing backup process. Verifies that certain conditions are met such as milestone points at which backup has been started. Requires additional implementation of provided shell script files (/data/enterprise/scripts) for using vendor's specific command for backup.)     
     - checkConformance                  (executes a set of queries stored in 'data/sparql/conformance' for testing the inference capabilities of the database engine.
                                         OWL2-RL : prp-irp, prp-asyp, prp-pdw, prp-adp, cax-dw, cax-adc, cls-maxc1, prp-key, prp-spo2, prp-inv1.
