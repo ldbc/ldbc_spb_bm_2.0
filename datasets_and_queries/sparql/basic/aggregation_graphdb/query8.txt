@@ -57,22 +57,24 @@ PREFIX ot:<http://www.ontotext.com/>
 #      "propertyChain": [
 #        "http://www.bbc.co.uk/ontologies/creativework/title"
 #      ],
-#      "facet": false
+#      "facet": false,
+#      "stored": false
 #    },
 #    {
 #      "fieldName": "description",
 #      "propertyChain": [
 #        "http://www.bbc.co.uk/ontologies/creativework/description"
 #      ],
-#      "facet": false
+#      "facet": false,
+#      "stored": false
 #    },
 #    {
 #      "fieldName": "dateModified",
 #      "propertyChain": [
 #        "http://www.bbc.co.uk/ontologies/creativework/dateModified"
 #      ],
-#      "sort": true
-#      "noindex": true,
+#      "stored": false,
+#      "multivalued": false,
 #      "facet": false
 #    }
 #  ]

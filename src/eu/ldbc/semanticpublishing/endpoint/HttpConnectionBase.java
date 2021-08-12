@@ -10,13 +10,15 @@ import java.net.HttpURLConnection;
 public abstract class HttpConnectionBase {
 	protected String endpointUrl;
 	protected String endpointUpdateUrl;
+	protected String contentTypeForGraphQuery;	
 	protected int timeoutMilliseconds;
 	protected HttpURLConnection httpUrlConnection;
 	protected boolean verbose;
 	
-	public HttpConnectionBase(String endpointUrl, String endpointUpdateUrl, int timeoutMilliseconds, boolean verbose) {
+	public HttpConnectionBase(String endpointUrl, String endpointUpdateUrl, String contentTypeForGraphQuery, int timeoutMilliseconds, boolean verbose) {
 		this.endpointUrl = endpointUrl;
 		this.endpointUpdateUrl = endpointUpdateUrl;
+		this.contentTypeForGraphQuery = contentTypeForGraphQuery;
 		this.timeoutMilliseconds = timeoutMilliseconds;
 		this.verbose = verbose;
 	}
@@ -37,10 +39,9 @@ public abstract class HttpConnectionBase {
 	}	
 	
 	public InputStream execute() throws IOException {
-		connect();
-		
+		connect();		
 		InputStream returnedStream = getResponse();
-			
+		
 		return returnedStream;
 	}	
 	
@@ -52,5 +53,5 @@ public abstract class HttpConnectionBase {
 	/**
 	 * Must provide implementation for that method, and execute it before starting a query
 	 */
-	public abstract void prepareConnection(boolean flushQueryContentsToStream);
+	public abstract void prepareConnection(boolean setQueryToStream);
 }

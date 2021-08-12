@@ -1,18 +1,17 @@
 package eu.ldbc.semanticpublishing.validation;
 
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.SparqlResultValidator;
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.TurtleResultValidator;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.eclipse.rdf4j.query.QueryEvaluationException;
+import org.eclipse.rdf4j.query.TupleQueryResultHandlerException;
+import org.eclipse.rdf4j.query.resultio.QueryResultParseException;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFParseException;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
-
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.openrdf.query.QueryEvaluationException;
-import org.openrdf.query.TupleQueryResultHandlerException;
-import org.openrdf.query.resultio.QueryResultParseException;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
-
-import eu.ldbc.semanticpublishing.resultanalyzers.sesame.SparqlResultValidator;
-import eu.ldbc.semanticpublishing.resultanalyzers.sesame.TurtleResultValidator;
 
 public class Validator {
 	
@@ -144,14 +143,24 @@ public class Validator {
 			if (result.startsWith("<")) {
 				result = result.substring(1);
 			}
-			if (result.endsWith(">")) {
-				result = result.substring(0, result.length()-1);
-			}				
+			// Should be called before next because ^^<http://www.w3.org/2001/XMLSchema#string>
 			if (result.contains("^^")) {
 				result = result.substring(0, result.indexOf("^^"));
 			}
-			
-			result = result.replace("\"", "");
+			if (result.endsWith(">")) {
+				result = result.substring(0, result.length()-1);
+			}				
+
+			// Since we're adding ''' for literals with new line in them should remove them also
+			result = result.replace("'''", "");
+
+			// Remove only first and last quote
+			if (result.startsWith("\"")) {
+				result = result.replaceFirst("\"", "");
+			}
+			if (result.endsWith("\"")) {
+				result = result.substring(0, result.lastIndexOf("\""));
+			}
 		}
 		
 		//escapeJava() returns UTF-8 escaped chars with double "\\"

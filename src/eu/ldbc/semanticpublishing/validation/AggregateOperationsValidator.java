@@ -49,7 +49,7 @@ public class AggregateOperationsValidator extends Validator {
 		this.testDriver = testDriver;
 		this.validationValuesManager = validationValuesManager;
 		this.queryExecuteManager = queryExecuteManager;
-		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_TURTLE, queryExecuteManager.getTimeoutMilliseconds(), true);
 		this.ru = ru;
 		this.aggregateQueryTemplates = aggregateQueryTemplates;
 		this.configuration = configuration;
@@ -88,7 +88,7 @@ public class AggregateOperationsValidator extends Validator {
 			queryName = queryTemplate.getTemplateFileName();
 			queryString = queryTemplate.compileMustacheTemplate();			
 			
-			queryResult = queryExecuteManager.executeQuery(connection, queryName, queryString, queryType, false, true);			
+			queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, true);			
 
 			long actualResultsSize = 0;
 			InputStream iStream = null;

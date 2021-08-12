@@ -1,7 +1,6 @@
 package eu.ldbc.semanticpublishing.resultanalyzers;
 
-import java.io.ByteArrayInputStream;
-import java.io.UnsupportedEncodingException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import eu.ldbc.semanticpublishing.refdataset.model.Entity;
@@ -11,12 +10,12 @@ import eu.ldbc.semanticpublishing.resultanalyzers.sax.SAXQuery18TemplateTransfor
  * A class used to extract cwork uris, geoLocationsids, lat and long properties from a query18.txt result.
  */
 public class Query18Analyzer {
-	public ArrayList<Entity> collectEntitiesList(String result) throws UnsupportedEncodingException {
-		if (result.trim().isEmpty()) {	
+	public ArrayList<Entity> collectEntitiesList(InputStream inputStreamResult) {
+		if (inputStreamResult == null) {	
 			return null;
 		}
 		SAXQuery18TemplateTransformer transformer = new SAXQuery18TemplateTransformer();
-		transformer.transform(new ByteArrayInputStream(result.getBytes("UTF-8")));
+		transformer.transform(inputStreamResult);
 		return transformer.getEntitiesList();
 	}
 }

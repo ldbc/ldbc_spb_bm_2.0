@@ -1,19 +1,15 @@
 package eu.ldbc.semanticpublishing.resultanalyzers.sesame;
 
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.model.impl.LinkedHashModel;
+import org.eclipse.rdf4j.rio.*;
+import org.eclipse.rdf4j.rio.helpers.AbstractRDFHandler;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-
-import org.openrdf.model.Model;
-import org.openrdf.model.Statement;
-import org.openrdf.model.impl.LinkedHashModel;
-import org.openrdf.rio.RDFFormat;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
-import org.openrdf.rio.RDFParser;
-import org.openrdf.rio.Rio;
-import org.openrdf.rio.helpers.RDFHandlerBase;
 
 public class TurtleResultValidator {
 	private static final String BASE_URI_STRING = "http://www.ldbc.eu";
@@ -48,7 +44,7 @@ public class TurtleResultValidator {
 		return model;
 	}
 	
-	static class RdfModelBuilder extends RDFHandlerBase {
+	static class RdfModelBuilder extends AbstractRDFHandler {
 		private int modelStatementsCount = 0;
 		private Model model;		
 		

@@ -16,6 +16,7 @@ import eu.ldbc.semanticpublishing.substitutionparameters.SubstitutionParametersG
 import eu.ldbc.semanticpublishing.templates.MustacheTemplatesHolder;
 import eu.ldbc.semanticpublishing.templates.editorial.InsertTemplate;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
+import eu.ldbc.semanticpublishing.util.RdfUtils;
 import eu.ldbc.semanticpublishing.validation.EditorialOperationsValidator;
 
 /**
@@ -69,7 +70,7 @@ public class ReplicationAndBackupHelper {
 		String queryResult = "";
 		QueryType queryType;
 
-		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
 		
 		InsertTemplate insertTemplate = new InsertTemplate("", ru, mustacheTemplatesHolder.getQueryTemplates(MustacheTemplatesHolder.EDITORIAL), definitions, false, null);
 
@@ -81,7 +82,7 @@ public class ReplicationAndBackupHelper {
 		queryName = insertTemplate.getTemplateFileName();
 		queryString = insertTemplate.compileMustacheTemplate();		
 
-		queryResult = queryExecuteManager.executeQuery(connection, queryName, queryString, queryType, false, true);
+		queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, true);
 		
 		BRIEF_LOGGER.info(String.format("Milestone Query [%s] executed", queryName));
 		LOGGER.info("\n*** Milestone Query [" + queryName + "], \n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");

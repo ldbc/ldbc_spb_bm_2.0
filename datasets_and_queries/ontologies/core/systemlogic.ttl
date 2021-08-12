@@ -12,6 +12,8 @@
 @prefix systemlogic:  <urn:ldp-systemlogic/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 core:Person
       rdfs:subClassOf systemlogic:TagConcept .
 
@@ -29,4 +31,3 @@ systemlogic:TagConcept
       rdf:type owl:Class ;
       rdfs:label "TagConcept"^^xsd:string .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

@@ -1,5 +1,8 @@
 package eu.ldbc.semanticpublishing.util;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -398,8 +401,11 @@ public class RandomUtil {
 			boolean appendDataType) {
 		StringBuilder sb = new StringBuilder();
 
-		sb.append(firstString);
-		sb.append(" ");
+		if (!StringUtils.isEmpty(firstString)) {
+			// Some entities' object have ''' in them
+			sb.append(firstString.replace("'''", ""));
+			sb.append(" ");
+		}
 
 		for (int i = 0; i < numberOfWords; i++) {
 			sb.append(randomWordFromDictionary(false, false));
@@ -417,14 +423,16 @@ public class RandomUtil {
 				escapeSb.append("\\");
 			}
 			escapeSb.append("\"");
-			replacement = sb.toString().replaceAll("\"", escapeSb.toString());			
+			replacement = sb.toString().replaceAll("\"", escapeSb.toString());
 			sb.setLength(0);
 			sb.append(replacement);			
 		}
 		
 		if (surroundWithQuotes) {
-			sb.insert(0, '"');
-			sb.append("\"");
+			// In order to handle cases where we have new line in data we should add ''' instead of quotes
+			char[] quotesArr = {39, 39, 39};
+			sb.insert(0, quotesArr);
+			sb.append("'''");
 		}
 
 		if (appendDataType) {

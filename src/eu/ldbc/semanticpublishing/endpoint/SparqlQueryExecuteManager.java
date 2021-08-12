@@ -1,13 +1,13 @@
 package eu.ldbc.semanticpublishing.endpoint;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection.QueryType;
 import eu.ldbc.semanticpublishing.resultanalyzers.sax.SAXResultTransformer;
+import eu.ldbc.semanticpublishing.util.RdfUtils;
+import eu.ldbc.semanticpublishing.util.StringUtil;
 
 /**
  * The class for handling a SPARQL query execution.
@@ -34,17 +34,17 @@ public class SparqlQueryExecuteManager {
 	 * @return count of bytes from the returned result 
 	 * @throws IOException
 	 */
-	public String executeQuery(String queryName, String queryString, QueryType queryType) throws IOException {
-		return executeQuery(new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, queryTimeoutMilliseconds, verbose), queryName, queryString, queryType, false, true);
+	public String executeQueryWithStringResult(String queryName, String queryString, QueryType queryType, String contentTypeForGraphQuery) throws IOException {
+		return executeQueryWithStringResult(new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, contentTypeForGraphQuery, queryTimeoutMilliseconds, verbose), queryName, queryString, queryType, false, true);
 	}
 	
 	/**
 	 * Executes a query by using an existing connection, requires an explicit disconnect.
-	 * @param connection - a prepared connection
-	 * @return count of bytes from returned result
+	 * @param returnQueryResultAsString
+	 * @return query result as string, or empty string controlled by returnQueryResultAsString (if set to false will reduce memory footprint of the driver)
 	 * @throws IOException
 	 */
-	public String executeQuery(SparqlQueryConnection connection, String queryName, String queryString, QueryType queryType, boolean useInStatistics, boolean disconnect) throws IOException {
+	public String executeQueryWithStringResult(SparqlQueryConnection connection, String queryName, String queryString, QueryType queryType, boolean useInStatistics, boolean disconnect) throws IOException {
 		
 		connection.setQueryString(queryString);
 		connection.setQueryType(queryType);
@@ -52,7 +52,7 @@ public class SparqlQueryExecuteManager {
 		
 		InputStream is = connection.execute();
 		
-		String queryResult = readResultString2(is);
+		String queryResult = StringUtil.iostreamToString(is);		
 		
 		if (disconnect) {
 			connection.disconnect();
@@ -60,7 +60,26 @@ public class SparqlQueryExecuteManager {
 		
 		return queryResult;		
 	}
-
+	
+	public String executeQueryWithInputStreamResult(String queryName, String queryString, QueryType queryType, String contentTypeForGraphQuery) throws IOException {
+		return executeQueryWithStringResult(new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, contentTypeForGraphQuery, queryTimeoutMilliseconds, verbose), queryName, queryString, queryType, false, true);
+	}		
+	
+	public InputStream executeQueryWithInputStreamResult(SparqlQueryConnection connection, String queryName, String queryString, QueryType queryType, boolean useInStatistics, boolean disconnect) throws IOException {
+		
+		connection.setQueryString(queryString);
+		connection.setQueryType(queryType);
+		connection.prepareConnection(true);
+		
+		InputStream is = connection.execute();		
+		
+		if (disconnect) {
+			connection.disconnect();
+		}
+		
+		return is;		
+	}
+	
 	/**
 	 * A service method for executing queries not related to the benchmark run.
 	 * Always executed in a new connection, used for execution of queries during ontologies and reference datasets loading only.
@@ -72,7 +91,7 @@ public class SparqlQueryExecuteManager {
 	 */
 	public void executeSystemQuery(SAXResultTransformer transformer, String queryString, QueryType queryType) throws IOException {
 		
-		SparqlQueryConnection sparqlQuery = new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, queryString, queryType, systemQueryTimeoutMilliseconds, verbose);		
+		SparqlQueryConnection sparqlQuery = new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, RdfUtils.CONTENT_TYPE_RDFXML, queryString, queryType, systemQueryTimeoutMilliseconds, verbose);		
 		InputStream is = sparqlQuery.execute();
 		if (is == null) {
 			System.out.println("Unable to execute query : \n" + queryString);
@@ -96,31 +115,6 @@ public class SparqlQueryExecuteManager {
 		return bytesCount;
 	}
 */	
-	
-/*	
-	//Non UTF-8 compatible !!!
-	private String readResultString(InputStream is) throws IOException {
-		int length = 0;
-		byte[] buffer = new byte[10000];
-		StringBuilder sb = new StringBuilder();
-		while((length = is.read(buffer)) != -1) {
-			String s = new String(buffer, 0, length);
-			sb.append(s);
-		}
-		return sb.toString();		
-	}
-*/
-	
-	private String readResultString2(InputStream is) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-		StringBuilder sb = new StringBuilder();
-	    String str;
-	    while (null != (str = br.readLine())) {
-	        sb.append(str).append("\r\n"); 
-	    }
-	    br.close();	    
-	    return sb.toString();
-	}
 	
 	public String getEndpointUrl() {
 		return this.endpointUrl;

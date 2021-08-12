@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #path to properties file
-pathToPropertiesFile=../../../test.properties
+pathToPropertiesFile="../../../$1"
 
 #extract the endpoint URL for the CURL command
 SPQRLEndpointURL=$(grep "endpointUpdateURL=" "$pathToPropertiesFile" | cut -d = -f 2)

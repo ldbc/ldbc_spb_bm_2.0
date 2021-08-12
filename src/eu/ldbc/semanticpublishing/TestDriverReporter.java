@@ -1,11 +1,16 @@
 package eu.ldbc.semanticpublishing;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import eu.ldbc.semanticpublishing.agents.AbstractAsynchronousAgent;
+import eu.ldbc.semanticpublishing.refdataset.DataManager;
 import eu.ldbc.semanticpublishing.statistics.Statistics;
 
 /**
@@ -28,15 +33,17 @@ public class TestDriverReporter extends Thread {
 	private int currentRateReportPeriodSeconds;
 	private long runPeriodSeconds;
 	private int minUpdateRatePassesCount;
-	private int aggregationAgentsCount;
-	private int editorialAgentsCount;
+	private final List<AbstractAsynchronousAgent> aggregationAgentsList;
+	private final List<AbstractAsynchronousAgent> editorialAgentsList;
 	private int initializedCount;
 	private long totalOperationsFromPrevReport;
 	private long totalQueriesFromPrevReport;
+	private Calendar calendar;
+	private int reportIntervalSeconds;
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(TestDriverReporter.class.getName());
 	
-	public TestDriverReporter(AtomicLong totalQueryExecutions, AtomicLong totalCompletedQueryMixRuns, AtomicBoolean benchmarkState, AtomicBoolean keepAlive, AtomicBoolean benchmarkResultIsValid, double updateQueryRateFirstReachTimePercent, double minUpdateQueriesRateThresholdOps, double maxUpdateRateThresholdOps, AtomicBoolean maxUpdateRateReached, int editorialAgentsCount, int aggregationAgentsCount, long runPeriodSeconds, /*long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, */String queryPoolsDefinitons, int reportPeriodSeconds , boolean verbose) {
+	public TestDriverReporter(AtomicLong totalQueryExecutions, AtomicLong totalCompletedQueryMixRuns, AtomicBoolean benchmarkState, AtomicBoolean keepAlive, AtomicBoolean benchmarkResultIsValid, double updateQueryRateFirstReachTimePercent, double minUpdateQueriesRateThresholdOps, double maxUpdateRateThresholdOps, AtomicBoolean maxUpdateRateReached, List<AbstractAsynchronousAgent> editorialAgentsList, List<AbstractAsynchronousAgent> aggregationAgentsList, long runPeriodSeconds, /*long benchmarkByQueryMixRuns, long benchmarkByQueryRuns, */String queryPoolsDefinitons, int reportPeriodSeconds, int reportIntervalSeconds, boolean verbose) {
 		this.totalQueryExecutions = totalQueryExecutions;
 		this.totalCompletedQueryMixRuns = totalCompletedQueryMixRuns;
 		this.benchmarkState = benchmarkState;
@@ -46,8 +53,8 @@ public class TestDriverReporter extends Thread {
 		this.seconds = 0;
 		this.runPeriodSeconds = runPeriodSeconds;
 		this.verbose = verbose;
-		this.aggregationAgentsCount = aggregationAgentsCount;
-		this.editorialAgentsCount = editorialAgentsCount;
+		this.editorialAgentsList = editorialAgentsList;
+		this.aggregationAgentsList = aggregationAgentsList;
 		this.minUpdateRateThresholdOps = minUpdateQueriesRateThresholdOps;
 		this.minUpdateRatePassesCount = 0;
 		this.maxUpdateRateThresholdOps = maxUpdateRateThresholdOps;
@@ -57,6 +64,7 @@ public class TestDriverReporter extends Thread {
 		this.totalOperationsFromPrevReport = 0;
 		this.totalQueriesFromPrevReport = 0;
 		this.currentRateReportPeriodSeconds = reportPeriodSeconds;
+		this.reportIntervalSeconds = reportIntervalSeconds;
 	}
 	
 	/* (non-Javadoc)
@@ -69,8 +77,9 @@ public class TestDriverReporter extends Thread {
 		try {
 			long timeCorreciton = 0;
 			long startTime = System.currentTimeMillis();
+			showDatasetInfoHeader();
 			while (benchmarkState.get() || keepAlive.get()) {
-				Thread.sleep(Math.abs(1000 - timeCorreciton));
+				Thread.sleep(Math.abs(reportIntervalSeconds * 1000 - timeCorreciton));
 				seconds = (long) ((System.currentTimeMillis() - startTime) / 1000);
 				timeCorreciton = collectAndShowResults(/*(benchmarkByQueryRuns == 0) && (benchmarkByQueryMixRuns == 0)*/);
 			}
@@ -78,6 +87,24 @@ public class TestDriverReporter extends Thread {
 			System.out.println("BenchmarkProcessObserver :: encountered a problem : " + t.getMessage());
 			t.printStackTrace();
 		}
+	}
+	
+	private void showDatasetInfoHeader() {
+		StringBuilder sb = new StringBuilder();
+		
+		calendar = Calendar.getInstance();
+		sb.append("\nLDBC Semantic Publishing Benchmark");
+		sb.append("\nStarted: ");
+		sb.append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendar.getTime()));
+		sb.append("\n");
+		sb.append("Dataset Info: ");
+		sb.append(String.format("\tCreative Works\t: %,d\n", DataManager.creativeWorksNextId.get()));
+		sb.append(String.format("\tReference Entities\t: %,d\n", DataManager.regularEntitiesList.size()));
+		sb.append(String.format("\tGeo Locations\t\t: %,d\n", DataManager.locationsIdsList.size() + DataManager.geonamesIdsList.size()));
+		sb.append("\n");
+		sb.append("Benchmark Results:\n");
+
+		LOGGER.info(sb.toString());
 	}
 	
 	/**
@@ -101,12 +128,24 @@ public class TestDriverReporter extends Thread {
 		sb.append("\n");
 		
 		sb.append("\nSeconds : " + seconds);
+		
+		calendar = Calendar.getInstance();
+		sb.append("\n");
+		sb.append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(calendar.getTime())); 
+		
 		if (!queryPoolsDefinitions.isEmpty()) {
 			sb.append(" (completed query mixes : " + totalCompletedQueryMixRuns.get() + ")");
 		} else {
 			sb.append(" (completed query runs : " + totalQueryExecutions.get() + ")");
 		}
 
+		//report each alive thread
+		int editorialAgentsCount = 0;
+		for (AbstractAsynchronousAgent a : editorialAgentsList) {
+			if (a.getState() != Thread.State.TERMINATED) {
+				editorialAgentsCount++;
+			}
+		}		
 		sb.append("\n");
 		sb.append("\tEditorial:\n");
 		sb.append(String.format("\t\t%s agents\n\n", editorialAgentsCount));
@@ -143,6 +182,13 @@ public class TestDriverReporter extends Thread {
 		
 		sb.append(String.format("\t\t%.4f average operations per second\n", averageOperationsPerSecond));
 
+		//report each alive thread
+		int aggregationAgentsCount = 0;
+		for (AbstractAsynchronousAgent a : aggregationAgentsList) {
+			if (a.getState() != Thread.State.TERMINATED) {
+				aggregationAgentsCount++;
+			}
+		}		
 		sb.append("\n");
 		sb.append("\tAggregation:\n");
 		sb.append(String.format("\t\t%s agents\n\n", aggregationAgentsCount));
@@ -156,7 +202,7 @@ public class TestDriverReporter extends Thread {
 																											   				  Statistics.aggregateQueriesArray[i].getFailuresCount()));
 			}
 			
-			sb.append(String.format("\n\t\t%d total retrieval queries (%d timed-out)\n", totalAggregateOpsCount, failedTotalAggregateOpsCount));
+			sb.append(String.format("\n\t\t%d total retrieval queries (%d errors)\n", totalAggregateOpsCount, failedTotalAggregateOpsCount));
 		} else {
 			for (int i = 0; i < Statistics.AGGREGATE_QUERIES_COUNT; i++) {
 				sb.append(String.format("\t\t%-5d Q%-2d  queries\n", Statistics.aggregateQueriesArray[i].getRunsCount(), (i + 1)));
@@ -164,27 +210,29 @@ public class TestDriverReporter extends Thread {
 			
 			sb.append(String.format("\n\t\t%d total retrieval queries\n", totalAggregateOpsCount));
 		}
-		
-		//considering an average time correction caused by result parsing for each aggregate query by each of aggregate agents, that time is subtracted when calculating the total average		
-		double averageQueriesPerSecond = 0.0;
-		
-		if (aggregationAgentsCount > 0) {
-			averageQueriesPerSecond = (double)totalAggregateOpsCount / ((double)seconds - (double)(Statistics.timeCorrectionsMS.get() / aggregationAgentsCount / 1000/*ms*/));
-		}
-		
+			
 		if (currentRateReportPeriodSeconds > 0 && seconds % currentRateReportPeriodSeconds == 0) {
-			double currentQueriesRate = (double)((totalAggregateOpsCount) - totalQueriesFromPrevReport) / currentRateReportPeriodSeconds;
+			double currentQueriesRate = (double)((totalAggregateOpsCount) - totalQueriesFromPrevReport) / (double)currentRateReportPeriodSeconds;
 			sb.append(String.format("\t\t%.4f current queries per %d second\n", currentQueriesRate, currentRateReportPeriodSeconds));
 		}
 		
 		//remember stats for previous second
 		totalQueriesFromPrevReport = totalAggregateOpsCount;
 		
-		if ((double)(Statistics.timeCorrectionsMS.get() / 1000) >= (double)seconds) {
-			averageQueriesPerSecond = (double)(totalAggregateOpsCount / seconds) / (currentRateReportPeriodSeconds > 0 ? currentRateReportPeriodSeconds : 1);			
+		//considering an average time correction caused by result parsing for each aggregate query by each of aggregate agents, that time is subtracted when calculating the total average		
+		double averageQueriesPerSecond = 0.0;
+		
+		if (aggregationAgentsCount > 0) {
+			averageQueriesPerSecond = (double)totalAggregateOpsCount / ((double)seconds - (double)(Statistics.timeCorrectionsMS.get() / (double)aggregationAgentsCount / 1000.0 /*ms*/));
+			
+			if ((double)(Statistics.timeCorrectionsMS.get() / 1000) >= (double)seconds) {
+				LOGGER.warn("Time correction interval exceeds total run-time: " + seconds);
+				averageQueriesPerSecond = (double)(totalAggregateOpsCount / (double)seconds) / (currentRateReportPeriodSeconds > 0 ? (double)currentRateReportPeriodSeconds : 1.0);			
+			}			
 		}
+		
 		sb.append(String.format("\t\t%.4f average queries per second\n", averageQueriesPerSecond));		
-				
+
 		//in case using minUpdateRateThresholdOps option, display a message that benchmark is not 
 		if (minUpdateRateThresholdOps > 0.0) {
 			String message = "";

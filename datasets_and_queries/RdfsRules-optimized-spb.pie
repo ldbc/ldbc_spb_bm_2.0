@@ -14,7 +14,7 @@ Prefices
 	onto : http://www.ontotext.com/
 	xsd : http://www.w3.org/2001/XMLSchema#
 	qb: http://purl.org/linked-data/cube#
-	psys: <http://proton.semanticweb.org/protonsys#>
+	psys: http://proton.semanticweb.org/protonsys#
 }
 
 Axioms

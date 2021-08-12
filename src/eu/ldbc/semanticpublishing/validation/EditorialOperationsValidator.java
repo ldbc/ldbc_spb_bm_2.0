@@ -26,6 +26,7 @@ import eu.ldbc.semanticpublishing.templates.validation.ValidateInsertTemplate;
 import eu.ldbc.semanticpublishing.templates.validation.ValidateUpdateTemplate;
 import eu.ldbc.semanticpublishing.util.FileUtils;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
+import eu.ldbc.semanticpublishing.util.RdfUtils;
 
 public class EditorialOperationsValidator extends Validator {
 	private SparqlQueryExecuteManager queryExecuteManager;
@@ -46,7 +47,7 @@ public class EditorialOperationsValidator extends Validator {
 	
 	public EditorialOperationsValidator(SparqlQueryExecuteManager queryExecuteManager, RandomUtil ru, HashMap<String, String> editorialQueryTemplates, HashMap<String, String> validationQueryTemplates, Configuration configuration, Definitions definitions) {
 		this.queryExecuteManager = queryExecuteManager;
-		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_TURTLE, queryExecuteManager.getTimeoutMilliseconds(), true);
 		this.ru = ru;
 		this.editorialQueryTemplates = editorialQueryTemplates;
 		this.validationQueryTemplates = validationQueryTemplates;
@@ -132,7 +133,7 @@ public class EditorialOperationsValidator extends Validator {
 		queryName = actionQuery.getTemplateFileName();
 		queryString = actionQuery.compileMustacheTemplate();		
 
-		queryResult = queryExecuteManager.executeQuery(connection, queryName, queryString, queryType, false, closeConnection);
+		queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, closeConnection);
 
 		BRIEF_LOGGER.info(String.format("Query [%s] executed, iteration %d", queryName, iteration));
 		LOGGER.info("\n*** Query [" + queryName + "], iteration " + iteration + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");		
@@ -163,7 +164,7 @@ public class EditorialOperationsValidator extends Validator {
 			queryName = validateQuery.getTemplateFileName();
 			queryString = validateQuery.compileMustacheTemplate();
 
-			queryResult = queryExecuteManager.executeQuery(connection, queryName, queryString, queryType, false, closeConnection);
+			queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, closeConnection);
 
 			BRIEF_LOGGER.info(String.format("Query [%s] executed, iteration %d", queryName, iteration));
 			LOGGER.info("\n*** Query [" + queryName + "], iteration " + iteration + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
@@ -209,9 +210,10 @@ public class EditorialOperationsValidator extends Validator {
 	
 	private String buildModifiedString(String inputString, int iteration) {
 		StringBuilder sb = new StringBuilder();
-		//insert first quote 
-		String firstPart = inputString.substring(0, 1);
-		String secondPart = inputString.substring(1);
+		// New implementation of method randomWordFromDictionary of RandomUtil class
+		// literals of type <http://www.w3.org/2001/XMLSchema#string> are in ''' instead of quotes.
+		String firstPart = inputString.substring(0, 3);
+		String secondPart = inputString.substring(3);
 		sb.append(firstPart);
 		sb.append("_updated_" + iteration);
 		sb.append(secondPart);

@@ -68,6 +68,8 @@ public class Configuration {
 	public static final String ENABLE_COMPRESSION_ON_GENERATED_DATA = "enableCompressionOnGeneratedData";
 	public static final String INTERRUPT_SIGNAL_LOCATION = "interruptSignalLocation";
 	public static final String CURRENT_RATE_REPORT_PERIOD_SECONDS = "currentRateReportPeriodSeconds";
+	public static final String SAVE_DETAILED_QUERY_LOGS = "saveDetailedQueryLogs";
+	public static final String REPORT_INTERVAL_SECONDS = "reportIntervalSeconds";
 	
 	/**
 	 * Initialise and set default values for parameters that make sense.
@@ -122,6 +124,9 @@ public class Configuration {
 		properties.setProperty(INTERRUPT_SIGNAL_LOCATION, "");
 		properties.setProperty(BENCHMARK_BY_QUERY_MIX_RUNS, "0");
 		properties.setProperty(CURRENT_RATE_REPORT_PERIOD_SECONDS, "0");
+		properties.setProperty(SAVE_DETAILED_QUERY_LOGS, "true");
+		
+		properties.setProperty(REPORT_INTERVAL_SECONDS, "1");
 	}
 	
 	/**

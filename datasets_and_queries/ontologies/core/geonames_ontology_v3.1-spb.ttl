@@ -10,6 +10,8 @@
 @prefix mrel: <http://id.loc.gov/vocabulary/relators/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 
+_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .
+
 <http://www.geonames.org/ontology> a owl:Ontology ;
 	dcterms:title "The Geonames ontology"@en ;
 	dcterms:description "The Geonames ontologies provides elements of description for geographical features, in particular those defined in the geonames.org data base"@en ;
@@ -4372,4 +4374,3 @@ gn:V a gn:Class ;
 	skos:prefLabel "homestead"@en ;
 	skos:definition "a residence, owner's or manager's, on a sheep or cattle station, woolshed, outcamp, or Aboriginal outstation, specific to Australia and New Zealand" .
 
-_:b1 <http://www.ontotext.com/owlim/system#schemaTransaction> "" .

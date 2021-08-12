@@ -8,13 +8,21 @@
 	<property name="dir.data" location="data"/>
 	<property name="dir.datasets.and.queries" location="datasets_and_queries"/>
 	<property name="dir.lib" location="lib/"/>
+	<property name="dir.lib.jfreechart" location="${dir.lib}/jFreeChart"/>
 	<property name="jar.file.name" value="semantic_publishing_benchmark"/>
+	<property name="jar.charttool.file.name" value="semantic_publishing_benchmark_chart_tool"/>
 	<property name="ref.knowledge.and.queries.archive.name" value="${jar.file.name}_reference_knowledge_data"/>
 	<property name="validation.data.archive.name" value="validation_data"/>
 	<property name="validation.data.info.archive.name" value="validation_data_info"/>	
 	
 	<path id="classpath-lib">
     <fileset dir="${dir.lib}">
+      <include name="*.jar"/>
+    </fileset>
+  	</path>
+	
+	<path id="classpath-jfreechart-lib">
+    <fileset dir="${dir.lib.jfreechart}">
       <include name="*.jar"/>
     </fileset>
   	</path>
@@ -34,6 +42,7 @@
 			   target="1.6"
 			   includeantruntime="false">
 			<classpath refid="classpath-lib"/>
+			<classpath refid="classpath-jfreechart-lib"/>			
 		</javac>
 	</target>
 	
@@ -176,6 +185,16 @@
 			<fileset file="definitions.properties" />
 		</copy>
 	</target>
+
+	<target name="build-charttool-jar">
+		<jar destfile="${dir.dist}\${jar.charttool.file.name}.jar" basedir="${dir.bin}" duplicate="preserve">
+			<manifest>
+				<attribute name="Main-Class" value="eu.ldbc.semanticpublishing.tools.PerformanceChartTool"/>
+				<attribute name="Benchmark-Release-Version" value="${version.number.major}.${version.number.minor}.${revision.number}"/>
+			</manifest>
+			<zipgroupfileset dir="${dir.lib.jfreechart}" includes="*.jar"/>
+		</jar>
+	</target>
 	
 	<target name="build-jar">
 		<jar destfile="${dir.dist}\${jar.file.name}-${querymix}-${customization}.jar" basedir="${dir.bin}" duplicate="preserve">
@@ -207,6 +226,7 @@
             <param name="querymix" value="basic"/>
             <param name="customization" value="standard"/>
         </antcall>
+		<antcall target="build-charttool-jar"/>
 	</target>
 
 	<target name="build-basic-querymix-graphdb" depends="build.release.version">
@@ -219,6 +239,7 @@
             <param name="querymix" value="basic"/>
             <param name="customization" value="graphdb"/>
         </antcall>
+		<antcall target="build-charttool-jar"/>
 	</target>	
 	
 	<target name="build-basic-querymix-virtuoso" depends="build.release.version">
@@ -231,6 +252,7 @@
             <param name="querymix" value="basic"/>
             <param name="customization" value="virtuoso"/>
         </antcall>
+		<antcall target="build-charttool-jar"/>
 	</target>	
 	
 	<target name="build-advanced-querymix" depends="build.release.version">
@@ -242,7 +264,8 @@
 	    <antcall target="build-jar">
             <param name="querymix" value="advanced"/>
             <param name="customization" value="standard"/>
-        </antcall>	
+        </antcall>
+		<antcall target="build-charttool-jar"/>
 	</target>
 
 	<target name="build-advanced-querymix-graphdb" depends="build.release.version">
@@ -254,7 +277,8 @@
 	    <antcall target="build-jar">
             <param name="querymix" value="advanced"/>
             <param name="customization" value="graphdb"/>
-        </antcall>	
+        </antcall>
+		<antcall target="build-charttool-jar"/>
 	</target>
 
 	
@@ -267,7 +291,8 @@
 	    <antcall target="build-jar">
             <param name="querymix" value="advanced"/>
             <param name="customization" value="virtuoso"/>
-        </antcall>			
+        </antcall>
+		<antcall target="build-charttool-jar"/>
 	</target>	
 
 	<!-- Zip reference knowledge (ontologies and reference datasets) -->

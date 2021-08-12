@@ -1,11 +1,11 @@
 package eu.ldbc.semanticpublishing.agents;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,15 +14,19 @@ import eu.ldbc.semanticpublishing.TestDriver;
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection.QueryType;
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection;
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryExecuteManager;
+import eu.ldbc.semanticpublishing.properties.Configuration;
 import eu.ldbc.semanticpublishing.properties.Definitions;
 import eu.ldbc.semanticpublishing.substitutionparameters.SubstitutionQueryParametersManager;
 import eu.ldbc.semanticpublishing.resultanalyzers.sax.SPARQLResultStatementsCounter;
-import eu.ldbc.semanticpublishing.resultanalyzers.sesame.TurtleResultStatementsCounter;
+//import eu.ldbc.semanticpublishing.resultanalyzers.sesame.TurtleResultStatementsCounter;
+import eu.ldbc.semanticpublishing.resultanalyzers.sesame.RDFXMLResultStatementsCounter;
 import eu.ldbc.semanticpublishing.statistics.Statistics;
 import eu.ldbc.semanticpublishing.statistics.querypool.Pool;
 import eu.ldbc.semanticpublishing.templates.MustacheTemplate;
 import eu.ldbc.semanticpublishing.templates.aggregation.*;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
+import eu.ldbc.semanticpublishing.util.RdfUtils;
+import eu.ldbc.semanticpublishing.util.StringUtil;
 
 /**
  * A class that represents an aggregation agent. It executes aggregation queries 
@@ -40,27 +44,31 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 	private final long benchmarkByQueryMixRuns;
 	private SparqlQueryConnection connection;
 	private Definitions definitions;
-	private SubstitutionQueryParametersManager substitutionQueryParametersMngr;
-	private TurtleResultStatementsCounter turtleResultStatementsCounter;
+	private SubstitutionQueryParametersManager substitutionQueryParametersMngr;	
+//	private TurtleResultStatementsCounter turtleResultStatementsCounter;
+	private RDFXMLResultStatementsCounter rdfXmlResultStatementsCounter;
 	private SPARQLResultStatementsCounter sparqlResultStatementsCounter;
+	private final boolean saveDetailedQueryLogs;
 	
-	private final static Logger LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
+	private final static Logger DETAILED_LOGGER = LoggerFactory.getLogger(AggregationAgent.class.getName());
 	private final static Logger BRIEF_LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
 //	private final static int MAX_DRILL_DOWN_ITERATIONS = 5;
 	
-	public AggregationAgent(AtomicBoolean benchmarkingState, SparqlQueryExecuteManager queryExecuteManager, RandomUtil ru, AtomicBoolean runFlag, HashMap<String, String> queryTamplates, Definitions definitions, SubstitutionQueryParametersManager substitutionQueryParametersMngr, long benchmarkByQueryMixRuns) {
+	public AggregationAgent(AtomicBoolean benchmarkingState, SparqlQueryExecuteManager queryExecuteManager, RandomUtil ru, AtomicBoolean runFlag, HashMap<String, String> queryTamplates, Configuration configuration, Definitions definitions, SubstitutionQueryParametersManager substitutionQueryParametersMngr, long benchmarkByQueryMixRuns) {
 		super(runFlag);
 		this.queryExecuteManager = queryExecuteManager;
 		this.ru = ru;
 		this.benchmarkingState = benchmarkingState;
 		this.queryTemplates = queryTamplates;
-		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
+		this.connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
 		this.definitions = definitions;
 		this.substitutionQueryParametersMngr = substitutionQueryParametersMngr;
-		this.turtleResultStatementsCounter = new TurtleResultStatementsCounter();
+//		this.turtleResultStatementsCounter = new TurtleResultStatementsCounter();
+		this.rdfXmlResultStatementsCounter = new RDFXMLResultStatementsCounter();
 		this.sparqlResultStatementsCounter = new SPARQLResultStatementsCounter();
 		this.queryMixPool = new Pool(definitions.getString(Definitions.QUERY_POOLS), Statistics.totalStartedQueryMixRuns, Statistics.totalCompletedQueryMixRuns);
 		this.benchmarkByQueryMixRuns = benchmarkByQueryMixRuns;
+		this.saveDetailedQueryLogs = configuration.getBoolean(Configuration.SAVE_DETAILED_QUERY_LOGS);
 	}
 	
 	@Override
@@ -85,7 +93,8 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		long queryId = 0;
 		MustacheTemplate aggregateQuery = null;
 		String queryString = "";
-		String queryResult = "";
+		String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+		InputStream inputStreamResult = null;
 
 		try {
 //			boolean drillDownQuery = false;
@@ -149,21 +158,34 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 			
 			long executionTimeMs = System.currentTimeMillis();
 			
-			queryResult = queryExecuteManager.executeQuery(connection, aggregateQuery.getTemplateFileName(), queryString, aggregateQuery.getTemplateQueryType(), true, false);			
+			inputStreamResult = queryExecuteManager.executeQueryWithInputStreamResult(connection, aggregateQuery.getTemplateFileName(), queryString, aggregateQuery.getTemplateQueryType(), true, false);			
 			
-			updateQueryStatistics(true, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, queryResult, queryId, System.currentTimeMillis() - executionTimeMs);
+			updateQueryStatistics(true, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, inputStreamResult, saveDetailedQueryLogs, queryId, System.currentTimeMillis() - executionTimeMs, timeStamp);
 
-		} catch (IOException ioe) {
-			String msg = "Warning : AggregationAgent : IOException caught : " + ioe.getMessage() + ", attempting a new connection" + "\n" + "\tfor query : \n" + queryString;
+		} catch (Throwable t) {
+			String msg = "WARNING : AggregationAgent [" + Thread.currentThread().getName() +"] reports: " + t.getMessage() + "\n" + "\tfor query : \n" + queryString + "\n...closing current connection and creating a new one..." + "\n----------------------------------------------------------------------------------------------\n";
 			
 			System.out.println(msg);
 			
-			LOGGER.warn(msg);
+			DETAILED_LOGGER.warn(msg);
 			
-			updateQueryStatistics(false, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, queryResult, queryId, 0);
+			try {
+                
+                updateQueryStatistics(false, startedDuringBenchmarkPhase, aggregateQuery.getTemplateQueryType(), aggregateQuery.getTemplateFileName(), queryString, inputStreamResult, saveDetailedQueryLogs, queryId, 0, timeStamp);
+
+				msg = StringUtil.iostreamToString(inputStreamResult);
+                               
+                System.out.println("===============================");
+                System.out.println("Dump of InputStream:");
+                System.out.println(msg);
+                System.out.println("===============================");					
+
+			} catch (Throwable t1) {
+				t1.printStackTrace();
+			}
 			
-			connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), queryExecuteManager.getTimeoutMilliseconds(), true);
-			
+			connection.disconnect();
+			connection = new SparqlQueryConnection(queryExecuteManager.getEndpointUrl(), queryExecuteManager.getEndpointUpdateUrl(), RdfUtils.CONTENT_TYPE_RDFXML, queryExecuteManager.getTimeoutMilliseconds(), true);
 		}
 
 		if (startedDuringBenchmarkPhase) {
@@ -178,7 +200,7 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		connection.disconnect();
 	}
 	
-	private void updateQueryStatistics(boolean reportSuccess, boolean startedDuringBenchmarkPhase, QueryType queryType, String queryName, String queryString, String queryResult, long id, long queryExecutionTimeMs) {
+	private void updateQueryStatistics(boolean reportSuccess, boolean startedDuringBenchmarkPhase, QueryType queryType, String queryName, String queryString, InputStream inputStreamQueryResult, boolean useStringQueryResultOrInputStreamResult, long id, long queryExecutionTimeMs, String timeStamp) {
 		//skip update of statistics for conformance queries
 		if (queryName.startsWith("#")) {
 			return;
@@ -189,54 +211,57 @@ public class AggregationAgent extends AbstractAsynchronousAgent {
 		
 		//count results (statements)
 		long resultsCount = 0;
-		InputStream iStream = null;
+		
+		String queryResultString = "";
+		
+		try {
+			if (useStringQueryResultOrInputStreamResult) {
+				//might increase memory footprint of the driver, as each query result will be stored into a String
+				queryResultString = StringUtil.iostreamToString(inputStreamQueryResult);
 				
-		try {			
-			if ((!queryResult.trim().isEmpty())) {			
-            iStream = new ByteArrayInputStream(queryResult.getBytes("UTF-8"));
-		        if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
-		          resultsCount = turtleResultStatementsCounter.getStatementsCount(iStream);
-		          Statistics.timeCorrectionsMS.addAndGet(turtleResultStatementsCounter.getParseTime());
-		        } else {
-		          resultsCount = sparqlResultStatementsCounter.getStatementsCount(iStream);
-		          Statistics.timeCorrectionsMS.addAndGet(sparqlResultStatementsCounter.getParseTime());
-		        }
-			}
-			
-			if (queryResult.length() >= 0 && benchmarkingState.get()) {
-				if (startedDuringBenchmarkPhase) {
-					if (reportSuccess) {
-						Statistics.aggregateQueriesArray[queryNumber - 1].reportSuccess(queryExecutionTimeMs);
-						Statistics.totalAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
-						logBrief(queryNameId, queryType, queryResult, "", queryExecutionTimeMs, resultsCount);
-					} else {				
-						Statistics.aggregateQueriesArray[queryNumber - 1].reportFailure();
-						Statistics.totalAggregateQueryStatistics.reportFailure();
-						logBrief(queryNameId, queryType, queryResult, ", query error!", queryExecutionTimeMs, resultsCount);
-					}
+				//reconvert the queryStringResult to an InputStream again, as the first one will be exhausted and not usable any more
+				inputStreamQueryResult = StringUtil.stringToIostream(queryResultString);				
+			}		
+            
+            if (reportSuccess) {
+                if (queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
+                  resultsCount = rdfXmlResultStatementsCounter.getStatementsCount(inputStreamQueryResult);
+                  Statistics.timeCorrectionsMS.addAndGet(rdfXmlResultStatementsCounter.getParseTime());
+                } else {
+                  resultsCount = sparqlResultStatementsCounter.getStatementsCount(inputStreamQueryResult);
+                  Statistics.timeCorrectionsMS.addAndGet(sparqlResultStatementsCounter.getParseTime());
+                }	
+            }
+	        
+			if (startedDuringBenchmarkPhase) {
+				if (reportSuccess) {
+					Statistics.aggregateQueriesArray[queryNumber - 1].reportSuccess(queryExecutionTimeMs);
+					Statistics.totalAggregateQueryStatistics.reportSuccess(queryExecutionTimeMs);
+					logBrief(timeStamp, queryNameId, queryType, "", queryExecutionTimeMs, resultsCount);
+				} else {				
+					Statistics.aggregateQueriesArray[queryNumber - 1].reportFailure();
+					Statistics.totalAggregateQueryStatistics.reportFailure();
+					logBrief(timeStamp, queryNameId, queryType, ", query error!", queryExecutionTimeMs, resultsCount);
+				}        
+			} else {
+				if (queryExecutionTimeMs > 0) {
+					DETAILED_LOGGER.info("\tQuery : " + queryName + ", time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), " + "queryResult.length : " + queryResultString.length() + ", results : " + resultsCount + ", has been started during the warmup phase, it will be ignored in the benchmark result!");
+					logBrief(timeStamp, queryNameId, queryType, ", has been started during the warmup phase, it will be ignored in the benchmark result!", queryExecutionTimeMs, resultsCount);
 				} else {
-					if (queryExecutionTimeMs > 0) {
-						LOGGER.info("\tQuery : " + queryName + ", time : " + queryExecutionTimeMs + " ms, queryResult.length : " + queryResult.length() + ", results : " + resultsCount + ", has been started during the warmup phase, it will be ignored in the benchmark result!");
-						logBrief(queryNameId, queryType, queryResult, ", has been started during the warmup phase, it will be ignored in the benchmark result!", queryExecutionTimeMs, resultsCount);
-					} else {
-						LOGGER.warn("\tQuery : " + queryName + ", time : " + queryExecutionTimeMs + " ms, queryResult.length : " + queryResult.length() + ", results : " + resultsCount + ", has failed to execute... possibly query timeout has been reached!");					
-						logBrief(queryNameId, queryType, queryResult, ", has failed to execute... possibly query timeout has been reached!", queryExecutionTimeMs, resultsCount);
-					}
+					DETAILED_LOGGER.warn("\tQuery : " + queryName + ", time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), " + "queryResult.length : " + queryResultString.length() + ", results : " + resultsCount + ", has failed to execute... possibly query timeout has been reached!");
+					logBrief(timeStamp, queryNameId, queryType, ", has failed to execute... possibly query timeout has been reached!", queryExecutionTimeMs, resultsCount);
 				}
 			}
 			
-			LOGGER.info("\n*** Query [" + queryNameId + "], execution time : " + queryExecutionTimeMs + " ms, results : " + resultsCount + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");
-		} catch (UnsupportedEncodingException e) {
+			DETAILED_LOGGER.info("\n*** Query [" + queryNameId + "], execution time : " + timeStamp + " (" + queryExecutionTimeMs + " ms), results : " + resultsCount + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryNameId + "]" + " : \n" + (queryResultString.isEmpty() ? "Query results are not saved, to enable, set 'saveDetailedQueryLogs=true' in test.properties file." : ("Length : " + queryResultString.length() + "\n" + queryResultString)) + "\n\n");
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	private void logBrief(String queryId, QueryType queryType, String queryResult, String appendString, long queryExecutionTimeMs, long resultStatementsCount) {
+	private void logBrief(String timeStamp, String queryId, QueryType queryType, String appendString, long queryExecutionTimeMs, long resultStatementsCount) {
 		StringBuilder reportSb = new StringBuilder();
-		reportSb.append(String.format("\t[%s, %s] Query executed, execution time : %d ms, results : %d %s", queryId, Thread.currentThread().getName(), queryExecutionTimeMs, resultStatementsCount, appendString));
-//		if (queryType == QueryType.SELECT || queryType == QueryType.CONSTRUCT || queryType == QueryType.DESCRIBE) {
-//			reportSb.append(", characters returned : " + queryResult.length());
-//		}
+		reportSb.append(String.format("\t%s:\t[%s, %s] Query executed, execution time : %d ms, results : %d %s", timeStamp, queryId, Thread.currentThread().getName(), queryExecutionTimeMs, resultStatementsCount, appendString));
 		
 		BRIEF_LOGGER.info(reportSb.toString());		
 	}

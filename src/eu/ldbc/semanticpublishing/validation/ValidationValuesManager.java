@@ -6,7 +6,6 @@ import java.io.IOException;
 import eu.ldbc.semanticpublishing.refdataset.DataManager;
 import eu.ldbc.semanticpublishing.statistics.Statistics;
 import eu.ldbc.semanticpublishing.util.FileUtils;
-import eu.ldbc.semanticpublishing.util.StringUtil;
 
 public class ValidationValuesManager {
 	private static final ValidationValuesModel[] validationValuesArray;
@@ -23,7 +22,7 @@ public class ValidationValuesManager {
 	
 	public void initValidationValues(String location, boolean suppressErrorMessages) throws IOException, InterruptedException {
 		
-		String datasetInfoFile = String.format("%s%s%s", StringUtil.normalizePath(location), File.separator, "dataset.info");
+		String datasetInfoFile = String.format("%s%s%s", FileUtils.normalizePath(location), File.separator, "dataset.info");
 		if (FileUtils.fileExists(datasetInfoFile)) {			
 			DataManager.initDatasetInfo(datasetInfoFile, false);
 			System.out.println("\tInitialized info about dataset for validation...");
@@ -36,7 +35,7 @@ public class ValidationValuesManager {
 	
 	private String buildFilePath(String location, String fileName) {
 		StringBuilder sb = new StringBuilder();
-		sb.append(StringUtil.normalizePath(location));
+		sb.append(FileUtils.normalizePath(location));
 		sb.append(File.separator);
 		sb.append(fileName);
 		return sb.toString();

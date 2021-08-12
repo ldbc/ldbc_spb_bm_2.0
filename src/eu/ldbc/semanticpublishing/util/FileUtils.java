@@ -129,6 +129,19 @@ public class FileUtils {
 		return (f.exists() && !f.isDirectory());
 	}
 	
+	/**
+	 * Removes last folder separator if found. e.g. : /a1/b1/ -> /a1/b1
+	 * 
+	 * @param path
+	 * @return result path, see example
+	 */
+	public static String normalizePath(String path) {
+		if (path.endsWith(File.separator)) {
+			return path.substring(0, path.length() - 2);
+		}
+		return path;
+	}
+	
 	public static boolean isWindowsOS() {
 		String osName = System.getProperty("os.name");
 		return osName.toLowerCase().contains("windows");
