@@ -1,5 +1,8 @@
 package eu.ldbc.semanticpublishing.util;
 
+import eu.ldbc.semanticpublishing.TestDriver;
+import org.eclipse.rdf4j.rio.RDFFormat;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -60,5 +63,18 @@ public class StringUtil {
 		}
 		return sb.toString();		
 	}
-	*/	
+	*/
+
+	/**
+	 *  Generates triple string representation for the CreativeWork,
+	 *  to which all other statements are appended as metadata
+	 * @param URI
+	 * @return
+	 */
+	public static String generateEmbeddedTripleFromURI(String URI) {
+		if (TestDriver.generatedCreativeWorksFormat == RDFFormat.TRIGSTAR) {
+			return "<<" + URI + " <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bbc.co.uk/ontologies/creativework/CreativeWork>>>";
+		}
+		return URI;
+	}
 }

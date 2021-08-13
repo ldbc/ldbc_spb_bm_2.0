@@ -27,7 +27,7 @@ public class Validator {
 		String escapedString = StringEscapeUtils.escapeJava(result).replace("\\\\", "\\");
 		
 		if (resultIsFromAskQuery) {
-			if (!result.toLowerCase().contains(">false<") && !result.toLowerCase().contains(">no<")) {			
+			if (!result.toLowerCase().contains("false") && !result.toLowerCase().contains("no")) {
 				totalErrors++;
 			}
 		} else {		

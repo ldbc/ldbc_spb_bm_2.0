@@ -13,8 +13,10 @@
 	<property name="jar.charttool.file.name" value="semantic_publishing_benchmark_chart_tool"/>
 	<property name="ref.knowledge.and.queries.archive.name" value="${jar.file.name}_reference_knowledge_data"/>
 	<property name="validation.data.archive.name" value="validation_data"/>
-	<property name="validation.data.info.archive.name" value="validation_data_info"/>	
-	
+	<property name="validation.data.info.archive.name" value="validation_data_info"/>
+
+	<taskdef resource="org/pescuma/mergeservices/antlib.xml" classpath="merge-services.jar" />
+
 	<path id="classpath-lib">
     <fileset dir="${dir.lib}">
       <include name="*.jar"/>
@@ -30,6 +32,7 @@
 	<target name="clean">
 		<delete dir="${dir.bin}" />
 		<delete dir="${dir.dist}" />
+		<delete dir="out/services" />
 	</target>
 
 	<target name="compile" depends="clean">
@@ -200,12 +203,19 @@
 	</target>
 	
 	<target name="build-jar">
+		<merge-services dest="out/services">
+			<fileset dir="lib">
+				<include name="**/*.jar" />
+				<exclude name="**/*-source.jar" />
+			</fileset>
+		</merge-services>
 		<jar destfile="${dir.dist}\${jar.file.name}-${querymix}-${customization}.jar" basedir="${dir.bin}" duplicate="preserve">
 			<manifest>
 				<attribute name="Main-Class" value="eu.ldbc.semanticpublishing.TestDriver"/>
 				<attribute name="Benchmark-Release-Version" value="${version.number.major}.${version.number.minor}.${revision.number}"/>
 				<attribute name="Benchmark-Release-Type" value="${querymix} qierymix, ${customization}"/>
 			</manifest>
+			<fileset dir="out/services" />
 			<zipgroupfileset dir="${dir.lib}" includes="*.jar"/>
 			<fileset file="readme.txt" />
 			<fileset file="test.properties" />

@@ -25,7 +25,9 @@ public class RdfUtils {
 	public static final String CONTENT_TYPE_NQUADS = "application/n-quads";
 	public static final String CONTENT_TYPE_SESAME_NQUADS = "text/x-nquads";
 	public static final String CONTENT_TYPE_TRIG = "application/x-trig";
+	public static final String CONTENT_TYPE_TRIG_STAR = "application/x-trigstar";
 	public static final String CONTENT_TYPE_TURTLE = "application/x-turtle";
+	public static final String CONTENT_TYPE_TURTLE_STAR = "application/x-turtlestar";
 	
 	private static String[] NAMESPACES = {"cwork:", "<http://www.bbc.co.uk/ontologies/creativework/>",
 										  "bbc:"  , "<http://www.bbc.co.uk/ontologies/bbc/>"};

@@ -99,7 +99,7 @@ public class ExpDecayWorker extends RandomWorker {
 						creativeWorkBuilder.setDateIncrement(startDate, (int)iterationStep);
 						creativeWorkBuilder.setAboutPresetUri(entity.getURI());
 						creativeWorkBuilder.setUsePresetData(true);
-						sesameModel = creativeWorkBuilder.buildSesameModel();												
+						sesameModel = creativeWorkBuilder.buildSesameModel(rdfFormat);
 					}
 					
 					Rio.write(sesameModel, os, rdfFormat);

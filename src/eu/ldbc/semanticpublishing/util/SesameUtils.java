@@ -14,6 +14,8 @@ public class SesameUtils {
 			rdfFormat = RDFFormat.BINARY;
 		} else if (serializationFormat.equalsIgnoreCase("TriG")) {
 			rdfFormat = RDFFormat.TRIG;
+		} else if (serializationFormat.equalsIgnoreCase("TriG*")) {
+			rdfFormat = RDFFormat.TRIGSTAR;
 		} else if (serializationFormat.equalsIgnoreCase("TriX")) {
 			rdfFormat = RDFFormat.TRIX;
 		} else if (serializationFormat.equalsIgnoreCase("N-Triples")) {
@@ -28,6 +30,8 @@ public class SesameUtils {
 			rdfFormat = RDFFormat.RDFJSON;
 		} else if (serializationFormat.equalsIgnoreCase("Turtle")) {
 			rdfFormat = RDFFormat.TURTLE;
+		} else if (serializationFormat.equalsIgnoreCase("Turtle*")) {
+			rdfFormat = RDFFormat.TURTLESTAR;
 		} else {
 			throw new IllegalArgumentException("Warning : unknown serialization format : " + serializationFormat + ", defaulting to N-Quads");
 		}		

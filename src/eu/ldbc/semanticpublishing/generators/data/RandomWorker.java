@@ -88,7 +88,7 @@ public class RandomWorker extends AbstractAsynchronousWorker {
 					//using a synchronized block, to guarantee the exactly equal generated data no matter the number of threads
 					synchronized(lock) {							
 						CreativeWorkBuilder creativeWorkBuilder = new CreativeWorkBuilder("", ru);
-						sesameModel = creativeWorkBuilder.buildSesameModel();
+						sesameModel = creativeWorkBuilder.buildSesameModel(rdfFormat);
 					}
 					
 					Rio.write(sesameModel, os, rdfFormat);

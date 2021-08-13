@@ -3,15 +3,18 @@ package eu.ldbc.semanticpublishing.generators.data.sesamemodelbuilders;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.URI;
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
+import org.eclipse.rdf4j.model.impl.SimpleTriple;
 
 import eu.ldbc.semanticpublishing.properties.Definitions;
 import eu.ldbc.semanticpublishing.refdataset.DataManager;
 import eu.ldbc.semanticpublishing.refdataset.model.Entity;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
+import org.eclipse.rdf4j.rio.RDFFormat;
 
 public class CreativeWorkBuilder implements SesameBuilder {
 
@@ -48,7 +51,7 @@ public class CreativeWorkBuilder implements SesameBuilder {
 	}
 	
 	public CreativeWorkBuilder(long cwID, RandomUtil ru) {
-		this.contextURI = ru.numberURI("things", cwID, true, true).replace("/things/", "/context/");
+		this.contextURI = ru.numberURI(RandomUtil.THINGS_STRING, cwID, true, true).replace("/things/", "/context/");
 		this.ru = ru;
 		Definitions.reconfigureAllocations(ru.getRandom());
 		this.aboutsCount = Definitions.aboutsAllocations.getAllocation();
@@ -69,7 +72,7 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			if (!updateCwUri.isEmpty()) {
 				cwURInew = updateCwUri;
 			} else {
-				cwURInew = ru.numberURI("things", DataManager.creativeWorksNextId.incrementAndGet(), true, true);				
+				cwURInew = ru.numberURI(RandomUtil.THINGS_STRING, DataManager.creativeWorksNextId.incrementAndGet(), true, true);
 			}
 			
 			this.contextURI = cwURInew.replace("/things/", "/context/");
@@ -100,7 +103,7 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			this.cwEntity = new Entity(cwURInew, e.getLabel(), e.getURI(), e.getCategory(), e.getRank());
 		} catch (IllegalArgumentException iae) {
 			if (DataManager.popularEntitiesList.size() + DataManager.regularEntitiesList.size() == 0) {
-				System.err.println("No reference data found in repository, initialize reposotory with ontologies and reference data first!");
+				System.err.println("No reference data found in repository, initialize repository with ontologies and reference data first!");
 			}
 			throw new IllegalArgumentException(iae);
 		}
@@ -144,7 +147,7 @@ public class CreativeWorkBuilder implements SesameBuilder {
 	 * Which gets initialized with values during construction of the object.
 	 */
 	@Override
-	public synchronized Model buildSesameModel() {
+	public synchronized Model buildSesameModel(RDFFormat rdfFormat) {
 		Model model = new LinkedHashModel();
 		String adaptedContextUri = contextURI.replace("<", "").replace(">", "");
 		URI context = sesameValueFactory.createURI(adaptedContextUri);
@@ -155,32 +158,34 @@ public class CreativeWorkBuilder implements SesameBuilder {
 		String s = cwTypeString;
 		s = s.replace("cwork:", cworkNamespace);
 		Value object = sesameValueFactory.createURI(s);
+
+		SimpleTriple embeddedTriple = (SimpleTriple) sesameValueFactory.createTriple(subject, (IRI) predicate, sesameValueFactory.createURI("http://www.bbc.co.uk/ontologies/creativework/CreativeWork"));
 		
-		model.add(subject, predicate, object, context);
+		model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		
 		//Set Title
 		predicate = sesameValueFactory.createURI(cworkNamespace + "title");
 		object = sesameValueFactory.createLiteral(ru.sentenceFromDictionaryWords(this.cwEntity.getLabel(), 10, false, true, 1, false));		
 		
-		model.add(subject, predicate, object, context);
+		model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 
 		//Set Short Title
 		predicate = sesameValueFactory.createURI(cworkNamespace + "shortTitle");
 		object = sesameValueFactory.createLiteral(ru.sentenceFromDictionaryWords("", 10, false, true, 1, false));		
 		
-		model.add(subject, predicate, object, context);
+		model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 
 		//Set Category
 		predicate = sesameValueFactory.createURI(cworkNamespace + "category");
 		object = sesameValueFactory.createURI(ru.stringURI("category", cwEntity.getCategory(), false, false));
 
-		model.add(subject, predicate, object, context);
+		model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		
 		//Set Description
 		predicate = sesameValueFactory.createURI(cworkNamespace + "description");
 		object = sesameValueFactory.createLiteral(ru.sentenceFromDictionaryWords("", ru.nextInt(8, 26 + 1), false, true, 1, false));
 		
-		model.add(subject, predicate, object, context);
+		model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		
 		boolean initialAboutUriUsed = false;
 		String initialUri = this.cwEntity.getObjectFromTriple(Entity.ENTITY_ABOUT);
@@ -202,14 +207,14 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			
 			object = sesameValueFactory.createURI(initialUri.replace("<", "").replace(">", ""));
 			
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		}
 		
 		//Add optional About URI - in case of modeling correlations - disregard the about distributions
 		if (usePresetData && !optionalAboutPresetUri.isEmpty()) {
 			predicate = sesameValueFactory.createURI(cworkNamespace + "about");
 			object = sesameValueFactory.createURI(optionalAboutPresetUri.replace("<", "").replace(">", ""));
-			model.add(subject, predicate, object, context);			
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		}
 		
 		//Set Mention(s)
@@ -231,21 +236,21 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			
 			object = sesameValueFactory.createURI(initialUri.replace("<", "").replace(">", ""));			
 			
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		}
 
 		//Add Mentions URI - in case of modeling correlations - disregard the mentions distributions
 		if (usePresetData && !mentionsPresetUri.isEmpty()) {
 			predicate = sesameValueFactory.createURI(cworkNamespace + "mentions");
 			object = sesameValueFactory.createURI(mentionsPresetUri.replace("<", "").replace(">", ""));
-			model.add(subject, predicate, object, context);			
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		}		
 
 		//Add optional Mentions URI - in case of modeling correlations - disregard the mentions distributions
 		if (usePresetData && !optionalMentionsPresetUri.isEmpty()) {
 			predicate = sesameValueFactory.createURI(cworkNamespace + "mentions");
 			object = sesameValueFactory.createURI(optionalMentionsPresetUri.replace("<", "").replace(">", ""));
-			model.add(subject, predicate, object, context);			
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		}		
 
 		switch (cwType) {
@@ -254,26 +259,26 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			predicate = sesameValueFactory.createURI(cworkNamespace + "audience");
 			object = sesameValueFactory.createURI(cworkNamespace + "InternationalAudience");
 			
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			//Set LiveCoverage
 			predicate = sesameValueFactory.createURI(cworkNamespace + "liveCoverage");
 			object = sesameValueFactory.createLiteral(false);
 			
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			//Set PrimaryFormat
 			predicate = sesameValueFactory.createURI(cworkNamespace + "primaryFormat");
 			object = sesameValueFactory.createURI(cworkNamespace + "TextualFormat");
 			
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			if (ru.nextBoolean()) {
 				//Set additional primary format randomly
 				predicate = sesameValueFactory.createURI(cworkNamespace + "primaryFormat");
 				object = sesameValueFactory.createURI(cworkNamespace + "InteractiveFormat");
 				
-				model.add(subject, predicate, object, context);
+				model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			}
 			
 			break;
@@ -282,25 +287,25 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			predicate = sesameValueFactory.createURI(cworkNamespace + "audience");
 			object = sesameValueFactory.createURI(cworkNamespace + "NationalAudience");
 			
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			//Set LiveCoverage
 			predicate = sesameValueFactory.createURI(cworkNamespace + "liveCoverage");
 			object = sesameValueFactory.createLiteral(false);
 			
-			model.add(subject, predicate, object, context);			
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			//Set PrimaryFormat
 			predicate = sesameValueFactory.createURI(cworkNamespace + "primaryFormat");
 			object = sesameValueFactory.createURI(cworkNamespace + "TextualFormat");
 			
-			model.add(subject, predicate, object, context);			
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			//Set additional primary format
 			predicate = sesameValueFactory.createURI(cworkNamespace + "primaryFormat");
 			object = sesameValueFactory.createURI(cworkNamespace + "InteractiveFormat");
 			
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			break;
 		case PROGRAMME : 
@@ -308,13 +313,13 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			predicate = sesameValueFactory.createURI(cworkNamespace + "audience");
 			object = sesameValueFactory.createURI(cworkNamespace + "InternationalAudience");
 			
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			//Set LiveCoverage
 			predicate = sesameValueFactory.createURI(cworkNamespace + "liveCoverage");
 			object = sesameValueFactory.createLiteral(true);
 			
-			model.add(subject, predicate, object, context);			
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			//Set PrimaryFormat
 			predicate = sesameValueFactory.createURI(cworkNamespace + "primaryFormat");
@@ -324,7 +329,7 @@ public class CreativeWorkBuilder implements SesameBuilder {
 				object = sesameValueFactory.createURI(cworkNamespace + "AudioFormat");
 			}
 			
-			model.add(subject, predicate, object, context);			
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 						
 			break;
 		}
@@ -336,7 +341,7 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			//Set Creation Date
 			predicate = sesameValueFactory.createURI(cworkNamespace + "dateCreated");
 			object = sesameValueFactory.createLiteral(presetDate);
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			//Set Modification Date
 			calendar.setTime(presetDate);
@@ -357,7 +362,7 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			predicate = sesameValueFactory.createURI(cworkNamespace + "dateCreated");
 			object = sesameValueFactory.createLiteral(creationDate);
 			
-			model.add(subject, predicate, object, context);
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 			
 			//Set Modification Date
 			calendar.setTime(creationDate);
@@ -373,38 +378,41 @@ public class CreativeWorkBuilder implements SesameBuilder {
 			object = sesameValueFactory.createLiteral(calendar.getTime());
 		}
 		
-		model.add(subject, predicate, object, context);
+		model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		
 		//Set Thumbnail
 		predicate = sesameValueFactory.createURI(cworkNamespace + "thumbnail");
 		object = sesameValueFactory.createURI(ru.randomURI("thumbnail", false, false));
 		
-		model.add(subject, predicate, object, context);
+		model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		
 		//Set cwork:altText to thumbnail
 		predicate = sesameValueFactory.createURI(cworkNamespace + "altText");
 		object = sesameValueFactory.createLiteral("thumbnail atlText for CW " + adaptedContextUri);
 		
-		model.add(subject, predicate, object, context);
+		model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate, object, context);
 		
 		//Set PrimaryContentOf
 		int random = ru.nextInt(1, 4 + 1);
 		for (int i = 0; i < random; i++) {
 			predicate = sesameValueFactory.createURI(bbcNamespace + "primaryContentOf");
-			String primaryContentUri = ru.numberURI("document", DataManager.webDocumentNextId.incrementAndGet(), false, true);
-			object = sesameValueFactory.createURI(primaryContentUri);
-			
-			model.add(subject, predicate, object, context);
-			
-			URI subjectPrimaryContent = sesameValueFactory.createURI(primaryContentUri);
-			predicate = sesameValueFactory.createURI(bbcNamespace + "webDocumentType");
+			String primaryContentUri = ru.numberURI(RandomUtil.DOCUMENT_STRING, DataManager.webDocumentNextId.incrementAndGet(), false, true);
+
+			URI tripleSubject = sesameValueFactory.createURI(primaryContentUri);
+			URI triplePredicate = sesameValueFactory.createURI(bbcNamespace + "webDocumentType");
+			Value tripleObject;
 			if (ru.nextBoolean()) {
-				object = sesameValueFactory.createURI(bbcNamespace + "HighWeb");
+				tripleObject = sesameValueFactory.createURI(bbcNamespace + "HighWeb");
 			} else {
-				object = sesameValueFactory.createURI(bbcNamespace + "Mobile");
+				tripleObject = sesameValueFactory.createURI(bbcNamespace + "Mobile");
 			}
-			
-			model.add(subjectPrimaryContent, predicate, object, context);
+
+			model.add(tripleSubject, triplePredicate, tripleObject, context);
+
+			object = sesameValueFactory.createTriple(tripleSubject, (IRI) triplePredicate, tripleObject);
+
+			model.add(rdfFormat == RDFFormat.TRIGSTAR ? embeddedTriple : subject, predicate,
+					rdfFormat == RDFFormat.TRIGSTAR ? object : tripleObject, context);
 		}
 		
 		return model;

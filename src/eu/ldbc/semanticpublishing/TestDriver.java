@@ -19,6 +19,7 @@ import eu.ldbc.semanticpublishing.agents.HistoryAgent;
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection;
 import eu.ldbc.semanticpublishing.resultanalyzers.history.HistoryQueriesUtils;
 import eu.ldbc.semanticpublishing.resultanalyzers.history.QueryResultsConverterUtil;
+import org.eclipse.rdf4j.rio.RDFFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,14 +41,15 @@ import eu.ldbc.semanticpublishing.statistics.Statistics;
 import eu.ldbc.semanticpublishing.substitutionparameters.SubstitutionParametersGenerator;
 import eu.ldbc.semanticpublishing.substitutionparameters.SubstitutionQueryParametersManager;
 import eu.ldbc.semanticpublishing.templates.MustacheTemplatesHolder;
-import eu.ldbc.semanticpublishing.util.FileUtils;
-import eu.ldbc.semanticpublishing.util.RandomUtil;
-import eu.ldbc.semanticpublishing.util.RdfUtils;
-import eu.ldbc.semanticpublishing.util.ShellUtil;
-import eu.ldbc.semanticpublishing.util.ThreadUtil;
 import eu.ldbc.semanticpublishing.validation.AggregateOperationsValidator;
 import eu.ldbc.semanticpublishing.validation.EditorialOperationsValidator;
 import eu.ldbc.semanticpublishing.validation.ValidationValuesManager;
+import eu.ldbc.semanticpublishing.util.FileUtils;
+import eu.ldbc.semanticpublishing.util.RandomUtil;
+import eu.ldbc.semanticpublishing.util.RdfUtils;
+import eu.ldbc.semanticpublishing.util.SesameUtils;
+import eu.ldbc.semanticpublishing.util.ShellUtil;
+import eu.ldbc.semanticpublishing.util.ThreadUtil;
 
 /**
  * The start point of the semantic publishing test driver. Initializes and runs all parts of the benchmark.
@@ -72,6 +74,7 @@ public class TestDriver {
 	private final ValidationValuesManager validationValuesManager = new ValidationValuesManager();
 	private static final String CHECK_HISTORY_PLUGIN_ENABLED_QUERY = "select ?enabled { [] <http://www.ontotext.com/at/enabled> ?enabled }";
 	private static final String ENABLE_HISTORY_PLUGIN_QUERY = "insert data { [] <http://www.ontotext.com/at/enabled> true }";
+	public static RDFFormat generatedCreativeWorksFormat;
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
 	private final static Logger RLOGGER = LoggerFactory.getLogger(TestDriverReporter.class.getName());
@@ -84,6 +87,7 @@ public class TestDriver {
 		
 		propertiesFile = args[0];
 		configuration.loadFromFile(propertiesFile);
+		generatedCreativeWorksFormat = SesameUtils.parseRdfFormat(configuration.getString(Configuration.GENERATE_CREATIVE_WORKS_FORMAT));
 		definitions.loadFromFile(configuration.getString(Configuration.DEFINITIONS_PATH), configuration.getBoolean(Configuration.VERBOSE));
 		mustacheTemplatesHolder.loadFrom(configuration.getString(Configuration.QUERIES_PATH));
 		
@@ -337,21 +341,42 @@ public class TestDriver {
 			int size=0;
 			long startTime = System.currentTimeMillis();
 			for( File file : files ) {
-				size++;
 				if( file.getName().endsWith(".nq")) {
 					System.out.print("\tloading " + file.getName());
 					InputStream input = new FileInputStream(file);
 					
 					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_SESAME_NQUADS, input);
 					System.out.println();
-				}
-				if( file.getName().endsWith(".ttl")) {
+					size++;
+				} else if( file.getName().endsWith(".ttl")) {
 					System.out.print("\tloading " + file.getName());
 					InputStream input = new FileInputStream(file);
 					
 					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_TURTLE, input);
 					System.out.println();
-				}		
+					size++;
+				} else if( file.getName().endsWith(".trig")) {
+					System.out.print("\tloading " + file.getName());
+					InputStream input = new FileInputStream(file);
+
+					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_TRIG, input);
+					System.out.println();
+					size++;
+				} else if( file.getName().endsWith(".ttls")) {
+					System.out.print("\tloading " + file.getName());
+					InputStream input = new FileInputStream(file);
+
+					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_TURTLE_STAR, input);
+					System.out.println();
+					size++;
+				} else if( file.getName().endsWith(".trigs")) {
+					System.out.print("\tloading " + file.getName());
+					InputStream input = new FileInputStream(file);
+
+					RdfUtils.postStatements(endpoint, RdfUtils.CONTENT_TYPE_TRIG_STAR, input);
+					System.out.println();
+					size++;
+				}
 			}
 			long endTime = System.currentTimeMillis();
 			System.out.println("Loaded "+size+" files with Creative Works in "+ (endTime - startTime) + " milliseconds");

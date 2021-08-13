@@ -30,6 +30,10 @@ public class RandomUtil {
 	private int seedYear = 2000;
 	private int dataGenerationPeriodYears = 1;
 
+	public static final String CONTEXT_STRING = "context";
+	public static final String THINGS_STRING = "things";
+	public static final String DOCUMENT_STRING = "document";
+
 	static {
 		// numbers 0..9
 		for (int index = 0; index < 10; ++index) {
@@ -124,7 +128,7 @@ public class RandomUtil {
 		if (max <= 0) {
 			System.out.println("Warning : RandomUtil : wrong int parameter value (" + max + ")! Inconsistent behaviour expected!");			
 		}
-		return randomGenerator.nextInt(max);
+		return randomGenerator.nextInt(max - 1) + 1;
 	}
 
 	public long nextLong(long max) {
@@ -510,7 +514,7 @@ public class RandomUtil {
 	/**
 	 * Generates a URI using a string, passed as input parameter
 	 * @param domain - sets the domain name to the URI, e.g. domain=sports
-	 * @param core - the string token used as an constant
+	 * @param token - the string token used as an constant
 	 */
 	public String stringURI(String domain, String token, boolean appendBrackets, boolean appendSuffixId) {
 		StringBuilder sb = new StringBuilder();
@@ -564,7 +568,7 @@ public class RandomUtil {
 	/**
 	 * Reads a text file and extracts all unique words in it
 	 * 
-	 * @param fullPath
+	 * @param textFilePath
 	 */
 	protected void buildWordsArray(String textFilePath) {
 		BufferedReader br = null;
