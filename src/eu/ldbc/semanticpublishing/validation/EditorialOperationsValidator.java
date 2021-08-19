@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
-import org.eclipse.rdf4j.rio.RDFFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -166,7 +165,7 @@ public class EditorialOperationsValidator extends Validator {
 			queryString = validateQuery.compileMustacheTemplate();
 
 			queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, closeConnection,
-					!validateAskQuery && TestDriver.generatedCreativeWorksFormat == RDFFormat.TRIGSTAR);
+					!validateAskQuery && TestDriver.isFormatTrigstar);
 
 			BRIEF_LOGGER.info(String.format("Query [%s] executed, iteration %d", queryName, iteration));
 			LOGGER.info("\n*** Query [" + queryName + "], iteration " + iteration + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");

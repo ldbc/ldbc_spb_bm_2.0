@@ -26,7 +26,7 @@ import org.eclipse.rdf4j.rio.RDFFormat;
 public class InsertTemplate extends MustacheTemplate implements SubstitutionParametersGenerator {
 	//must match with corresponding file name of the mustache template file
 	private static final String templateFileName =
-			TestDriver.generatedCreativeWorksFormat == RDFFormat.TRIGSTAR ? "insert_sparql_star.txt":"insert.txt";
+			TestDriver.isFormatTrigstar ? "insert_sparql_star.txt":"insert.txt";
 	
 	private CWType cwType = CWType.BLOG_POST;
 	private String cwTypeString = "cwork:BlogPost";

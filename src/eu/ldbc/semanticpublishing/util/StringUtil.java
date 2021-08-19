@@ -72,7 +72,7 @@ public class StringUtil {
 	 * @return
 	 */
 	public static String generateEmbeddedTripleFromURI(String URI) {
-		if (TestDriver.generatedCreativeWorksFormat == RDFFormat.TRIGSTAR) {
+		if (TestDriver.isFormatTrigstar) {
 			return "<<" + URI + " <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bbc.co.uk/ontologies/creativework/CreativeWork>>>";
 		}
 		return URI;

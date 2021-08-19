@@ -25,7 +25,7 @@ public class CreativeWorksAnalyzer {
 	public long getResult() throws IOException {
 		StringBuilder query = new StringBuilder();
 		query.append(queryTemplatesHolder.getQueryTemplates(
-				MustacheTemplatesHolder.SYSTEM).get(TestDriver.generatedCreativeWorksFormat == RDFFormat.TRIGSTAR ? "analyzetrigstarcreativeworks.txt" : "analyzecreativeworks.txt"));
+				MustacheTemplatesHolder.SYSTEM).get(TestDriver.isFormatTrigstar ? "analyzetrigstarcreativeworks.txt" : "analyzecreativeworks.txt"));
 		
 		SAXCreativeWorksCountTransformer saxCwCounter = new SAXCreativeWorksCountTransformer();
 		sparqlQeuryManager.executeSystemQuery(saxCwCounter, query.toString(), QueryType.SELECT);

@@ -74,7 +74,7 @@ public class TestDriver {
 	private final ValidationValuesManager validationValuesManager = new ValidationValuesManager();
 	private static final String CHECK_HISTORY_PLUGIN_ENABLED_QUERY = "select ?enabled { [] <http://www.ontotext.com/at/enabled> ?enabled }";
 	private static final String ENABLE_HISTORY_PLUGIN_QUERY = "insert data { [] <http://www.ontotext.com/at/enabled> true }";
-	public static RDFFormat generatedCreativeWorksFormat;
+	public static boolean isFormatTrigstar;
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(TestDriver.class.getName());
 	private final static Logger RLOGGER = LoggerFactory.getLogger(TestDriverReporter.class.getName());
@@ -87,7 +87,7 @@ public class TestDriver {
 		
 		propertiesFile = args[0];
 		configuration.loadFromFile(propertiesFile);
-		generatedCreativeWorksFormat = SesameUtils.parseRdfFormat(configuration.getString(Configuration.GENERATE_CREATIVE_WORKS_FORMAT));
+		isFormatTrigstar = (SesameUtils.parseRdfFormat(configuration.getString(Configuration.GENERATE_CREATIVE_WORKS_FORMAT)) == RDFFormat.TRIGSTAR);
 		definitions.loadFromFile(configuration.getString(Configuration.DEFINITIONS_PATH), configuration.getBoolean(Configuration.VERBOSE));
 		mustacheTemplatesHolder.loadFrom(configuration.getString(Configuration.QUERIES_PATH));
 		
