@@ -18,6 +18,9 @@ public class SparqlQueryConnection extends HttpConnectionBase {
 	
 	private String queryString;
 	private QueryType queryType;
+	private String DEFAULT_RESULT_TYPE = "application/sparql-results+xml";
+
+	public static final String SPARQL_STAR_RESULT_TYPE = "application/x-sparqlstar-results+json";
 
 	/**
 	 * Constructs a SparqlQueryConnection and writes query string to out stream
@@ -80,7 +83,7 @@ public class SparqlQueryConnection extends HttpConnectionBase {
 //					httpUrlConnection.setRequestProperty("Accept", "application/rdf+xml");
 //					httpUrlConnection.setRequestProperty("Accept", "application/x-turtle");
 				} else {
-					httpUrlConnection.setRequestProperty("Accept", "application/sparql-results+xml");
+					httpUrlConnection.setRequestProperty("Accept", DEFAULT_RESULT_TYPE);
 				}
 			}
 			if (setQueryToStream && !queryString.isEmpty()) {
@@ -138,5 +141,9 @@ public class SparqlQueryConnection extends HttpConnectionBase {
 	
 	public void setQueryType(QueryType queryType) {
 		this.queryType = queryType;
+	}
+
+	public void setResultType(String RESULT_TYPE) {
+		this.DEFAULT_RESULT_TYPE = RESULT_TYPE;
 	}
 }

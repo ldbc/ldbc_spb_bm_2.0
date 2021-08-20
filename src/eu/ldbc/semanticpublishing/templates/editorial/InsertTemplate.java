@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
+import eu.ldbc.semanticpublishing.TestDriver;
 import eu.ldbc.semanticpublishing.endpoint.SparqlQueryConnection.QueryType;
 import eu.ldbc.semanticpublishing.properties.Definitions;
 import eu.ldbc.semanticpublishing.refdataset.DataManager;
@@ -15,6 +16,8 @@ import eu.ldbc.semanticpublishing.substitutionparameters.SubstitutionParametersG
 import eu.ldbc.semanticpublishing.templates.MustacheTemplate;
 import eu.ldbc.semanticpublishing.util.RandomUtil;
 import eu.ldbc.semanticpublishing.util.RdfUtils;
+import eu.ldbc.semanticpublishing.util.StringUtil;
+import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
  * A class extending the MustacheTemplateCompiler, used to generate a query string
@@ -22,7 +25,8 @@ import eu.ldbc.semanticpublishing.util.RdfUtils;
  */
 public class InsertTemplate extends MustacheTemplate implements SubstitutionParametersGenerator {
 	//must match with corresponding file name of the mustache template file
-	private static final String templateFileName = "insert.txt";
+	private static final String templateFileName =
+			TestDriver.isFormatTrigstar ? "insert_sparql_star.txt":"insert.txt";
 	
 	private CWType cwType = CWType.BLOG_POST;
 	private String cwTypeString = "cwork:BlogPost";
@@ -73,7 +77,7 @@ public class InsertTemplate extends MustacheTemplate implements SubstitutionPara
 			if (!updateCwUri.isEmpty()) {
 				cwURInew = updateCwUri;
 			} else {
-				cwURInew = ru.numberURI("things", DataManager.creativeWorksNextId.incrementAndGet(), true, true);				
+				cwURInew = ru.numberURI(RandomUtil.THINGS_STRING, DataManager.creativeWorksNextId.incrementAndGet(), true, true);
 			}
 			
 			this.contextURI = cwURInew.replace("/things/", "/context/");
@@ -123,8 +127,12 @@ public class InsertTemplate extends MustacheTemplate implements SubstitutionPara
 	
 	/**
 	 * A method for replacing mustache template : {{{cwUri}}}
-	 */		
+	 */
 	public String cwUri() {
+		return cwUri(false);
+	}
+
+	public String cwUri(boolean isGenerateParams) {
 		if (substitutionParameters != null) {
 			//assuming that cwUri is positioned in the first two items of the parameters list
 			if (parameterIndex > 2) {
@@ -136,8 +144,12 @@ public class InsertTemplate extends MustacheTemplate implements SubstitutionPara
 				return substitutionParameters[parameterIndex++];
 			}
 		}
-		
-		return this.contextURI.replace("/context/", "/things/");
+
+		if (isGenerateParams) {
+			return this.contextURI.replace("/context/", "/things/");
+		}
+
+		return StringUtil.generateEmbeddedTripleFromURI(this.contextURI.replace("/context/", "/things/"));
 	}
 
 	/**
@@ -400,7 +412,7 @@ public class InsertTemplate extends MustacheTemplate implements SubstitutionPara
 		}		
 		
 		for (int i = 0; i < ru.nextInt(1, 4 + 1); i++) {
-			primaryContent.add(new PrimaryContentUri(ru.numberURI("document", (long)(1E14 + DataManager.webDocumentNextId.incrementAndGet()), true, true), ru.nextBoolean() ? "bbc:HighWeb" : "bbc:Mobile"));
+			primaryContent.add(new PrimaryContentUri(ru.numberURI(RandomUtil.DOCUMENT_STRING, (long)(1E14 + DataManager.webDocumentNextId.incrementAndGet()), true, true), ru.nextBoolean() ? "bbc:HighWeb" : "bbc:Mobile"));
 		}
 		
 		return primaryContent;
@@ -412,9 +424,11 @@ public class InsertTemplate extends MustacheTemplate implements SubstitutionPara
 	static class PrimaryContentUri {
 		String cwPrimaryContentUri;
 		String cwWebDocumentType;
+		String cwPrimaryContentUriAsTriple;
 		public PrimaryContentUri(String primaryContentUri, String webDocumentType) {
 			this.cwPrimaryContentUri = primaryContentUri;
 			this.cwWebDocumentType = webDocumentType;
+			this.cwPrimaryContentUriAsTriple = "<<" + cwPrimaryContentUri + " " + RdfUtils.expandNamepsacePrefix("bbc:webDocumentType") + " " + RdfUtils.expandNamepsacePrefix(cwWebDocumentType) + ">>";
 		}
 	}
 	
@@ -427,7 +441,7 @@ public class InsertTemplate extends MustacheTemplate implements SubstitutionPara
 			sb.setLength(0);
 			sb.append(cwGraphUri());
 			sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
-			sb.append(cwUri());
+			sb.append(cwUri(true));
 			sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
 			sb.append(RdfUtils.expandNamepsacePrefix(cwType()));
 			sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
@@ -490,7 +504,7 @@ public class InsertTemplate extends MustacheTemplate implements SubstitutionPara
 			if (primaryContentList.size() > 0) {
 				//executing one iteration on purpose, future TODO
 				for (int j = 0; j < 1; j++) {
-					sb.append(ru.numberURI("document", (long)(1E14 + DataManager.webDocumentNextId.incrementAndGet()), true, true));
+					sb.append(ru.numberURI(RandomUtil.DOCUMENT_STRING, (long)(1E14 + DataManager.webDocumentNextId.incrementAndGet()), true, true));
 					sb.append(SubstitutionParametersGenerator.PARAMS_DELIMITER);
 					sb.append(ru.nextBoolean() ? RdfUtils.expandNamepsacePrefix("bbc:HighWeb") : RdfUtils.expandNamepsacePrefix("bbc:Mobile"));
 				}

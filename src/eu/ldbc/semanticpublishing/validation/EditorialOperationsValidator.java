@@ -164,7 +164,8 @@ public class EditorialOperationsValidator extends Validator {
 			queryName = validateQuery.getTemplateFileName();
 			queryString = validateQuery.compileMustacheTemplate();
 
-			queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, closeConnection);
+			queryResult = queryExecuteManager.executeQueryWithStringResult(connection, queryName, queryString, queryType, false, closeConnection,
+					!validateAskQuery && TestDriver.isFormatTrigstar);
 
 			BRIEF_LOGGER.info(String.format("Query [%s] executed, iteration %d", queryName, iteration));
 			LOGGER.info("\n*** Query [" + queryName + "], iteration " + iteration + "\n" + queryString + "\n---------------------------------------------\n*** Result for query [" + queryName + "]" + " : \n" + "Length : " + queryResult.length() + "\n" + queryResult + "\n\n");

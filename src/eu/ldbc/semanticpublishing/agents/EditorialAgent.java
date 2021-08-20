@@ -99,7 +99,7 @@ public class EditorialAgent extends AbstractAsynchronousAgent {
 					break;
 				case 1 :
 					long cwNextId = ru.nextInt((int)DataManager.creativeWorksNextId.get());
-					String uri = ru.numberURI("context", cwNextId, true, true);
+					String uri = ru.numberURI(RandomUtil.CONTEXT_STRING, cwNextId, true, true);
 								
 					UpdateTemplate updateQuery = new UpdateTemplate(uri, ru, queryTemplates, definitions);
 					

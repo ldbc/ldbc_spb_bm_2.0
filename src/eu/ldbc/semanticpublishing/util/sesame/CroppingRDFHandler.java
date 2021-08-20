@@ -2,7 +2,7 @@ package eu.ldbc.semanticpublishing.util.sesame;
 
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Statement;
-import org.eclipse.rdf4j.model.URI;
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.rio.RDFFormat;
@@ -30,7 +30,7 @@ public class CroppingRDFHandler extends AbstractRDFHandler {
 	private RDFWriter rdfWriter;
 	private Resource lastSubject = null;
 	private Resource foafPersonResource = null;
-	private final URI rdfTypeUri = factory.createIRI(RDF_TYPE_URI);
+	private final IRI rdfTypeUri = factory.createIRI(RDF_TYPE_URI);
 	
 	protected static final String RDF_TYPE_URI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"; 
 	

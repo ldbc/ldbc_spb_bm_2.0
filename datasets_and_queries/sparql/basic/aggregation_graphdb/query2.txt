@@ -74,5 +74,5 @@ WHERE {
     ?creativeWork bbc:primaryContentOf ?pco .
     ?pco bbc:webDocumentType ?webDocType .
   }
-  FILTER (?creativeWork = {{{cwUri}}})
+    FILTER (?creativeWork = {{{cwUri}}})
 }

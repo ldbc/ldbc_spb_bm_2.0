@@ -37,17 +37,24 @@ public class SparqlQueryExecuteManager {
 	public String executeQueryWithStringResult(String queryName, String queryString, QueryType queryType, String contentTypeForGraphQuery) throws IOException {
 		return executeQueryWithStringResult(new SparqlQueryConnection(endpointUrl, endpointUpdateUrl, contentTypeForGraphQuery, queryTimeoutMilliseconds, verbose), queryName, queryString, queryType, false, true);
 	}
+
+	public String executeQueryWithStringResult(SparqlQueryConnection connection, String queryName, String queryString, QueryType queryType, boolean useInStatistics, boolean disconnect) throws IOException {
+		return executeQueryWithStringResult(connection, queryName, queryString, queryType, useInStatistics, disconnect, false);
+	}
 	
 	/**
 	 * Executes a query by using an existing connection, requires an explicit disconnect.
-	 * @param returnQueryResultAsString
+	 * @param
 	 * @return query result as string, or empty string controlled by returnQueryResultAsString (if set to false will reduce memory footprint of the driver)
 	 * @throws IOException
 	 */
-	public String executeQueryWithStringResult(SparqlQueryConnection connection, String queryName, String queryString, QueryType queryType, boolean useInStatistics, boolean disconnect) throws IOException {
+	public String executeQueryWithStringResult(SparqlQueryConnection connection, String queryName, String queryString, QueryType queryType, boolean useInStatistics, boolean disconnect, boolean useTrigStarResult) throws IOException {
 		
 		connection.setQueryString(queryString);
 		connection.setQueryType(queryType);
+		if (useTrigStarResult) {
+			connection.setResultType(SparqlQueryConnection.SPARQL_STAR_RESULT_TYPE);
+		}
 		connection.prepareConnection(true);
 		
 		InputStream is = connection.execute();

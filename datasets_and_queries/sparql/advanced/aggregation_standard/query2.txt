@@ -61,6 +61,6 @@ WHERE {
   OPTIONAL { 
     ?cWork bbc:primaryContentOf ?pco . 
     ?pco bbc:webDocumentType ?webDocType . 
-  } 
+  }
   FILTER (?cWork = {{{cwUri}}})
 }

@@ -178,12 +178,16 @@ public class SAXReferenceDataEntityTransformer extends DefaultHandler implements
 			}
 			
 			if (literalElementBeginFlag) {
-				if (currentBindingName.equals(LABEL_BINDING_ELEMENT_ATTRIBUTE)) {									
-					labelSb.append(str);	
-				} else if (currentBindingName.equals(CATEGORY_BINDING_ELEMENT_ATTRIBUTE)) {
-					categorySb.append(str);
-				} else if (currentBindingName.equals(RANK_BINDING_ELEMENT_ATTRIBUTE)) {
-					rankSb.append(str);
+				switch (currentBindingName) {
+					case LABEL_BINDING_ELEMENT_ATTRIBUTE:
+						labelSb.append(str);
+						break;
+					case CATEGORY_BINDING_ELEMENT_ATTRIBUTE:
+						categorySb.append(str);
+						break;
+					case RANK_BINDING_ELEMENT_ATTRIBUTE:
+						rankSb.append(str);
+						break;
 				}
 			}
 		}
@@ -193,14 +197,18 @@ public class SAXReferenceDataEntityTransformer extends DefaultHandler implements
 	 * Updates boolean flags about which element from parsing is currently visited.
 	 */
 	private void updateFlagsState(String element, boolean state) {
-		if (element.equals(RESULT_XML_ELEMENT)) {
-			resultElementBeginFlag = state;
-			
-		} else if (element.equals(URI_XML_ELEMENT)) {
-			uriElementBeginFlag = state;
-			
-		} else if (element.equals(LITERAL_XML_ELEMENT)) {
-			literalElementBeginFlag = state;
+		switch (element) {
+			case RESULT_XML_ELEMENT:
+				resultElementBeginFlag = state;
+
+				break;
+			case URI_XML_ELEMENT:
+				uriElementBeginFlag = state;
+
+				break;
+			case LITERAL_XML_ELEMENT:
+				literalElementBeginFlag = state;
+				break;
 		}
 	}
 	
