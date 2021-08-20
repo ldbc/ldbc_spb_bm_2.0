@@ -1,9 +1,12 @@
 package eu.ldbc.semanticpublishing.refdataset.model;
 
+import java.io.Serializable;
+
 /**
  * A class which represents a triple, used mainly in the Entity class.
  */
-public class Triple {
+public class Triple implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private String subject;
 	private String predicate;
 	private String object;

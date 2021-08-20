@@ -1,18 +1,20 @@
 package eu.ldbc.semanticpublishing.refdataset.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * A class for storing entities from different dataset's. Used to initialize the database and build insert queries.
  */
-public class Entity {
+public class Entity implements Serializable {
+	private static final long serialVersionUID = 1L;
 	public static final String ENTITY_RDFS_LABEL = "rdfs:label";
 	public static final String ENTITY_ABOUT = "entity:about";
 	public static final String ENTITY_CATEGORY = "entity:category";
 	public static final String ENTITY_RANK = "entity:rank";
 	
 	private String aboutURI;	
-	private ArrayList<Triple> triplesList = new ArrayList<Triple>();
+	private final ArrayList<Triple> triplesList = new ArrayList<>();
 	
 	public Entity() {
 	}
