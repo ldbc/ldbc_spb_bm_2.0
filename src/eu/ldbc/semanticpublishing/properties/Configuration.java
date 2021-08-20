@@ -73,6 +73,9 @@ public class Configuration {
 	public static final String VALIDATE_HISTORY_PLUGIN = "validateHistoryPlugin";
 	public static final String HISTORY_QUERIES = "historyQueries";
 	public static final String LOG_FAILED_HISTORY_QUERIES = "logFailedQueries";
+	public static final String PRELOAD_ANALYTICAL_QUERY_RESULTS = "preloadAnalyticalQueryResults";
+	public static final String SAVE_ANALYTICAL_QUERY_RESULTS = "saveAnalyticalQueryResults";
+	public static final String ANALYTICAL_QUERY_RESULTS_FILE_NAME = "analyticalQueryResultsFileName";
 	
 	/**
 	 * Initialise and set default values for parameters that make sense.
@@ -133,6 +136,9 @@ public class Configuration {
 		properties.setProperty(VALIDATE_HISTORY_PLUGIN, "false");
 		properties.setProperty(HISTORY_QUERIES, "");
 		properties.setProperty(LOG_FAILED_HISTORY_QUERIES, "false");
+		properties.setProperty(PRELOAD_ANALYTICAL_QUERY_RESULTS, "false");
+		properties.setProperty(SAVE_ANALYTICAL_QUERY_RESULTS, "false");
+		properties.setProperty(ANALYTICAL_QUERY_RESULTS_FILE_NAME, "analytical_queries_results.info");
 	}
 	
 	/**
@@ -243,8 +249,12 @@ public class Configuration {
 		catch( NumberFormatException e ) {
 			throw new IllegalStateException( "Illegal value for double configuration parameter: " + key);
 		}
-	}	
-	
+	}
+
+	public void setProperty(String key, String value) {
+		properties.setProperty(key, value);
+	}
+
 	private final Properties properties = new Properties();
 	
 	public static void main(String[] args) throws IOException  {
