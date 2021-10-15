@@ -32,10 +32,10 @@ PREFIX dcterms:<http://purl.org/dc/terms/>
 PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/>
 
 #  Query Name : AnalyzeReferenceData
-#  Query Description : Retrieves DBPedia IDs of all locations from reference data using the 'SameAs' relations from geonames .
+#  Query Description : Retrieves DBPedia IDs of all locations from reference data.
 
-SELECT DISTINCT ?locationId 
+SELECT DISTINCT ?locationId
 {
   ?locationId a geo-ont:Feature .
-  FILTER(CONTAINS(STR(?locationId), "dbpedia")) . 
+  FILTER(CONTAINS(STR(?locationId), "dbpedia")) .
 }
