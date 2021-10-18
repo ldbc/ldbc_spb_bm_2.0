@@ -1,0 +1,20 @@
+name: CI build
+on: [push, pull_request]
+jobs:
+  build_project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: build the benchmark driver with basic query mix, standard SPARQL 1.1 compliance
+        run: ant build-basic-querymix
+      - name: build the benchmark driver with advanced query mix, standard SPARQL 1.1 compliance
+        run: ant build-advanced-querymix
+      - name: build the benchmark driver with basic query mix and queries optimized for GraphDB
+        run: ant build-basic-querymix-graphdb
+      - name: build the benchmark driver with advanced query mix and queries optimized for GraphDB
+        run: ant build-advanced-querymix-graphdb
+      - name: build the benchmark driver with basic query mix and queries optimized for Virtuoso
+        run: ant build-basic-querymix-virtuoso
+      - name: build the benchmark driver with advanced query mix and queries optimized for Virtuoso
+        run: ant build-advanced-querymix-virtuoso

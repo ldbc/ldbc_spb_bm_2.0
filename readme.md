@@ -2,7 +2,7 @@
 Semantic Publishing Benchmark v2.0
 ----------------------------------
 
-[![Build Status](https://travis-ci.org/ldbc/ldbc_spb_bm_2.0.svg?branch=master)](https://travis-ci.org/ldbc/ldbc_spb_bm_2.0)
+[![Build status](https://github.com/ldbc/ldbc_spb_bm_2.0/workflows/CI%20build/badge.svg)](https://github.com/ldbc/ldbc_spb_bm_2.0/actions)
 
 ### Introduction
 
