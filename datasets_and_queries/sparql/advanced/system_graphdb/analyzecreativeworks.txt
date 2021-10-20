@@ -30,16 +30,13 @@ PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
 PREFIX fb:<http://rdf.freebase.com/ns/>
 PREFIX dcterms:<http://purl.org/dc/terms/>
 PREFIX cwork:<http://www.bbc.co.uk/ontologies/creativework/>
+PREFIX ot:<http://www.ontotext.com/>
 
 #  Query Name : AnalyzeReferenceData
 #  Query Description : Retrieves the greatest ID of Creative Work stored. Next Creative Works will have new IDs greater than existing.
 
-SELECT ?maxCwID { 
-  ?cwUri a cwork:CreativeWork . 
-  BIND(str(?cwUri) AS ?strCwUri) . 
-  BIND(replace(?strCwUri, "http://www.bbc.co.uk/things/", "", "i") AS ?cwTmp) . 
-  BIND(replace(?cwTmp, "#id", "", "i") AS ?cwTmp2) . 
-  BIND(xsd:decimal(?cwTmp2) AS ?maxCwID) . 
-} 
-ORDER BY DESC(?maxCwID) 
-LIMIT 1 
+SELECT (COUNT(?cwUri) AS ?maxCwID)
+FROM ot:disable-sameAs
+{
+  ?cwUri a cwork:CreativeWork .
+}

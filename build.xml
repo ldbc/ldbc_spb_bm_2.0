@@ -1,7 +1,8 @@
 <project name="semanticpublishingbenchmark" basedir="." default="show-usage">
 	<property name="version.number.major" value="2" />
 	<property name="version.number.minor" value="0" />
-	
+	<property name="version.number.patch" value="1" />
+
 	<property name="dir.src" location="src"/>
 	<property name="dir.bin" location="bin"/>
 	<property name="dir.dist" location="dist"/>
@@ -13,20 +14,20 @@
 	<property name="jar.charttool.file.name" value="semantic_publishing_benchmark_chart_tool"/>
 	<property name="ref.knowledge.and.queries.archive.name" value="${jar.file.name}_reference_knowledge_data"/>
 	<property name="validation.data.archive.name" value="validation_data"/>
-	<property name="validation.data.info.archive.name" value="validation_data_info"/>	
-	
+	<property name="validation.data.info.archive.name" value="validation_data_info"/>
+
 	<path id="classpath-lib">
     <fileset dir="${dir.lib}">
       <include name="*.jar"/>
     </fileset>
   	</path>
-	
+
 	<path id="classpath-jfreechart-lib">
     <fileset dir="${dir.lib.jfreechart}">
       <include name="*.jar"/>
     </fileset>
   	</path>
-	
+
 	<target name="clean">
 		<delete dir="${dir.bin}" />
 		<delete dir="${dir.dist}" />
@@ -34,21 +35,21 @@
 
 	<target name="compile" depends="clean">
 		<mkdir dir="${dir.bin}"/>
-		<mkdir dir="${dir.dist}"/>		
-		<javac srcdir="${dir.src}" 
+		<mkdir dir="${dir.dist}"/>
+		<javac srcdir="${dir.src}"
 			   destdir="${dir.bin}"
 			   debug="off"
 			   source="1.6"
 			   target="1.6"
 			   includeantruntime="false">
 			<classpath refid="classpath-lib"/>
-			<classpath refid="classpath-jfreechart-lib"/>			
+			<classpath refid="classpath-jfreechart-lib"/>
 		</javac>
 	</target>
-	
+
 	<target name="rebuild" depends="clean, compile">
 	</target>
-	
+
 	<target name="clear-conformance-queries">
         <delete>
             <fileset dir="./data/sparql/conformance/cardinalities/" includes="*.txt"/>
@@ -64,7 +65,7 @@
             <fileset dir="./data/sparql/conformance/uni-int/" includes="*.txt"/>
         </delete>
 	</target>
-	
+
 	<target name="unzip-conformance-queries">
         <unzip src="./data/sparql/conformance/cardinalities/${conformance_archive_name}.zip" dest="./data/sparql/conformance/cardinalities/"/>
         <unzip src="./data/sparql/conformance/disjointness/${conformance_archive_name}.zip" dest="./data/sparql/conformance/disjointness/"/>
@@ -78,29 +79,29 @@
         <unzip src="./data/sparql/conformance/subsumption/${conformance_archive_name}.zip" dest="./data/sparql/conformance/subsumption/"/>
         <unzip src="./data/sparql/conformance/uni-int/${conformance_archive_name}.zip" dest="./data/sparql/conformance/uni-int/"/>
 	</target>
-		
+
     <target name="setup-querymix">
 		<delete file="${dir.src}/eu/ldbc/semanticpublishing/agents/AggregationAgent.java"/>
 		<copy file="${dir.src}/eu/ldbc/semanticpublishing/agents/AggregationAgent.${querymix}" tofile="${dir.src}/eu/ldbc/semanticpublishing/agents/AggregationAgent.java"/>
-		
+
 		<delete file="${dir.src}/eu/ldbc/semanticpublishing/statistics/Statistics.java"/>
 		<copy file="${dir.src}/eu/ldbc/semanticpublishing/statistics/Statistics.${querymix}" tofile="${dir.src}/eu/ldbc/semanticpublishing/statistics/Statistics.java"/>
-		
+
 		<delete dir="${dir.data}"/>
-		
+
 		<mkdir dir="./data-temp"/>
-    	
+
     	<copy file="datasets_and_queries/RdfsRules-optimized-spb.pie" todir="./data-temp"/>
-    	
+
   		<mkdir dir="./data-temp/datasets"/>
   		<copy todir="./data-temp/datasets">
   			<fileset dir="datasets_and_queries/datasets"/>
   		</copy>
-    	
+
   		<mkdir dir="./data-temp/ontologies"/>
 		<copy todir="./data-temp/ontologies">
       		<fileset dir="datasets_and_queries/ontologies"/>
-		</copy>		
+		</copy>
 		<mkdir dir="./data-temp/sparql"/>
 		<copy todir="./data-temp/sparql">
       		<fileset dir="datasets_and_queries/sparql/${querymix}"/>
@@ -110,18 +111,18 @@
   			<fileset dir="datasets_and_queries/validation/${querymix}/${customization}"/>
 		</copy>
 		<unzip src="./datasets_and_queries/validation/data/${validation.data.archive.name}.zip" dest="./data-temp/validation/"/>
-		<unzip src="./datasets_and_queries/validation/data/${validation.data.info.archive.name}.zip" dest="./data-temp/validation/"/>		
-  	
+		<unzip src="./datasets_and_queries/validation/data/${validation.data.info.archive.name}.zip" dest="./data-temp/validation/"/>
+
 		<mkdir dir="./data-temp/scripts/enterprise"/>
 		<copy todir="./data-temp/scripts/enterprise">
 			<fileset dir="datasets_and_queries/scripts/enterprise"/>
-		</copy>  	
-		
+		</copy>
+
     	<mkdir dir="./data-temp/scripts/postLoad"/>
 		<copy todir="./data-temp/scripts/postLoad">
 			<fileset dir="datasets_and_queries/scripts/postLoad" includes="${customization}*.* *.txt"/>
 		</copy>
-		  	
+
 	  	<mkdir dir="./data-temp/dictionaries"/>
 		<copy file="datasets_and_queries/dictionaries/WordsDictionary.txt" todir="./data-temp/dictionaries"/>
 
@@ -130,13 +131,13 @@
 		<copy todir="./data-temp/sparql/aggregation">
 			<fileset dir="./data-temp/sparql/aggregation_${customization}"/>
 		</copy>
-  	
+
 		<delete dir="./data-temp/sparql/system"/>
 		<mkdir dir="./data-temp/sparql/system"/>
 		<copy todir="./data-temp/sparql/system">
 			<fileset dir="./data-temp/sparql/system_${customization}"/>
-		</copy>	  	
-  	
+		</copy>
+
   		<delete dir="./data-temp/sparql/validation"/>
   		<mkdir dir="./data-temp/sparql/validation"/>
 		<copy todir="./data-temp/sparql/validation">
@@ -156,7 +157,7 @@
 
 		<move file="./data-temp" toFile="./data"/>
 		<delete dir="./data-temp"/>
-		
+
 		<delete>
 			<fileset dir="./src/eu/ldbc/semanticpublishing/templates/aggregation" includes="*.java"/>
 		</delete>
@@ -173,11 +174,11 @@
     	<antcall target="unzip-conformance-queries">
       		<param name="conformance_archive_name" value="${customization}"/>
     	</antcall>
-	
+
 		<delete file="./definitions.properties"/>
 		<copy file="datasets_and_queries/definitions.properties-${querymix}" tofile="./definitions.properties"/>
 	</target>
-		
+
 	<target name="copy-config-files-to-dist" >
 		<copy todir="${dir.dist}">
 			<fileset file="readme.txt" />
@@ -190,17 +191,17 @@
 		<jar destfile="${dir.dist}\${jar.charttool.file.name}.jar" basedir="${dir.bin}" duplicate="preserve">
 			<manifest>
 				<attribute name="Main-Class" value="eu.ldbc.semanticpublishing.tools.PerformanceChartTool"/>
-				<attribute name="Benchmark-Release-Version" value="${version.number.major}.${version.number.minor}.${revision.number}"/>
+				<attribute name="Benchmark-Release-Version" value="${version.number.major}.${version.number.minor}.${version.number.patch}.${revision.number}"/>
 			</manifest>
 			<zipgroupfileset dir="${dir.lib.jfreechart}" includes="*.jar"/>
 		</jar>
 	</target>
-	
+
 	<target name="build-jar">
 		<jar destfile="${dir.dist}\${jar.file.name}-${querymix}-${customization}.jar" basedir="${dir.bin}" duplicate="preserve">
 			<manifest>
 				<attribute name="Main-Class" value="eu.ldbc.semanticpublishing.TestDriver"/>
-				<attribute name="Benchmark-Release-Version" value="${version.number.major}.${version.number.minor}.${revision.number}"/>
+				<attribute name="Benchmark-Release-Version" value="${version.number.major}.${version.number.minor}.${version.number.patch}.${revision.number}"/>
 				<attribute name="Benchmark-Release-Type" value="${querymix} qierymix, ${customization}"/>
 			</manifest>
 			<zipgroupfileset dir="${dir.lib}" includes="*.jar"/>
@@ -213,7 +214,7 @@
 		<antcall target="unzip-all-compressed-datasets"/>
 		<antcall target="move-reference-knowledge-and-queries"/>
 		<delete dir="./data"/>
-		<delete file="./definitions.properties" />	
+		<delete file="./definitions.properties" />
 	</target>
 
 	<target name="build-basic-querymix" depends="build.release.version">
@@ -221,7 +222,7 @@
             <param name="querymix" value="basic"/>
             <param name="customization" value="standard"/>
 	    </antcall>
-	    <antcall target="rebuild"/>		
+	    <antcall target="rebuild"/>
 	    <antcall target="build-jar">
             <param name="querymix" value="basic"/>
             <param name="customization" value="standard"/>
@@ -240,27 +241,27 @@
             <param name="customization" value="graphdb"/>
         </antcall>
 		<antcall target="build-charttool-jar"/>
-	</target>	
-	
+	</target>
+
 	<target name="build-basic-querymix-virtuoso" depends="build.release.version">
 	    <antcall target="setup-querymix">
             <param name="querymix" value="basic"/>
             <param name="customization" value="virtuoso"/>
 	    </antcall>
-	    <antcall target="rebuild"/>		
+	    <antcall target="rebuild"/>
 	    <antcall target="build-jar">
             <param name="querymix" value="basic"/>
             <param name="customization" value="virtuoso"/>
         </antcall>
 		<antcall target="build-charttool-jar"/>
-	</target>	
-	
+	</target>
+
 	<target name="build-advanced-querymix" depends="build.release.version">
 	    <antcall target="setup-querymix">
             <param name="querymix" value="advanced"/>
             <param name="customization" value="standard"/>
 	    </antcall>
-	    <antcall target="rebuild"/>		
+	    <antcall target="rebuild"/>
 	    <antcall target="build-jar">
             <param name="querymix" value="advanced"/>
             <param name="customization" value="standard"/>
@@ -273,7 +274,7 @@
             <param name="querymix" value="advanced"/>
             <param name="customization" value="graphdb"/>
 	    </antcall>
-	    <antcall target="rebuild"/>			
+	    <antcall target="rebuild"/>
 	    <antcall target="build-jar">
             <param name="querymix" value="advanced"/>
             <param name="customization" value="graphdb"/>
@@ -281,19 +282,19 @@
 		<antcall target="build-charttool-jar"/>
 	</target>
 
-	
-	<target name="build-advanced-querymix-virtuoso" depends="build.release.version">	
+
+	<target name="build-advanced-querymix-virtuoso" depends="build.release.version">
 	    <antcall target="setup-querymix">
             <param name="querymix" value="advanced"/>
             <param name="customization" value="virtuoso"/>
 	    </antcall>
-	    <antcall target="rebuild"/>		
+	    <antcall target="rebuild"/>
 	    <antcall target="build-jar">
             <param name="querymix" value="advanced"/>
             <param name="customization" value="virtuoso"/>
         </antcall>
 		<antcall target="build-charttool-jar"/>
-	</target>	
+	</target>
 
 	<!-- Zip reference knowledge (ontologies and reference datasets) -->
 	<target name="zip-reference-knowledge-and-queries">
@@ -301,7 +302,7 @@
 			<zipfileset dir="." includes="data/**" excludes="data/datasets/*.zip"/>
 		</zip>
 	</target>
-	
+
 	<!-- Move reference knowledge (ontologies and reference datasets) to the distribution folder -->
 	<target name="move-reference-knowledge-and-queries">
 		<move todir="${dir.dist}/data">
@@ -310,19 +311,19 @@
 			</fileset>
 		</move>
 	</target>
-	
+
 	<!-- UnZip all compressed datasets -->
 	<target name="unzip-all-compressed-datasets">
 		<unzip dest="${dir.data}/datasets">
 			<fileset dir="${dir.data}/datasets">
 				<include name="**/*.zip"/>
-			</fileset>			
+			</fileset>
 		</unzip>
 		<delete>
 			<fileset dir="${dir.data}/datasets" includes="*.zip"/>
-		</delete>		
+		</delete>
 	</target>
-	
+
 	<!-- SVN -->
 	<!-- This target requires that an svn client is installed -->
 	<!--
@@ -344,7 +345,7 @@
 	</target>
 	-->
 	<!-- Git -->
-    <available file=".git" type="dir" property="git.present"/>	
+    <available file=".git" type="dir" property="git.present"/>
     <target name="build.release.version" description="Store git revision in ${revision.number}" if="git.present">
         <exec executable="git" outputproperty="git.revision" failifexecutionfails="false" errorproperty="">
             <arg value="describe"/>
@@ -358,16 +359,16 @@
                 <length string="${git.revision}" trim="yes" length="0" when="greater"/>
             </and>
         </condition>
-        <echo>Benchmark Release Version : ${version.number.major}.${version.number.minor}.${revision.number}</echo>
+        <echo>Benchmark Release Version : ${version.number.major}.${version.number.minor}.${version.number.patch}.${revision.number}</echo>
     </target>
-	
+
 	<target name="deploy">
 		<move todir="${dir.deploy}">
 			<fileset dir="${dir.dist}" includes="*.jar"/>
 			<fileset dir="${dir.dist}" includes="*.zip"/>
 		</move>
 	</target>
-	
+
 	<target name="show-usage">
     <echo>
 -------------------------------------------------------------------------------------------------------------------------------------
@@ -376,12 +377,12 @@ To build the LDBC Semantic Publishing Benchmark, execute :
 	SPARQL compliant version:
 		ant build-basic-querymix             - builds the benchmark driver with basic query mix, standard SPARQL 1.1 compliance
 		ant build-advanced-querymix          - builds the benchmark driver with advanced query mix, standard SPARQL 1.1 compliance
-		
+
     GraphDB:
 		ant build-basic-querymix-graphdb     - builds the benchmark driver with basic query mix and queries optimized for GraphDB
 		ant build-advanced-querymix-graphdb  - builds the benchmark driver with advanced query mix and queries optimized for GraphDB
-    	
-	Virtuoso: 
+
+	Virtuoso:
 		ant build-basic-querymix-virtuoso    - builds the benchmark driver with basic query mix and queries optimized for Virtuoso
 		ant build-advanced-querymix-virtuoso - builds the benchmark driver with advanced query mix and queries optimized for Virtuoso
 -------------------------------------------------------------------------------------------------------------------------------------

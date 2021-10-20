@@ -35,14 +35,8 @@ PREFIX ot:<http://www.ontotext.com/>
 #  Query Name : AnalyzeReferenceData
 #  Query Description : Retrieves the greatest ID of Creative Work stored. Next Creative Works will have new IDs greater than existing.
 
-SELECT ?maxCwID 
+SELECT (COUNT(?cwUri) AS ?maxCwID)
 FROM ot:disable-sameAs
-{ 
-  ?cwUri a cwork:CreativeWork . 
-  BIND(str(?cwUri) AS ?strCwUri) . 
-  BIND(replace(?strCwUri, "http://www.bbc.co.uk/things/", "", "i") AS ?cwTmp) . 
-  BIND(replace(?cwTmp, "#id", "", "i") AS ?cwTmp2) . 
-  BIND(xsd:decimal(?cwTmp2) AS ?maxCwID) . 
-} 
-ORDER BY DESC(?maxCwID) 
-LIMIT 1 
+{
+  ?cwUri a cwork:CreativeWork .
+}
