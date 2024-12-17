@@ -47,11 +47,11 @@ Benchmark Phases:
 
   * The Semantic Publishing Benchmark can be configured to run through these phases ordered by the sequence they should be run: 
 
-    - loadOntologies        		          		: load ontologies (from the 'data/ontologies' folder) into database. It can be done manually by uploading all .ttl files located at: /data/ontologies into the database
-    - loadDatasets          		          		: load the reference datasets (from the 'data/datasets' folder) into database. It can be done manually by uploading all .ttl files located at: /data/ontologies into the database
-    - generateCreativeWorks 		          		: using uploaded data from previous two phases, generates Creative Works and saves them to files. Generated files need to be loaded into database manually (or automatically if file format is n-quads)
+    - loadOntologies        		          		: load ontologies (from the 'data/ontologies' folder) into the database. It can be done manually by uploading all .ttl files located at: /data/ontologies into the database
+    - loadDatasets          		          		: load the reference datasets (from the 'data/datasets' folder) into the database. It can be done manually by uploading all .ttl files located at: /data/ontologies into the database
+    - generateCreativeWorks 		          		: using uploaded data from previous two phases, generates Creative Works and saves them to files. Generated files need to be loaded into the database manually (or automatically if file format is n-quads)
                                               			Note: Requires phases: loadOntologies, loadDatasets.
-    - loadCreativeWorks	  		            		: load generated creative works into database (It is advisable to use serialization format: N-Quads). The benchmark driver will attempt to start all executable script files (files with extension .sh or .bat) saved in folder '/data/scripts/postLoad'. It is not necessary to provide such scripts.
+    - loadCreativeWorks	  		            		: load generated creative works into the database (It is advisable to use serialization format: N-Quads). The benchmark driver will attempt to start all executable script files (files with extension .sh or .bat) saved in folder '/data/scripts/postLoad'. It is not necessary to provide such scripts.
     - generateQuerySubstitutionParameters 		: Controls generation of query substitution parameters which later can be used during the warmup and benchmark phases. For each query a substitution parameters file is created and saved into 'creativeWorksPath' location. 
                                               			Note: If no files are found at that location, queries executed during warmup and benchmark phases will use randomly generated parameters.
                                               			Note2: Requires phases: loadOntologies, loadDatasets, generateCreativeWorks, loadCreativeWorks.
@@ -61,7 +61,7 @@ Benchmark Phases:
     - benchmark             		          		: all aggregation and editorial agents are started and kept running for a period of 'benchmarkRunPeriodSeconds'.
     - benchmarkOnlineReplicationAndBackup 		: benchmark is measuring performance under currently ongoing backup process. Verifies that certain conditions are met such as milestone points at which backup has been started. 
                                             			Note: Requires phases: loadOntologies, loadDatasets, generateCreativeWorks, loadCreativeWorks, warmUp (optional). Phases that should be disabled: benchmark.
-                                            			Note2: Requires all necessary enterprise script files (data/enterprise/scripts) to have DB Engie's commands added (Commands for: starting, shutting down, backing up, etc).
+                                            			Note2: Requires all necessary enterprise script files (data/enterprise/scripts) to have DB Engine's commands added (Commands for: starting, shutting down, backing up, etc).
                                             			Note3: Required to set the full path for property 'scriptsPath' in test.properties file and all scripts need to have an execution permission enabled.  
     - checkConformance                    		: executes predefined queries (from folder 'data/sparql/conformance'. Checking for OWL2-RL: prp-irp, prp-asyp, prp-pdw, prp-adp, cax-dw, cax-adc, cls-maxc1, prp-key, prp-spo2, prp-inv1)  
                                               			Note: Requires phase: loadOntologies.
